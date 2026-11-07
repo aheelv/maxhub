@@ -1,0 +1,4328 @@
+{
+  "total": 355,
+  "items": [
+    {
+      "id": "COURSE-ROOT",
+      "type": "course",
+      "title": "人工智能工具应用实践",
+      "url": "/",
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "M1",
+      "type": "module",
+      "title": "AI 基础与背景",
+      "url": "/knowledge/modules/#M1",
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "M2",
+      "type": "module",
+      "title": "AI 办公与数据分析",
+      "url": "/knowledge/modules/#M2",
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "M3",
+      "type": "module",
+      "title": "智能体（Agent）技术",
+      "url": "/knowledge/modules/#M3",
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "M4",
+      "type": "module",
+      "title": "Harness 与 AI 集成开发环境",
+      "url": "/knowledge/modules/#M4",
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "M5",
+      "type": "module",
+      "title": "综合实践与前沿",
+      "url": "/knowledge/modules/#M5",
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "PLAN-01",
+      "type": "lesson-plan",
+      "title": "第 1 次课教案｜课程导论：人工智能 70 年与 AI 工具全景",
+      "url": "/sessions/01/plan/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "SYL-01",
+      "type": "syllabus-unit",
+      "title": "第 1 次课｜课程导论：人工智能 70 年与 AI 工具全景",
+      "url": "/syllabus/#s01",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "TXT-01",
+      "type": "textbook-chapter",
+      "title": "课程导论与AI工具全景",
+      "url": "/textbook/01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "DECK-01",
+      "type": "deck",
+      "title": "课程导论：人工智能 70 年与 AI 工具全景",
+      "url": "/courseware/01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "PPT-01",
+      "type": "deck-file",
+      "title": "第 1 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-01",
+      "type": "exercise",
+      "title": "第 1 次课｜AI 工具全景地图与个人使用红线",
+      "url": "/exercises/01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "KIT-01",
+      "type": "practice-kit",
+      "title": "资源包_第1次课_工具全景与个人红线",
+      "url": "/practice/01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "S01",
+      "type": "session",
+      "title": "课程导论：人工智能 70 年与 AI 工具全景",
+      "url": "/sessions/01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-01",
+        "KP-M1-02",
+        "KP-M1-03",
+        "KP-M1-04",
+        "KP-M1-05",
+        "KP-M1-06"
+      ]
+    },
+    {
+      "id": "PLAN-02",
+      "type": "lesson-plan",
+      "title": "第 2 次课教案｜大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "url": "/sessions/02/plan/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "SYL-02",
+      "type": "syllabus-unit",
+      "title": "第 2 次课｜大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "url": "/syllabus/#s02",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "TXT-02",
+      "type": "textbook-chapter",
+      "title": "大语言模型与Token成本",
+      "url": "/textbook/02/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "DECK-02",
+      "type": "deck",
+      "title": "大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "url": "/courseware/02/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "PPT-02",
+      "type": "deck-file",
+      "title": "第 2 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-02",
+      "type": "exercise",
+      "title": "第 2 次课｜把上下文换算成钱：Token 实测与成本估算",
+      "url": "/exercises/02/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "KIT-02",
+      "type": "practice-kit",
+      "title": "资源包_第2次课_Token与上下文成本实测",
+      "url": "/practice/02/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "S02",
+      "type": "session",
+      "title": "大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "url": "/sessions/02/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-07",
+        "KP-M1-08",
+        "KP-M1-09",
+        "KP-M1-10",
+        "KP-M1-11",
+        "KP-M1-12"
+      ]
+    },
+    {
+      "id": "PLAN-03",
+      "type": "lesson-plan",
+      "title": "第 3 次课教案｜生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "url": "/sessions/03/plan/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "SYL-03",
+      "type": "syllabus-unit",
+      "title": "第 3 次课｜生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "url": "/syllabus/#s03",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "TXT-03",
+      "type": "textbook-chapter",
+      "title": "生成式AI多模态与提示工程",
+      "url": "/textbook/03/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "DECK-03",
+      "type": "deck",
+      "title": "生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "url": "/courseware/03/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "PPT-03",
+      "type": "deck-file",
+      "title": "第 3 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-03",
+      "type": "exercise",
+      "title": "第 3 次课｜多模态读图核验与宣传素材包",
+      "url": "/exercises/03/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "KIT-03",
+      "type": "practice-kit",
+      "title": "资源包_第3次课_多模态读图与素材生成",
+      "url": "/practice/03/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "S03",
+      "type": "session",
+      "title": "生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "url": "/sessions/03/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13",
+        "KP-M1-14",
+        "KP-M1-15",
+        "KP-M1-16",
+        "KP-M1-17",
+        "KP-M1-18"
+      ]
+    },
+    {
+      "id": "PLAN-04",
+      "type": "lesson-plan",
+      "title": "第 4 次课教案｜AI 办公实践：文档、PPT 与知识管理",
+      "url": "/sessions/04/plan/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "SYL-04",
+      "type": "syllabus-unit",
+      "title": "第 4 次课｜AI 办公实践：文档、PPT 与知识管理",
+      "url": "/syllabus/#s04",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "TXT-04",
+      "type": "textbook-chapter",
+      "title": "AI办公实践与知识管理",
+      "url": "/textbook/04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "DECK-04",
+      "type": "deck",
+      "title": "AI 办公实践：文档、PPT 与知识管理",
+      "url": "/courseware/04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "PPT-04",
+      "type": "deck-file",
+      "title": "第 4 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-04",
+      "type": "exercise",
+      "title": "第 4 次课｜从原始材料到可署名交付：简报、八页演示与归档规则",
+      "url": "/exercises/04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "KIT-04",
+      "type": "practice-kit",
+      "title": "资源包_第4次课_文档演示与知识归档",
+      "url": "/practice/04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "S04",
+      "type": "session",
+      "title": "AI 办公实践：文档、PPT 与知识管理",
+      "url": "/sessions/04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-01",
+        "KP-M2-02",
+        "KP-M2-03",
+        "KP-M2-04",
+        "KP-M2-05",
+        "KP-M2-06"
+      ]
+    },
+    {
+      "id": "PLAN-05",
+      "type": "lesson-plan",
+      "title": "第 5 次课教案｜AI + 表格：智能表格、公式生成与数据清洗",
+      "url": "/sessions/05/plan/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "SYL-05",
+      "type": "syllabus-unit",
+      "title": "第 5 次课｜AI + 表格：智能表格、公式生成与数据清洗",
+      "url": "/syllabus/#s05",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "TXT-05",
+      "type": "textbook-chapter",
+      "title": "AI表格公式与数据清洗",
+      "url": "/textbook/05/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "DECK-05",
+      "type": "deck",
+      "title": "AI + 表格：智能表格、公式生成与数据清洗",
+      "url": "/courseware/05/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "PPT-05",
+      "type": "deck-file",
+      "title": "第 5 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-05",
+      "type": "exercise",
+      "title": "第 5 次课｜把脏订单表洗成可复核的干净数据",
+      "url": "/exercises/05/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "KIT-05",
+      "type": "practice-kit",
+      "title": "资源包_第5次课_表格清洗与公式复核",
+      "url": "/practice/05/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "S05",
+      "type": "session",
+      "title": "AI + 表格：智能表格、公式生成与数据清洗",
+      "url": "/sessions/05/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07",
+        "KP-M2-08",
+        "KP-M2-09",
+        "KP-M2-10",
+        "KP-M2-11"
+      ]
+    },
+    {
+      "id": "PLAN-06",
+      "type": "lesson-plan",
+      "title": "第 6 次课教案｜用自然语言做数据分析：代码解释器与 AI 分析师",
+      "url": "/sessions/06/plan/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "SYL-06",
+      "type": "syllabus-unit",
+      "title": "第 6 次课｜用自然语言做数据分析：代码解释器与 AI 分析师",
+      "url": "/syllabus/#s06",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "TXT-06",
+      "type": "textbook-chapter",
+      "title": "自然语言数据分析",
+      "url": "/textbook/06/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "DECK-06",
+      "type": "deck",
+      "title": "用自然语言做数据分析：代码解释器与 AI 分析师",
+      "url": "/courseware/06/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "PPT-06",
+      "type": "deck-file",
+      "title": "第 6 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-06",
+      "type": "exercise",
+      "title": "第 6 次课｜一次能复现的完整数据分析：从提问到结论",
+      "url": "/exercises/06/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "KIT-06",
+      "type": "practice-kit",
+      "title": "资源包_第6次课_自然语言数据分析",
+      "url": "/practice/06/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "S06",
+      "type": "session",
+      "title": "用自然语言做数据分析：代码解释器与 AI 分析师",
+      "url": "/sessions/06/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12",
+        "KP-M2-13",
+        "KP-M2-14",
+        "KP-M2-15",
+        "KP-M2-16"
+      ]
+    },
+    {
+      "id": "PLAN-07",
+      "type": "lesson-plan",
+      "title": "第 7 次课教案｜管理场景数据分析综合：BI × AI 协同",
+      "url": "/sessions/07/plan/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "SYL-07",
+      "type": "syllabus-unit",
+      "title": "第 7 次课｜管理场景数据分析综合：BI × AI 协同",
+      "url": "/syllabus/#s07",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "TXT-07",
+      "type": "textbook-chapter",
+      "title": "BI与AI协同经营分析",
+      "url": "/textbook/07/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "DECK-07",
+      "type": "deck",
+      "title": "管理场景数据分析综合：BI × AI 协同",
+      "url": "/courseware/07/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "PPT-07",
+      "type": "deck-file",
+      "title": "第 7 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-07",
+      "type": "exercise",
+      "title": "第 7 次课｜先立口径再谈自动化：27 万差额从哪来",
+      "url": "/exercises/07/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "KIT-07",
+      "type": "practice-kit",
+      "title": "资源包_第7次课_BI口径卡与经营报告",
+      "url": "/practice/07/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "S07",
+      "type": "session",
+      "title": "管理场景数据分析综合：BI × AI 协同",
+      "url": "/sessions/07/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17",
+        "KP-M2-18",
+        "KP-M2-19",
+        "KP-M2-20",
+        "KP-M2-21"
+      ]
+    },
+    {
+      "id": "PLAN-08",
+      "type": "lesson-plan",
+      "title": "第 8 次课教案｜从工具到智能体：Agent 原理与 MCP 协议",
+      "url": "/sessions/08/plan/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "SYL-08",
+      "type": "syllabus-unit",
+      "title": "第 8 次课｜从工具到智能体：Agent 原理与 MCP 协议",
+      "url": "/syllabus/#s08",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "TXT-08",
+      "type": "textbook-chapter",
+      "title": "智能体原理与MCP协议",
+      "url": "/textbook/08/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "DECK-08",
+      "type": "deck",
+      "title": "从工具到智能体：Agent 原理与 MCP 协议",
+      "url": "/courseware/08/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "PPT-08",
+      "type": "deck-file",
+      "title": "第 8 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-08",
+      "type": "exercise",
+      "title": "第 8 次课｜跑通一次端到端智能体，并拆开它的执行轨迹",
+      "url": "/exercises/08/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "KIT-08",
+      "type": "practice-kit",
+      "title": "资源包_第8次课_智能体端到端与权限",
+      "url": "/practice/08/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "S08",
+      "type": "session",
+      "title": "从工具到智能体：Agent 原理与 MCP 协议",
+      "url": "/sessions/08/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-02",
+        "KP-M3-03",
+        "KP-M3-04",
+        "KP-M3-05",
+        "KP-M3-06"
+      ]
+    },
+    {
+      "id": "PLAN-09",
+      "type": "lesson-plan",
+      "title": "第 9 次课教案｜提示到编排：工作流、RAG 与知识库",
+      "url": "/sessions/09/plan/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "SYL-09",
+      "type": "syllabus-unit",
+      "title": "第 9 次课｜提示到编排：工作流、RAG 与知识库",
+      "url": "/syllabus/#s09",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "TXT-09",
+      "type": "textbook-chapter",
+      "title": "工作流RAG与知识库",
+      "url": "/textbook/09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "DECK-09",
+      "type": "deck",
+      "title": "提示到编排：工作流、RAG 与知识库",
+      "url": "/courseware/09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "PPT-09",
+      "type": "deck-file",
+      "title": "第 9 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-09",
+      "type": "exercise",
+      "title": "第 9 次课｜带出处的知识问答：12 题测试集与可复核工作流",
+      "url": "/exercises/09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "KIT-09",
+      "type": "practice-kit",
+      "title": "资源包_第9次课_知识库RAG与工作流",
+      "url": "/practice/09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "S09",
+      "type": "session",
+      "title": "提示到编排：工作流、RAG 与知识库",
+      "url": "/sessions/09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07",
+        "KP-M3-08",
+        "KP-M3-09",
+        "KP-M3-10",
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "PLAN-10",
+      "type": "lesson-plan",
+      "title": "第 10 次课教案｜低代码智能体平台实战：搭建企业问答智能体",
+      "url": "/sessions/10/plan/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "SYL-10",
+      "type": "syllabus-unit",
+      "title": "第 10 次课｜低代码智能体平台实战：搭建企业问答智能体",
+      "url": "/syllabus/#s10",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "TXT-10",
+      "type": "textbook-chapter",
+      "title": "低代码智能体平台实战",
+      "url": "/textbook/10/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "DECK-10",
+      "type": "deck",
+      "title": "低代码智能体平台实战：搭建企业问答智能体",
+      "url": "/courseware/10/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "PPT-10",
+      "type": "deck-file",
+      "title": "第 10 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-10",
+      "type": "exercise",
+      "title": "第 10 次课｜把边界写下来：学院事务问答智能体的需求、语料、测试与发布验收",
+      "url": "/exercises/10/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "KIT-10",
+      "type": "practice-kit",
+      "title": "资源包_第10次课_低代码问答智能体实战",
+      "url": "/practice/10/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "S10",
+      "type": "session",
+      "title": "低代码智能体平台实战：搭建企业问答智能体",
+      "url": "/sessions/10/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-12",
+        "KP-M3-13",
+        "KP-M3-14",
+        "KP-M3-15",
+        "KP-M3-16"
+      ]
+    },
+    {
+      "id": "PLAN-11",
+      "type": "lesson-plan",
+      "title": "第 11 次课教案｜多智能体协作与 AgentOps",
+      "url": "/sessions/11/plan/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "SYL-11",
+      "type": "syllabus-unit",
+      "title": "第 11 次课｜多智能体协作与 AgentOps",
+      "url": "/syllabus/#s11",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "TXT-11",
+      "type": "textbook-chapter",
+      "title": "多智能体协作与AgentOps",
+      "url": "/textbook/11/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "DECK-11",
+      "type": "deck",
+      "title": "多智能体协作与 AgentOps",
+      "url": "/courseware/11/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "PPT-11",
+      "type": "deck-file",
+      "title": "第 11 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-11",
+      "type": "exercise",
+      "title": "多智能体协作与 AgentOps",
+      "url": "/exercises/11/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "KIT-11",
+      "type": "practice-kit",
+      "title": "资源包_第11次课_多智能体与AgentOps",
+      "url": "/practice/11/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "S11",
+      "type": "session",
+      "title": "多智能体协作与 AgentOps",
+      "url": "/sessions/11/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-17",
+        "KP-M3-18",
+        "KP-M3-19",
+        "KP-M3-20",
+        "KP-M3-21"
+      ]
+    },
+    {
+      "id": "PLAN-12",
+      "type": "lesson-plan",
+      "title": "第 12 次课教案｜什么是 Harness：模型之外的编排层",
+      "url": "/sessions/12/plan/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "SYL-12",
+      "type": "syllabus-unit",
+      "title": "第 12 次课｜什么是 Harness：模型之外的编排层",
+      "url": "/syllabus/#s12",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "TXT-12",
+      "type": "textbook-chapter",
+      "title": "Harness编排层",
+      "url": "/textbook/12/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "DECK-12",
+      "type": "deck",
+      "title": "什么是 Harness：模型之外的编排层",
+      "url": "/courseware/12/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "PPT-12",
+      "type": "deck-file",
+      "title": "第 12 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-12",
+      "type": "exercise",
+      "title": "Harness：模型之外的编排层",
+      "url": "/exercises/12/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "KIT-12",
+      "type": "practice-kit",
+      "title": "资源包_第12次课_Harness结构与成本",
+      "url": "/practice/12/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "S12",
+      "type": "session",
+      "title": "什么是 Harness：模型之外的编排层",
+      "url": "/sessions/12/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-02",
+        "KP-M4-03",
+        "KP-M4-04",
+        "KP-M4-05"
+      ]
+    },
+    {
+      "id": "PLAN-13",
+      "type": "lesson-plan",
+      "title": "第 13 次课教案｜AI IDE 与编程智能体实战",
+      "url": "/sessions/13/plan/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "SYL-13",
+      "type": "syllabus-unit",
+      "title": "第 13 次课｜AI IDE 与编程智能体实战",
+      "url": "/syllabus/#s13",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "TXT-13",
+      "type": "textbook-chapter",
+      "title": "AIIDE与编程智能体",
+      "url": "/textbook/13/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "DECK-13",
+      "type": "deck",
+      "title": "AI IDE 与编程智能体实战",
+      "url": "/courseware/13/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "PPT-13",
+      "type": "deck-file",
+      "title": "第 13 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-13",
+      "type": "exercise",
+      "title": "AI IDE 与编程智能体实战",
+      "url": "/exercises/13/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "KIT-13",
+      "type": "practice-kit",
+      "title": "资源包_第13次课_AI IDE CSV检查器",
+      "url": "/practice/13/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "S13",
+      "type": "session",
+      "title": "AI IDE 与编程智能体实战",
+      "url": "/sessions/13/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-06",
+        "KP-M4-07",
+        "KP-M4-08",
+        "KP-M4-09",
+        "KP-M4-10"
+      ]
+    },
+    {
+      "id": "PLAN-14",
+      "type": "lesson-plan",
+      "title": "第 14 次课教案｜Harness 工程实践：规则、Hook、子代理与权限",
+      "url": "/sessions/14/plan/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "SYL-14",
+      "type": "syllabus-unit",
+      "title": "第 14 次课｜Harness 工程实践：规则、Hook、子代理与权限",
+      "url": "/syllabus/#s14",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "TXT-14",
+      "type": "textbook-chapter",
+      "title": "Harness工程护栏",
+      "url": "/textbook/14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "DECK-14",
+      "type": "deck",
+      "title": "Harness 工程实践：规则、Hook、子代理与权限",
+      "url": "/courseware/14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "PPT-14",
+      "type": "deck-file",
+      "title": "第 14 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-14",
+      "type": "exercise",
+      "title": "Harness 工程实践：规则、Hook 与权限",
+      "url": "/exercises/14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "KIT-14",
+      "type": "practice-kit",
+      "title": "资源包_第14次课_工程护栏与Hook",
+      "url": "/practice/14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "S14",
+      "type": "session",
+      "title": "Harness 工程实践：规则、Hook、子代理与权限",
+      "url": "/sessions/14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11",
+        "KP-M4-12",
+        "KP-M4-13",
+        "KP-M4-14",
+        "KP-M4-15",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "PLAN-15",
+      "type": "lesson-plan",
+      "title": "第 15 次课教案｜用 AI 集成开发环境构建专业应用",
+      "url": "/sessions/15/plan/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "SYL-15",
+      "type": "syllabus-unit",
+      "title": "第 15 次课｜用 AI 集成开发环境构建专业应用",
+      "url": "/syllabus/#s15",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "TXT-15",
+      "type": "textbook-chapter",
+      "title": "AI集成开发环境构建应用",
+      "url": "/textbook/15/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "DECK-15",
+      "type": "deck",
+      "title": "用 AI 集成开发环境构建专业应用",
+      "url": "/courseware/15/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "PPT-15",
+      "type": "deck-file",
+      "title": "第 15 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-15",
+      "type": "exercise",
+      "title": "用 AI 集成开发环境构建专业应用",
+      "url": "/exercises/15/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "KIT-15",
+      "type": "practice-kit",
+      "title": "资源包_第15次课_校园活动报名应用",
+      "url": "/practice/15/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "S15",
+      "type": "session",
+      "title": "用 AI 集成开发环境构建专业应用",
+      "url": "/sessions/15/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-17",
+        "KP-M4-18",
+        "KP-M4-19",
+        "KP-M4-20",
+        "KP-M4-21"
+      ]
+    },
+    {
+      "id": "PLAN-16",
+      "type": "lesson-plan",
+      "title": "第 16 次课教案｜综合项目答辩与技术前沿展望",
+      "url": "/sessions/16/plan/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "SYL-16",
+      "type": "syllabus-unit",
+      "title": "第 16 次课｜综合项目答辩与技术前沿展望",
+      "url": "/syllabus/#s16",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "TXT-16",
+      "type": "textbook-chapter",
+      "title": "综合答辩与技术前沿",
+      "url": "/textbook/16/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "DECK-16",
+      "type": "deck",
+      "title": "综合项目答辩与技术前沿展望",
+      "url": "/courseware/16/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "PPT-16",
+      "type": "deck-file",
+      "title": "第 16 次课课件文件（PPTX）",
+      "url": null,
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "EX-16",
+      "type": "exercise",
+      "title": "综合项目答辩与技术前沿展望",
+      "url": "/exercises/16/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "KIT-16",
+      "type": "practice-kit",
+      "title": "资源包_第16次课_综合答辩与AI前沿",
+      "url": "/practice/16/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "S16",
+      "type": "session",
+      "title": "综合项目答辩与技术前沿展望",
+      "url": "/sessions/16/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": [
+        "KP-M5-01",
+        "KP-M5-02",
+        "KP-M5-03",
+        "KP-M5-04",
+        "KP-M5-05"
+      ]
+    },
+    {
+      "id": "KP-M1-01",
+      "type": "knowledge-point",
+      "title": "三次浪潮与两次寒冬",
+      "url": "/knowledge/points/kp-m1-01/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-02",
+      "type": "knowledge-point",
+      "title": "五个概念的层次",
+      "url": "/knowledge/points/kp-m1-02/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-03",
+      "type": "knowledge-point",
+      "title": "2026 年工具全景",
+      "url": "/knowledge/points/kp-m1-03/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-04",
+      "type": "knowledge-point",
+      "title": "AI Index 2026 数据",
+      "url": "/knowledge/points/kp-m1-04/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-05",
+      "type": "knowledge-point",
+      "title": "数据安全红线",
+      "url": "/knowledge/points/kp-m1-05/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-06",
+      "type": "knowledge-point",
+      "title": "模型与编排的分工",
+      "url": "/knowledge/points/kp-m1-06/",
+      "module_id": "M1",
+      "session_no": 1,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-07",
+      "type": "knowledge-point",
+      "title": "n-gram 与词向量",
+      "url": "/knowledge/points/kp-m1-07/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-08",
+      "type": "knowledge-point",
+      "title": "循环神经网络的局限",
+      "url": "/knowledge/points/kp-m1-08/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-09",
+      "type": "knowledge-point",
+      "title": "Transformer 与自注意力",
+      "url": "/knowledge/points/kp-m1-09/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-10",
+      "type": "knowledge-point",
+      "title": "预训练、微调、对齐",
+      "url": "/knowledge/points/kp-m1-10/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-11",
+      "type": "knowledge-point",
+      "title": "推理模型与思维链",
+      "url": "/knowledge/points/kp-m1-11/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-12",
+      "type": "knowledge-point",
+      "title": "Token 与上下文成本",
+      "url": "/knowledge/points/kp-m1-12/",
+      "module_id": "M1",
+      "session_no": 2,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-13",
+      "type": "knowledge-point",
+      "title": "扩散模型与 GAN",
+      "url": "/knowledge/points/kp-m1-13/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-14",
+      "type": "knowledge-point",
+      "title": "多模态能力",
+      "url": "/knowledge/points/kp-m1-14/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-15",
+      "type": "knowledge-point",
+      "title": "提示工程四要素",
+      "url": "/knowledge/points/kp-m1-15/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-16",
+      "type": "knowledge-point",
+      "title": "锯齿状智能",
+      "url": "/knowledge/points/kp-m1-16/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-17",
+      "type": "knowledge-point",
+      "title": "幻觉的成因",
+      "url": "/knowledge/points/kp-m1-17/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M1-18",
+      "type": "knowledge-point",
+      "title": "验证与核对方法",
+      "url": "/knowledge/points/kp-m1-18/",
+      "module_id": "M1",
+      "session_no": 3,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-01",
+      "type": "knowledge-point",
+      "title": "长文档结构化",
+      "url": "/knowledge/points/kp-m2-01/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-02",
+      "type": "knowledge-point",
+      "title": "会议纪要流程",
+      "url": "/knowledge/points/kp-m2-02/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-03",
+      "type": "knowledge-point",
+      "title": "PPT 信息层级",
+      "url": "/knowledge/points/kp-m2-03/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-04",
+      "type": "knowledge-point",
+      "title": "知识管理",
+      "url": "/knowledge/points/kp-m2-04/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-05",
+      "type": "knowledge-point",
+      "title": "WorkBuddy 六种扩展",
+      "url": "/knowledge/points/kp-m2-05/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-06",
+      "type": "knowledge-point",
+      "title": "交付与验收",
+      "url": "/knowledge/points/kp-m2-06/",
+      "module_id": "M2",
+      "session_no": 4,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-07",
+      "type": "knowledge-point",
+      "title": "智能表格两类形态",
+      "url": "/knowledge/points/kp-m2-07/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-08",
+      "type": "knowledge-point",
+      "title": "自然语言生成公式",
+      "url": "/knowledge/points/kp-m2-08/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-09",
+      "type": "knowledge-point",
+      "title": "五类脏数据与处理步骤",
+      "url": "/knowledge/points/kp-m2-09/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-10",
+      "type": "knowledge-point",
+      "title": "AI 公式的三类风险",
+      "url": "/knowledge/points/kp-m2-10/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-11",
+      "type": "knowledge-point",
+      "title": "可追溯与抽样复核",
+      "url": "/knowledge/points/kp-m2-11/",
+      "module_id": "M2",
+      "session_no": 5,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-12",
+      "type": "knowledge-point",
+      "title": "代码解释器原理",
+      "url": "/knowledge/points/kp-m2-12/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-13",
+      "type": "knowledge-point",
+      "title": "描述统计到结论链路",
+      "url": "/knowledge/points/kp-m2-13/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-14",
+      "type": "knowledge-point",
+      "title": "图表选择原则",
+      "url": "/knowledge/points/kp-m2-14/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-15",
+      "type": "knowledge-point",
+      "title": "结论可复现性",
+      "url": "/knowledge/points/kp-m2-15/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-16",
+      "type": "knowledge-point",
+      "title": "三类统计误用",
+      "url": "/knowledge/points/kp-m2-16/",
+      "module_id": "M2",
+      "session_no": 6,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-17",
+      "type": "knowledge-point",
+      "title": "指标体系与口径治理",
+      "url": "/knowledge/points/kp-m2-17/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-18",
+      "type": "knowledge-point",
+      "title": "NL2SQL 与对话式 BI",
+      "url": "/knowledge/points/kp-m2-18/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-19",
+      "type": "knowledge-point",
+      "title": "归因分析",
+      "url": "/knowledge/points/kp-m2-19/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-20",
+      "type": "knowledge-point",
+      "title": "经营分析报告流程",
+      "url": "/knowledge/points/kp-m2-20/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M2-21",
+      "type": "knowledge-point",
+      "title": "分析与行动的衔接",
+      "url": "/knowledge/points/kp-m2-21/",
+      "module_id": "M2",
+      "session_no": 7,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-01",
+      "type": "knowledge-point",
+      "title": "智能体四要素",
+      "url": "/knowledge/points/kp-m3-01/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-02",
+      "type": "knowledge-point",
+      "title": "感知规划行动反思循环",
+      "url": "/knowledge/points/kp-m3-02/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-03",
+      "type": "knowledge-point",
+      "title": "工具调用与函数调用",
+      "url": "/knowledge/points/kp-m3-03/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-04",
+      "type": "knowledge-point",
+      "title": "MCP 协议",
+      "url": "/knowledge/points/kp-m3-04/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-05",
+      "type": "knowledge-point",
+      "title": "WorkBuddy 扩展机制",
+      "url": "/knowledge/points/kp-m3-05/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-06",
+      "type": "knowledge-point",
+      "title": "智能体能力边界",
+      "url": "/knowledge/points/kp-m3-06/",
+      "module_id": "M3",
+      "session_no": 8,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-07",
+      "type": "knowledge-point",
+      "title": "工作流编排的四类控制",
+      "url": "/knowledge/points/kp-m3-07/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-08",
+      "type": "knowledge-point",
+      "title": "RAG 五步链路",
+      "url": "/knowledge/points/kp-m3-08/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-09",
+      "type": "knowledge-point",
+      "title": "资料库与检索",
+      "url": "/knowledge/points/kp-m3-09/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-10",
+      "type": "knowledge-point",
+      "title": "book-to-skill",
+      "url": "/knowledge/points/kp-m3-10/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-11",
+      "type": "knowledge-point",
+      "title": "技能与知识库的区别",
+      "url": "/knowledge/points/kp-m3-11/",
+      "module_id": "M3",
+      "session_no": 9,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-12",
+      "type": "knowledge-point",
+      "title": "需求拆解四问",
+      "url": "/knowledge/points/kp-m3-12/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-13",
+      "type": "knowledge-point",
+      "title": "知识准备与脱敏",
+      "url": "/knowledge/points/kp-m3-13/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-14",
+      "type": "knowledge-point",
+      "title": "命中率/忠实度/拒答",
+      "url": "/knowledge/points/kp-m3-14/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-15",
+      "type": "knowledge-point",
+      "title": "WorkBuddy 完整实操",
+      "url": "/knowledge/points/kp-m3-15/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-16",
+      "type": "knowledge-point",
+      "title": "上线与验收",
+      "url": "/knowledge/points/kp-m3-16/",
+      "module_id": "M3",
+      "session_no": 10,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-17",
+      "type": "knowledge-point",
+      "title": "四种协作拓扑",
+      "url": "/knowledge/points/kp-m3-17/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-18",
+      "type": "knowledge-point",
+      "title": "子代理机制",
+      "url": "/knowledge/points/kp-m3-18/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-19",
+      "type": "knowledge-point",
+      "title": "专家与专家团",
+      "url": "/knowledge/points/kp-m3-19/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-20",
+      "type": "knowledge-point",
+      "title": "Trajectory 只追加日志",
+      "url": "/knowledge/points/kp-m3-20/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M3-21",
+      "type": "knowledge-point",
+      "title": "成本与失败模式",
+      "url": "/knowledge/points/kp-m3-21/",
+      "module_id": "M3",
+      "session_no": 11,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-01",
+      "type": "knowledge-point",
+      "title": "Harness 的定义",
+      "url": "/knowledge/points/kp-m4-01/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-02",
+      "type": "knowledge-point",
+      "title": "五层分层",
+      "url": "/knowledge/points/kp-m4-02/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-03",
+      "type": "knowledge-point",
+      "title": "四项组成",
+      "url": "/knowledge/points/kp-m4-03/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-04",
+      "type": "knowledge-point",
+      "title": "两个实例对照",
+      "url": "/knowledge/points/kp-m4-04/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-05",
+      "type": "knowledge-point",
+      "title": "脚手架 token 成本",
+      "url": "/knowledge/points/kp-m4-05/",
+      "module_id": "M4",
+      "session_no": 12,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-06",
+      "type": "knowledge-point",
+      "title": "代码智能体工作闭环",
+      "url": "/knowledge/points/kp-m4-06/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-07",
+      "type": "knowledge-point",
+      "title": "上下文与仓库规则",
+      "url": "/knowledge/points/kp-m4-07/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-08",
+      "type": "knowledge-point",
+      "title": "四种预设与 PTC",
+      "url": "/knowledge/points/kp-m4-08/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-09",
+      "type": "knowledge-point",
+      "title": "模型与 Harness 解耦",
+      "url": "/knowledge/points/kp-m4-09/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-10",
+      "type": "knowledge-point",
+      "title": "代码审查与测试",
+      "url": "/knowledge/points/kp-m4-10/",
+      "module_id": "M4",
+      "session_no": 13,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-11",
+      "type": "knowledge-point",
+      "title": "规则文件",
+      "url": "/knowledge/points/kp-m4-11/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-12",
+      "type": "knowledge-point",
+      "title": "Hook 钩子",
+      "url": "/knowledge/points/kp-m4-12/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-13",
+      "type": "knowledge-point",
+      "title": "子代理分工",
+      "url": "/knowledge/points/kp-m4-13/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-14",
+      "type": "knowledge-point",
+      "title": "权限与沙箱",
+      "url": "/knowledge/points/kp-m4-14/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-15",
+      "type": "knowledge-point",
+      "title": "SKILL.md 编写",
+      "url": "/knowledge/points/kp-m4-15/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-16",
+      "type": "knowledge-point",
+      "title": "连接器与 MCP",
+      "url": "/knowledge/points/kp-m4-16/",
+      "module_id": "M4",
+      "session_no": 14,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-17",
+      "type": "knowledge-point",
+      "title": "从想法到应用全流程",
+      "url": "/knowledge/points/kp-m4-17/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-18",
+      "type": "knowledge-point",
+      "title": "数据持久化与云服务",
+      "url": "/knowledge/points/kp-m4-18/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-19",
+      "type": "knowledge-point",
+      "title": "用 Sites 发布上线",
+      "url": "/knowledge/points/kp-m4-19/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-20",
+      "type": "knowledge-point",
+      "title": "Creator 写插件",
+      "url": "/knowledge/points/kp-m4-20/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M4-21",
+      "type": "knowledge-point",
+      "title": "上线验收清单",
+      "url": "/knowledge/points/kp-m4-21/",
+      "module_id": "M4",
+      "session_no": 15,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M5-01",
+      "type": "knowledge-point",
+      "title": "答辩五项评分标准",
+      "url": "/knowledge/points/kp-m5-01/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M5-02",
+      "type": "knowledge-point",
+      "title": "AI Index 2026 前沿数据",
+      "url": "/knowledge/points/kp-m5-02/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M5-03",
+      "type": "knowledge-point",
+      "title": "负责任 AI 与治理",
+      "url": "/knowledge/points/kp-m5-03/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M5-04",
+      "type": "knowledge-point",
+      "title": "就业结构变化实证",
+      "url": "/knowledge/points/kp-m5-04/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "KP-M5-05",
+      "type": "knowledge-point",
+      "title": "个人能力建设路径",
+      "url": "/knowledge/points/kp-m5-05/",
+      "module_id": "M5",
+      "session_no": 16,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-001",
+      "type": "term",
+      "title": "人工智能",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-002",
+      "type": "term",
+      "title": "图灵测试",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-003",
+      "type": "term",
+      "title": "符号主义与连接主义",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-004",
+      "type": "term",
+      "title": "专家系统",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-005",
+      "type": "term",
+      "title": "AI 寒冬",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-006",
+      "type": "term",
+      "title": "机器学习",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-007",
+      "type": "term",
+      "title": "深度学习",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-008",
+      "type": "term",
+      "title": "神经网络",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-08"
+      ]
+    },
+    {
+      "id": "TERM-009",
+      "type": "term",
+      "title": "Transformer",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-09"
+      ]
+    },
+    {
+      "id": "TERM-010",
+      "type": "term",
+      "title": "注意力机制",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-011",
+      "type": "term",
+      "title": "Token 与分词",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-012",
+      "type": "term",
+      "title": "上下文窗口",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-013",
+      "type": "term",
+      "title": "大语言模型",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-014",
+      "type": "term",
+      "title": "预训练",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-10"
+      ]
+    },
+    {
+      "id": "TERM-015",
+      "type": "term",
+      "title": "微调",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-10"
+      ]
+    },
+    {
+      "id": "TERM-016",
+      "type": "term",
+      "title": "参数高效微调",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-017",
+      "type": "term",
+      "title": "强化学习与 RLHF",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-018",
+      "type": "term",
+      "title": "对齐",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-10"
+      ]
+    },
+    {
+      "id": "TERM-019",
+      "type": "term",
+      "title": "缩放定律",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-020",
+      "type": "term",
+      "title": "涌现能力",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-021",
+      "type": "term",
+      "title": "推理模型",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-11"
+      ]
+    },
+    {
+      "id": "TERM-022",
+      "type": "term",
+      "title": "思维链",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-11"
+      ]
+    },
+    {
+      "id": "TERM-023",
+      "type": "term",
+      "title": "幻觉",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-17"
+      ]
+    },
+    {
+      "id": "TERM-024",
+      "type": "term",
+      "title": "温度",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-025",
+      "type": "term",
+      "title": "蒸馏",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-026",
+      "type": "term",
+      "title": "量化",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-027",
+      "type": "term",
+      "title": "混合专家",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-028",
+      "type": "term",
+      "title": "模型商品化",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-029",
+      "type": "term",
+      "title": "生成式 AI",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-030",
+      "type": "term",
+      "title": "扩散模型",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13"
+      ]
+    },
+    {
+      "id": "TERM-031",
+      "type": "term",
+      "title": "GAN",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-13"
+      ]
+    },
+    {
+      "id": "TERM-032",
+      "type": "term",
+      "title": "AIGC",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-033",
+      "type": "term",
+      "title": "多模态",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-14"
+      ]
+    },
+    {
+      "id": "TERM-034",
+      "type": "term",
+      "title": "提示工程",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M1-15"
+      ]
+    },
+    {
+      "id": "TERM-035",
+      "type": "term",
+      "title": "少样本与零样本",
+      "url": null,
+      "module_id": "M1",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-036",
+      "type": "term",
+      "title": "AI 办公助手",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-037",
+      "type": "term",
+      "title": "智能表格",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-07"
+      ]
+    },
+    {
+      "id": "TERM-038",
+      "type": "term",
+      "title": "自然语言转 SQL",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-039",
+      "type": "term",
+      "title": "代码解释器",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-12"
+      ]
+    },
+    {
+      "id": "TERM-040",
+      "type": "term",
+      "title": "数据清洗",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-041",
+      "type": "term",
+      "title": "数据透视表",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-042",
+      "type": "term",
+      "title": "商业智能",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-043",
+      "type": "term",
+      "title": "指标体系",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M2-17"
+      ]
+    },
+    {
+      "id": "TERM-044",
+      "type": "term",
+      "title": "辛普森悖论",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-045",
+      "type": "term",
+      "title": "幸存者偏差",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-046",
+      "type": "term",
+      "title": "相关与因果",
+      "url": null,
+      "module_id": "M2",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-047",
+      "type": "term",
+      "title": "智能体",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-01",
+        "KP-M3-06",
+        "KP-M4-06"
+      ]
+    },
+    {
+      "id": "TERM-048",
+      "type": "term",
+      "title": "ReAct",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-049",
+      "type": "term",
+      "title": "函数调用",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-03"
+      ]
+    },
+    {
+      "id": "TERM-050",
+      "type": "term",
+      "title": "MCP",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-04",
+        "KP-M4-16"
+      ]
+    },
+    {
+      "id": "TERM-051",
+      "type": "term",
+      "title": "A2A",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-052",
+      "type": "term",
+      "title": "AGENTS.md",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-053",
+      "type": "term",
+      "title": "检索增强生成",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-054",
+      "type": "term",
+      "title": "向量与嵌入",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-055",
+      "type": "term",
+      "title": "向量数据库",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-056",
+      "type": "term",
+      "title": "分块",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-057",
+      "type": "term",
+      "title": "重排",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-058",
+      "type": "term",
+      "title": "知识库",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-11"
+      ]
+    },
+    {
+      "id": "TERM-059",
+      "type": "term",
+      "title": "工作流编排",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-07"
+      ]
+    },
+    {
+      "id": "TERM-060",
+      "type": "term",
+      "title": "人机协同",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-061",
+      "type": "term",
+      "title": "多智能体系统",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-062",
+      "type": "term",
+      "title": "AgentOps",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-063",
+      "type": "term",
+      "title": "智能体身份认证",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-064",
+      "type": "term",
+      "title": "智能体洗白",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-065",
+      "type": "term",
+      "title": "低代码智能体平台",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-066",
+      "type": "term",
+      "title": "Harness",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-01",
+        "KP-M4-09"
+      ]
+    },
+    {
+      "id": "TERM-067",
+      "type": "term",
+      "title": "智能体循环",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-068",
+      "type": "term",
+      "title": "上下文工程",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-069",
+      "type": "term",
+      "title": "工具执行与沙箱",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-070",
+      "type": "term",
+      "title": "规则文件",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-11"
+      ]
+    },
+    {
+      "id": "TERM-071",
+      "type": "term",
+      "title": "Hook",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-12"
+      ]
+    },
+    {
+      "id": "TERM-072",
+      "type": "term",
+      "title": "子代理",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-18",
+        "KP-M4-13"
+      ]
+    },
+    {
+      "id": "TERM-073",
+      "type": "term",
+      "title": "权限模型",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-074",
+      "type": "term",
+      "title": "失败处理",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-075",
+      "type": "term",
+      "title": "验证与回归",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-076",
+      "type": "term",
+      "title": "计划模式",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-077",
+      "type": "term",
+      "title": "编程智能体",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-078",
+      "type": "term",
+      "title": "AI 集成开发环境",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-079",
+      "type": "term",
+      "title": "差异审阅",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-080",
+      "type": "term",
+      "title": "SWE-bench",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-081",
+      "type": "term",
+      "title": "破坏性变更风险",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-082",
+      "type": "term",
+      "title": "欧盟 AI 法案",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-083",
+      "type": "term",
+      "title": "人工智能+ 行动",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-084",
+      "type": "term",
+      "title": "AI 治理",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-085",
+      "type": "term",
+      "title": "深度伪造",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-086",
+      "type": "term",
+      "title": "算法偏见",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-087",
+      "type": "term",
+      "title": "数据隐私",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-088",
+      "type": "term",
+      "title": "端侧推理",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-089",
+      "type": "term",
+      "title": "绿色算力",
+      "url": null,
+      "module_id": "M5",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-090",
+      "type": "term",
+      "title": "技能（Skill）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-091",
+      "type": "term",
+      "title": "SKILL.md",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M4-15"
+      ]
+    },
+    {
+      "id": "TERM-092",
+      "type": "term",
+      "title": "book-to-skill",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-10"
+      ]
+    },
+    {
+      "id": "TERM-093",
+      "type": "term",
+      "title": "连接器（Connector）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-094",
+      "type": "term",
+      "title": "专家与专家团",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": [
+        "KP-M3-19"
+      ]
+    },
+    {
+      "id": "TERM-095",
+      "type": "term",
+      "title": "资料库（Library）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-096",
+      "type": "term",
+      "title": "自动化任务（Automation）",
+      "url": null,
+      "module_id": "M3",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-097",
+      "type": "term",
+      "title": "会话日志（Trajectory）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-098",
+      "type": "term",
+      "title": "插件内核（Cordis）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-099",
+      "type": "term",
+      "title": "运行预设（Preset）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-100",
+      "type": "term",
+      "title": "程序化工具调用（PTC）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-101",
+      "type": "term",
+      "title": "脚手架开销（Scaffolding Cost）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-102",
+      "type": "term",
+      "title": "插件生态（Plugin）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "TERM-103",
+      "type": "term",
+      "title": "应用发布（Publish）",
+      "url": null,
+      "module_id": "M4",
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-01",
+      "type": "case",
+      "title": "Klarna：AI 客服的完整弧线，从「替代 700 人」到重新招人",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-02",
+      "type": "case",
+      "title": "澳大利亚联邦银行：宣布裁员 45 人，数周后撤回并道歉",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-03",
+      "type": "case",
+      "title": "工具不难，口径与流程才难：三条企业级证据",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-04",
+      "type": "case",
+      "title": "WorkBuddy：一个可以照着做的全场景 AI 工作台",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-05",
+      "type": "case",
+      "title": "DeepSeek Harness：开源智能体运行时的能力与成本",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-06",
+      "type": "case",
+      "title": "斯坦福 AI Index 2026：正面证据与反面证据并置",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-07",
+      "type": "case",
+      "title": "Gartner：集成在加速，项目取消也在加速",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "CASE-08",
+      "type": "case",
+      "title": "Gartner：集成在加速，项目取消也在加速",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S01",
+      "type": "asset",
+      "title": "课程门户首页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S02",
+      "type": "asset",
+      "title": "课程大纲页（五模块 16 次课）",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S03",
+      "type": "asset",
+      "title": "知识模块与知识体系页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S04",
+      "type": "asset",
+      "title": "课件中心（16 套课件卡片）",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S05",
+      "type": "asset",
+      "title": "案例展示页（可核查真实案例）",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S06",
+      "type": "asset",
+      "title": "技术趋势页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S07",
+      "type": "asset",
+      "title": "16 次课练习资源下载页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S08",
+      "type": "asset",
+      "title": "独立练习资源站（16 课任务详情）",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S09",
+      "type": "asset",
+      "title": "拓展资源页（工具清单与数据来源）",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S10",
+      "type": "asset",
+      "title": "术语词典页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S11",
+      "type": "asset",
+      "title": "第 8 次课课件播放页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S12",
+      "type": "asset",
+      "title": "第 12 次课课件播放页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S13",
+      "type": "asset",
+      "title": "WorkBuddy 官方产品首页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S14",
+      "type": "asset",
+      "title": "WorkBuddy 官方文档 · 概览",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S15",
+      "type": "asset",
+      "title": "MCP 官方站点首页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S16",
+      "type": "asset",
+      "title": "MCP 2026-07-28 规范页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S17",
+      "type": "asset",
+      "title": "MCP 扩展（Extensions）总览",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S18",
+      "type": "asset",
+      "title": "Stanford HAI《2026 AI Index》报告主页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S19",
+      "type": "asset",
+      "title": "AI Index 2026 · 技术性能章",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S20",
+      "type": "asset",
+      "title": "AI Index 2026 · 负责任 AI 章",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S21",
+      "type": "asset",
+      "title": "Stanford AI Index 项目主页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S22",
+      "type": "asset",
+      "title": "Trae 官方产品首页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S23",
+      "type": "asset",
+      "title": "DeepSeek 官方站点首页",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    },
+    {
+      "id": "SHOT-S24",
+      "type": "asset",
+      "title": "AI Index 2026 · 教育章",
+      "url": null,
+      "module_id": null,
+      "session_no": null,
+      "tags": [],
+      "kp_ids": []
+    }
+  ]
+}

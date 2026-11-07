@@ -1,0 +1,178 @@
+[
+  {
+    "no": 1,
+    "week_no": 1,
+    "date": null,
+    "weekday": null,
+    "session_id": "S01",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 1 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 2,
+    "week_no": 2,
+    "date": null,
+    "weekday": null,
+    "session_id": "S02",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 2 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 3,
+    "week_no": 3,
+    "date": null,
+    "weekday": null,
+    "session_id": "S03",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 3 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 4,
+    "week_no": 4,
+    "date": null,
+    "weekday": null,
+    "session_id": "S04",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 4 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 5,
+    "week_no": 5,
+    "date": null,
+    "weekday": null,
+    "session_id": "S05",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 5 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 6,
+    "week_no": 6,
+    "date": null,
+    "weekday": null,
+    "session_id": "S06",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 6 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 7,
+    "week_no": 7,
+    "date": null,
+    "weekday": null,
+    "session_id": "S07",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 7 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 8,
+    "week_no": 8,
+    "date": null,
+    "weekday": null,
+    "session_id": "S08",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 8 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 9,
+    "week_no": 9,
+    "date": null,
+    "weekday": null,
+    "session_id": "S09",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 9 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 10,
+    "week_no": 10,
+    "date": null,
+    "weekday": null,
+    "session_id": "S10",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 10 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 11,
+    "week_no": 11,
+    "date": null,
+    "weekday": null,
+    "session_id": "S11",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 11 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 12,
+    "week_no": 12,
+    "date": null,
+    "weekday": null,
+    "session_id": "S12",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 12 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 13,
+    "week_no": 13,
+    "date": null,
+    "weekday": null,
+    "session_id": "S13",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 13 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 14,
+    "week_no": 14,
+    "date": null,
+    "weekday": null,
+    "session_id": "S14",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 14 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 15,
+    "week_no": 15,
+    "date": null,
+    "weekday": null,
+    "session_id": "S15",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 15 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  },
+  {
+    "no": 16,
+    "week_no": 16,
+    "date": null,
+    "weekday": null,
+    "session_id": "S16",
+    "hours": 2,
+    "status": "待补充",
+    "date_rule": "第 16 教学周；具体日期/节次/地点由教务校历注入",
+    "source": null
+  }
+]

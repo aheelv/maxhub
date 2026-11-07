@@ -1,0 +1,3673 @@
+{
+  "course_id": "AI-TOOLS-APPLY",
+  "nodes": 371,
+  "edges": 605,
+  "predicates": [
+    "aligned_with",
+    "belongs_to",
+    "covers",
+    "defines",
+    "next",
+    "related_to"
+  ],
+  "edges_note": "教学顺序由课件课次推导；知识点语义前置/后置关系标记为待补充，需教师核定。术语互链中可按标题解析者已映射为稳定 TERM-nnn ID；不可解析者以 ext_ref=true + status=待补充 显式标注，不伪装成内容实例。",
+  "external_references": {
+    "count": 8,
+    "policy": "仅 related_to 允许 TERM: 形式的外部引用；必须同时标注 ext_ref=true 与 status=待补充。此类边不进入公开导航、不进入知识图谱导出，由教师补齐术语定义后再解析为稳定 ID。",
+    "unresolved_terms": [
+      "AI IDE",
+      "Token",
+      "插件生态",
+      "程序化工具调用",
+      "运行预设"
+    ]
+  },
+  "items": [
+    {
+      "from": "M1",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "M2",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "M3",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "M4",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "M5",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "TXT-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-01",
+      "pred": "aligned_with",
+      "to": "S01",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-01",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-02",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-03",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-04",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-05",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "covers",
+      "to": "KP-M1-06",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "TXT-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-02",
+      "pred": "aligned_with",
+      "to": "S02",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-07",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-08",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-09",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-10",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-11",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "covers",
+      "to": "KP-M1-12",
+      "note": ""
+    },
+    {
+      "from": "S01",
+      "pred": "next",
+      "to": "S02",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "TXT-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-03",
+      "pred": "aligned_with",
+      "to": "S03",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-13",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-14",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-15",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-16",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-17",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "covers",
+      "to": "KP-M1-18",
+      "note": ""
+    },
+    {
+      "from": "S02",
+      "pred": "next",
+      "to": "S03",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "TXT-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-04",
+      "pred": "aligned_with",
+      "to": "S04",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-01",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-02",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-03",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-04",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-05",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "covers",
+      "to": "KP-M2-06",
+      "note": ""
+    },
+    {
+      "from": "S03",
+      "pred": "next",
+      "to": "S04",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "TXT-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-05",
+      "pred": "aligned_with",
+      "to": "S05",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S05",
+      "pred": "covers",
+      "to": "KP-M2-07",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "covers",
+      "to": "KP-M2-08",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "covers",
+      "to": "KP-M2-09",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "covers",
+      "to": "KP-M2-10",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "covers",
+      "to": "KP-M2-11",
+      "note": ""
+    },
+    {
+      "from": "S04",
+      "pred": "next",
+      "to": "S05",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "TXT-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-06",
+      "pred": "aligned_with",
+      "to": "S06",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S06",
+      "pred": "covers",
+      "to": "KP-M2-12",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "covers",
+      "to": "KP-M2-13",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "covers",
+      "to": "KP-M2-14",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "covers",
+      "to": "KP-M2-15",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "covers",
+      "to": "KP-M2-16",
+      "note": ""
+    },
+    {
+      "from": "S05",
+      "pred": "next",
+      "to": "S06",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "TXT-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-07",
+      "pred": "aligned_with",
+      "to": "S07",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S07",
+      "pred": "covers",
+      "to": "KP-M2-17",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "covers",
+      "to": "KP-M2-18",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "covers",
+      "to": "KP-M2-19",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "covers",
+      "to": "KP-M2-20",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "covers",
+      "to": "KP-M2-21",
+      "note": ""
+    },
+    {
+      "from": "S06",
+      "pred": "next",
+      "to": "S07",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "TXT-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-08",
+      "pred": "aligned_with",
+      "to": "S08",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-01",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-02",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-03",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-04",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-05",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "covers",
+      "to": "KP-M3-06",
+      "note": ""
+    },
+    {
+      "from": "S07",
+      "pred": "next",
+      "to": "S08",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "TXT-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-09",
+      "pred": "aligned_with",
+      "to": "S09",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S09",
+      "pred": "covers",
+      "to": "KP-M3-07",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "covers",
+      "to": "KP-M3-08",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "covers",
+      "to": "KP-M3-09",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "covers",
+      "to": "KP-M3-10",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "covers",
+      "to": "KP-M3-11",
+      "note": ""
+    },
+    {
+      "from": "S08",
+      "pred": "next",
+      "to": "S09",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "TXT-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-10",
+      "pred": "aligned_with",
+      "to": "S10",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S10",
+      "pred": "covers",
+      "to": "KP-M3-12",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "covers",
+      "to": "KP-M3-13",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "covers",
+      "to": "KP-M3-14",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "covers",
+      "to": "KP-M3-15",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "covers",
+      "to": "KP-M3-16",
+      "note": ""
+    },
+    {
+      "from": "S09",
+      "pred": "next",
+      "to": "S10",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "TXT-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-11",
+      "pred": "aligned_with",
+      "to": "S11",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S11",
+      "pred": "covers",
+      "to": "KP-M3-17",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "covers",
+      "to": "KP-M3-18",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "covers",
+      "to": "KP-M3-19",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "covers",
+      "to": "KP-M3-20",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "covers",
+      "to": "KP-M3-21",
+      "note": ""
+    },
+    {
+      "from": "S10",
+      "pred": "next",
+      "to": "S11",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "TXT-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-12",
+      "pred": "aligned_with",
+      "to": "S12",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S12",
+      "pred": "covers",
+      "to": "KP-M4-01",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "covers",
+      "to": "KP-M4-02",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "covers",
+      "to": "KP-M4-03",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "covers",
+      "to": "KP-M4-04",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "covers",
+      "to": "KP-M4-05",
+      "note": ""
+    },
+    {
+      "from": "S11",
+      "pred": "next",
+      "to": "S12",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "TXT-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-13",
+      "pred": "aligned_with",
+      "to": "S13",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S13",
+      "pred": "covers",
+      "to": "KP-M4-06",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "covers",
+      "to": "KP-M4-07",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "covers",
+      "to": "KP-M4-08",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "covers",
+      "to": "KP-M4-09",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "covers",
+      "to": "KP-M4-10",
+      "note": ""
+    },
+    {
+      "from": "S12",
+      "pred": "next",
+      "to": "S13",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "TXT-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-14",
+      "pred": "aligned_with",
+      "to": "S14",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-11",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-12",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-13",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-14",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-15",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "covers",
+      "to": "KP-M4-16",
+      "note": ""
+    },
+    {
+      "from": "S13",
+      "pred": "next",
+      "to": "S14",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "TXT-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-15",
+      "pred": "aligned_with",
+      "to": "S15",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S15",
+      "pred": "covers",
+      "to": "KP-M4-17",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "covers",
+      "to": "KP-M4-18",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "covers",
+      "to": "KP-M4-19",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "covers",
+      "to": "KP-M4-20",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "covers",
+      "to": "KP-M4-21",
+      "note": ""
+    },
+    {
+      "from": "S14",
+      "pred": "next",
+      "to": "S15",
+      "note": ""
+    },
+    {
+      "from": "S16",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "TXT-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "PLAN-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "SYL-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "CAL-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "DECK-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "EX-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "KIT-16",
+      "pred": "aligned_with",
+      "to": "S16",
+      "note": "同一课次的内容对齐"
+    },
+    {
+      "from": "S16",
+      "pred": "covers",
+      "to": "KP-M5-01",
+      "note": ""
+    },
+    {
+      "from": "S16",
+      "pred": "covers",
+      "to": "KP-M5-02",
+      "note": ""
+    },
+    {
+      "from": "S16",
+      "pred": "covers",
+      "to": "KP-M5-03",
+      "note": ""
+    },
+    {
+      "from": "S16",
+      "pred": "covers",
+      "to": "KP-M5-04",
+      "note": ""
+    },
+    {
+      "from": "S16",
+      "pred": "covers",
+      "to": "KP-M5-05",
+      "note": ""
+    },
+    {
+      "from": "S15",
+      "pred": "next",
+      "to": "S16",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-01",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-02",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-03",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-04",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-05",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-06",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-07",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-08",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-09",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-10",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-11",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-12",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-13",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-14",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-15",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-16",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-17",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M1-18",
+      "pred": "belongs_to",
+      "to": "M1",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-01",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-02",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-03",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-04",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-05",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-06",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-07",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-08",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-09",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-10",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-11",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-12",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-13",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-14",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-15",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-16",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-17",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-18",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-19",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-20",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M2-21",
+      "pred": "belongs_to",
+      "to": "M2",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-01",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-02",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-03",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-04",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-05",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-06",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-07",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-08",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-09",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-10",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-11",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-12",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-13",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-14",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-15",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-16",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-17",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-18",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-19",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-20",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M3-21",
+      "pred": "belongs_to",
+      "to": "M3",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-01",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-02",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-03",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-04",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-05",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-06",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-07",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-08",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-09",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-10",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-11",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-12",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-13",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-14",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-15",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-16",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-17",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-18",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-19",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-20",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M4-21",
+      "pred": "belongs_to",
+      "to": "M4",
+      "note": ""
+    },
+    {
+      "from": "KP-M5-01",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "KP-M5-02",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "KP-M5-03",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "KP-M5-04",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "KP-M5-05",
+      "pred": "belongs_to",
+      "to": "M5",
+      "note": ""
+    },
+    {
+      "from": "TERM-001",
+      "pred": "related_to",
+      "to": "TERM-006",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-001",
+      "pred": "related_to",
+      "to": "TERM-007",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-001",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-002",
+      "pred": "related_to",
+      "to": "TERM-001",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-003",
+      "pred": "related_to",
+      "to": "TERM-004",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-003",
+      "pred": "related_to",
+      "to": "TERM-008",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-004",
+      "pred": "related_to",
+      "to": "TERM-003",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-004",
+      "pred": "related_to",
+      "to": "TERM-005",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-005",
+      "pred": "related_to",
+      "to": "TERM-004",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-006",
+      "pred": "related_to",
+      "to": "TERM-007",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-006",
+      "pred": "related_to",
+      "to": "TERM-014",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-006",
+      "pred": "related_to",
+      "to": "TERM-017",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-007",
+      "pred": "related_to",
+      "to": "TERM-008",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-007",
+      "pred": "related_to",
+      "to": "TERM-009",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-008",
+      "pred": "related_to",
+      "to": "TERM-007",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-008",
+      "pred": "related_to",
+      "to": "TERM-009",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-008",
+      "pred": "defines",
+      "to": "KP-M1-08",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-009",
+      "pred": "related_to",
+      "to": "TERM-010",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-009",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-009",
+      "pred": "related_to",
+      "to": "TERM:Token",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-009",
+      "pred": "defines",
+      "to": "KP-M1-09",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-010",
+      "pred": "related_to",
+      "to": "TERM-009",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-011",
+      "pred": "related_to",
+      "to": "TERM-012",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-011",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-012",
+      "pred": "related_to",
+      "to": "TERM-011",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-012",
+      "pred": "related_to",
+      "to": "TERM-068",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-012",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-013",
+      "pred": "related_to",
+      "to": "TERM-009",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-013",
+      "pred": "related_to",
+      "to": "TERM-014",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-013",
+      "pred": "related_to",
+      "to": "TERM-023",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-013",
+      "pred": "related_to",
+      "to": "TERM-021",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-014",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-014",
+      "pred": "related_to",
+      "to": "TERM-015",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-014",
+      "pred": "related_to",
+      "to": "TERM-019",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-014",
+      "pred": "defines",
+      "to": "KP-M1-10",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-015",
+      "pred": "related_to",
+      "to": "TERM-014",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-015",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-015",
+      "pred": "related_to",
+      "to": "TERM-016",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-015",
+      "pred": "defines",
+      "to": "KP-M1-10",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-016",
+      "pred": "related_to",
+      "to": "TERM-015",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-016",
+      "pred": "related_to",
+      "to": "TERM-026",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-017",
+      "pred": "related_to",
+      "to": "TERM-018",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-017",
+      "pred": "related_to",
+      "to": "TERM-021",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-018",
+      "pred": "related_to",
+      "to": "TERM-017",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-018",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-018",
+      "pred": "defines",
+      "to": "KP-M1-10",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-019",
+      "pred": "related_to",
+      "to": "TERM-014",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-019",
+      "pred": "related_to",
+      "to": "TERM-020",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-020",
+      "pred": "related_to",
+      "to": "TERM-019",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-020",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-021",
+      "pred": "related_to",
+      "to": "TERM-022",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-021",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-021",
+      "pred": "related_to",
+      "to": "TERM-019",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-021",
+      "pred": "defines",
+      "to": "KP-M1-11",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-022",
+      "pred": "related_to",
+      "to": "TERM-034",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-022",
+      "pred": "related_to",
+      "to": "TERM-021",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-022",
+      "pred": "defines",
+      "to": "KP-M1-11",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-023",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-023",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-023",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-023",
+      "pred": "defines",
+      "to": "KP-M1-17",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-024",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-024",
+      "pred": "related_to",
+      "to": "TERM-034",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-025",
+      "pred": "related_to",
+      "to": "TERM-026",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-025",
+      "pred": "related_to",
+      "to": "TERM-088",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-026",
+      "pred": "related_to",
+      "to": "TERM-025",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-026",
+      "pred": "related_to",
+      "to": "TERM-088",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-026",
+      "pred": "related_to",
+      "to": "TERM-028",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-027",
+      "pred": "related_to",
+      "to": "TERM-019",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-027",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-028",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-028",
+      "pred": "related_to",
+      "to": "TERM-019",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-029",
+      "pred": "related_to",
+      "to": "TERM-033",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-029",
+      "pred": "related_to",
+      "to": "TERM-030",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-029",
+      "pred": "related_to",
+      "to": "TERM-032",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-030",
+      "pred": "related_to",
+      "to": "TERM-029",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-030",
+      "pred": "related_to",
+      "to": "TERM-031",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-030",
+      "pred": "defines",
+      "to": "KP-M1-13",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-031",
+      "pred": "related_to",
+      "to": "TERM-030",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-031",
+      "pred": "related_to",
+      "to": "TERM-029",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-031",
+      "pred": "defines",
+      "to": "KP-M1-13",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-032",
+      "pred": "related_to",
+      "to": "TERM-029",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-032",
+      "pred": "related_to",
+      "to": "TERM-085",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-033",
+      "pred": "related_to",
+      "to": "TERM-029",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-033",
+      "pred": "related_to",
+      "to": "TERM-013",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-033",
+      "pred": "defines",
+      "to": "KP-M1-14",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-034",
+      "pred": "related_to",
+      "to": "TERM-068",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-034",
+      "pred": "related_to",
+      "to": "TERM-022",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-034",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-034",
+      "pred": "defines",
+      "to": "KP-M1-15",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-035",
+      "pred": "related_to",
+      "to": "TERM-034",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-036",
+      "pred": "related_to",
+      "to": "TERM-037",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-036",
+      "pred": "related_to",
+      "to": "TERM-039",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-037",
+      "pred": "related_to",
+      "to": "TERM-038",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-037",
+      "pred": "related_to",
+      "to": "TERM-040",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-037",
+      "pred": "related_to",
+      "to": "TERM-036",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-037",
+      "pred": "defines",
+      "to": "KP-M2-07",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-038",
+      "pred": "related_to",
+      "to": "TERM-042",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-038",
+      "pred": "related_to",
+      "to": "TERM-043",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-039",
+      "pred": "related_to",
+      "to": "TERM-038",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-039",
+      "pred": "related_to",
+      "to": "TERM-040",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-039",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-039",
+      "pred": "defines",
+      "to": "KP-M2-12",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-040",
+      "pred": "related_to",
+      "to": "TERM-037",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-040",
+      "pred": "related_to",
+      "to": "TERM-041",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-041",
+      "pred": "related_to",
+      "to": "TERM-040",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-041",
+      "pred": "related_to",
+      "to": "TERM-043",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-042",
+      "pred": "related_to",
+      "to": "TERM-038",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-042",
+      "pred": "related_to",
+      "to": "TERM-043",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-043",
+      "pred": "related_to",
+      "to": "TERM-042",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-043",
+      "pred": "related_to",
+      "to": "TERM-044",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-043",
+      "pred": "defines",
+      "to": "KP-M2-17",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-044",
+      "pred": "related_to",
+      "to": "TERM-043",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-044",
+      "pred": "related_to",
+      "to": "TERM-046",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-045",
+      "pred": "related_to",
+      "to": "TERM-044",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-046",
+      "pred": "related_to",
+      "to": "TERM-044",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-046",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "related_to",
+      "to": "TERM-048",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "related_to",
+      "to": "TERM-049",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "related_to",
+      "to": "TERM-067",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "defines",
+      "to": "KP-M3-01",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "defines",
+      "to": "KP-M3-06",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-047",
+      "pred": "defines",
+      "to": "KP-M4-06",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-048",
+      "pred": "related_to",
+      "to": "TERM-047",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-048",
+      "pred": "related_to",
+      "to": "TERM-049",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-048",
+      "pred": "related_to",
+      "to": "TERM-067",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-049",
+      "pred": "related_to",
+      "to": "TERM-048",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-049",
+      "pred": "related_to",
+      "to": "TERM-050",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-049",
+      "pred": "related_to",
+      "to": "TERM-069",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-049",
+      "pred": "defines",
+      "to": "KP-M3-03",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-050",
+      "pred": "related_to",
+      "to": "TERM-049",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-050",
+      "pred": "related_to",
+      "to": "TERM-051",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-050",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-050",
+      "pred": "defines",
+      "to": "KP-M3-04",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-050",
+      "pred": "defines",
+      "to": "KP-M4-16",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-051",
+      "pred": "related_to",
+      "to": "TERM-050",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-051",
+      "pred": "related_to",
+      "to": "TERM-061",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-052",
+      "pred": "related_to",
+      "to": "TERM-070",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-052",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-053",
+      "pred": "related_to",
+      "to": "TERM-054",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-053",
+      "pred": "related_to",
+      "to": "TERM-056",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-053",
+      "pred": "related_to",
+      "to": "TERM-057",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-053",
+      "pred": "related_to",
+      "to": "TERM-058",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-054",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-054",
+      "pred": "related_to",
+      "to": "TERM-055",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-055",
+      "pred": "related_to",
+      "to": "TERM-054",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-055",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-056",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-056",
+      "pred": "related_to",
+      "to": "TERM-057",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-057",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-057",
+      "pred": "related_to",
+      "to": "TERM-056",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-058",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-058",
+      "pred": "related_to",
+      "to": "TERM-055",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-058",
+      "pred": "defines",
+      "to": "KP-M3-11",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-059",
+      "pred": "related_to",
+      "to": "TERM-047",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-059",
+      "pred": "related_to",
+      "to": "TERM-060",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-059",
+      "pred": "defines",
+      "to": "KP-M3-07",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-060",
+      "pred": "related_to",
+      "to": "TERM-059",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-060",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-061",
+      "pred": "related_to",
+      "to": "TERM-051",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-061",
+      "pred": "related_to",
+      "to": "TERM-062",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-061",
+      "pred": "related_to",
+      "to": "TERM-072",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-062",
+      "pred": "related_to",
+      "to": "TERM-061",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-062",
+      "pred": "related_to",
+      "to": "TERM-063",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-062",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-063",
+      "pred": "related_to",
+      "to": "TERM-062",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-063",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-063",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-064",
+      "pred": "related_to",
+      "to": "TERM-047",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-065",
+      "pred": "related_to",
+      "to": "TERM-059",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-065",
+      "pred": "related_to",
+      "to": "TERM-058",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "related_to",
+      "to": "TERM-067",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "related_to",
+      "to": "TERM-068",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "related_to",
+      "to": "TERM-070",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "related_to",
+      "to": "TERM-074",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "defines",
+      "to": "KP-M4-01",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-066",
+      "pred": "defines",
+      "to": "KP-M4-09",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-067",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-067",
+      "pred": "related_to",
+      "to": "TERM-048",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-068",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-068",
+      "pred": "related_to",
+      "to": "TERM-012",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-068",
+      "pred": "related_to",
+      "to": "TERM-034",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-069",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-069",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-069",
+      "pred": "related_to",
+      "to": "TERM-049",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-070",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-070",
+      "pred": "related_to",
+      "to": "TERM-052",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-070",
+      "pred": "related_to",
+      "to": "TERM-071",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-070",
+      "pred": "defines",
+      "to": "KP-M4-11",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-071",
+      "pred": "related_to",
+      "to": "TERM-070",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-071",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-071",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-071",
+      "pred": "defines",
+      "to": "KP-M4-12",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-072",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-072",
+      "pred": "related_to",
+      "to": "TERM-061",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-072",
+      "pred": "defines",
+      "to": "KP-M3-18",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-072",
+      "pred": "defines",
+      "to": "KP-M4-13",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-073",
+      "pred": "related_to",
+      "to": "TERM-069",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-073",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-073",
+      "pred": "related_to",
+      "to": "TERM-063",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-074",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-074",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-075",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-075",
+      "pred": "related_to",
+      "to": "TERM-074",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-075",
+      "pred": "related_to",
+      "to": "TERM-062",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-076",
+      "pred": "related_to",
+      "to": "TERM:AI IDE",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-076",
+      "pred": "related_to",
+      "to": "TERM-077",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-077",
+      "pred": "related_to",
+      "to": "TERM:AI IDE",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-077",
+      "pred": "related_to",
+      "to": "TERM-076",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-077",
+      "pred": "related_to",
+      "to": "TERM-081",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-078",
+      "pred": "related_to",
+      "to": "TERM-077",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-078",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-078",
+      "pred": "related_to",
+      "to": "TERM-079",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-079",
+      "pred": "related_to",
+      "to": "TERM:AI IDE",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-079",
+      "pred": "related_to",
+      "to": "TERM-076",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-080",
+      "pred": "related_to",
+      "to": "TERM-077",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-081",
+      "pred": "related_to",
+      "to": "TERM-069",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-081",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-081",
+      "pred": "related_to",
+      "to": "TERM-075",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-082",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-082",
+      "pred": "related_to",
+      "to": "TERM-085",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-083",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-084",
+      "pred": "related_to",
+      "to": "TERM-082",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-084",
+      "pred": "related_to",
+      "to": "TERM-083",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-084",
+      "pred": "related_to",
+      "to": "TERM-087",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-085",
+      "pred": "related_to",
+      "to": "TERM-082",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-085",
+      "pred": "related_to",
+      "to": "TERM-032",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-086",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-086",
+      "pred": "related_to",
+      "to": "TERM-018",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-087",
+      "pred": "related_to",
+      "to": "TERM-084",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-087",
+      "pred": "related_to",
+      "to": "TERM-088",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-088",
+      "pred": "related_to",
+      "to": "TERM-026",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-088",
+      "pred": "related_to",
+      "to": "TERM-025",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-088",
+      "pred": "related_to",
+      "to": "TERM-087",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-089",
+      "pred": "related_to",
+      "to": "TERM-088",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-090",
+      "pred": "related_to",
+      "to": "TERM-091",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-090",
+      "pred": "related_to",
+      "to": "TERM-092",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-090",
+      "pred": "related_to",
+      "to": "TERM-068",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-091",
+      "pred": "related_to",
+      "to": "TERM-090",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-091",
+      "pred": "related_to",
+      "to": "TERM-070",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-091",
+      "pred": "defines",
+      "to": "KP-M4-15",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-092",
+      "pred": "related_to",
+      "to": "TERM-090",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-092",
+      "pred": "related_to",
+      "to": "TERM-058",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-092",
+      "pred": "related_to",
+      "to": "TERM-091",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-092",
+      "pred": "defines",
+      "to": "KP-M3-10",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-093",
+      "pred": "related_to",
+      "to": "TERM-050",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-093",
+      "pred": "related_to",
+      "to": "TERM-090",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-093",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-094",
+      "pred": "related_to",
+      "to": "TERM-061",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-094",
+      "pred": "related_to",
+      "to": "TERM-090",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-094",
+      "pred": "defines",
+      "to": "KP-M3-19",
+      "note": "按名称包含关系自动匹配，需教师复核"
+    },
+    {
+      "from": "TERM-095",
+      "pred": "related_to",
+      "to": "TERM-058",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-095",
+      "pred": "related_to",
+      "to": "TERM-053",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-095",
+      "pred": "related_to",
+      "to": "TERM-093",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-096",
+      "pred": "related_to",
+      "to": "TERM-059",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-096",
+      "pred": "related_to",
+      "to": "TERM-047",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-097",
+      "pred": "related_to",
+      "to": "TERM-062",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-097",
+      "pred": "related_to",
+      "to": "TERM-067",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-097",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-098",
+      "pred": "related_to",
+      "to": "TERM:插件生态",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-098",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-098",
+      "pred": "related_to",
+      "to": "TERM:运行预设",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-099",
+      "pred": "related_to",
+      "to": "TERM-098",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-099",
+      "pred": "related_to",
+      "to": "TERM:程序化工具调用",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-099",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-100",
+      "pred": "related_to",
+      "to": "TERM:运行预设",
+      "note": "待补充：原 rel 指向词典中未定义的术语；外部引用，端点不解析为内容实例",
+      "ext_ref": true,
+      "status": "待补充"
+    },
+    {
+      "from": "TERM-100",
+      "pred": "related_to",
+      "to": "TERM-069",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-100",
+      "pred": "related_to",
+      "to": "TERM-073",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-101",
+      "pred": "related_to",
+      "to": "TERM-068",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-101",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-101",
+      "pred": "related_to",
+      "to": "TERM-012",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-102",
+      "pred": "related_to",
+      "to": "TERM-098",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-102",
+      "pred": "related_to",
+      "to": "TERM-069",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-102",
+      "pred": "related_to",
+      "to": "TERM-081",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-103",
+      "pred": "related_to",
+      "to": "TERM-066",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-103",
+      "pred": "related_to",
+      "to": "TERM-078",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "TERM-103",
+      "pred": "related_to",
+      "to": "TERM-087",
+      "note": "术语互链（原 rel 字段，已按术语标题解析为稳定 ID）"
+    },
+    {
+      "from": "CASE-01",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-02",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-03",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-04",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-05",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-06",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-07",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    },
+    {
+      "from": "CASE-08",
+      "pred": "belongs_to",
+      "to": "COURSE-ROOT",
+      "note": ""
+    }
+  ]
+}

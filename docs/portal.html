@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>个人中心 · 《人工智能工具应用实践》</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-requires-auth>
+<div id="site-header"></div>
+
+<section class="section" style="padding-top:36px">
+  <div class="container">
+    <div class="dash-head reveal">
+      <span class="avatar" id="dashAvatar">U</span>
+      <div style="flex:1">
+        <h2 id="dashName">加载中…</h2>
+        <p id="dashMeta">—</p>
+      </div>
+      <div id="dashRole"></div>
+    </div>
+
+    <!-- ============ 学生视图 ============ -->
+    <div id="studentView" class="hidden">
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab active" data-tab="intent">选课意向</button>
+          <button class="tab" data-tab="feedback">学习反馈</button>
+          <button class="tab" data-tab="records">我的记录</button>
+          <button class="tab" data-tab="perm">权限</button>
+        </div>
+
+        <!-- 选课意向 -->
+        <div class="tab-panel active" data-panel="intent">
+          <div class="grid grid-2" style="align-items:start">
+            <div class="card">
+              <h3>提交 / 更新选课意向</h3>
+              <p class="small muted">同一账号重复提交将更新原有记录。</p>
+              <form id="intentForm">
+                <div class="form-row"><label>专业</label>
+                  <select class="input" name="major">
+                    <option>大数据管理与应用</option><option>工商管理</option><option>市场营销</option>
+                    <option>会计学</option><option>财务管理</option><option>物流管理</option>
+                    <option>信息管理与信息系统</option><option>其他</option>
+                  </select></div>
+                <div class="form-row"><label>选课意向</label>
+                  <select class="input" name="intent"><option>确定选修</option><option>考虑中</option><option>暂不选修</option></select></div>
+                <div class="form-row"><label>备注（可选）</label>
+                  <textarea class="input" name="note" placeholder="例如：希望多讲数据分析案例 / 已有编程基础 等"></textarea></div>
+                <button class="btn btn-primary btn-block" type="submit">提交选课意向</button>
+              </form>
+            </div>
+            <div class="card" style="background:var(--surface-2)">
+              <h3>我的意向记录</h3>
+              <div id="myIntent"><div class="empty"><div class="e-ico"></div>暂未提交</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 学习反馈 -->
+        <div class="tab-panel" data-panel="feedback">
+          <div class="grid grid-2" style="align-items:start">
+            <div class="card">
+              <h3>填写学习反馈</h3>
+              <form id="fbForm">
+                <div class="form-row"><label>整体评价</label>
+                  <div class="rating" id="rating">
+                    <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button>
+                    <button type="button" data-v="3">★</button><button type="button" data-v="4">★</button>
+                    <button type="button" data-v="5">★</button>
+                  </div>
+                  <input type="hidden" name="rating" id="ratingVal">
+                </div>
+                <div class="form-row"><label>关注方面（可多选）</label>
+                  <div class="check-chips" id="tags">
+                    <label><input type="checkbox" value="课程内容"><span>课程内容</span></label>
+                    <label><input type="checkbox" value="讲授方式"><span>讲授方式</span></label>
+                    <label><input type="checkbox" value="实践环节"><span>实践环节</span></label>
+                    <label><input type="checkbox" value="难度节奏"><span>难度节奏</span></label>
+                    <label><input type="checkbox" value="作业量"><span>作业量</span></label>
+                    <label><input type="checkbox" value="工具与环境"><span>工具与环境</span></label>
+                  </div>
+                </div>
+                <div class="form-row"><label>反馈内容</label>
+                  <textarea class="input" name="content" placeholder="例如：希望增加 Harness 实操时间；某个案例很有启发…" required></textarea></div>
+                <button class="btn btn-primary btn-block" type="submit">提交反馈</button>
+              </form>
+            </div>
+            <div class="card" style="background:var(--surface-2)">
+              <h3>我的反馈记录</h3>
+              <div id="myFeedback"><div class="empty"><div class="e-ico"></div>暂未提交</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 我的记录 -->
+        <div class="tab-panel" data-panel="records">
+          <div class="card">
+            <h3>提交记录总览</h3>
+            <div class="grid grid-3 mb2">
+              <div class="stat-card"><div class="stat-val" id="recFb">0</div><div class="stat-label">已提交反馈</div></div>
+              <div class="stat-card"><div class="stat-val" id="recIntent">—</div><div class="stat-label">当前选课意向</div></div>
+              <div class="stat-card"><div class="stat-val" id="recAvg">—</div><div class="stat-label">我的平均评分</div></div>
+            </div>
+            <p class="small muted mb0">提示：反馈与意向均可重复提交，系统会保留全部反馈并更新最新意向。</p>
+          </div>
+        </div>
+
+        <!-- 权限 -->
+        <div class="tab-panel" data-panel="perm">
+          <div class="card" style="max-width:620px">
+            <h3>教师权限激活</h3>
+            <p class="small muted">如果你是课程负责人或助教，请输入教师邀请码，将当前账号升级为教师管理员权限。</p>
+            <form id="claimForm">
+              <div class="form-row"><label>教师邀请码</label><input class="input" name="code" placeholder="请输入邀请码"></div>
+              <button class="btn btn-primary" type="submit">激活教师权限</button>
+            </form>
+            <div class="alert alert-err" id="claimErr"></div>
+            <div class="alert alert-ok" id="claimOk"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 教师视图 ============ -->
+    <div id="teacherView" class="hidden">
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab active" data-tab="manage">课程内容管理</button>
+          <button class="tab" data-tab="stats">反馈与统计</button>
+          <button class="tab" data-tab="roster">选课名单</button>
+        </div>
+
+        <!-- 内容管理 -->
+        <div class="tab-panel active" data-panel="manage">
+          <div class="grid grid-2" style="align-items:start">
+            <div class="card">
+              <h3>发布课程内容 / 通知</h3>
+              <p class="small muted">发布后将实时显示在首页「课程通知」区域。</p>
+              <form id="updateForm">
+                <div class="form-row"><label>类型</label>
+                  <select class="input" name="tag"><option>课程通知</option><option>作业布置</option><option>环境准备</option><option>拓展资料</option><option>课程调整</option></select></div>
+                <div class="form-row"><label>标题</label><input class="input" name="title" placeholder="请输入标题" required></div>
+                <div class="form-row"><label>正文</label><textarea class="input" name="body" placeholder="请输入正文内容" required></textarea></div>
+                <button class="btn btn-primary btn-block" type="submit">发布</button>
+              </form>
+            </div>
+            <div class="card">
+              <h3>已发布内容</h3>
+              <div id="updateList"><div class="empty"><div class="e-ico"></div>加载中…</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 反馈与统计 -->
+        <div class="tab-panel" data-panel="stats">
+          <div class="grid grid-4 mb2">
+            <div class="stat-card"><div class="stat-val" id="tStudents">0</div><div class="stat-label">注册学生</div></div>
+            <div class="stat-card"><div class="stat-val" id="tFb">0</div><div class="stat-label">反馈条数</div></div>
+            <div class="stat-card"><div class="stat-val" id="tAvg">—</div><div class="stat-label">平均评分</div></div>
+            <div class="stat-card"><div class="stat-val" id="tIntent">0</div><div class="stat-label">确定选修人数</div></div>
+          </div>
+          <div class="grid grid-2 mb3">
+            <div class="chart-card"><h3>评分分布</h3><p class="chart-sub">学生反馈的星级分布</p><div class="chart short" id="chartRating"></div></div>
+            <div class="chart-card"><h3>选课意向分布</h3><p class="chart-sub">按意向类别统计</p><div class="chart short" id="chartIntent"></div></div>
+          </div>
+          <div class="card">
+            <h3>全部学习反馈</h3>
+            <div id="allFeedback"><div class="empty"><div class="e-ico"></div>暂无反馈</div></div>
+          </div>
+        </div>
+
+        <!-- 选课名单 -->
+        <div class="tab-panel" data-panel="roster">
+          <div class="card">
+            <h3>选课意向名单</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>学号</th><th>姓名</th><th>专业</th><th>意向</th><th>备注</th><th>提交时间</th><th>操作</th></tr></thead>
+                <tbody id="rosterBody"><tr><td colspan="7" class="muted">加载中…</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/vendor/echarts.min.js"></script>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var me = null;
+
+  function el(id) { return document.getElementById(id); }
+  function show(node) { node.classList.remove('hidden'); }
+  function hide(node) { node.classList.add('hidden'); }
+  function stars(n) { var s = ''; for (var i = 0; i < 5; i++) s += i < n ? '★' : '☆'; return s; }
+  function intentBadge(v) {
+    var cls = v === '确定选修' ? 'emerald' : v === '暂不选修' ? 'rose' : 'amber';
+    return '<span class="badge ' + cls + '">' + App.esc(v) + '</span>';
+  }
+
+  /* ---------------- 学生：选课意向 ---------------- */
+  function loadMyIntent() {
+    App.api('/api/enrollments').then(function (r) {
+      var list = (r.data && r.data.enrollments) || [];
+      var mine = list[0];
+      var host = el('myIntent');
+      if (!mine) { host.innerHTML = '<div class="empty"><div class="e-ico"></div>暂未提交</div>'; el('recIntent').textContent = '—'; return; }
+      host.innerHTML = '<div class="list-item"><div class="li-ico"></div><div class="li-main">' +
+        '<div class="li-title">' + App.esc(mine.major) + ' ' + intentBadge(mine.intent) + '</div>' +
+        '<div class="li-sub">' + App.fmtDate(mine.updatedAt || mine.createdAt) + '</div>' +
+        (mine.note ? '<div class="li-body">' + App.esc(mine.note) + '</div>' : '') + '</div></div>';
+      el('recIntent').textContent = mine.intent;
+    });
+  }
+
+  /* ---------------- 学生：反馈 ---------------- */
+  function loadMyFeedback() {
+    App.api('/api/feedback').then(function (r) {
+      var list = (r.data && r.data.feedback) || [];
+      renderFeedbackList(el('myFeedback'), list);
+      el('recFb').textContent = list.length;
+      el('recAvg').textContent = list.length ? (list.reduce(function (s, f) { return s + f.rating; }, 0) / list.length).toFixed(1) + ' / 5' : '—';
+    });
+  }
+
+  function renderFeedbackList(host, list, deletable) {
+    if (!list.length) { host.innerHTML = '<div class="empty"><div class="e-ico"></div>暂无反馈</div>'; return; }
+    host.innerHTML = list.map(function (f) {
+      return '<div class="list-item"><div class="li-ico"></div><div class="li-main">' +
+        '<div class="li-title"><span class="stars">' + stars(f.rating) + '</span> <span class="muted small">' + App.esc(f.userName || '') + '</span></div>' +
+        '<div class="li-sub">' + App.fmtDate(f.createdAt) + (f.tags && f.tags.length ? ' · ' + f.tags.map(App.esc).join('、') : '') + '</div>' +
+        '<div class="li-body">' + App.esc(f.content) + '</div>' +
+        (deletable ? '<button class="btn btn-danger btn-sm mt1" data-delfb="' + f.id + '">删除</button>' : '') +
+        '</div></div>';
+    }).join('');
+    if (deletable) host.querySelectorAll('[data-delfb]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (!confirm('确认删除该条反馈？此操作不可恢复。')) return;
+        App.api('/api/feedback?id=' + encodeURIComponent(b.getAttribute('data-delfb')), { method: 'DELETE' }).then(function (r2) {
+          if (r2.data && r2.data.ok) loadTeacherStats(); else alert((r2.data && r2.data.message) || '删除失败');
+        });
+      });
+    });
+  }
+
+  /* ---------------- 教师：内容管理 ---------------- */
+  function loadUpdates() {
+    App.api('/api/updates').then(function (r) {
+      var list = (r.data && r.data.updates) || [];
+      var host = el('updateList');
+      if (!list.length) { host.innerHTML = '<div class="empty"><div class="e-ico"></div>暂无内容</div>'; return; }
+      host.innerHTML = list.map(function (u) {
+        return '<div class="list-item"><div class="li-ico"></div><div class="li-main">' +
+          '<div class="li-title">' + App.esc(u.title) + ' <span class="badge gray">' + App.esc(u.tag) + '</span></div>' +
+          '<div class="li-sub">' + App.esc(u.author) + ' · ' + App.fmtDate(u.createdAt) + '</div>' +
+          '<div class="li-body">' + App.esc(u.body) + '</div>' +
+          '<button class="btn btn-danger btn-sm mt1" data-del="' + u.id + '">删除</button></div></div>';
+      }).join('');
+      host.querySelectorAll('[data-del]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (!confirm('确认删除该内容？此操作不可恢复。')) return;
+          App.api('/api/updates?id=' + encodeURIComponent(b.getAttribute('data-del')), { method: 'DELETE' }).then(function (r2) {
+            if (r2.data && r2.data.ok) loadUpdates(); else alert((r2.data && r2.data.message) || '删除失败');
+          });
+        });
+      });
+    });
+  }
+
+  /* ---------------- 教师：统计 ---------------- */
+  var ratingChart = null, intentChart = null;
+  function loadTeacherStats() {
+    App.api('/api/stats').then(function (r) {
+      var s = (r.data && r.data.stats) || {};
+      el('tStudents').textContent = s.students || 0;
+      el('tFb').textContent = s.feedback || 0;
+      el('tAvg').textContent = s.avgRating ? s.avgRating + ' / 5' : '—';
+      el('tIntent').textContent = s.intents || 0;
+    });
+    App.api('/api/feedback').then(function (r) {
+      var list = (r.data && r.data.feedback) || [];
+      renderFeedbackList(el('allFeedback'), list, true);
+      var dist = [0, 0, 0, 0, 0];
+      list.forEach(function (f) { if (f.rating >= 1 && f.rating <= 5) dist[f.rating - 1]++; });
+      drawRating(dist);
+    });
+    App.api('/api/enrollments').then(function (r) {
+      var list = (r.data && r.data.enrollments) || [];
+      var counts = { '确定选修': 0, '考虑中': 0, '暂不选修': 0 };
+      list.forEach(function (e) { counts[e.intent] = (counts[e.intent] || 0) + 1; });
+      drawIntent(counts);
+      var body = el('rosterBody');
+      if (!list.length) { body.innerHTML = '<tr><td colspan="7" class="muted">暂无数据</td></tr>'; return; }
+      body.innerHTML = list.map(function (e) {
+        return '<tr><td>' + App.esc(e.studentNo) + '</td><td>' + App.esc(e.name) + '</td><td>' + App.esc(e.major) + '</td>' +
+          '<td>' + intentBadge(e.intent) + '</td><td class="small">' + App.esc(e.note || '—') + '</td>' +
+          '<td class="small">' + App.fmtDate(e.updatedAt || e.createdAt) + '</td>' +
+          '<td><button class="btn btn-danger btn-sm" data-dele="' + e.id + '">删除</button></td></tr>';
+      }).join('');
+      body.querySelectorAll('[data-dele]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (!confirm('确认删除该选课记录？此操作不可恢复。')) return;
+          App.api('/api/enrollments?id=' + encodeURIComponent(b.getAttribute('data-dele')), { method: 'DELETE' }).then(function (r2) {
+            if (r2.data && r2.data.ok) loadTeacherStats(); else alert((r2.data && r2.data.message) || '删除失败');
+          });
+        });
+      });
+    });
+  }
+
+  function drawRating(dist) {
+    if (!window.echarts) return;
+    var dom = el('chartRating');
+    ratingChart = ratingChart || echarts.init(dom);
+    ratingChart.setOption({
+      tooltip: { trigger: 'axis' }, grid: { left: 36, right: 18, top: 24, bottom: 30, containLabel: true },
+      xAxis: { type: 'category', data: ['1星', '2星', '3星', '4星', '5星'], axisLine: { lineStyle: { color: '#e4e9f2' } }, axisLabel: { color: '#6b7891' } },
+      yAxis: { type: 'value', minInterval: 1, splitLine: { lineStyle: { color: '#eef1f7', type: 'dashed' } }, axisLabel: { color: '#6b7891' } },
+      series: [{ type: 'bar', barWidth: '46%', data: dist.map(function (v) { return { value: v, itemStyle: { color: '#d98a06', borderRadius: [6, 6, 0, 0] } }; }), label: { show: true, position: 'top', color: '#33415c' } }]
+    });
+    window.addEventListener('resize', function () { ratingChart.resize(); });
+  }
+  function drawIntent(counts) {
+    if (!window.echarts) return;
+    var dom = el('chartIntent');
+    intentChart = intentChart || echarts.init(dom);
+    intentChart.setOption({
+      tooltip: { trigger: 'item', formatter: '{b}: {c} 人 ({d}%)' },
+      legend: { bottom: 0, textStyle: { color: '#6b7891' } },
+      series: [{
+        type: 'pie', radius: ['42%', '68%'], center: ['50%', '46%'],
+        itemStyle: { borderColor: '#fff', borderWidth: 2, borderRadius: 6 },
+        label: { formatter: '{b}\n{c} 人', color: '#33415c', fontSize: 11 },
+        data: [
+          { value: counts['确定选修'] || 0, name: '确定选修', itemStyle: { color: '#12a06a' } },
+          { value: counts['考虑中'] || 0, name: '考虑中', itemStyle: { color: '#d98a06' } },
+          { value: counts['暂不选修'] || 0, name: '暂不选修', itemStyle: { color: '#e0435c' } }
+        ]
+      }]
+    });
+    window.addEventListener('resize', function () { intentChart.resize(); });
+  }
+
+  /* ---------------- 渲染角色 ---------------- */
+  function renderRole() {
+    el('dashAvatar').textContent = (me.name || 'U').slice(0, 1);
+    el('dashName').textContent = me.name;
+    el('dashMeta').textContent = (me.role === 'teacher' ? '教师管理员' : '学生') + ' · ' + me.account + (me.major ? ' · ' + me.major : '');
+    el('dashRole').innerHTML = me.role === 'teacher'
+      ? '<span class="badge emerald">教师 · 管理员</span>'
+      : '<span class="badge">学生</span>';
+    if (me.role === 'teacher') { hide(el('studentView')); show(el('teacherView')); loadUpdates(); loadTeacherStats(); }
+    else { hide(el('teacherView')); show(el('studentView')); loadMyIntent(); loadMyFeedback(); }
+  }
+
+  /* ---------------- 事件绑定 ---------------- */
+  function bindEvents() {
+    // 星级
+    var rating = el('rating'), hidden = el('ratingVal');
+    rating.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      var v = Number(e.target.getAttribute('data-v'));
+      hidden.value = v;
+      rating.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', Number(b.getAttribute('data-v')) <= v); });
+    });
+
+    el('intentForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      App.api('/api/enrollments', { method: 'POST', body: { major: f.major.value, intent: f.intent.value, note: f.note.value } }).then(function (r) {
+        if (r.data && r.data.ok) { alert('选课意向已提交'); loadMyIntent(); }
+        else alert((r.data && r.data.message) || '提交失败，请重新登录');
+      });
+    });
+
+    el('fbForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var tags = Array.prototype.slice.call(el('tags').querySelectorAll('input:checked')).map(function (i) { return i.value; });
+      if (!hidden.value) { alert('请先选择整体评价星级'); return; }
+      App.api('/api/feedback', { method: 'POST', body: { rating: Number(hidden.value), tags: tags, content: f.content.value } }).then(function (r) {
+        if (r.data && r.data.ok) {
+          alert('反馈已提交，感谢你的建议！');
+          f.reset(); hidden.value = ''; rating.querySelectorAll('button').forEach(function (b) { b.classList.remove('on'); });
+          loadMyFeedback();
+        } else alert((r.data && r.data.message) || '提交失败');
+      });
+    });
+
+    el('claimForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var code = e.target.code.value.trim();
+      App.api('/api/auth/teacher', { method: 'POST', body: { code: code } }).then(function (r) {
+        var e1 = el('claimErr'), e2 = el('claimOk');
+        if (r.data && r.data.ok) { e2.textContent = '教师权限已激活，正在刷新…'; e2.classList.add('show'); e1.classList.remove('show'); setTimeout(function () { location.reload(); }, 900); }
+        else { e1.textContent = (r.data && r.data.message) || '激活失败'; e1.classList.add('show'); e2.classList.remove('show'); }
+      });
+    });
+
+    el('updateForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      App.api('/api/updates', { method: 'POST', body: { tag: f.tag.value, title: f.title.value, body: f.body.value } }).then(function (r) {
+        if (r.data && r.data.ok) { alert('发布成功'); f.reset(); loadUpdates(); }
+        else alert((r.data && r.data.message) || '发布失败');
+      });
+    });
+  }
+
+  var inited = false;
+  function initOnce(user) {
+    if (inited || !user) return;
+    inited = true;
+    me = user;
+    renderRole();
+    bindEvents();
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('auth-ready', function (e) { initOnce(e.detail); });
+    // 兜底：若事件已派发过或延迟较大
+    setTimeout(function () { initOnce(App.getUser()); }, 1200);
+  });
+})();
+</script>
+</body>
+</html>

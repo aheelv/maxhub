@@ -1,0 +1,140 @@
+{
+  "$schema": "../schema/course.config.schema.json",
+  "course_id": "COURSE-CODE-101",
+  "title": "<课程名称>",
+  "subtitle": "<一句话课程定位，须体现「用工具解决真实问题」>",
+  "course_type": "专业选修课",
+  "school": "<学校名称>",
+  "department": "<开课学院>",
+  "major": "<适用专业>",
+  "course_code": null,
+  "credits": null,
+  "hours": 16,
+  "session_count": 8,
+  "session_minutes": 90,
+  "lecture_minutes": 45,
+  "practice_minutes": 45,
+  "term": null,
+  "calendar_start": null,
+  "language": "zh-CN",
+  "license": "课程组自建，仅用于教学",
+  "modules": [
+    {"id": "M1", "no": 1, "name": "<模块一名称>", "session_range": [1, 4], "accent": "m1"},
+    {"id": "M2", "no": 2, "name": "<模块二名称>", "session_range": [5, 8], "accent": "m2"}
+  ],
+  "sessions": [
+    {"no": 1, "title": "<第 1 次课标题>", "module_id": "M1", "hours": 2},
+    {"no": 2, "title": "<第 2 次课标题>", "module_id": "M1", "hours": 2},
+    {"no": 3, "title": "<第 3 次课标题>", "module_id": "M1", "hours": 2},
+    {"no": 4, "title": "<第 4 次课标题>", "module_id": "M1", "hours": 2},
+    {"no": 5, "title": "<第 5 次课标题>", "module_id": "M2", "hours": 2},
+    {"no": 6, "title": "<第 6 次课标题>", "module_id": "M2", "hours": 2},
+    {"no": 7, "title": "<第 7 次课标题>", "module_id": "M2", "hours": 2},
+    {"no": 8, "title": "<第 8 次课标题>", "module_id": "M2", "hours": 2}
+  ],
+  "tools": [
+    {"name": "<核心 AI 工作台>", "role": "任务编排、文件处理与成果交付", "core": true, "url": null, "availability": "可用"},
+    {"name": "<辅助工具>", "role": "补充能力，需说明适用边界", "core": false, "url": null, "availability": "待开通"}
+  ],
+  "navigation": {
+    "primary": [
+      {"id": "overview", "label": "课程总览", "href": "/", "children": [
+        {"label": "课程介绍", "href": "/about/"},
+        {"label": "教学大纲", "href": "/syllabus/"},
+        {"label": "教学日历", "href": "/calendar/"},
+        {"label": "考核方式", "href": "/policies/"}
+      ]},
+      {"id": "sessions", "label": "课次主轴", "href": "/sessions/"},
+      {"id": "textbook", "label": "教材", "href": "/textbook/"},
+      {"id": "courseware", "label": "课件", "href": "/courseware/"},
+      {"id": "practice", "label": "习题与实践", "href": "/exercises/", "children": [
+        {"label": "任务单", "href": "/exercises/"},
+        {"label": "资源包下载", "href": "/downloads/"}
+      ]},
+      {"id": "knowledge", "label": "知识图谱", "href": "/knowledge/", "children": [
+        {"label": "知识模块", "href": "/knowledge/modules/"},
+        {"label": "知识点", "href": "/knowledge/points/"},
+        {"label": "术语词典", "href": "/knowledge/terms/"}
+      ]},
+      {"id": "resources", "label": "案例与资源", "href": "/cases/", "children": [
+        {"label": "案例库", "href": "/cases/"},
+        {"label": "技术趋势", "href": "/trends/"},
+        {"label": "课程通知", "href": "/announcements/"},
+        {"label": "超星学习通", "href": "<由 integration.chaoxing.course_space_url 注入>"}
+      ]}
+    ],
+    "footer": [
+      {"label": "站点地图", "href": "/sitemap/"},
+      {"label": "对接与数据说明", "href": "/integration/"},
+      {"label": "课程团队", "href": "/about/team/"}
+    ],
+    "show_breadcrumb": true,
+    "show_prev_next": true
+  },
+  "theme": {
+    "preset": "light",
+    "brand": "#2563eb",
+    "tokens": {"m1": "#2563eb", "m2": "#0d9488", "m3": "#7c3aed", "m4": "#059669", "m5": "#d97706"}
+  },
+  "features": {
+    "textbook": true,
+    "lesson_plan_public": false,
+    "knowledge_graph": true,
+    "cases": true,
+    "glossary": true,
+    "trends": true,
+    "announcements": true,
+    "downloads": true,
+    "site_accounts": false,
+    "site_gradebook": false
+  },
+  "integration": {
+    "mode": "complementary",
+    "chaoxing": {
+      "platform_url": "https://i.chaoxing.com",
+      "course_space_url": null,
+      "sso_enabled": false,
+      "api_contract_status": "待核验"
+    },
+    "datasets": {
+      "knowledge-graph": {"enabled": true, "direction": "out", "transport": "template", "frequency": "按版本发布"},
+      "course-structure": {"enabled": true, "direction": "out", "transport": "export", "frequency": "学期级"},
+      "item-bank": {"enabled": true, "direction": "out", "transport": "template", "frequency": "按课次"},
+      "resource-index": {"enabled": true, "direction": "out", "transport": "export", "frequency": "按版本发布"},
+      "calendar": {"enabled": true, "direction": "out", "transport": "manual", "frequency": "学期级"},
+      "student-roster": {"enabled": false, "direction": "in", "transport": "export", "frequency": "学期级"},
+      "learning-analytics": {"enabled": false, "direction": "in", "transport": "export", "frequency": "模块级"},
+      "identity-and-notification": {"enabled": true, "direction": "off", "transport": "manual", "frequency": "实时跳转"}
+    },
+    "restricted_zone": {
+      "path": "_restricted/",
+      "publish_excluded": true,
+      "deidentify": true,
+      "retention_days": null
+    }
+  },
+  "content": {
+    "evidence_levels_enabled": ["A", "B", "C"],
+    "require_source_for_A": true,
+    "default_visibility": {"lesson-plan": "teacher", "calendar-entry": "public", "asset": "public"},
+    "min_exercise_minutes": 60,
+    "rubric_total": 100
+  },
+  "sources": {
+    "decks": "site/assets/js/decks/",
+    "textbook": "教材/分章/",
+    "courseware_files": "deliverables/",
+    "exercises": "course-exercises-site/resources/",
+    "downloads": "site/downloads/",
+    "glossary": "site/assets/js/glossary-data.js",
+    "cases": "site/cases.html",
+    "screenshots": "textbook-build/screenshots/"
+  },
+  "build": {
+    "out_dir": "dist/",
+    "base_url": "https://<username>.github.io/<repo>/",
+    "static": true,
+    "generate": ["nav.json", "sitemap.xml", "sitemap.json", "search-index.json", "graph.json", "content-manifest.json"]
+  },
+  "extensions": {}
+}

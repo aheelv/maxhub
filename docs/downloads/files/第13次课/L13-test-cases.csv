@@ -1,0 +1,9 @@
+test_id,输入,固定预期（禁止修改）,实际结果,结论,证据
+T01,products_a.csv,0项问题,,,
+T02,products_b.csv,P30在基准A中不存在,,,
+T03,products_b.csv,基准P03在B中缺失,,,
+T04,products_c.csv,P02价格为空,,,
+T05,products_c.csv,P03库存为负,,,
+T06,products_duplicate.csv,P02为重复ID,,,
+T07,products_bad_header.csv,明确报缺少name字段，不白屏,,,
+T08,products_normal_alt.csv,列名映射后0项问题,,,

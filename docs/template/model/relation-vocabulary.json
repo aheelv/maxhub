@@ -1,0 +1,26 @@
+{
+  "$meta": {
+    "name": "通用课程站点 · 内容关联词表",
+    "version": "1.0.0",
+    "description": "固定结构的一部分。所有关联以有向三元组 (from, pred, to) 存储于 graph.json，并同时以冗余字段写入内容实例的 relations，便于单条渲染与全图导出。",
+    "storage": "单向存储 + 自动生成逆关系；禁止在两处手工维护同一事实。",
+    "integrity_rule": "每条边的 from / to 必须能在 content-manifest.json 中找到对应 id（或以 TERM: 前缀指向术语名），否则校验器报错。",
+    "chaoxing_note": "知识图谱相关谓词需映射到超星『关系设置』的前置 / 后置 / 关联三类；其余谓词仅服务于站内导航，不导出。"
+  },
+  "predicates": [
+    {"code": "belongs_to", "name": "归属", "inverse": "contains", "from_types": ["module", "session", "knowledge-point", "case"], "to_types": ["course", "module"], "navigational": true, "chaoxing_equivalent": null, "semantics": "层级归属，用于面包屑与模块筛选。"},
+    {"code": "aligned_with", "name": "课次对齐", "inverse": "aligned_with", "from_types": ["textbook-chapter", "lesson-plan", "syllabus-unit", "calendar-entry", "deck", "deck-file", "exercise", "practice-kit"], "to_types": ["session"], "navigational": true, "chaoxing_equivalent": "课程章节任务点关联知识点", "semantics": "不同内容类型指向同一课次；课次聚合页据此一次性取齐全部材料，是整站信息架构的核心关系。"},
+    {"code": "covers", "name": "覆盖知识点", "inverse": "covered_by", "from_types": ["session", "textbook-chapter", "deck"], "to_types": ["knowledge-point"], "navigational": true, "chaoxing_equivalent": "章节 / 资源关联知识点", "semantics": "标明某次课或某份材料涉及哪些知识点，供图谱反向查询与题目组卷。"},
+    {"code": "prerequisite_of", "name": "前置依赖", "inverse": "follows_from", "from_types": ["knowledge-point"], "to_types": ["knowledge-point"], "navigational": true, "chaoxing_equivalent": "前置", "semantics": "语义上的先修关系。必须由教师核定，不由课次顺序自动推断；未核定前不得生成该边。"},
+    {"code": "next", "name": "教学顺序后继", "inverse": "prev", "from_types": ["session", "knowledge-point"], "to_types": ["session", "knowledge-point"], "navigational": true, "chaoxing_equivalent": "后置（需教师复核）", "semantics": "由课件课次顺序确定性推导的教学顺序，仅表示讲授先后，不等同于知识依赖。"},
+    {"code": "related_to", "name": "关联", "inverse": "related_to", "from_types": ["knowledge-point", "term", "case", "reading"], "to_types": ["knowledge-point", "term", "case", "reading"], "navigational": true, "chaoxing_equivalent": "关联", "semantics": "弱关联，用于相关推荐与术语互链。"},
+    {"code": "assesses", "name": "考核", "inverse": "assessed_by", "from_types": ["exercise", "practice-kit"], "to_types": ["knowledge-point"], "navigational": true, "chaoxing_equivalent": "题目关联知识点 / 按知识点选题", "semantics": "题目对知识点的覆盖，是超星按知识点抽题组卷的依据。"},
+    {"code": "uses", "name": "使用素材或工具", "inverse": "used_by", "from_types": ["exercise", "lesson-plan", "textbook-chapter", "case"], "to_types": ["asset", "practice-kit"], "navigational": true, "chaoxing_equivalent": "资源关联", "semantics": "内容对素材 / 工具 / 资源包的引用，保证下载通道不出现孤儿文件。"},
+    {"code": "illustrates", "name": "案例佐证", "inverse": "illustrated_by", "from_types": ["case"], "to_types": ["knowledge-point", "session"], "navigational": true, "chaoxing_equivalent": "资源关联知识点", "semantics": "案例为哪些知识点或课次提供真实情境。"},
+    {"code": "defines", "name": "术语定义", "inverse": "defined_by", "from_types": ["term"], "to_types": ["knowledge-point"], "navigational": true, "chaoxing_equivalent": "知识点别名 / 标签", "semantics": "术语与知识点的对应；自动匹配结果须教师复核。"},
+    {"code": "scheduled_as", "name": "排期", "inverse": "schedules", "from_types": ["session"], "to_types": ["calendar-entry"], "navigational": true, "chaoxing_equivalent": "教学日历 / 作业截止", "semantics": "课次与日历条目的对应；日期为空时该边仍存在，但目标标注待补充。"},
+    {"code": "evidence_for", "name": "趋势证据", "inverse": "evidenced_by", "from_types": ["case", "asset"], "to_types": ["reading"], "navigational": true, "chaoxing_equivalent": null, "semantics": "案例或数据为某项技术趋势提供正面 / 反面证据。"},
+    {"code": "supersedes", "name": "版本替代", "inverse": "superseded_by", "from_types": ["*"], "to_types": ["*"], "navigational": false, "chaoxing_equivalent": null, "semantics": "内容版本更替留痕，旧版本保留可读但不进入导航与导出。"},
+    {"code": "mirrors", "name": "同内容多载体", "inverse": "mirrors", "from_types": ["deck", "textbook-chapter"], "to_types": ["deck-file", "asset"], "navigational": true, "chaoxing_equivalent": null, "semantics": "网页版课件与 PPTX、教材正文与分章文件等同一内容的不同载体。"}
+  ]
+}

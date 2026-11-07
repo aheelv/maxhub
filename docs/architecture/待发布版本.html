@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《人工智能工具应用实践》课程空间 · 待发布版本 v1.0</title><style>
+:root{--bg:#f6f7f9;--panel:#ffffff;--ink:#1c2330;--sub:#5b6675;--line:#e2e6ec;
+--brand:#1f4e79;--brand2:#2f7d5b;--soft:#eef4fa;--warn:#a15c00;--warnbg:#fff7e6;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"Microsoft YaHei","PingFang SC","Source Han Sans SC",system-ui,sans-serif;
+ font-size:15.5px;line-height:1.85;}
+a{color:var(--brand);text-decoration:none;word-break:break-all}
+a:hover{text-decoration:underline}
+.topbar{position:sticky;top:0;z-index:20;background:var(--brand);color:#fff;
+ padding:10px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+ box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.topbar b{font-size:16px;letter-spacing:.5px}
+.topbar a{color:#dbeaf7;font-size:14px;padding:4px 10px;border-radius:6px}
+.topbar a.cur{background:rgba(255,255,255,.18);color:#fff}
+.topbar .sp{flex:1}
+.topbar .hint{font-size:12.5px;color:#c8dcef}
+.wrap{display:flex;max-width:1500px;margin:0 auto;align-items:flex-start}
+nav{position:sticky;top:48px;width:236px;flex:0 0 236px;height:calc(100vh - 48px);
+ overflow:auto;background:var(--panel);border-right:1px solid var(--line);padding:18px 12px 40px}
+nav h4{margin:6px 8px 12px;font-size:13px;color:var(--sub);letter-spacing:1px}
+nav a{display:block;padding:6px 10px;border-radius:6px;color:var(--ink);font-size:13.2px;
+ line-height:1.5;margin-bottom:2px}
+nav a:hover{background:var(--soft);text-decoration:none}
+nav a.on{background:var(--soft);color:var(--brand);font-weight:700;border-left:3px solid var(--brand)}
+main{flex:1;min-width:0;padding:28px 40px 100px;background:var(--panel);
+ box-shadow:0 0 0 1px var(--line)}
+h1{font-size:27px;color:var(--brand);border-bottom:3px solid var(--brand);padding-bottom:12px;margin:8px 0 24px}
+h2{font-size:22px;color:var(--brand);margin:52px 0 20px;padding:10px 14px;
+ background:var(--soft);border-left:5px solid var(--brand);border-radius:0 6px 6px 0;
+ page-break-before:always}
+h2:first-of-type{page-break-before:auto}
+h3{font-size:17.5px;margin:30px 0 12px;color:var(--brand2);
+ border-bottom:1px solid var(--line);padding-bottom:6px}
+h4{font-size:15.5px;margin:22px 0 8px;color:var(--ink);background:#fafbfc;
+ padding:8px 12px;border-radius:6px;border:1px solid var(--line)}
+p{margin:10px 0}
+blockquote{margin:12px 0;padding:10px 16px;background:#f8fafc;
+ border-left:4px solid #9fb6cc;color:var(--sub);border-radius:0 6px 6px 0}
+blockquote p{margin:4px 0}
+code{background:#f0f3f7;padding:1px 5px;border-radius:4px;font-size:13px;color:#8a3b12}
+ol,ul{padding-left:26px;margin:10px 0}
+li{margin:5px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.6px;line-height:1.65}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--soft);color:var(--brand);font-weight:700;white-space:nowrap}
+tr:nth-child(even) td{background:#fcfdfe}
+.shot-table td:first-child,.shot-table th:first-child{white-space:nowrap}
+hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+ gap:16px;margin:18px 0 8px}
+figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+figure img{width:100%;display:block;background:#eef1f5;aspect-ratio:16/10;object-fit:cover;
+ object-position:top;border-bottom:1px solid var(--line)}
+figcaption{padding:8px 10px;font-size:12.4px;color:var(--sub);line-height:1.6}
+figcaption b{color:var(--brand)}
+.tip{background:var(--warnbg);border:1px solid #f0d9ab;color:var(--warn);
+ padding:10px 14px;border-radius:6px;font-size:13.4px;margin:14px 0}
+@media print{
+ .topbar,nav{display:none} body{background:#fff;font-size:11pt}
+ main{box-shadow:none;padding:0} h2{page-break-before:always}
+ a{color:inherit} table,figure{page-break-inside:avoid}
+}
+@media(max-width:900px){.wrap{display:block}nav{position:static;width:auto;height:auto;
+ border-right:0;border-bottom:1px solid var(--line)}main{padding:20px 16px 60px}}
+
+.tw{overflow-x:auto;margin:14px 0}
+.tw table{margin:0;min-width:700px;font-size:13px}
+nav a.lv3{padding-left:24px;font-size:12.5px;color:var(--sub)}
+nav a.lv3.on{color:var(--brand)}
+main h1{font-size:25px}
+blockquote{background:var(--soft);border-left-color:var(--brand);color:var(--ink)}
+</style></head><body><div class="topbar"><b>《人工智能工具应用实践》课程空间 · 待发布版本　v1.0</b><span class="sp"></span><span class="hint">371 个内容实例 · 35 个栏目节点 · 两种衔接方式 · R0—R3 发布判定 · 可打印存 PDF</span></div><div class="wrap"><nav><h4>待发布版本目录</h4>
+<a href="#sec-1" data-sec="sec-1">第一部分　发布版本总述</a>
+<a class="lv3" href="#sec-2" data-sec="sec-2">1.1 本版本定位与效力</a>
+<a class="lv3" href="#sec-3" data-sec="sec-3">1.2 左、右两侧的定义与整合口径</a>
+<a class="lv3" href="#sec-4" data-sec="sec-4">1.3 四项综合优化结论</a>
+<a class="lv3" href="#sec-5" data-sec="sec-5">1.4 蓝图核心结构（不可变更项）</a>
+<a href="#sec-6" data-sec="sec-6">第二部分　整合后的信息架构（左右对齐）</a>
+<a class="lv3" href="#sec-7" data-sec="sec-7">2.1 左、右两侧信息项对照总表</a>
+<a class="lv3" href="#sec-8" data-sec="sec-8">2.2 统一层级与左右对齐锚点</a>
+<a class="lv3" href="#sec-9" data-sec="sec-9">2.3 统一关联关系</a>
+<a class="lv3" href="#sec-10" data-sec="sec-10">2.4 导航与三条贯通路径（保持蓝图结构，统一表述）</a>
+<a class="lv3" href="#sec-11" data-sec="sec-11">2.5 消除重复</a>
+<a class="lv3" href="#sec-12" data-sec="sec-12">2.6 补齐缺失</a>
+<a class="lv3" href="#sec-13" data-sec="sec-13">2.7 统一表述</a>
+<a href="#sec-14" data-sec="sec-14">第三部分　内容清单（发布口径）</a>
+<a class="lv3" href="#sec-15" data-sec="sec-15">3.1 清单口径与总量</a>
+<a class="lv3" href="#sec-16" data-sec="sec-16">3.2 按内容类型的发布清单</a>
+<a class="lv3" href="#sec-17" data-sec="sec-17">3.3 按栏目层级的发布清单</a>
+<a class="lv3" href="#sec-18" data-sec="sec-18">3.4 十六课次聚合清单</a>
+<a class="lv3" href="#sec-19" data-sec="sec-19">3.5 右侧（超星）信息清单</a>
+<a class="lv3" href="#sec-20" data-sec="sec-20">3.6 发布排除清单（R3）</a>
+<a href="#sec-21" data-sec="sec-21">第四部分　衔接标注：与超星资源深度衔接的范围与要求</a>
+<a class="lv3" href="#sec-22" data-sec="sec-22">4.1 标注体系</a>
+<a class="lv3" href="#sec-23" data-sec="sec-23">4.2 方式 A · 资源导入导出</a>
+<a class="lv3" href="#sec-24" data-sec="sec-24">4.3 方式 B · 在超星中嵌入本课程链接</a>
+<a class="lv3" href="#sec-25" data-sec="sec-25">4.4 两种方式的组合、互斥与共同禁用项</a>
+<a class="lv3" href="#sec-26" data-sec="sec-26">4.5 内容类型衔接标注逐项对照</a>
+<a href="#sec-27" data-sec="sec-27">第五部分　发布就绪度</a>
+<a class="lv3" href="#sec-28" data-sec="sec-28">5.1 四级判定口径</a>
+<a class="lv3" href="#sec-29" data-sec="sec-29">5.2 判定数量分布</a>
+<a class="lv3" href="#sec-30" data-sec="sec-30">5.3 发布前置条件</a>
+<a class="lv3" href="#sec-31" data-sec="sec-31">5.4 发布一致性断言（结果要求）</a>
+<a class="lv3" href="#sec-32" data-sec="sec-32">5.5 发布版本边界声明</a>
+<a href="#sec-33" data-sec="sec-33">第六部分　附则</a>
+<a class="lv3" href="#sec-34" data-sec="sec-34">6.1 统一词表（最终口径）</a>
+<a class="lv3" href="#sec-35" data-sec="sec-35">6.2 真值源与效力顺序</a>
+<a class="lv3" href="#sec-36" data-sec="sec-36">6.3 版本记录</a>
+<a class="lv3" href="#sec-37" data-sec="sec-37">6.4 交付物清单</a>
+<h4 style="margin-top:22px">本轮交付</h4>
+<a href="信息架构蓝图.html">→ 信息架构蓝图 v1.0</a>
+<a href="06_待发布版本.md">→ 主文档 Markdown</a>
+<a href="待发布版本_发布内容清单.csv">→ 发布内容清单</a>
+</nav><main><h1>《人工智能工具应用实践》课程空间 · 待发布版本 · v1.0</h1>
+<blockquote><p>本文件是课程空间进入发布流程的<strong>唯一发布口径</strong>。依据《信息架构蓝图 v1.0》编制，蓝图确立的核心结构保持不变；本文件在其上完成左、右两侧信息项的整合、内容清单固化、衔接标注与发布就绪度判定。</p></blockquote>
+<div class="tw"><table><thead><tr><th>文档属性</th><th>内容</th></tr></thead><tbody>
+<tr><td>名称</td><td>《人工智能工具应用实践》课程空间 · 待发布版本</td></tr>
+<tr><td>版本</td><td>v1.0（待发布版本）</td></tr>
+<tr><td>编制日期</td><td>2026-11-07</td></tr>
+<tr><td>结构依据</td><td>《信息架构蓝图 v1.0》六个视图：整站骨架、站点地图、课次主轴、内容模型、超星对接、模板与核验</td></tr>
+<tr><td>数据依据</td><td>course-template 下站点地图、内容类型、关联词表、字段映射契约、内容清单、关联图、课次主轴与课程配置</td></tr>
+<tr><td>适用范围</td><td>本站公开页面的内容组织、导航、检索、对外链接，以及与超星学习通／泛雅平台的两种可选衔接方式</td></tr>
+<tr><td>效力</td><td>结构冲突以蓝图为准；数值冲突以真值源与构建产物为准；发布口径以本文件为准</td></tr>
+<tr><td>状态</td><td>内容完整、结构冻结、可进入发布流程；R2 事项与待核验接口显式标注，不表述为已联通</td></tr>
+<tr><td>边界</td><td>本版本为发布口径交付，未改动现网页面，未推送公开站点，未实施真实超星同步</td></tr>
+</tbody></table></div>
+<h2 id="sec-1">第一部分　发布版本总述</h2>
+<h3 id="sec-2">1.1 本版本定位与效力</h3>
+<p>本版本承接蓝图，不新增、不删减、不重排任何结构约定。其工作对象是<strong>内容口径而非结构蓝图</strong>：把散落在蓝图六个视图、六份说明文档、结构化真值源与构建产物中的信息项，按左、右两侧归并成一份可直接用于发布的单一版本，并对每一项内容给出发布处置与衔接标注。</p>
+<p>本版本确认四项结果：整合后的结构、完整的内容清单、逐项衔接标注、发布就绪度判定。四者共用同一套稳定 ID、状态词表与可见性词表，不允许各栏目自行解释。</p>
+<h3 id="sec-3">1.2 左、右两侧的定义与整合口径</h3>
+<p>本版本所称「左、右两侧」，指蓝图超星对接视图中并列呈现的两个信息体系；在字段映射表中，左右两侧另有字段级含义。两者统一如下：</p>
+<div class="tw"><table><thead><tr><th>侧别</th><th>含义</th><th>承载对象</th><th>权威定位</th></tr></thead><tbody>
+<tr><td>左侧</td><td>课程站点侧；字段映射表中为站点内部标准字段 canonical</td><td>教材、课件、大纲、日历骨架、教案、习题、实践包、知识点、术语、案例、素材、导航与结构化数据出口</td><td>课程内容主数据源（Content Master）</td></tr>
+<tr><td>右侧</td><td>超星学习通／泛雅平台侧；字段映射表中为平台字段、栏目或功能对象</td><td>身份与选课、在线作答、成绩、签到、讨论、通知、问卷、图谱展示与掌握度计算、任务点与资料库引用</td><td>教学运行与学情主系统（System of Record）</td></tr>
+</tbody></table></div>
+<p>整合的三类对象：<strong>信息项</strong>（左右各自有哪些内容、哪些字段、哪些页面）、<strong>层级</strong>（各自的父子结构与对齐锚点）、<strong>关联关系</strong>（有向谓词、平台前置／后置／关联、外链引用）。整合的三项动作：消除重复、补齐缺失、统一表述。</p>
+<p>贯穿全局的纪律：同一类数据只有一个权威源；左侧标准字段为唯一命名依据，适配层只做转换，平台字段不得反向污染站点模型；任何未见来源的取值一律保持空值并显式标注，不以推测补齐。</p>
+<h3 id="sec-4">1.3 四项综合优化结论</h3>
+<div class="tw"><table><thead><tr><th>维度</th><th>整合前的主要问题</th><th>本版本的整合结论</th><th>发布判定</th></tr></thead><tbody>
+<tr><td>信息架构</td><td>左、右两侧信息项交叉；原站点 15 个栏目平级并列；同一课次在课件数据、大纲页面、练习元数据、教材文件名四处各自存在且互不引用</td><td>统一为课程—模块—课次—内容实例—素材与知识点五层；课次为唯一主轴，全部内容以课次编号与稳定 ID 对齐；35 个栏目节点中 2 项下线、7 项改造、15 项新建；左右职责按单一权威源划断</td><td>结构冻结，可发布</td></tr>
+<tr><td>内容一致性</td><td>教案可见性在类型定义与内容清单中不一致；教学日历状态与栏目可见性口径不一致；151 项无独立 URL；16 项仅登记规划地址；8 条术语外部引用未统一处置</td><td>统一状态词表、可见性词表与证据等级词表；建立发布视图覆盖规则；逐项标注 URL 状态与处置；外部引用显式登记且不进公开导航与图谱导出</td><td>条件发布，处置明确</td></tr>
+<tr><td>衔接完整性</td><td>仅有 8 类数据集的字段契约；缺少「在超星中嵌入本课程链接」方式的完整定义；缺少内容项级别的衔接标注</td><td>补齐方式 A 与方式 B 各自的信息范围、衔接点、需保持一致的内容与禁用项；17 类内容类型、35 个栏目节点、371 个内容实例全部带衔接标注</td><td>条件发布，范围明确</td></tr>
+<tr><td>发布就绪度</td><td>待核验与待补充事项散落在说明文档中，未形成发布判定；发布排除项未与内容清单同列</td><td>建立 R0—R3 四级判定与数量分布；汇总 17 项既有前置条件并新增 1 项本轮发现的校正项；列出发布排除清单与结果性断言</td><td>可进入发布流程，R2 显式标注</td></tr>
+</tbody></table></div>
+<h3 id="sec-5">1.4 蓝图核心结构（不可变更项）</h3>
+<div class="tw"><table><thead><tr><th>序号</th><th>核心结构约定</th><th>本版本采用的值</th><th>出处</th></tr></thead><tbody>
+<tr><td>1</td><td>单课程为根</td><td>课程 COURSE-ROOT 为根节点，全站内容同属一门课的一次开课轮次</td><td>蓝图 · 整站骨架</td></tr>
+<tr><td>2</td><td>课次为唯一组织轴</td><td>16 个课次、5 个模块，所有教学内容以课次编号对齐</td><td>蓝图 · 课次主轴</td></tr>
+<tr><td>3</td><td>三层分离</td><td>栏目（URL 位置）／内容类型（元数据模板）／内容实例（稳定 ID）分离，页面只做视图渲染</td><td>蓝图 · 内容模型</td></tr>
+<tr><td>4</td><td>栏目层级</td><td>L0—L4 加系统层与下线条，共 35 个栏目节点（保留 11、改造 7、新增 15、下线 2）</td><td>站点地图真值源</td></tr>
+<tr><td>5</td><td>主导航</td><td>7 项，配置驱动，不超过 7 项</td><td>课程配置</td></tr>
+<tr><td>6</td><td>内容类型字典</td><td>17 类定义，其中 15 类已有实例</td><td>内容类型字典</td></tr>
+<tr><td>7</td><td>关联词表</td><td>14 种有向谓词，已实例化 6 种、共 605 条边</td><td>关联词表与关联图</td></tr>
+<tr><td>8</td><td>三条贯通路径</td><td>按课次线性路径、按知识点图谱路径、按任务能力路径，在课次聚合页汇合</td><td>蓝图 · 整站骨架</td></tr>
+<tr><td>9</td><td>单一权威源</td><td>站点为课程内容主数据源；超星为教学运行与学情主系统；不做同一字段双向写回</td><td>蓝图 · 超星对接</td></tr>
+<tr><td>10</td><td>字段映射契约</td><td>8 类数据集、49 个字段、4 个权威来源；接口字段一律待核验</td><td>字段映射契约</td></tr>
+<tr><td>11</td><td>模板固定结构与可配置项分离</td><td>固定结构不得逐课修改；课程差异集中在课程配置</td><td>蓝图 · 模板与核验</td></tr>
+<tr><td>12</td><td>静态发布排除</td><td>后端文件、账号数据、受控区、个人级学情一律不进入静态发布包</td><td>蓝图 · 超星对接与模板核验</td></tr>
+</tbody></table></div>
+<h2 id="sec-6">第二部分　整合后的信息架构（左右对齐）</h2>
+<h3 id="sec-7">2.1 左、右两侧信息项对照总表</h3>
+<p>按职责域归并列示。左右两侧不并列生产同一份内容；「整合处置」列是本版本对重复的唯一裁决。</p>
+<div class="tw"><table><thead><tr><th>职责域</th><th>左侧（课程站点）信息项</th><th>右侧（超星）信息项</th><th>唯一权威源</th><th>数据流向</th><th>整合处置</th></tr></thead><tbody>
+<tr><td>课程介绍、大纲、教材、课件、案例、术语、公开资源</td><td>课程总览与 371 个内容实例中的对应类型</td><td>课程资料引用、资料库外链或上传副本</td><td>左侧</td><td>出站引用</td><td>一份内容一个原件；超星只引用，副本不回写</td></tr>
+<tr><td>教学日历（周次与交付物）</td><td>16 条教学周骨架，含周次、课次、学时、交付物</td><td>具体日期、提醒、作业截止的执行方</td><td>左侧（结构）／教务校历（日期）</td><td>出站可选</td><td>站点不推断日期；日期以教务校历或超星设置为准</td></tr>
+<tr><td>教案与教师备课</td><td>16 份五环节教案</td><td>不承载</td><td>左侧（教师可见）</td><td>不导出</td><td>不作为学生学习对象，不进入学生导航与题库</td></tr>
+<tr><td>知识图谱</td><td>86 个知识点、层级、属性及资源与题目关联</td><td>图谱展示、按知识点组卷、掌握度计算</td><td>左侧</td><td>出站主通道</td><td>站点导出、超星消费；超星侧人工增补只进差异报告</td></tr>
+<tr><td>题库题目与素材</td><td>16 套综合任务单、16 个实践资源包</td><td>在线作答、判分、组卷、成绩记录</td><td>左侧（题目正文）／右侧（作答与成绩）</td><td>出站</td><td>题目正文与量规不改写；站点不采集作答</td></tr>
+<tr><td>学生身份、选课、登录</td><td>不承载，仅提供前往超星的明确出口</td><td>身份、选课、登录状态</td><td>右侧</td><td>仅跳转</td><td>下线站点自有注册、登录、选课、扫码登录与个人中心</td></tr>
+<tr><td>学情、成绩、签到、讨论、通知</td><td>不采集、不存储个人级数据；仅接收聚合脱敏指标</td><td>唯一权威源与唯一执行方</td><td>右侧</td><td>受控入站</td><td>入站数据只进受控区，用于内容改进标记，不呈现任何学生数据</td></tr>
+<tr><td>课程反馈与问卷</td><td>不自建反馈库，反馈入口改为跳转</td><td>问卷、评教、互动</td><td>右侧</td><td>仅跳转</td><td>避免双份反馈通道</td></tr>
+<tr><td>公开资源下载</td><td>唯一入口：16 个单课资源包与 16 份课件文件</td><td>以资源外链方式引用</td><td>左侧</td><td>出站引用</td><td>学生从任一入口进入都落到同一份原件</td></tr>
+</tbody></table></div>
+<h3 id="sec-8">2.2 统一层级与左右对齐锚点</h3>
+<div class="tw"><table><thead><tr><th>站点侧层级</th><th>站点对象</th><th>稳定锚点</th><th>超星侧对应层级</th><th>超星对象</th><th>需保持一致的对齐要求</th></tr></thead><tbody>
+<tr><td>L0 课程</td><td>COURSE-ROOT</td><td>课程编号</td><td>课程空间</td><td>课程</td><td>课程名称、学分学时、开课轮次与版本号一致</td></tr>
+<tr><td>L1 模块</td><td>M1—M5 共 5 个模块</td><td>模块编号</td><td>章节分组</td><td>章节</td><td>模块数量、编号与顺序不可重排</td></tr>
+<tr><td>L1 课次（主轴）</td><td>S01—S16 共 16 课次</td><td>课次编号</td><td>章节／任务点</td><td>任务点</td><td>16 个课次编号、规范标题与教学顺序逐条一致</td></tr>
+<tr><td>L2 内容实例</td><td>371 项，分属 15 类内容类型</td><td>内容稳定 ID</td><td>资源条目／题目／知识点</td><td>资源与题目</td><td>内容 ID 作为幂等键，在超星侧保留，不另建编号体系</td></tr>
+<tr><td>L3 素材与知识点</td><td>24 张截图、8 个案例、86 个知识点、103 条术语</td><td>素材 ID／知识点 ID／术语锚点</td><td>资料库／图谱节点／知识点别名</td><td>资源与节点</td><td>A 类素材须带来源与抓取日期；知识点以知识点 ID 为唯一锚</td></tr>
+<tr><td>L4 关联关系</td><td>605 条有向边、14 类谓词</td><td>起点＋谓词＋终点</td><td>前置／后置／关联</td><td>关系</td><td>课次先后不等于知识先修；外部引用不导出</td></tr>
+<tr><td>系统层</td><td>导航、检索、结构化数据出口、受控区</td><td>不适用</td><td>无对应</td><td>不适用</td><td>系统层不进入超星；受控区不进入静态发布包</td></tr>
+</tbody></table></div>
+<p>层级规则：面包屑统一为「课程 › 模块 › 课次 › 内容类型 › 内容实例」；任何内容实例只能归属于一个课次主轴位置；跨课次引用通过关联边表达，不复制内容实例。</p>
+<h3 id="sec-9">2.3 统一关联关系</h3>
+<div class="tw"><table><thead><tr><th>谓词</th><th>名称</th><th>已实例化边数</th><th>本版本表述口径</th></tr></thead><tbody>
+<tr><td>belongs_to</td><td>归属</td><td>115</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>aligned_with</td><td>课次对齐</td><td>112</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>covers</td><td>覆盖知识点</td><td>86</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>prerequisite_of</td><td>前置依赖</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>next</td><td>教学顺序后继</td><td>15</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>related_to</td><td>关联</td><td>245</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>assesses</td><td>考核</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>uses</td><td>使用素材或工具</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>illustrates</td><td>案例佐证</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>defines</td><td>术语定义</td><td>32</td><td>已实例化，纳入导航与图谱导出</td></tr>
+<tr><td>scheduled_as</td><td>排期</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>evidence_for</td><td>趋势证据</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>supersedes</td><td>版本替代</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+<tr><td>mirrors</td><td>同内容多载体</td><td>0</td><td>词表已定义、本轮无实例，不生成空边</td></tr>
+</tbody></table></div>
+<p>三条不可协商的关系口径：</p>
+<ul><li>课次顺序产生的是 next（教学顺序），不得自动推断为 prerequisite_of（知识先修）；语义前置／后置关系须教师逐条核定。</li><li>术语互链中 237 条已解析为稳定术语 ID；剩余 8 条指向 5 个词典中尚未定义的概念，统一标注为「待补充外部引用」，不进入公开导航与知识图谱导出，也不以虚构术语条目凑齐端点。</li><li>平台侧的「前置／后置／关联」只是站点谓词的一种呈现形式；字段映射表的左侧标准字段为唯一命名依据，平台列名不得反向改写站点模型。</li></ul>
+<h3 id="sec-10">2.4 导航与三条贯通路径（保持蓝图结构，统一表述）</h3>
+<div class="tw"><table><thead><tr><th>路径</th><th>入口</th><th>组织方式</th><th>服务目标</th></tr></thead><tbody>
+<tr><td>按课次 · 线性教学路径</td><td>课次主轴</td><td>课程 › 模块 › 课次 › 内容</td><td>跟课学习与课前预习</td></tr>
+<tr><td>按知识点 · 图谱检索路径</td><td>知识图谱</td><td>模块 › 知识点 › 关联资源与题目</td><td>概念回溯与查漏补缺</td></tr>
+<tr><td>按任务 · 能力达成路径</td><td>习题与实践</td><td>任务 › 步骤 › 成果物 › 量规</td><td>作业完成与答辩准备</td></tr>
+</tbody></table></div>
+<p>三条路径在课次聚合页汇合；主导航固定为 7 项，任何栏目不得另建平行导航。</p>
+<h3 id="sec-11">2.5 消除重复</h3>
+<div class="tw"><table><thead><tr><th>编号</th><th>重复项（整合前）</th><th>重复表现</th><th>本版本唯一裁决</th></tr></thead><tbody>
+<tr><td>D-01</td><td>站点自有账号与超星身份体系</td><td>站点含注册、登录、选课、扫码登录、个人中心；超星亦为身份权威源</td><td>统一归超星；站点仅保留跳转出口，旧登录与旧门户栏目下线</td></tr>
+<tr><td>D-02</td><td>站点后端业务数据与超星教学运行</td><td>站点含 20 个业务接口与 7 类业务数据集合，与超星作业、成绩、签到、讨论重复</td><td>统一归超星；后端文件与账号数据列入发布排除清单</td></tr>
+<tr><td>D-03</td><td>同一课次的多处命名</td><td>课件数据、大纲页面、练习元数据、教材文件名四处各自表述第 N 次课</td><td>统一以课次编号与规范标题为唯一锚点，其余位置只做引用</td></tr>
+<tr><td>D-04</td><td>教材与课件原件双份维护</td><td>超星资料库若上传副本，易与站点原件产生版本分叉</td><td>站点持有唯一原件；超星以外链引用，副本不回写</td></tr>
+<tr><td>D-05</td><td>教学日历的日期双源</td><td>站点周次骨架与超星具体日期、提醒、截止可能各自维护</td><td>站点只出周次与交付物；具体日期、提醒与截止由教务校历／超星设定</td></tr>
+<tr><td>D-06</td><td>知识图谱双份建设</td><td>站点知识点与超星图谱节点可能各自增补</td><td>站点为知识点、关系、属性的权威源；超星侧人工增补只进差异报告</td></tr>
+<tr><td>D-07</td><td>题目正文与作答成绩双写</td><td>站点题库与超星作业可能同时改写题目或记录成绩</td><td>题目正文、附件、量规归站点；作答、判分、组卷、成绩归超星</td></tr>
+<tr><td>D-08</td><td>课程通知与反馈双通道</td><td>站点通知、反馈库与超星通知、问卷并行</td><td>站点不自建通知库与反馈库；通知与互动统一跳转超星，公告栏目不导出</td></tr>
+<tr><td>D-09</td><td>资源包下载的多入口</td><td>站点下载页、练习站资源目录、超星资料库可能指向不同副本</td><td>按课次打包的 16 个资源包为唯一原件，所有入口落到同一 URL</td></tr>
+<tr><td>D-10</td><td>大纲与教案混排</td><td>大纲页面内含 16 课 × 5 环节共 78 个教学环节，教案与大纲未分离</td><td>大纲单元与教案分为两类内容实例；教案归教师可见，不进入学生学习路径</td></tr>
+</tbody></table></div>
+<h3 id="sec-12">2.6 补齐缺失</h3>
+<div class="tw"><table><thead><tr><th>编号</th><th>补齐的信息项</th><th>整合前状态</th><th>本版本结果</th></tr></thead><tbody>
+<tr><td>G-01</td><td>课次聚合页</td><td>原站点无统一课次入口</td><td>新建课次栏目与课次详情栏目，八类内容指针全部挂接课次</td></tr>
+<tr><td>G-02</td><td>教学日历栏目</td><td>全站检索教学日历为 0 处</td><td>新建日历栏目，补齐 16 条周次骨架，日期字段显式留空</td></tr>
+<tr><td>G-03</td><td>知识点实体与详情页</td><td>原知识图谱只有形态无数据</td><td>补齐 86 个知识点、详情页栏目与图谱导出</td></tr>
+<tr><td>G-04</td><td>教案归属与可见性</td><td>教案正文嵌在大纲页中，无独立类型</td><td>补齐 16 份教案实例与教师可见口径</td></tr>
+<tr><td>G-05</td><td>对接说明栏目</td><td>原站点无职责边界说明</td><td>新建对接说明栏目，公开说明权威源、同步范围与个人数据处理原则</td></tr>
+<tr><td>G-06</td><td>站点地图与结构化数据出口</td><td>原站点无机器可读出口</td><td>补齐站点地图、导航、检索索引与内容清单／关联图出口</td></tr>
+<tr><td>G-07</td><td>方式 B 的完整定义</td><td>蓝图仅有字段级导出契约，未定义超星内嵌链接方式</td><td>补齐可嵌白名单、不嵌清单、三级链接粒度、衔接点与一致性要求</td></tr>
+<tr><td>G-08</td><td>内容项级衔接标注</td><td>原交付无逐项标注</td><td>17 类内容类型、35 个栏目节点、371 个内容实例全部带方式 A／方式 B 标注</td></tr>
+<tr><td>G-09</td><td>发布排除清单</td><td>排除项散落在说明文字中</td><td>补齐与内容清单同列的排除清单，明确 R3 范围</td></tr>
+<tr><td>G-10</td><td>发布就绪度判定</td><td>待补充事项未形成发布判定</td><td>补齐 R0—R3 四级判定、数量分布、前置条件与结果性断言</td></tr>
+<tr><td>G-11</td><td>术语外部引用登记</td><td>8 条术语互链指向未定义概念，端点悬空</td><td>显式登记为待补充外部引用，列明 5 个未定义概念与解除条件</td></tr>
+<tr><td>G-12</td><td>发布视图覆盖规则</td><td>教案可见性在类型定义与内容清单中冲突，无统一发布口径</td><td>新增覆盖规则 R-01，并列入发布前置条件第 18 项</td></tr>
+</tbody></table></div>
+<h3 id="sec-13">2.7 统一表述</h3>
+<div class="tw"><table><thead><tr><th>编号</th><th>统一对象</th><th>整合前的不一致</th><th>本版本统一口径</th></tr></thead><tbody>
+<tr><td>W-01</td><td>状态词表</td><td>已发布、待复核、待补充、待审核、草稿等混用</td><td>只保留三种状态：published（已发布）、needs-review（待复核）、待补充；发布判定另用 R0—R3，不与内容状态混写</td></tr>
+<tr><td>W-02</td><td>可见性词表</td><td>教案在类型定义中为 teacher，在内容清单中为 public；配置亦明确不公开教案</td><td>统一为 public／teacher／restricted 三值；发布视图覆盖规则 R-01 规定 16 份教案按 teacher 执行</td></tr>
+<tr><td>W-03</td><td>证据等级词表</td><td>部分素材带出处，部分未标注，易被误读为真实案例</td><td>统一 A／B／C 三级；A 类须同时给出 URL、抓取日期与使用场景；当前 32 项为 A 类，其余不虚标</td></tr>
+<tr><td>W-04</td><td>课次称谓</td><td>第 N 讲、第 N 周、第 N 章、第 N 次课混用</td><td>统一称「课次」，以 S01—S16 编号与规范标题引用；教材章、大纲单元、练习任务均对齐课次编号</td></tr>
+<tr><td>W-05</td><td>内容项称谓</td><td>条目、资源项、材料、文档混用</td><td>统一称「内容实例」，栏目、内容类型、内容实例三层不得混称</td></tr>
+<tr><td>W-06</td><td>衔接称谓</td><td>对接点、接口点、挂接点混用</td><td>统一称「衔接点」；两种衔接方式统一称「方式 A 资源导入导出」与「方式 B 超星内嵌课程链接」</td></tr>
+<tr><td>W-07</td><td>左右侧字段称谓</td><td>站点字段、超星字段、模板列名、接口列名混用</td><td>左侧统一称标准字段 canonical，右侧统一称平台字段／栏目／功能对象；平台列名未取得文档前一律标注待核验</td></tr>
+<tr><td>W-08</td><td>教案可见性冲突</td><td>类型定义 teacher、内容清单 public、配置不公开，三处不一致</td><td>本版本统一按 teacher 发布；真值源回填列为发布前置条件第 18 项，回填前以覆盖规则 R-01 为准</td></tr>
+<tr><td>W-09</td><td>教学日历口径</td><td>栏目定义为公开，16 条内容状态为待补充、日期全空</td><td>统一表述为「周次骨架公开、具体日期待补充」；不作为已排期日历发布，不进入作业截止设置</td></tr>
+<tr><td>W-10</td><td>URL 状态口径</td><td>151 项无独立 URL，其中 16 项另记规划地址，易被误当作已上线链接</td><td>无独立 URL 者统一表述为「随父页锚点呈现」；16 项规划地址统一表述为「待同步，链接未激活」，不渲染为活动链接</td></tr>
+<tr><td>W-11</td><td>外部引用口径</td><td>术语互链端点悬空，未说明是否可用</td><td>统一标注「待补充外部引用」，不进公开导航与图谱导出，不以虚构条目补齐</td></tr>
+<tr><td>W-12</td><td>统计数字口径</td><td>早期文档的栏目节点数与资源清单行数曾与真值源存在偏差</td><td>统一以真值源为准：35 个栏目节点、371 个内容实例、605 条关联边、49 个字段、96 行资源清单</td></tr>
+</tbody></table></div>
+<h2 id="sec-14">第三部分　内容清单（发布口径）</h2>
+<h3 id="sec-15">3.1 清单口径与总量</h3>
+<p>内容清单以稳定 ID 为最小单位，逐项列示于随附的发布内容清单。文件为本版本附件，与本文件具有同等发布效力；两者数值不一致时以真值源为准。</p>
+<div class="tw"><table><thead><tr><th>统计项</th><th>数量</th><th>说明</th></tr></thead><tbody>
+<tr><td>栏目节点</td><td>35</td><td>保留 11、改造 7、新建 15、下线 2</td></tr>
+<tr><td>内容类型</td><td>17</td><td>已实例化 15 类，预留 2 类</td></tr>
+<tr><td>内容实例</td><td>371</td><td>按状态：已发布 253、待复核 102、待补充 16</td></tr>
+<tr><td>关联边</td><td>605</td><td>已实例化 6 类谓词</td></tr>
+<tr><td>课次</td><td>16</td><td>5 个模块、32 学时、2 学分</td></tr>
+<tr><td>知识点</td><td>86</td><td>全部状态为待复核，语义先修关系未核定</td></tr>
+<tr><td>术语</td><td>103</td><td>其中 8 条外部引用待补齐</td></tr>
+<tr><td>A 类可核验素材</td><td>32</td><td>含 24 张真实界面截图与 8 个带出处案例</td></tr>
+<tr><td>对接数据集</td><td>8</td><td>共 49 个字段、4 个权威来源</td></tr>
+<tr><td>职责域</td><td>9</td><td>逐域明确唯一权威源与重复风险</td></tr>
+<tr><td>出站交换文件</td><td>5</td><td>课程结构 16 行、知识图谱 86 行、题库 16 行、资源清单 96 行、教学日历 16 行</td></tr>
+<tr><td>入站模板</td><td>2</td><td>学生名单与学情聚合，均仅含表头、0 行数据</td></tr>
+<tr><td>发布判定</td><td>R0 237／R1 118／R2 16</td><td>R3 为发布排除项，不属于内容实例</td></tr>
+</tbody></table></div>
+<h3 id="sec-16">3.2 按内容类型的发布清单</h3>
+<p>衔接标注码：A＝仅方式 A 适用，B＝仅方式 B 适用，AB＝两方式均适用，—＝不衔接。各项的信息范围、衔接点与一致性要求见第四部分，不在本表重复。发布可见性列按内容类型字典的规范值列示；教案在内容清单中仍记为 public，由覆盖规则 R-01 统一按 teacher 执行。</p>
+<div class="tw"><table><thead><tr><th>内容类型</th><th>名称</th><th>实例数</th><th>权威归属</th><th>发布可见性</th><th>状态构成</th><th>URL 状态</th><th>衔接标注</th><th>发布处置与判定</th></tr></thead><tbody>
+<tr><td>course</td><td>课程</td><td>1</td><td>左侧</td><td>public</td><td>已发布 1</td><td>均有稳定 URL（1 项）</td><td>AB（课程级锚点，两种方式共同引用）</td><td>内容齐备；R0 1</td></tr>
+<tr><td>module</td><td>知识模块</td><td>5</td><td>左侧</td><td>public</td><td>已发布 5</td><td>均有稳定 URL（5 项）</td><td>AB（模块即超星章节分组）</td><td>内容齐备；R0 5</td></tr>
+<tr><td>session</td><td>课次（教学单元 · 主轴）</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（课次即超星章节任务点，唯一主轴）</td><td>内容齐备；R0 16</td></tr>
+<tr><td>syllabus-unit</td><td>教学大纲单元</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（大纲同时供智能导入与外链引用）</td><td>内容齐备；R0 16</td></tr>
+<tr><td>calendar-entry</td><td>教学日历条目</td><td>16</td><td>左侧</td><td>public</td><td>待补充 16</td><td>均有稳定 URL（16 项）</td><td>A（仅导出周次骨架；日期待补充，不嵌入）</td><td>R2：具体日期、星期、节次、地点、交付截止未注入；R2 16</td></tr>
+<tr><td>lesson-plan</td><td>教案</td><td>16</td><td>左侧</td><td>teacher</td><td>待复核 16</td><td>均有稳定 URL（16 项）</td><td>—（教师备课资产，不进入学生学习路径）</td><td>R1：统一按教师可见执行；教学目标与分钟级时间盒待教师核定；R1 16</td></tr>
+<tr><td>textbook-chapter</td><td>教材章节</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（教材章节可导出也可外链）</td><td>内容齐备；教材中的待补充图位仅作显式占位；R0 16</td></tr>
+<tr><td>deck</td><td>课件（网页版）</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（网页课件可导出也可外链）</td><td>内容齐备；R0 16</td></tr>
+<tr><td>deck-file</td><td>课件文件（PPTX）</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>16 项无 URL（其中 16 项已登记规划地址，未激活）</td><td>A（资源清单登记；链接待同步后才激活）</td><td>R1：16 个 PPTX 尚未同步到站内下载目录，链接不激活；R1 16</td></tr>
+<tr><td>exercise</td><td>习题 / 综合任务单</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（题目正文导出，题目页可外链）</td><td>内容齐备；教师核验卡不进入学生可见范围；R0 16</td></tr>
+<tr><td>practice-kit</td><td>实践资源包</td><td>16</td><td>左侧</td><td>public</td><td>已发布 16</td><td>均有稳定 URL（16 项）</td><td>AB（资源包导出，下载页可外链）</td><td>内容齐备；R0 16</td></tr>
+<tr><td>knowledge-point</td><td>知识点</td><td>86</td><td>左侧</td><td>public</td><td>待复核 86</td><td>均有稳定 URL（86 项）</td><td>AB（图谱导出主对象，详情页可外链；状态条件发布）</td><td>R1：认知维度、分类、教学目标与语义先修关系待教师核定；R1 86</td></tr>
+<tr><td>term</td><td>术语条目</td><td>103</td><td>左侧</td><td>public</td><td>已发布 103</td><td>103 项无独立 URL，随父页锚点呈现</td><td>AB（作为知识点别名导出，术语页可外链）</td><td>内容齐备；8 条外部引用不进入导航与图谱导出；R0 103</td></tr>
+<tr><td>case</td><td>教学案例</td><td>8</td><td>左侧</td><td>public</td><td>已发布 8</td><td>8 项无独立 URL，随父页锚点呈现</td><td>AB（案例资源可导出也可外链）</td><td>内容齐备；案例三要素待人工回填核对；R0 8</td></tr>
+<tr><td>asset</td><td>素材文件</td><td>24</td><td>左侧</td><td>public</td><td>已发布 24</td><td>24 项无独立 URL，随父页锚点呈现</td><td>A（随父页呈现，只登记资源清单，不单独嵌入）</td><td>内容齐备；仅随父页呈现，A 类素材保留来源；R0 24</td></tr>
+<tr><td>announcement</td><td>课程通知</td><td>0</td><td>不适用（本轮无实例）</td><td>public</td><td>无实例</td><td>不适用</td><td>—（避免与超星通知重复，站点不自建通知库）</td><td>预留类型，本轮不填充内容</td></tr>
+<tr><td>reading</td><td>拓展阅读 / 资源</td><td>0</td><td>不适用（本轮无实例）</td><td>public</td><td>无实例</td><td>不适用</td><td>B（拓展阅读以页面外链方式引用，可选）</td><td>预留类型，本轮不填充内容</td></tr>
+</tbody></table></div>
+<p>发布视图覆盖规则 R-01：教案 16 项在真值源中仍记为 public，本版本统一按 teacher 执行——不进入主导航、不进入学生可见检索、不作为超星学生学习对象、不纳入方式 B 可嵌白名单。该覆盖规则为发布前置条件第 18 项的依据。</p>
+<h3 id="sec-17">3.3 按栏目层级的发布清单</h3>
+<div class="tw"><table><thead><tr><th>栏目 ID</th><th>层级</th><th>路径</th><th>迁移状态</th><th>承载内容类型</th><th>衔接标注</th><th>发布处置</th></tr></thead><tbody>
+<tr><td>home</td><td>L0</td><td>/</td><td>existing</td><td>course</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>about</td><td>L0</td><td>/about/</td><td>existing</td><td>course</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>team</td><td>L1</td><td>/about/team/</td><td>extend</td><td>course</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>syllabus</td><td>L0</td><td>/syllabus/</td><td>extend</td><td>syllabus-unit、module</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>calendar</td><td>L0</td><td>/calendar/</td><td>new</td><td>calendar-entry</td><td>A</td><td>R2 阻断（仅发布周次骨架与待补充占位，不作为已排期日历）</td></tr>
+<tr><td>policies</td><td>L0</td><td>/policies/</td><td>extend</td><td>course</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>announcements</td><td>L0</td><td>/announcements/</td><td>new</td><td>announcement</td><td>—</td><td>R0 骨架发布（栏目结构保留，本轮不填充内容）</td></tr>
+<tr><td>integration</td><td>L0</td><td>/integration/</td><td>new</td><td>course</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>sitemap</td><td>L0</td><td>/sitemap/</td><td>new</td><td>course</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>sessions</td><td>L0</td><td>/sessions/</td><td>new</td><td>session、module</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>session-detail</td><td>L1</td><td>/sessions/{nn}/</td><td>new</td><td>session</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>session-plan</td><td>L2</td><td>/sessions/{nn}/plan/</td><td>extend</td><td>lesson-plan</td><td>—</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>textbook</td><td>L0</td><td>/textbook/</td><td>new</td><td>textbook-chapter</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>textbook-chapter</td><td>L1</td><td>/textbook/{nn}/</td><td>new</td><td>textbook-chapter、asset、case</td><td>AB</td><td>R0 直接发布（新建栏目，内容已挂接课次）</td></tr>
+<tr><td>courseware</td><td>L0</td><td>/courseware/</td><td>existing</td><td>deck、deck-file</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>courseware-detail</td><td>L1</td><td>/courseware/{nn}/</td><td>existing</td><td>deck、deck-file</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>exercises</td><td>L0</td><td>/exercises/</td><td>extend</td><td>exercise</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>exercise-detail</td><td>L1</td><td>/exercises/{nn}/</td><td>new</td><td>exercise、knowledge-point</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>practice</td><td>L0</td><td>/practice/</td><td>extend</td><td>practice-kit</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>practice-detail</td><td>L1</td><td>/practice/{nn}/</td><td>extend</td><td>practice-kit、asset</td><td>AB</td><td>R0 直接发布（按课次主轴改造，移除重复入口）</td></tr>
+<tr><td>downloads</td><td>L0</td><td>/downloads/</td><td>existing</td><td>deck-file、practice-kit、asset</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>knowledge</td><td>L0</td><td>/knowledge/</td><td>new</td><td>knowledge-point、module</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>knowledge-modules</td><td>L1</td><td>/knowledge/modules/</td><td>existing</td><td>module</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>knowledge-points</td><td>L1</td><td>/knowledge/points/</td><td>new</td><td>knowledge-point</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>knowledge-point-detail</td><td>L2</td><td>/knowledge/points/{kp}/</td><td>new</td><td>knowledge-point</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>terms</td><td>L1</td><td>/knowledge/terms/</td><td>existing</td><td>term</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>cases</td><td>L0</td><td>/cases/</td><td>existing</td><td>case</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>case-detail</td><td>L1</td><td>/cases/{id}/</td><td>new</td><td>case、asset、knowledge-point</td><td>AB</td><td>R1 条件发布（按教师可见／待复核／链接待激活的限定执行）</td></tr>
+<tr><td>trends</td><td>L0</td><td>/trends/</td><td>existing</td><td>reading、case</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>resources</td><td>L0</td><td>/resources/</td><td>existing</td><td>reading、asset</td><td>AB</td><td>R0 直接发布（保留原栏目，补统一表述与面包屑）</td></tr>
+<tr><td>assets</td><td>L9</td><td>/assets/{id}</td><td>existing</td><td>asset</td><td>—</td><td>系统层产物，随静态发布包生成；不进入主导航与超星外链</td></tr>
+<tr><td>data-api</td><td>L9</td><td>/content/{manifest／graph／nav}.json</td><td>new</td><td>*</td><td>—</td><td>系统层产物，随静态发布包生成；不进入主导航与超星外链</td></tr>
+<tr><td>machine</td><td>L9</td><td>/sitemap.xml、/search-index.json、/404.html</td><td>new</td><td>*</td><td>—</td><td>系统层产物，随静态发布包生成；不进入主导航与超星外链</td></tr>
+<tr><td>legacy-login</td><td>L-1</td><td>（已下线）</td><td>deprecate</td><td>—</td><td>—</td><td>R3 排除（下线条目及其入口，不进入发布包）</td></tr>
+<tr><td>legacy-portal</td><td>L-1</td><td>（已下线）</td><td>deprecate</td><td>—</td><td>—</td><td>R3 排除（下线条目及其入口，不进入发布包）</td></tr>
+</tbody></table></div>
+<h3 id="sec-18">3.4 十六课次聚合清单</h3>
+<div class="tw"><table><thead><tr><th>课次</th><th>模块</th><th>规范标题</th><th>课件页数</th><th>练习分钟</th><th>八类内容指针</th><th>超星衔接锚点</th><th>发布判定</th></tr></thead><tbody>
+<tr><td>S01</td><td>M1</td><td>课程导论：人工智能 70 年与 AI 工具全景</td><td>47</td><td>70</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S01 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S02</td><td>M1</td><td>大语言模型：从 n-gram 到 Transformer 与推理模型</td><td>46</td><td>70</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S02 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S03</td><td>M1</td><td>生成式 AI 与多模态：AIGC 与提示工程进阶</td><td>46</td><td>75</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S03 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S04</td><td>M2</td><td>AI 办公实践：文档、PPT 与知识管理</td><td>47</td><td>80</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S04 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S05</td><td>M2</td><td>AI + 表格：智能表格、公式生成与数据清洗</td><td>47</td><td>80</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S05 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S06</td><td>M2</td><td>用自然语言做数据分析：代码解释器与 AI 分析师</td><td>48</td><td>80</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S06 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S07</td><td>M2</td><td>管理场景数据分析综合：BI × AI 协同</td><td>48</td><td>85</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S07 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S08</td><td>M3</td><td>从工具到智能体：Agent 原理与 MCP 协议</td><td>48</td><td>80</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S08 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S09</td><td>M3</td><td>提示到编排：工作流、RAG 与知识库</td><td>44</td><td>85</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S09 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S10</td><td>M3</td><td>低代码智能体平台实战：搭建企业问答智能体</td><td>44</td><td>90</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S10 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S11</td><td>M3</td><td>多智能体协作与 AgentOps</td><td>46</td><td>85</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S11 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S12</td><td>M4</td><td>什么是 Harness：模型之外的编排层</td><td>48</td><td>80</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S12 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S13</td><td>M4</td><td>AI IDE 与编程智能体实战</td><td>44</td><td>90</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S13 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S14</td><td>M4</td><td>Harness 工程实践：规则、Hook、子代理与权限</td><td>46</td><td>85</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S14 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S15</td><td>M4</td><td>用 AI 集成开发环境构建专业应用</td><td>49</td><td>100</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S15 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+<tr><td>S16</td><td>M5</td><td>综合项目答辩与技术前沿展望</td><td>44</td><td>90</td><td>齐备（教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单、实践资源包）</td><td>课次编号 S16 ＋ 规范标题</td><td>R0 直接发布</td></tr>
+</tbody></table></div>
+<p>每课次的教材章节、网页课件、课件文件、教案、大纲单元、日历条目、综合任务单与实践资源包共八类内容指针全部以课次编号对齐；练习时长均不低于 60 分钟；上一课／下一课关系由 next 表达。</p>
+<h3 id="sec-19">3.5 右侧（超星）信息清单</h3>
+<div class="tw"><table><thead><tr><th>数据集</th><th>名称</th><th>方向</th><th>权威源</th><th>字段数</th><th>交换目标</th><th>本版本衔接结论</th></tr></thead><tbody>
+<tr><td>knowledge-graph</td><td>知识图谱（知识点 · 关系 · 属性 · 关联）</td><td>outbound-primary</td><td>site</td><td>14</td><td>chaoxing</td><td>纳入方式 A；方式 B 仅做外链回指</td></tr>
+<tr><td>course-structure</td><td>课程结构与教学大纲</td><td>outbound</td><td>site</td><td>7</td><td>chaoxing</td><td>纳入方式 A；方式 B 仅做外链回指</td></tr>
+<tr><td>item-bank</td><td>题库 / 作业题目</td><td>outbound</td><td>site</td><td>6</td><td>chaoxing</td><td>纳入方式 A；方式 B 仅做外链回指</td></tr>
+<tr><td>resource-index</td><td>课程资源与素材清单</td><td>outbound</td><td>site</td><td>4</td><td>chaoxing</td><td>纳入方式 A；方式 B 仅做外链回指</td></tr>
+<tr><td>calendar</td><td>教学日历与截止</td><td>outbound-optional</td><td>site（结构）/ registrar（日期）</td><td>3</td><td>chaoxing</td><td>纳入方式 A；方式 B 仅做外链回指</td></tr>
+<tr><td>student-roster</td><td>学生信息与选课名单</td><td>inbound-controlled</td><td>chaoxing / registrar</td><td>5</td><td>site-restricted-zone</td><td>仅方式 A 受控入站，不进入公开页面</td></tr>
+<tr><td>learning-analytics</td><td>学情与知识点掌握度</td><td>inbound-aggregate</td><td>chaoxing</td><td>8</td><td>site-restricted-zone</td><td>仅方式 A 受控入站，不进入公开页面</td></tr>
+<tr><td>identity-and-notification</td><td>身份认证与消息通知</td><td>redirect-only</td><td>chaoxing</td><td>2</td><td>site</td><td>仅跳转出口，两种方式均不交换身份数据</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>职责域</th><th>站点职责</th><th>超星职责</th><th>重复风险</th><th>裁决规则</th></tr></thead><tbody>
+<tr><td>课程介绍 / 大纲 / 教材 / 课件 / 案例 / 术语 / 公开资源</td><td>唯一权威源，负责生产与发布</td><td>引用外链或上传副本（副本不回写）</td><td>低</td><td>一份内容一个原件，超星只引用</td></tr>
+<tr><td>教学日历（周次与交付物）</td><td>结构权威源</td><td>具体日期、提醒与截止的执行方</td><td>中</td><td>站点不推断日期；日期以教务校历 / 超星设置为准</td></tr>
+<tr><td>教案 / 教师备课</td><td>教师可见，面向教学设计</td><td>不承载</td><td>无</td><td>教案不导出为学生学习对象</td></tr>
+<tr><td>知识图谱</td><td>知识点、关系、属性、资源关联的权威源</td><td>图谱展示、按知识点组卷、掌握度计算</td><td>中</td><td>站点导出，超星消费；超星侧的人工增补只进差异报告，不自动回写</td></tr>
+<tr><td>题库题目与素材</td><td>题目正文、附件、量规的权威源</td><td>在线作答、判分、组卷、成绩记录</td><td>中</td><td>站点不采集作答；超星不改写题目正文</td></tr>
+<tr><td>学生身份 / 选课 / 登录</td><td>不承载，仅提供跳转出口</td><td>唯一权威源</td><td>高</td><td>下线站点自有注册、登录、选课、扫码登录、个人中心</td></tr>
+<tr><td>学情 / 成绩 / 签到 / 讨论 / 通知</td><td>不采集、不存储个人级数据</td><td>唯一权威源与唯一执行方</td><td>高</td><td>站点只接收聚合、脱敏指标用于内容改进</td></tr>
+<tr><td>课程反馈 / 问卷</td><td>不自建反馈库</td><td>问卷、评教与互动</td><td>高</td><td>站点反馈入口改为跳转超星</td></tr>
+<tr><td>公开资源下载通道</td><td>唯一入口（按课次打包）</td><td>以资源外链方式引用</td><td>低</td><td>学生从任一入口进入都落到同一份原件</td></tr>
+</tbody></table></div>
+<h3 id="sec-20">3.6 发布排除清单（R3）</h3>
+<div class="tw"><table><thead><tr><th>排除项</th><th>排除理由</th><th>发布后要求</th></tr></thead><tbody>
+<tr><td>站点后端服务文件、包配置与运行期数据</td><td>静态发布不需要后端；与超星教学运行职责重复</td><td>不得出现在静态发布包中</td></tr>
+<tr><td>账号数据集合</td><td>身份、选课、作答归超星，站点不保留并行账号体系</td><td>不得出现在静态发布包中</td></tr>
+<tr><td>受控分析区及全部入站个人级数据</td><td>学生名单与个人级学情只在受控区聚合脱敏</td><td>不得出现在静态发布包、公开页面与检索索引中</td></tr>
+<tr><td>教师核验卡与标准答案</td><td>泄露后破坏练习评价有效性</td><td>不进入学生可见题库、下载包与方式 B 外链</td></tr>
+<tr><td>16 份教案原件</td><td>教师备课资产，统一按 teacher 执行</td><td>不进入主导航、学生检索与超星链接</td></tr>
+<tr><td>旧登录栏目与旧门户栏目</td><td>已在站点地图中标记下线</td><td>不生成 URL、不生成检索条目、不生成外链</td></tr>
+<tr><td>待补充图位与待补充日期</td><td>均为显式占位，不得伪装成已具备内容</td><td>可保留占位标注，不得呈现为已排期或已配图</td></tr>
+<tr><td>8 条术语外部引用边</td><td>端点指向未定义概念，不进公开导航与图谱导出</td><td>教师补齐术语定义后再解析为稳定 ID</td></tr>
+<tr><td>未激活的 16 个课件规划地址</td><td>课件文件尚未同步到站内下载目录</td><td>不渲染为活动链接，不进入方式 B 可嵌白名单</td></tr>
+<tr><td>统一身份认证与消息接口声明</td><td>接口文档与授权未取得</td><td>不表述为已联通，不生成登录态依赖</td></tr>
+</tbody></table></div>
+<h2 id="sec-21">第四部分　衔接标注：与超星资源深度衔接的范围与要求</h2>
+<h3 id="sec-22">4.1 标注体系</h3>
+<p>每个内容项带一组衔接标注，由五个字段构成：适用方式（A／B／AB／—）、信息范围、衔接点、需保持一致的内容、限制与禁用项。方式 A 与方式 B 是两种<strong>可选</strong>衔接方式，可单独采用，也可并行采用；任一方式都不得突破单一权威源与职责边界。</p>
+<div class="tw"><table><thead><tr><th>方式</th><th>名称</th><th>本质</th><th>覆盖的信息流</th><th>不覆盖的信息流</th></tr></thead><tbody>
+<tr><td>方式 A</td><td>资源导入导出</td><td>以数据集为单位的文件级交换</td><td>左侧课程内容出站、右侧聚合学情受控入站、仅跳转出口</td><td>不承担在线作答、成绩、签到、通知与个人身份</td></tr>
+<tr><td>方式 B</td><td>在超星中嵌入本课程链接</td><td>以稳定 URL 为单位的页面级引用</td><td>超星课程空间引用站点公开页面与课次聚合页</td><td>不复制内容原件、不回写正文、不引入学生数据</td></tr>
+</tbody></table></div>
+<h3 id="sec-23">4.2 方式 A · 资源导入导出</h3>
+<p>适用范围：8 类数据集、49 个字段。出站 5 类只含课程内容，入站 2 类仅聚合脱敏，1 类为纯跳转。逐类的信息范围、衔接点、幂等锚点、需保持一致的内容与不可导出项如下。</p>
+<div class="tw"><table><thead><tr><th>数据集</th><th>方向</th><th>信息范围</th><th>衔接点（左侧 ↔ 右侧）</th><th>幂等锚点</th><th>需保持一致的内容</th><th>不可导出／不可带入项</th></tr></thead><tbody>
+<tr><td>knowledge-graph</td><td>outbound-primary</td><td>86 个知识点、父子层级、14 类属性、资源与题目关联；不含任何学生数据</td><td>站点知识图谱与知识点实体 ↔ 超星知识图谱（模板导入／大纲智能导入／思维导图导入）</td><td>kp.id</td><td>知识点编号、名称、父子层级、关联资源 URL、题目 ID、内容版本号</td><td>8 条外部引用边、未核定前置／后置关系、认知维度／分类／教学目标空值、个人学情</td></tr>
+<tr><td>course-structure</td><td>outbound</td><td>课程名、课程代码、学分学时、5 个模块、16 个课次、大纲单元、教材章节清单</td><td>站点课程结构与大纲 ↔ 超星课程章节与章节任务点</td><td>course_id + session.no</td><td>课程名称、课次编号与规范标题、模块划分与顺序、学时学分、教材章节清单</td><td>课程编码（待补充）、教案原件、任何学生数据</td></tr>
+<tr><td>item-bank</td><td>outbound</td><td>16 套综合任务单、题干、知识点绑定、100 分量规、实践资源包附件</td><td>站点习题与实践 ↔ 超星题库／作业</td><td>exercise.id</td><td>题目编号、题干、知识点绑定、量规总分、资源包 URL</td><td>教师核验卡与标准答案（默认不导出到学生可见题库）、作答记录与成绩</td></tr>
+<tr><td>resource-index</td><td>outbound</td><td>96 条资源：教材章节、网页课件、课件文件、案例、截图、拓展阅读的 URL 与元数据</td><td>站点资源清单 ↔ 超星资料库外链或批量上传</td><td>content.id</td><td>资源编号、标题、URL、类型、关联知识点、证据等级与来源标注</td><td>后端文件、受控区内容、16 个未激活课件链接、个人数据</td></tr>
+<tr><td>calendar</td><td>outbound-optional</td><td>16 条教学周骨架：周次、课次、学时、交付物</td><td>站点教学日历 ↔ 超星日历与作业截止设置</td><td>calendar.no</td><td>周次、课次编号、交付物名称</td><td>具体日期、星期、节次、地点、截止时间（均待补充，空值不导出）</td></tr>
+<tr><td>student-roster</td><td>inbound-controlled</td><td>学生名单入站模板，仅表头、0 行数据；用于班级维度匿名统计</td><td>超星／教务名单导出 ↔ 站点受控分析区</td><td>student_id_hash</td><td>班级／专业／院系聚合维度、选课状态枚举、学号加盐哈希口径</td><td>姓名、原始学号、平台用户 ID 不得进入公开站点；不得用于站点登录</td></tr>
+<tr><td>learning-analytics</td><td>inbound-aggregate</td><td>8 类聚合学情指标：知识点完成率与掌握率、任务点完成度、视频时长、作业与测验、讨论访问签到</td><td>超星学情统计报表 ↔ 站点受控分析区</td><td>kp.id + term + aggregate_level</td><td>指标口径（百分比折算）、知识点编号、课次编号、聚合层级</td><td>个人级明细、成绩回算、评价结论；站点只生成内容改进标记</td></tr>
+<tr><td>identity-and-notification</td><td>redirect-only</td><td>不交换身份数据，仅提供前往超星完成登录、提交作业、查看成绩的明确出口</td><td>站点全局出口 ↔ 超星课程空间入口</td><td>不适用</td><td>课程空间 URL、课程名称、版本号</td><td>身份数据、统一身份认证、消息接口（均待核验）</td></tr>
+</tbody></table></div>
+<p>方式 A 的一致性要求：</p>
+<ul><li>单一权威源：出站课程内容以左侧为准，入站学情以右侧为准；不对同一字段双向写回。</li><li>只引用不复制：超星侧尽量以公开外链引用原件；确需上传副本时，副本不得回写、不得成为第二原件。</li><li>差异报告：超星侧的人工增补只进入差异报告，由课程组核对后再决定是否回灌左侧。</li><li>版本对齐：每次内容发布以版本号与内容 ID 为幂等键；课次编号、知识点编号、资源 ID 在两侧必须保持一致。</li><li>状态门槛：待复核与待补充内容不冒充已核定内容；知识点语义前置／后置关系、教学目标、分类与认知维度未核定前留空。</li><li>待核验纪律：49 个字段的平台接口列名当前全部为空；取得校方模板或授权接口文档前不得写死，功能可核验不等于列名可核验。</li></ul>
+<h3 id="sec-24">4.3 方式 B · 在超星中嵌入本课程链接</h3>
+<p>适用范围：超星课程空间引用站点公开页面或课次聚合页，学生从超星任一入口跳转到同一份站点原件。该方式只建立页面级引用，不在超星复制内容正文，也不改变方式 A 的数据边界。</p>
+<h4>可嵌栏目白名单</h4>
+<div class="tw"><table><thead><tr><th>链接粒度</th><th>可嵌栏目与页面</th><th>对应稳定 ID／URL 依据</th><th>嵌接位置</th></tr></thead><tbody>
+<tr><td>课程级</td><td>课程首页、课程介绍、教学大纲、对接说明、站点地图</td><td>课程编号与版本号；站点根路径与总览栏目路径</td><td>超星课程空间首页、课程介绍区、公告与说明区</td></tr>
+<tr><td>课次级</td><td>课次主轴列表、16 个课次聚合页</td><td>课次编号 S01—S16 与规范标题；课次聚合页路径</td><td>超星课程章节、章节任务点、每周学习任务说明</td></tr>
+<tr><td>资源级</td><td>教材章节、网页课件、综合任务单、实践资源包与下载页、知识图谱与知识点详情页、术语页、案例页、拓展阅读页</td><td>内容稳定 ID、资源编号、知识点编号、素材编号与对应 URL</td><td>超星资料库、作业说明、题库题目备注、知识点资源关联</td></tr>
+</tbody></table></div>
+<h4>不嵌清单</h4>
+<div class="tw"><table><thead><tr><th>不嵌对象</th><th>理由</th></tr></thead><tbody>
+<tr><td>教案页与教师备课内容</td><td>统一按 teacher 执行，不得通过外链绕过可见性</td></tr>
+<tr><td>教学日历的具体日期、星期、节次、地点与截止</td><td>均为待补充空值，嵌入会造成已排期错觉</td></tr>
+<tr><td>结构化数据出口、导航与检索索引文件</td><td>系统层产物，面向机器而非学生，URL 可能随构建变化</td></tr>
+<tr><td>受控分析区、学生名单与个人级学情</td><td>隐私与合规禁止；静态发布包本身不含该目录</td></tr>
+<tr><td>旧登录栏目、旧门户栏目及站点自有账号与成绩入口</td><td>已下线，且身份与成绩归超星</td></tr>
+<tr><td>教师核验卡、标准答案与含固定预期答案的素材</td><td>防止泄露评价依据</td></tr>
+<tr><td>16 个未激活的课件规划地址</td><td>链接未生效，嵌入即产生死链</td></tr>
+<tr><td>8 条待补充外部引用对应的术语目标</td><td>端点未定义，不构成可访问页面</td></tr>
+</tbody></table></div>
+<h4>衔接点与一致性要求</h4>
+<div class="tw"><table><thead><tr><th>超星侧衔接点</th><th>站点侧落点</th><th>需保持一致的内容</th></tr></thead><tbody>
+<tr><td>课程空间首页与课程介绍区</td><td>课程首页、课程介绍、对接说明</td><td>课程名称、课程编号、学分学时、开课轮次、版本号、职责边界说明</td></tr>
+<tr><td>课程章节与章节任务点</td><td>课次主轴与 16 个课次聚合页</td><td>课次编号与规范标题、模块划分与顺序、八类内容指针的齐备性</td></tr>
+<tr><td>资料库与作业附件区</td><td>教材章节、课件、习题与实践、资源包下载页</td><td>资源 ID 与 URL、文件名与版本号、公开可见范围、来源与版权标注</td></tr>
+<tr><td>题库题目与知识点资源关联</td><td>综合任务单、知识点详情页、术语页</td><td>题目编号、知识点编号与名称、题干与量规口径、资源关联关系</td></tr>
+<tr><td>公告、讨论与学习提醒</td><td>对接说明页与站点地图（仅说明性回链）</td><td>课程名称与版本、公开可见范围；不在站点重开讨论与通知</td></tr>
+<tr><td>全部嵌入位置</td><td>全站稳定 URL 约定</td><td>URL 稳定不随构建漂移；页面公开可访问、无登录墙；内容下线或改版时同步更新超星侧链接</td></tr>
+</tbody></table></div>
+<p>方式 B 的前提与限制：站点须为公开可访问的静态发布版本；课程空间 URL 仍待校方提供，当前不得写死；URL 与内容 ID 一经发布即锁定；方式 B 不产生、不传输、不展示任何学生数据；题目正文与知识点数据仍以方式 A 导入，方式 B 只做说明性与学习路径回链。</p>
+<h3 id="sec-25">4.4 两种方式的组合、互斥与共同禁用项</h3>
+<div class="tw"><table><thead><tr><th>情形</th><th>结论</th></tr></thead><tbody>
+<tr><td>仅采用方式 A</td><td>可独立完成课程内容交换；超星侧以学生任务点与资料引用为主，无需站点外链体系</td></tr>
+<tr><td>仅采用方式 B</td><td>可完成学习路径引导；但知识点、题目与资源的结构化数据仍留在站点，超星侧不产生结构化副本</td></tr>
+<tr><td>两种方式并行</td><td>推荐组合：方式 A 负责结构化数据，方式 B 负责学习路径入口；两者必须指向同一份原件、同一套稳定 ID 与同一版本号</td></tr>
+<tr><td>互斥关系</td><td>方式 B 不能替代方式 A 的入站边界；方式 A 的入站数据不得因启用方式 B 而出现在公开页面或超星外链中</td></tr>
+<tr><td>共同禁用项</td><td>身份数据交换、个人级学情公开、教案原件外链、教师核验卡导出、受控区内容发布、待补充占位伪装、统一身份认证已联通声明</td></tr>
+</tbody></table></div>
+<h3 id="sec-26">4.5 内容类型衔接标注逐项对照</h3>
+<div class="tw"><table><thead><tr><th>内容类型</th><th>适用方式</th><th>方式 A 信息范围</th><th>方式 A 衔接点</th><th>方式 A 需保持一致</th><th>方式 B 落点</th><th>方式 B 需保持一致</th><th>限制与禁用项</th></tr></thead><tbody>
+<tr><td>course</td><td>AB</td><td>课程名、编号、学分学时、版本</td><td>站点课程首页 ↔ 超星课程空间首页</td><td>课程名称、编号、学时学分、版本号</td><td>课程首页、介绍页、对接说明</td><td>名称与版本、职责边界说明、公开范围</td><td>不得指向账号或成绩入口</td></tr>
+<tr><td>module</td><td>AB</td><td>5 个模块编号、名称、课次区间</td><td>站点模块 ↔ 超星章节分组</td><td>模块编号与顺序、模块名称</td><td>知识模块页</td><td>模块划分与课次归属</td><td>不得重排编号</td></tr>
+<tr><td>session</td><td>AB</td><td>16 课次编号、标题、学时、八类内容指针</td><td>课次聚合页 ↔ 超星章节任务点</td><td>课次编号、规范标题、模块归属、学时</td><td>课次聚合页（主衔接点）</td><td>课次编号与标题、内容齐备性、URL 稳定</td><td>一个课次只对应一个聚合页</td></tr>
+<tr><td>syllabus-unit</td><td>AB</td><td>16 条大纲单元正文</td><td>大纲导出 ↔ 超星大纲智能导入／章节</td><td>大纲单元与课次编号一一对应</td><td>教学大纲页</td><td>大纲标题与课次编号</td><td>不得与教案混排</td></tr>
+<tr><td>calendar-entry</td><td>A</td><td>16 条周次骨架与交付物</td><td>日历导出 ↔ 超星日历与作业截止</td><td>周次、课次编号、交付物</td><td>不嵌入（日期待补充）</td><td>不适用</td><td>具体日期空值不导出、不嵌入</td></tr>
+<tr><td>lesson-plan</td><td>—</td><td>不衔接</td><td>不适用</td><td>不适用</td><td>不嵌入</td><td>不适用</td><td>教师可见，不导出、不外链</td></tr>
+<tr><td>textbook-chapter</td><td>AB</td><td>16 章教材正文、章节编号、图位标注</td><td>教材章节 ↔ 超星资料与知识点智能导入</td><td>章节编号、标题、所属课次</td><td>教材章节页</td><td>章节编号与标题、来源标注</td><td>待补充图位不得表述为已配图</td></tr>
+<tr><td>deck</td><td>AB</td><td>16 份网页课件、页数与标题</td><td>课件 ↔ 超星章节文档资源</td><td>课件编号、标题、所属课次</td><td>课件页</td><td>课件编号与标题、课次归属</td><td>不复制为第二原件</td></tr>
+<tr><td>deck-file</td><td>A</td><td>16 个课件文件与规划地址</td><td>资源清单 ↔ 超星资料库外链</td><td>资源编号、文件名、版本、URL</td><td>不嵌入（链接未激活）</td><td>不适用</td><td>同步到下载目录前不激活、不嵌入</td></tr>
+<tr><td>exercise</td><td>AB</td><td>16 套任务单、题干、知识点绑定、100 分量规</td><td>题目导出 ↔ 超星题库／作业</td><td>题目编号、题干、知识点、量规总分、附件 URL</td><td>综合任务单页</td><td>题目编号、题干、量规口径、公开范围</td><td>教师核验卡不导出；作答与成绩归超星</td></tr>
+<tr><td>practice-kit</td><td>AB</td><td>16 个单课资源包与文件名</td><td>资源包 ↔ 超星作业附件与资料库</td><td>资源包编号、课次编号、URL</td><td>实践资源包与下载页</td><td>文件名、URL、课次归属</td><td>所有入口落到同一原件</td></tr>
+<tr><td>knowledge-point</td><td>AB</td><td>86 个知识点、层级、属性、资源与题目关联</td><td>图谱导出 ↔ 超星知识图谱</td><td>知识点编号、名称、层级、关联 ID</td><td>知识图谱与知识点详情页</td><td>知识点编号与名称、版本</td><td>待复核状态、未核定先修关系、外部引用不导出</td></tr>
+<tr><td>term</td><td>AB</td><td>103 条术语与锚点</td><td>别名／标签导出 ↔ 超星知识点别名</td><td>术语名称、锚点、对应知识点编号</td><td>术语页</td><td>术语名称与锚点</td><td>8 条外部引用不进导航与导出</td></tr>
+<tr><td>case</td><td>AB</td><td>8 个带出处案例与证据等级</td><td>案例资源 ↔ 超星资料与知识点关联</td><td>案例编号、标题、出处、证据等级</td><td>案例页</td><td>标题、来源标注、关联知识点</td><td>案例三要素待人工回填核对</td></tr>
+<tr><td>asset</td><td>A</td><td>24 张真实截图及来源、抓取日期、使用场景</td><td>资源清单 ↔ 超星资料库外链</td><td>素材编号、来源 URL、抓取日期</td><td>随父页呈现，不单独嵌入</td><td>不适用</td><td>不虚构来源；未标注者不虚标 A 类</td></tr>
+<tr><td>announcement</td><td>—</td><td>不衔接</td><td>不适用</td><td>不适用</td><td>不嵌入</td><td>不适用</td><td>避免与超星通知重复</td></tr>
+<tr><td>reading</td><td>B</td><td>不适用（本类型仅方式 B）</td><td>不适用</td><td>不适用</td><td>拓展阅读页</td><td>标题与 URL、来源标注</td><td>可选衔接，不建空栏目内容</td></tr>
+</tbody></table></div>
+<h2 id="sec-27">第五部分　发布就绪度</h2>
+<h3 id="sec-28">5.1 四级判定口径</h3>
+<div class="tw"><table><thead><tr><th>判定</th><th>名称</th><th>含义</th><th>发布处置</th></tr></thead><tbody>
+<tr><td>R0</td><td>直接发布</td><td>内容齐备、状态为已发布、可见性为公开、URL 或父页锚点稳定</td><td>进入主导航、检索索引、静态发布包与可嵌白名单</td></tr>
+<tr><td>R1</td><td>条件发布</td><td>内容可用但需附带限定：教师可见、状态待复核、或链接待激活</td><td>按限定发布，不冒充完整状态；限定解除前不进入学生可见范围或活动链接</td></tr>
+<tr><td>R2</td><td>阻断</td><td>核心字段依赖外部输入且当前为空，作为完整功能上线会造成误读</td><td>站点可发布显式占位，但不得表述为已排期、已联通或已具备日期</td></tr>
+<tr><td>R3</td><td>排除</td><td>不属于公开内容实例，或与超星职责重复、涉及隐私与评价依据</td><td>不进入静态发布包、导航、检索索引与任何外链</td></tr>
+</tbody></table></div>
+<h3 id="sec-29">5.2 判定数量分布</h3>
+<div class="tw"><table><thead><tr><th>判定</th><th>内容实例数</th><th>占比</th><th>主要构成</th></tr></thead><tbody>
+<tr><td>R0 直接发布</td><td>237</td><td>63.9%</td><td>课程、模块、课次、大纲单元、教材章节、网页课件、习题、资源包、术语、案例、素材等</td></tr>
+<tr><td>R1 条件发布</td><td>118</td><td>31.8%</td><td>86 个知识点（待复核）、16 份教案（教师可见）、16 个课件文件（链接待激活）</td></tr>
+<tr><td>R2 阻断</td><td>16</td><td>4.3%</td><td>16 条教学日历条目（具体日期、星期、节次、地点、截止未注入）</td></tr>
+<tr><td>R3 排除</td><td>不适用（非内容实例）</td><td>—</td><td>发布排除清单所列 10 类对象</td></tr>
+</tbody></table></div>
+<p>按内容类型的判定分布：</p>
+<div class="tw"><table><thead><tr><th>内容类型</th><th>实例数</th><th>R0</th><th>R1</th><th>R2</th><th>条件说明</th></tr></thead><tbody>
+<tr><td>course</td><td>1</td><td>1</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>module</td><td>5</td><td>5</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>session</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>syllabus-unit</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>calendar-entry</td><td>16</td><td>0</td><td>0</td><td>16</td><td>R2：具体日期、星期、节次、地点、交付截止未注入</td></tr>
+<tr><td>lesson-plan</td><td>16</td><td>0</td><td>16</td><td>0</td><td>R1：统一按教师可见执行；教学目标与分钟级时间盒待教师核定</td></tr>
+<tr><td>textbook-chapter</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备；教材中的待补充图位仅作显式占位</td></tr>
+<tr><td>deck</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>deck-file</td><td>16</td><td>0</td><td>16</td><td>0</td><td>R1：16 个 PPTX 尚未同步到站内下载目录，链接不激活</td></tr>
+<tr><td>exercise</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备；教师核验卡不进入学生可见范围</td></tr>
+<tr><td>practice-kit</td><td>16</td><td>16</td><td>0</td><td>0</td><td>内容齐备</td></tr>
+<tr><td>knowledge-point</td><td>86</td><td>0</td><td>86</td><td>0</td><td>R1：认知维度、分类、教学目标与语义先修关系待教师核定</td></tr>
+<tr><td>term</td><td>103</td><td>103</td><td>0</td><td>0</td><td>内容齐备；8 条外部引用不进入导航与图谱导出</td></tr>
+<tr><td>case</td><td>8</td><td>8</td><td>0</td><td>0</td><td>内容齐备；案例三要素待人工回填核对</td></tr>
+<tr><td>asset</td><td>24</td><td>24</td><td>0</td><td>0</td><td>内容齐备；仅随父页呈现，A 类素材保留来源</td></tr>
+<tr><td>announcement</td><td>0</td><td>0</td><td>0</td><td>0</td><td>预留类型，本轮不填充内容</td></tr>
+<tr><td>reading</td><td>0</td><td>0</td><td>0</td><td>0</td><td>预留类型，本轮不填充内容</td></tr>
+</tbody></table></div>
+<h3 id="sec-30">5.3 发布前置条件</h3>
+<p>前 17 项延续参考来源与核验状态台账；第 18 项为本轮左右整合中新发现的发布视图冲突校正项。任何一项未解除前，相关内容不得升级判定。</p>
+<div class="tw"><table><thead><tr><th>编号</th><th>待核验／待补充项</th><th>责任方</th><th>解除条件</th></tr></thead><tbody>
+<tr><td>1</td><td>超星知识图谱模板实际列名</td><td>教务／平台管理员</td><td>提供本校模板文件并逐列核对</td></tr>
+<tr><td>2</td><td>题库批量导入模板列名与题型枚举</td><td>教务／平台管理员</td><td>提供模板并确认题型</td></tr>
+<tr><td>3</td><td>学情统计导出表头</td><td>教务／平台管理员</td><td>提供一次脱敏导出样本</td></tr>
+<tr><td>4</td><td>开放接口文档与鉴权方式</td><td>校方信息中心</td><td>出具授权与接口文档；否则只用文件交换</td></tr>
+<tr><td>5</td><td>本校课程空间 URL</td><td>教务</td><td>提供准确地址；当前仅用平台入口并注明待补充</td></tr>
+<tr><td>6</td><td>教务课程编码与校历</td><td>教务</td><td>提供编码与校历</td></tr>
+<tr><td>7</td><td>统一身份认证是否启用</td><td>校方信息中心</td><td>默认关闭；启用须授权与联调</td></tr>
+<tr><td>8</td><td>数据留存期限</td><td>教务／信息中心</td><td>明确规定后写入配置</td></tr>
+<tr><td>9</td><td>知识点认知维度／分类／教学目标枚举</td><td>课程组教师</td><td>教师核定后方可转为已发布</td></tr>
+<tr><td>10</td><td>知识点语义前置／后置关系</td><td>课程组教师</td><td>逐条核定；不得由课次顺序自动推断</td></tr>
+<tr><td>11</td><td>教案教学目标、重难点、教具、分钟级时间盒、课后反思</td><td>课程组教师</td><td>教师备课补齐</td></tr>
+<tr><td>12</td><td>教学日历日期、星期、节次、地点、交付截止</td><td>教务／课程组教师</td><td>由教务校历与课表注入</td></tr>
+<tr><td>13</td><td>案例背景、适用知识点、面向真实问题的实践任务</td><td>课程组教师</td><td>由教材已有案例四要素回填并人工核对</td></tr>
+<tr><td>14</td><td>术语与知识点的别名匹配结果</td><td>课程组教师</td><td>标注需教师复核后方可作为正式别名</td></tr>
+<tr><td>15</td><td>16 个课件文件的站内发布 URL</td><td>课程组</td><td>同步到下载目录后才启用链接</td></tr>
+<tr><td>16</td><td>5 个未定义术语概念与 8 条外部引用</td><td>课程组教师</td><td>补齐术语定义后重新解析为稳定 ID</td></tr>
+<tr><td>17</td><td>8 类预留谓词的实例化</td><td>课程组</td><td>内容逐条挂接后由构建器生成</td></tr>
+<tr><td>18</td><td>发布视图覆盖规则 R-01 的真值源回填</td><td>课程组</td><td>将 16 份教案可见性统一为 teacher，使类型定义、内容清单与发布口径三者一致</td></tr>
+</tbody></table></div>
+<h3 id="sec-31">5.4 发布一致性断言（结果要求）</h3>
+<p>以下为发布版本必须满足的结果性要求，用以判定发布是否成立；不构成操作说明。</p>
+<div class="tw"><table><thead><tr><th>编号</th><th>断言</th></tr></thead><tbody>
+<tr><td>K-01</td><td>全站只有一个课程根节点、一条课次主轴，16 课次与 5 模块的编号、标题、顺序在三处以上出现时完全一致</td></tr>
+<tr><td>K-02</td><td>公开发布包不含后端服务文件、包配置、账号数据、受控区目录与任何个人级学情</td></tr>
+<tr><td>K-03</td><td>16 份教案不出现在主导航、学生可见检索、方式 B 可嵌白名单与任何出站交换文件中</td></tr>
+<tr><td>K-04</td><td>教学日历只呈现周次骨架；日期、星期、节次、地点、截止为空时一律显式标注待补充</td></tr>
+<tr><td>K-05</td><td>16 个未激活课件规划地址不渲染为活动链接，不进入资源清单出站数据与超星外链</td></tr>
+<tr><td>K-06</td><td>A 类素材均带来源 URL、抓取日期与使用场景；未标注者不被表述为真实案例</td></tr>
+<tr><td>K-07</td><td>8 条待补充外部引用不进入公开导航、检索索引与知识图谱导出；5 个未定义概念无虚构条目</td></tr>
+<tr><td>K-08</td><td>平台接口字段名为空且标注待核验；任何文案不得将功能可核验表述为接口已联通</td></tr>
+<tr><td>K-09</td><td>方式 A 与方式 B 引用的课程名称、课次编号与规范标题、知识点编号、资源 ID、版本号完全一致</td></tr>
+<tr><td>K-10</td><td>方式 B 可嵌页面均为公开可访问、无登录墙、URL 稳定的静态页面；不嵌清单中的对象不出现在任何外链</td></tr>
+<tr><td>K-11</td><td>入站模板仅含表头、0 行数据；站点不呈现任何学生姓名、学号、成绩、排名或可识别信息</td></tr>
+<tr><td>K-12</td><td>知识图谱导出中前置／后置／关联三列在教师核定前保持留空；课次先后不被表述为知识先修</td></tr>
+<tr><td>K-13</td><td>35 个栏目节点中 2 项下线条目不生成 URL、不生成检索条目、不生成外链</td></tr>
+<tr><td>K-14</td><td>发布内容清单与本文件的统计口径一致，逐项衔接标注无空缺、无互相矛盾的适用方式</td></tr>
+</tbody></table></div>
+<h3 id="sec-32">5.5 发布版本边界声明</h3>
+<ul><li>本版本为结构与口径交付，未改动现网页面、课件数据、样式、后端与运行期数据；已发布的公开站点保持原状。</li><li>本版本未推送任何公开站点，未连接超星账号，未调用平台接口，未导入任何真实学生数据；入站模板仅含表头。</li><li>本版本未生成校历日期、课程编码、超星接口字段名、知识点语义先修关系；以上均保持空值并显式标注。</li><li>本版本未把契约设计表述为已上线能力；所有「可导出／可嵌入」均为发布口径下的适用范围声明，其生效以前置条件解除为准。</li></ul>
+<h2 id="sec-33">第六部分　附则</h2>
+<h3 id="sec-34">6.1 统一词表（最终口径）</h3>
+<div class="tw"><table><thead><tr><th>术语</th><th>统一含义</th><th>不得混用</th></tr></thead><tbody>
+<tr><td>课次</td><td>唯一组织轴上的教学单元，S01—S16</td><td>第 N 讲、第 N 周、第 N 章</td></tr>
+<tr><td>内容实例</td><td>带稳定 ID 的具体材料</td><td>条目、资源项、材料、文档</td></tr>
+<tr><td>栏目</td><td>导航与 URL 树上的位置</td><td>频道、板块、页面类型</td></tr>
+<tr><td>内容类型</td><td>内容实例的元数据模板</td><td>分类、标签、模型</td></tr>
+<tr><td>关联谓词</td><td>有向关联关系的类型，共 14 种</td><td>关系类型、连线</td></tr>
+<tr><td>权威源</td><td>某类数据唯一的生产与裁决方</td><td>主库、主站</td></tr>
+<tr><td>方式 A</td><td>资源导入导出</td><td>同步方案、接口对接</td></tr>
+<tr><td>方式 B</td><td>在超星中嵌入本课程链接</td><td>外链跳转、嵌入网页</td></tr>
+<tr><td>衔接点</td><td>左右两侧发生对应的具体位置与对象</td><td>对接点、接口点、挂接点</td></tr>
+<tr><td>已发布／待复核／待补充</td><td>内容状态三值</td><td>已上线、草稿、待审核</td></tr>
+<tr><td>R0—R3</td><td>发布判定四值</td><td>与内容状态混写</td></tr>
+<tr><td>A／B／C 类证据</td><td>可核验、课堂演练、待补充三级</td><td>真实／示例／占位混用</td></tr>
+</tbody></table></div>
+<h3 id="sec-35">6.2 真值源与效力顺序</h3>
+<div class="tw"><table><thead><tr><th>层级</th><th>对象</th><th>效力</th></tr></thead><tbody>
+<tr><td>结构依据</td><td>信息架构蓝图 v1.0</td><td>核心结构不可变更；本版本不得新增、删减或重排结构约定</td></tr>
+<tr><td>数据真值源</td><td>站点地图、内容类型、关联词表、字段映射契约、内容清单、关联图、课次主轴、课程配置及构建产物</td><td>数值冲突时以此为准</td></tr>
+<tr><td>发布口径</td><td>本文件与随附的发布内容清单</td><td>发布处置、衔接标注、就绪度判定以此为准</td></tr>
+<tr><td>说明文档</td><td>总览与现状诊断、站点地图说明、栏目与内容模型、字段映射说明、模板配置说明、参考来源与核验状态</td><td>解释与溯源用；与真值源冲突时不作为发布依据</td></tr>
+</tbody></table></div>
+<h3 id="sec-36">6.3 版本记录</h3>
+<div class="tw"><table><thead><tr><th>版本</th><th>日期</th><th>变更内容</th></tr></thead><tbody>
+<tr><td>v1.0</td><td>2026-11-07</td><td>依据信息架构蓝图 v1.0 建立待发布版本：完成左右两侧信息项、层级与关联关系整合，形成 10 项消除重复、12 项补齐缺失、12 项统一表述处置；固化 371 个内容实例与 35 个栏目节点的发布清单；补齐方式 A 与方式 B 的完整衔接标注；建立 R0—R3 发布判定与 18 项前置条件</td></tr>
+</tbody></table></div>
+<h3 id="sec-37">6.4 交付物清单</h3>
+<div class="tw"><table><thead><tr><th>交付物</th><th>形态</th><th>作用</th></tr></thead><tbody>
+<tr><td>06_待发布版本.md</td><td>主文档</td><td>发布口径的唯一依据：整合结构、内容清单、衔接标注、就绪度判定</td></tr>
+<tr><td>待发布版本.html</td><td>阅读版</td><td>带目录导航、可打印存 PDF 的同内容阅读版</td></tr>
+<tr><td>待发布版本_发布内容清单.csv</td><td>机器可读清单</td><td>371 行，逐实例给出权威归属、可见性、状态、URL 状态、衔接标注、发布判定与一致性要求</td></tr>
+</tbody></table></div>
+<hr>
+<p>编制：课程空间重构项目组　·　结构依据：信息架构蓝图 v1.0　·　数据依据：course-template 真值源　·　状态：待发布版本 v1.0</p></main></div><script>(function(){var ls=[].slice.call(document.querySelectorAll('nav a[data-sec]')),hs=[].slice.call(document.querySelectorAll('main h2[id],main h3[id]'));function s(){var y=window.scrollY+130,c=hs[0];hs.forEach(function(h){if(h.offsetTop<=y)c=h;});ls.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+(c&&c.id));});}window.addEventListener('scroll',s,{passive:true});s();})();</script></body></html>

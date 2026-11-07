@@ -1,0 +1,56 @@
+{
+  "$meta": {
+    "name": "通用课程站点 · 站点地图（机器可读）",
+    "version": "1.0.0",
+    "organizing_principle": "单门课程为根，课次（session）为唯一组织轴；其余内容类型均以 session_no 对齐到课次，以 kp_ids 对齐到知识图谱。",
+    "url_rule": "全站使用小写 ASCII 目录式 URL；动态部分用两位课次号或稳定 ID；不含中文与空格，便于静态托管与外链引用。",
+    "depth_rule": "主导航 ≤ 2 层；任何内容最多 3 次点击可达；课次聚合页是教与学的统一入口。",
+    "breadcrumb_rule": "课程 › 模块 › 课次 › 内容类型 › 内容实例（逐级可点）。",
+    "status_legend": {"existing": "现有内容可直接迁移", "extend": "现有内容需拆分或补充元数据", "new": "本次重构新增栏目", "deprecate": "现状存在但应下线，避免与超星重复"}
+  },
+  "columns": [
+    {"id": "home", "level": 0, "path": "/", "label": "课程首页", "content_types": ["course"], "nav_group": "overview", "status": "existing", "existing_page": "site/index.html", "note": "聚合课程定位、16 课次入口、最近更新、前往超星的明确出口；移除站点自有登录与选课入口。"},
+
+    {"id": "about", "level": 0, "path": "/about/", "label": "课程介绍", "content_types": ["course"], "nav_group": "overview", "status": "existing", "existing_page": "site/about.html", "children": ["/about/team/"], "note": "课程定位、教学目标、授课对象与学情、教学理念与学习路径。"},
+    {"id": "team", "level": 1, "path": "/about/team/", "label": "课程团队", "content_types": ["course"], "nav_group": "footer", "status": "extend", "existing_page": "site/about.html#团队", "note": "从课程介绍拆出，便于独立维护与引用。"},
+    {"id": "syllabus", "level": 0, "path": "/syllabus/", "label": "教学大纲", "content_types": ["syllabus-unit", "module"], "nav_group": "overview", "status": "extend", "existing_page": "site/syllabus.html", "note": "只保留大纲层（模块 → 课次 → 教学内容与学时）；现页面中逐课教学环节迁入教案栏目。", "anchors": "/syllabus/#s{nn}"},
+    {"id": "calendar", "level": 0, "path": "/calendar/", "label": "教学日历", "content_types": ["calendar-entry"], "nav_group": "overview", "status": "new", "existing_page": null, "note": "按教学周组织；具体日期须由教务校历注入，未注入前一律标注待补充，不编造。", "anchors": "/calendar/#w{nn}"},
+    {"id": "policies", "level": 0, "path": "/policies/", "label": "考核与学习规则", "content_types": ["course"], "nav_group": "overview", "status": "extend", "existing_page": "site/about.html#考核方式", "note": "考核方式、量规说明、AI 使用规范与数据安全红线；成绩记录本身在超星。"},
+    {"id": "announcements", "level": 0, "path": "/announcements/", "label": "课程通知", "content_types": ["announcement"], "nav_group": "resources", "status": "new", "existing_page": "site/data/db.json#updates", "note": "仅公开通知；个人成绩与学情通知由超星发送，站点不复制。"},
+    {"id": "integration", "level": 0, "path": "/integration/", "label": "对接与数据说明", "content_types": ["course"], "nav_group": "footer", "status": "new", "existing_page": null, "note": "公开说明与超星的职责边界、同步范围、字段口径与个人数据处理原则，提升透明度。"},
+    {"id": "sitemap", "level": 0, "path": "/sitemap/", "label": "站点地图", "content_types": ["course"], "nav_group": "footer", "status": "new", "existing_page": null, "note": "面向人与爬虫的全站索引。"},
+
+    {"id": "sessions", "level": 0, "path": "/sessions/", "label": "课次主轴", "content_types": ["session", "module"], "nav_group": "sessions", "status": "new", "existing_page": null, "note": "整站核心栏目：按 5 模块列出 16 课次，是线性学习路径入口。", "instances": 16},
+    {"id": "session-detail", "level": 1, "path": "/sessions/{nn}/", "label": "课次聚合页", "content_types": ["session"], "nav_group": "sessions", "status": "new", "existing_page": null, "instances": 16, "note": "一页取齐本课教材章节、课件、教案、日历、习题、实践包、知识点、案例与术语；含上一课/下一课与六大内容标签。", "key_page": true},
+    {"id": "session-plan", "level": 2, "path": "/sessions/{nn}/plan/", "label": "教案", "content_types": ["lesson-plan"], "nav_group": "sessions", "status": "extend", "existing_page": "site/syllabus.html（第 nn 课手风琴正文）", "instances": 16, "note": "默认教师可见；目标、重难点、时间盒、五环节、教具、评价与反思。"},
+
+    {"id": "textbook", "level": 0, "path": "/textbook/", "label": "教材", "content_types": ["textbook-chapter"], "nav_group": "textbook", "status": "new", "existing_page": null, "note": "接入已完成的 16 章教材文本与修改详细说明；此前教材文件未进入网站导航。", "instances": 16},
+    {"id": "textbook-chapter", "level": 1, "path": "/textbook/{nn}/", "label": "教材章节", "content_types": ["textbook-chapter", "asset", "case"], "nav_group": "textbook", "status": "new", "existing_page": "教材/分章/第NN章_*.md", "instances": 16, "note": "章内嵌 A 类真实截图；B 类标注虚构；C 类与待补充图位明确列出。"},
+    {"id": "courseware", "level": 0, "path": "/courseware/", "label": "课件中心", "content_types": ["deck", "deck-file"], "nav_group": "courseware", "status": "existing", "existing_page": "site/courseware.html", "instances": 16, "note": "保留按模块浏览，同时补齐每课与教材章节、习题的双向链接。", "children": ["/courseware/{nn}/"]},
+    {"id": "courseware-detail", "level": 1, "path": "/courseware/{nn}/", "label": "课件播放", "content_types": ["deck", "deck-file"], "nav_group": "courseware", "status": "existing", "existing_page": "site/lecture.html?n={nn}", "instances": 16, "note": "把查询参数式地址改为目录式静态 URL。"},
+
+    {"id": "exercises", "level": 0, "path": "/exercises/", "label": "习题", "content_types": ["exercise"], "nav_group": "practice", "status": "extend", "existing_page": "site/exercises.html", "instances": 16, "note": "从「下载列表」升级为「题目实体列表」：展示时长、独立性、工具、成果物、量规与关联知识点。"},
+    {"id": "exercise-detail", "level": 1, "path": "/exercises/{nn}/", "label": "综合任务单", "content_types": ["exercise", "knowledge-point"], "nav_group": "practice", "status": "new", "existing_page": "course-exercises-site/resources/files/第N次课/任务单.md", "instances": 16, "note": "任务说明、背景、素材、分钟级步骤、成果要求、100 分量规、教师核验卡。"},
+    {"id": "practice", "level": 0, "path": "/practice/", "label": "实践环节", "content_types": ["practice-kit"], "nav_group": "practice", "status": "extend", "existing_page": "site/resources.html#exercise-downloads", "instances": 16, "note": "明确「实践环节」栏目层级，与「习题」并列：题目在习题，素材在实践。"},
+    {"id": "practice-detail", "level": 1, "path": "/practice/{nn}/", "label": "课次实践资源包", "content_types": ["practice-kit", "asset"], "nav_group": "practice", "status": "extend", "existing_page": "site/exercises.html#第N次课", "instances": 16, "note": "按课次单独打包，整包与逐份下载并存。"},
+    {"id": "downloads", "level": 0, "path": "/downloads/", "label": "下载中心", "content_types": ["deck-file", "practice-kit", "asset"], "nav_group": "practice", "status": "existing", "existing_page": "site/downloads/", "note": "统一文件出口，响应头强制附件下载；文件名保留中文但与规范 URL 解耦。"},
+
+    {"id": "knowledge", "level": 0, "path": "/knowledge/", "label": "知识图谱", "content_types": ["knowledge-point", "module"], "nav_group": "knowledge", "status": "new", "existing_page": null, "note": "把站点已有「知识模块」「术语词典」与新增知识点统一到图谱视图；同时是超星知识图谱导出的唯一数据源。"},
+    {"id": "knowledge-modules", "level": 1, "path": "/knowledge/modules/", "label": "知识模块", "content_types": ["module"], "nav_group": "knowledge", "status": "existing", "existing_page": "site/modules.html", "instances": 5, "note": "模块 → 课次 → 知识点三级展开。"},
+    {"id": "knowledge-points", "level": 1, "path": "/knowledge/points/", "label": "知识点索引", "content_types": ["knowledge-point"], "nav_group": "knowledge", "status": "new", "existing_page": null, "instances": 86, "note": "当前实例由 16 份课件 points[] 抽取；语义前置/后置关系标注待教师核定。"},
+    {"id": "knowledge-point-detail", "level": 2, "path": "/knowledge/points/{kp}/", "label": "知识点详情", "content_types": ["knowledge-point"], "nav_group": "knowledge", "status": "new", "existing_page": null, "note": "展示定义、关联资源、关联题目、前后置与掌握情况说明（不展示学生数据）。"},
+    {"id": "terms", "level": 1, "path": "/knowledge/terms/", "label": "术语词典", "content_types": ["term"], "nav_group": "knowledge", "status": "existing", "existing_page": "site/glossary.html", "instances": 103, "note": "术语作为知识点别名与标签，纳入统一图谱。", "anchors": "/knowledge/terms/#{anchor}"},
+
+    {"id": "cases", "level": 0, "path": "/cases/", "label": "案例库", "content_types": ["case"], "nav_group": "resources", "status": "existing", "existing_page": "site/cases.html", "instances": 8, "note": "补齐全字段：背景、适用知识点、来源、面向真实问题的实践任务、A/B/C 分级。"},
+    {"id": "case-detail", "level": 1, "path": "/cases/{id}/", "label": "案例详情", "content_types": ["case", "asset", "knowledge-point"], "nav_group": "resources", "status": "new", "existing_page": null, "note": "每个案例独立可引用地址，供课次、教材章节与知识点反向链接。"},
+    {"id": "trends", "level": 0, "path": "/trends/", "label": "技术趋势", "content_types": ["reading", "case"], "nav_group": "resources", "status": "existing", "existing_page": "site/trends.html", "note": "保留趋势解读，明确其证据条目来自案例库并双向链接。"},
+    {"id": "resources", "level": 0, "path": "/resources/", "label": "拓展资源", "content_types": ["reading", "asset"], "nav_group": "resources", "status": "existing", "existing_page": "site/resources.html", "note": "保留工具清单、学习路径、延伸阅读；剥离已独立成栏的下载与练习内容。"},
+
+    {"id": "assets", "level": 9, "path": "/assets/{id}", "label": "素材原件", "content_types": ["asset"], "nav_group": null, "status": "existing", "existing_page": "教材/素材/截图/", "note": "系统层，不进主导航。"},
+    {"id": "data-api", "level": 9, "path": "/content/{manifest|graph|nav}.json", "label": "结构化数据出口", "content_types": ["*"], "nav_group": null, "status": "new", "existing_page": null, "note": "系统层；供站内检索、导航渲染与超星适配层消费。"},
+    {"id": "machine", "level": 9, "path": "/sitemap.xml | /search-index.json | /404.html", "label": "机器可读入口", "content_types": ["*"], "nav_group": null, "status": "new", "existing_page": null, "note": "系统层。"},
+
+    {"id": "legacy-login", "level": -1, "path": null, "label": "登录 / 注册", "content_types": [], "nav_group": null, "status": "deprecate", "existing_page": "site/login.html, site/qr.html", "note": "站点自建账号与扫码登录；与超星身份体系重复，应下线并改为跳转。"},
+    {"id": "legacy-portal", "level": -1, "path": null, "label": "个人中心 / 选课 / 反馈 / 统计", "content_types": [], "nav_group": null, "status": "deprecate", "existing_page": "site/portal.html, site/resources.html#faq 相关交互", "note": "站点的 users / sessions / enrollments / feedback / updates / stats / qr 接口与数据库；全部由超星承担，静态发布时不打包 db.json。"}
+  ]
+}

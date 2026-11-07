@@ -1,0 +1,42 @@
+[
+  {
+    "seq": 1,
+    "title": "Klarna：AI 客服的完整弧线，从「替代 700 人」到重新招人",
+    "source_note": "来源：Klarna 与 OpenAI 联合公开声明（2024-02-27 上线；4000 万美元为厂商自报预测值）；Klarna 2024 年报与 2025 年公开披露；CEO 2025 年 5 月公开表态与媒体报道。"
+  },
+  {
+    "seq": 2,
+    "title": "澳大利亚联邦银行：宣布裁员 45 人，数周后撤回并道歉",
+    "source_note": "来源：Commonwealth Bank 2025 年 7 月公开声明与撤回公告；澳大利亚金融业工会（FSU）公开举证；主流媒体 2025 年 7—8 月报道。"
+  },
+  {
+    "seq": 3,
+    "title": "工具不难，口径与流程才难：三条企业级证据",
+    "source_note": "来源：MIT NANDA《The GenAI Divide: State of AI in Business 2025》；McKinsey《The State of AI》（2025）；METR（2025）。"
+  },
+  {
+    "seq": 4,
+    "title": "WorkBuddy：一个可以照着做的全场景 AI 工作台",
+    "source_note": "来源：WorkBuddy 官方产品说明与帮助文档（腾讯）。"
+  },
+  {
+    "seq": 5,
+    "title": "DeepSeek Harness：开源智能体运行时的能力与成本",
+    "source_note": "来源：DeepSeek Harness 官方文档与公开仓库（MIT 许可，developer preview）；「回复 PONG」约 13,467 输入 token 与 macOS 531 包 / 306 MB 为公开实测数据。"
+  },
+  {
+    "seq": 6,
+    "title": "斯坦福 AI Index 2026：正面证据与反面证据并置",
+    "source_note": "来源：Stanford HAI《2026 年人工智能指数报告》（2026-04-13 发布）。"
+  },
+  {
+    "seq": 7,
+    "title": "Gartner：集成在加速，项目取消也在加速",
+    "source_note": "来源：Gartner 新闻稿（2025-08-26）与 Gartner 公开预测。"
+  },
+  {
+    "seq": 8,
+    "title": "Gartner：集成在加速，项目取消也在加速",
+    "source_note": "来源：Klarna 2024—2025 公开披露；Commonwealth Bank 与澳大利亚金融业工会 2025 年公开信息；Stanford HAI《2026 年人工智能指数报告》（AI 事件 233→362、透明度指数 58→40）。"
+  }
+]

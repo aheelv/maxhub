@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://course-template.local/schema/content-instance.schema.json",
+  "title": "通用课程站点 · 内容实例元数据",
+  "description": "每个内容对象的公共核心字段。类型专属字段放在 ext 中，按 model/content-types.json 的 ext_fields 校验。",
+  "type": "object",
+  "required": ["id", "type", "title", "course_id", "status", "visibility", "ext"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "minLength": 2, "pattern": "^[A-Z0-9][A-Z0-9:._-]*$"},
+    "type": {"type": "string", "description": "必须命中 model/content-types.json 的 types[].code"},
+    "title": {"type": "string", "minLength": 1},
+    "course_id": {"type": "string"},
+    "session_no": {"type": ["integer", "null"], "minimum": 1},
+    "module_id": {"type": ["string", "null"], "pattern": "^M\\d+$"},
+    "kp_ids": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string", "enum": ["published", "needs-review", "draft", "待补充"]},
+    "version": {"type": "string"},
+    "updated_at": {"type": ["string", "null"]},
+    "owner": {"type": "string"},
+    "source": {"type": ["string", "null"], "description": "项目内原件相对路径或数据来源说明；A 类素材必填。"},
+    "source_url": {"type": ["string", "null"], "description": "外部可核验来源 URL 或站内 URL；A 类素材必填。"},
+    "captured_at": {"type": ["string", "null"], "description": "外部材料抓取日期；A 类素材必填。"},
+    "evidence_level": {"type": ["string", "null"], "enum": ["A", "B", "C", null]},
+    "visibility": {"type": "string", "enum": ["public", "campus", "teacher", "internal"]},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["path", "format"], "additionalProperties": false,
+        "properties": {
+          "path": {"type": "string"},
+          "format": {"type": "string"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "url": {"type": ["string", "null"], "description": "站内规范 URL；须符合 model/content-types.json 的 url_pattern。"},
+    "ext": {"type": "object", "description": "类型专属字段，键集合见内容类型字典；允许 null 值表示待补充。"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"evidence_level": {"const": "A"}}},
+      "then": {
+        "required": ["source"],
+        "description": "A 类可核验素材必须记录原件路径；外部材料还须有 source_url 与 captured_at，由校验器单独检查。"
+      }
+    }
+  ]
+}

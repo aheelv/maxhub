@@ -1,0 +1,11 @@
+表,字段,建议类型,约束/权限说明
+events,event_id,TEXT,唯一主键
+events,title,TEXT,必填
+events,start_at,TEXT,开始时间
+events,capacity,INTEGER,正整数；服务端校验
+events,status,TEXT,open/closed
+registrations,registration_id,TEXT,唯一主键
+registrations,event_id,TEXT,关联events
+registrations,user_id,AUTH_ID,认证身份，不存真实学号
+registrations,created_at,TIMESTAMP,服务端时间
+registrations,status,TEXT,active/cancelled

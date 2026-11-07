@@ -1,0 +1,17 @@
+﻿course_id,course_title,course_code,hours,credits,module_id,module_name,session_no,session_title,session_hours
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M1,AI 基础与背景,1,课程导论：人工智能 70 年与 AI 工具全景,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M1,AI 基础与背景,2,大语言模型：从 n-gram 到 Transformer 与推理模型,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M1,AI 基础与背景,3,生成式 AI 与多模态：AIGC 与提示工程进阶,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M2,AI 办公与数据分析,4,AI 办公实践：文档、PPT 与知识管理,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M2,AI 办公与数据分析,5,AI + 表格：智能表格、公式生成与数据清洗,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M2,AI 办公与数据分析,6,用自然语言做数据分析：代码解释器与 AI 分析师,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M2,AI 办公与数据分析,7,管理场景数据分析综合：BI × AI 协同,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M3,智能体（Agent）技术,8,从工具到智能体：Agent 原理与 MCP 协议,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M3,智能体（Agent）技术,9,提示到编排：工作流、RAG 与知识库,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M3,智能体（Agent）技术,10,低代码智能体平台实战：搭建企业问答智能体,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M3,智能体（Agent）技术,11,多智能体协作与 AgentOps,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M4,Harness 与 AI 集成开发环境,12,什么是 Harness：模型之外的编排层,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M4,Harness 与 AI 集成开发环境,13,AI IDE 与编程智能体实战,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M4,Harness 与 AI 集成开发环境,14,Harness 工程实践：规则、Hook、子代理与权限,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M4,Harness 与 AI 集成开发环境,15,用 AI 集成开发环境构建专业应用,2
+AI-TOOLS-APPLY,人工智能工具应用实践,,32,2,M5,综合实践与前沿,16,综合项目答辩与技术前沿展望,2

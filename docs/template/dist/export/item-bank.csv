@@ -1,0 +1,17 @@
+﻿item_id,session_no,title,question,kp_ids,duration_minutes,independent,rubric_total,attachment_url,teacher_key_visible
+EX-01,1,第 1 次课｜AI 工具全景地图与个人使用红线,由你一人使用 WorkBuddy，完成《AI 工具全景与个人使用红线》三件套：一张四层工具全景表、一份同题三工具对比记录、一份可打勾的个人红线清单，并用三句话写出本课复盘卡。,KP-M1-01;KP-M1-02;KP-M1-03;KP-M1-04;KP-M1-05;KP-M1-06,70,True,100,/exercises/01/,false
+EX-02,2,第 2 次课｜把上下文换算成钱：Token 实测与成本估算,由你一人用 WorkBuddy 完成《Token 与上下文成本实测报告》：两轮对照实验记录、一份四要素结构化提示、一张成本估算表，以及一句有数字支撑的「值不值得」结论。,KP-M1-07;KP-M1-08;KP-M1-09;KP-M1-10;KP-M1-11;KP-M1-12,70,True,100,/exercises/02/,false
+EX-03,3,第 3 次课｜多模态读图核验与宣传素材包,由你一人用 WorkBuddy 完成《多模态读图核验与宣传素材包》：一张由 AI 生成再被 AI 读回的图表、一份逐项读图核验表、三条可背下来的验证清单、一套四要素提示生成的宣传文案。,KP-M1-13;KP-M1-14;KP-M1-15;KP-M1-16;KP-M1-17;KP-M1-18,75,True,100,/exercises/03/,false
+EX-04,4,第 4 次课｜从原始材料到可署名交付：简报、八页演示与归档规则,"由你一人用 WorkBuddy 完成《咖啡角月度复盘交付包》：一份 1,500 字简报 docx、一份 8 页演示 pptx、一张三类验收表、一套可复用的归档规则与模板。",KP-M2-01;KP-M2-02;KP-M2-03;KP-M2-04;KP-M2-05;KP-M2-06,80,True,100,/exercises/04/,false
+EX-05,5,第 5 次课｜把脏订单表洗成可复核的干净数据,由你一人用 WorkBuddy 完成《订单表清洗与公式复核报告》：三个可复核算式、一份干净表、一张清洗留痕表、一次 20 行抽样复核，以及清洗前后合计金额的对账说明。,KP-M2-07;KP-M2-08;KP-M2-09;KP-M2-10;KP-M2-11,80,True,100,/exercises/05/,false
+EX-06,6,第 6 次课｜一次能复现的完整数据分析：从提问到结论,由你一人用 WorkBuddy 完成《3 月门店经营分析报告》：一份带口径的四步分析任务书、可复现脚本与中间结果、三张选对图的图表、三条带数字的结论，以及一张误用排查表。,KP-M2-12;KP-M2-13;KP-M2-14;KP-M2-15;KP-M2-16,80,True,100,/exercises/06/,false
+EX-07,7,第 7 次课｜先立口径再谈自动化：27 万差额从哪来,由你一人用 WorkBuddy 完成《口径治理与一页经营报告》：三张指标口径卡、6 条经核验的查询用例、27 万差额的逐项归因表、一页经营报告。,KP-M2-17;KP-M2-18;KP-M2-19;KP-M2-20;KP-M2-21,85,True,100,/exercises/07/,false
+EX-08,8,第 8 次课｜跑通一次端到端智能体，并拆开它的执行轨迹,由你一人用 WorkBuddy 完成《智能体端到端实验报告》：一次真实端到端任务、五阶段轨迹拆解、纯对话 vs 带工具对比表、一张连接器权限矩阵与越界处置记录。,KP-M3-01;KP-M3-02;KP-M3-03;KP-M3-04;KP-M3-05;KP-M3-06,80,True,100,/exercises/08/,false
+EX-09,9,第 9 次课｜带出处的知识问答：12 题测试集与可复核工作流,由你一人用 WorkBuddy 完成《带出处知识问答最小可用包》：一个由四份制度构成的资料库、12 题测试集与三项指标、一条含分支和人工确认的工作流、以及一次命中失败的根因修正。,KP-M3-07;KP-M3-08;KP-M3-09;KP-M3-10;KP-M3-11,85,True,100,/exercises/09/,false
+EX-10,10,第 10 次课｜把边界写下来：学院事务问答智能体的需求、语料、测试与发布验收,由你一人用 WorkBuddy 完成《学院事务问答智能体交付包》：一页四问需求、脱敏后的语料与命名表、20 题测试报告、发布验收 11 项与巡检回滚方案。,KP-M3-12;KP-M3-13;KP-M3-14;KP-M3-15;KP-M3-16,90,True,100,/exercises/10/,false
+EX-11,11,多智能体协作与 AgentOps,,KP-M3-17;KP-M3-18;KP-M3-19;KP-M3-20;KP-M3-21,85,True,100,/exercises/11/,false
+EX-12,12,Harness：模型之外的编排层,,KP-M4-01;KP-M4-02;KP-M4-03;KP-M4-04;KP-M4-05,80,True,100,/exercises/12/,false
+EX-13,13,AI IDE 与编程智能体实战,,KP-M4-06;KP-M4-07;KP-M4-08;KP-M4-09;KP-M4-10,90,True,100,/exercises/13/,false
+EX-14,14,Harness 工程实践：规则、Hook 与权限,,KP-M4-11;KP-M4-12;KP-M4-13;KP-M4-14;KP-M4-15;KP-M4-16,85,True,100,/exercises/14/,false
+EX-15,15,用 AI 集成开发环境构建专业应用,,KP-M4-17;KP-M4-18;KP-M4-19;KP-M4-20;KP-M4-21,100,True,100,/exercises/15/,false
+EX-16,16,综合项目答辩与技术前沿展望,,KP-M5-01;KP-M5-02;KP-M5-03;KP-M5-04;KP-M5-05,90,True,100,/exercises/16/,false

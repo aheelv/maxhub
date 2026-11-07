@@ -1,0 +1,135 @@
+{
+  "$meta": {
+    "name": "通用课程站点 · 内容类型字典",
+    "version": "1.0.0",
+    "description": "固定结构的一部分：所有套用本模板的课程共用同一组内容类型编码。类型不可随意新增；确需扩展须走 model/CHANGELOG 并同步 schema 与校验器。",
+    "id_rule": "全站唯一稳定 ID，形如 {前缀}-{序号}；一经发布不得变更，URL 由 ID 与 slug 共同决定。",
+    "core_fields": ["id", "type", "title", "course_id", "session_no", "module_id", "kp_ids", "status", "version", "updated_at", "owner", "source", "source_url", "captured_at", "evidence_level", "visibility", "files", "tags", "url", "ext"],
+    "status_vocabulary": ["published", "needs-review", "draft", "待补充"],
+    "evidence_vocabulary": ["A", "B", "C", null],
+    "visibility_vocabulary": ["public", "campus", "teacher", "internal"],
+    "evidence_note": "A=可核验真实材料（须有 source_url + captured_at + 使用场景）；B=明确标注的虚构教学数据；C=待补充，只列应采内容、不提供图像与案例结论。"
+  },
+  "types": [
+    {
+      "code": "course", "name": "课程", "cardinality": "1", "id_pattern": "COURSE-ROOT",
+      "url_pattern": "/", "primary_axis": false, "default_visibility": "public",
+      "description": "站点根实体，代表一门课的一次开课轮次。全站所有内容的 course_id 均指向它。",
+      "ext_fields": {"hours": "integer", "sessions": "integer", "credits": "number", "term": "string", "school": "string", "major": "string"},
+      "chaoxing_export": "课程基本信息与章节骨架",
+      "instance_count_ref": "data/content-manifest.json"
+    },
+    {
+      "code": "module", "name": "知识模块", "cardinality": "2..8", "id_pattern": "M{no}",
+      "url_pattern": "/knowledge/modules/#{id}", "primary_axis": false, "default_visibility": "public",
+      "description": "课程的中观分组，由若干连续课次构成；是知识图谱的一级父节点。",
+      "ext_fields": {"no": "integer", "session_range": "[integer,integer]", "accent": "string"},
+      "chaoxing_export": "知识图谱一级节点 / 课程章节分组"
+    },
+    {
+      "code": "session", "name": "课次（教学单元 · 主轴）", "cardinality": "8..32", "id_pattern": "S{nn}",
+      "url_pattern": "/sessions/{nn}/", "primary_axis": true, "default_visibility": "public",
+      "description": "全站唯一组织轴。教材章节、课件、教案、大纲单元、日历条目、习题、实践包均以 session_no 对齐到同一课次，课次聚合页是教与学的统一入口。",
+      "ext_fields": {"hours": "integer", "slides": "integer", "summary": "string", "points": "string[]", "lecture_minutes": "integer", "practice_minutes": "integer"},
+      "chaoxing_export": "课程章节 / 章节任务点"
+    },
+    {
+      "code": "syllabus-unit", "name": "教学大纲单元", "cardinality": "= session", "id_pattern": "SYL-{nn}",
+      "url_pattern": "/syllabus/#s{nn}", "primary_axis": false, "default_visibility": "public",
+      "description": "大纲中对应一次课的条目：教学内容、学时、要求。与教案分离，避免把教学实施细节混入大纲。",
+      "ext_fields": {"hours": "integer", "summary": "string"},
+      "chaoxing_export": "教学大纲（供超星知识点智能导入）"
+    },
+    {
+      "code": "calendar-entry", "name": "教学日历条目", "cardinality": "= session 或更多", "id_pattern": "CAL-{nn}",
+      "url_pattern": "/calendar/#w{nn}", "primary_axis": false, "default_visibility": "public",
+      "description": "按教学周组织的时间视图：周次、日期、节次、地点、授课方式、交付物与截止。日期必须由教务校历注入，不从课件推断。",
+      "ext_fields": {"week_no": "integer", "date": "date|null", "weekday": "string|null", "date_rule": "string", "hours": "integer", "delivery_mode": "string|null", "location": "string|null", "due": "datetime|null", "deliverable": "string|null"},
+      "chaoxing_export": "教学日历 / 作业截止（如校方启用）"
+    },
+    {
+      "code": "lesson-plan", "name": "教案", "cardinality": "= session", "id_pattern": "PLAN-{nn}",
+      "url_pattern": "/sessions/{nn}/plan/", "primary_axis": false, "default_visibility": "teacher",
+      "description": "面向教师的教学实施设计：目标、重难点、时间盒、环节、教具、评价与课后反思。默认仅教师可见，可按需开放。",
+      "ext_fields": {"lecture_minutes": "integer", "practice_minutes": "integer", "total_minutes": "integer", "objectives": "string[]|null", "key_difficult": "string|null", "teaching_aids": "string[]|null", "segments": "object[]", "review_status": "string"},
+      "chaoxing_export": "不导出（教师备课资产，非学生学习对象）"
+    },
+    {
+      "code": "textbook-chapter", "name": "教材章节", "cardinality": "= session", "id_pattern": "TXT-{nn}",
+      "url_pattern": "/textbook/{nn}/", "primary_axis": false, "default_visibility": "public",
+      "description": "可直接用于教学的正式教材文本；含导入、目标、知识讲授、界面截图、真实案例、面向真实问题的实践任务。",
+      "ext_fields": {"chapter_no": "integer", "has_review_doc": "boolean", "assets_dir": "string", "word_count": "integer|null"},
+      "chaoxing_export": "教材/资料资源（供知识点智能导入与资源关联）"
+    },
+    {
+      "code": "deck", "name": "课件（网页版）", "cardinality": "= session", "id_pattern": "DECK-{nn}",
+      "url_pattern": "/courseware/{nn}/", "primary_axis": false, "default_visibility": "public",
+      "description": "可在站点内逐页播放的课件实例，含页数、页签与来源标注。",
+      "ext_fields": {"slides": "integer", "hours": "integer", "summary": "string"},
+      "chaoxing_export": "章节文档资源"
+    },
+    {
+      "code": "deck-file", "name": "课件文件（PPTX）", "cardinality": "= session", "id_pattern": "PPT-{nn}",
+      "url_pattern": "/downloads/{filename}", "primary_axis": false, "default_visibility": "public",
+      "description": "可下载的独立 PPTX 交付件，与网页版课件是同一教学内容的不同载体，用 aligned_with 关联。",
+      "ext_fields": {"slides": "integer", "bytes": "integer"},
+      "chaoxing_export": "课程资料（上传或外链）"
+    },
+    {
+      "code": "exercise", "name": "习题 / 综合任务单", "cardinality": "= session", "id_pattern": "EX-{nn}",
+      "url_pattern": "/exercises/{nn}/", "primary_axis": false, "default_visibility": "public",
+      "description": "单人独立完成、不少于 60 分钟的 AI 应用任务；含任务说明、背景、素材、分钟级步骤、成果要求、100 分量规与教师核验卡。",
+      "ext_fields": {"duration_minutes": "integer", "independent": "boolean", "mode": "string", "tools": "string[]", "question": "string", "theme": "string", "deliverables": "string[]", "rubric_total": "integer", "teacher_key": "string", "kp_ids": "string[]"},
+      "chaoxing_export": "题库题目（须带知识点标注）/ 作业"
+    },
+    {
+      "code": "practice-kit", "name": "实践资源包", "cardinality": "= session", "id_pattern": "KIT-{nn}",
+      "url_pattern": "/practice/{nn}/", "primary_axis": false, "default_visibility": "public",
+      "description": "按课次单独打包的 ZIP：任务单、背景资料、素材、模板、个人验收表、教师核验卡、使用说明与工具功能清单。",
+      "ext_fields": {"file_count": "integer", "files": "string[]", "minutes": "integer"},
+      "chaoxing_export": "课程资料 / 作业附件"
+    },
+    {
+      "code": "knowledge-point", "name": "知识点", "cardinality": "20..300", "id_pattern": "KP-{module}-{nn}",
+      "url_pattern": "/knowledge/points/{id}/", "primary_axis": false, "default_visibility": "public",
+      "description": "知识图谱节点。层级、标签、认知维度、教学目标、前置/后置/关联关系与超星知识图谱属性一一对应。",
+      "ext_fields": {"level": "integer", "parent_id": "string", "cognitive_dimension": "string|null", "teaching_objective": "string|null", "tag": "string[]", "review_status": "string"},
+      "chaoxing_export": "知识图谱：知识点 + 关系 + 属性 + 资源关联 + 题目关联"
+    },
+    {
+      "code": "term", "name": "术语条目", "cardinality": "0..500", "id_pattern": "TERM-{nnn}",
+      "url_pattern": "/knowledge/terms/#{anchor}", "primary_axis": false, "default_visibility": "public",
+      "description": "术语词典条目：中文名、英文名、分类、释义、相关术语、出处；可作为知识点别名导入知识图谱。",
+      "ext_fields": {"en": "string", "category": "string", "definition": "string", "source_note": "string", "anchor": "string"},
+      "chaoxing_export": "知识点别名 / 标签"
+    },
+    {
+      "code": "case", "name": "教学案例", "cardinality": "0..100", "id_pattern": "CASE-{nn}",
+      "url_pattern": "/cases/{id}/", "primary_axis": false, "default_visibility": "public",
+      "description": "可核验真实案例；须写明来源或使用场景、案例背景、适用知识点、面向真实问题的实践任务，并按 A/B/C 分级。",
+      "ext_fields": {"source_note": "string", "background": "string|null", "applicable_kp_ids": "string[]", "practice_task": "string|null", "review_status": "string"},
+      "chaoxing_export": "案例资源（关联知识点）"
+    },
+    {
+      "code": "asset", "name": "素材文件", "cardinality": "0..1000", "id_pattern": "SHOT-{id} / AST-{nnn}",
+      "url_pattern": "/assets/{id}", "primary_axis": false, "default_visibility": "public",
+      "description": "截图、数据集、模板、核验卡等二进制或文本素材；A 类须记录来源 URL、抓取日期与使用场景。",
+      "ext_fields": {"chapter": "string|null", "scene": "string|null", "kind": "string|null", "capture_status": "string"},
+      "chaoxing_export": "资源文件（外链或上传）"
+    },
+    {
+      "code": "announcement", "name": "课程通知", "cardinality": "0..200", "id_pattern": "ANN-{yyyymmdd}-{nn}",
+      "url_pattern": "/announcements/#{id}", "primary_axis": false, "default_visibility": "public",
+      "description": "按时间倒序的课程公告。仅发布公开通知；涉及个人成绩与学情的通知由超星发送，站点不复制。",
+      "ext_fields": {"published_at": "datetime", "pinned": "boolean"},
+      "chaoxing_export": "不导出（避免与超星通知重复）"
+    },
+    {
+      "code": "reading", "name": "拓展阅读 / 资源", "cardinality": "0..200", "id_pattern": "READ-{nnn}",
+      "url_pattern": "/resources/#{id}", "primary_axis": false, "default_visibility": "public",
+      "description": "延伸阅读、公开数据、工具清单、参考文献；须标注出处与适用知识点。",
+      "ext_fields": {"publisher": "string|null", "published_at": "date|null", "url": "string", "source_note": "string"},
+      "chaoxing_export": "资源链接（可选）"
+    }
+  ]
+}

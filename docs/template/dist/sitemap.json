@@ -1,0 +1,2261 @@
+{
+  "base_url": "https://aheelv.github.io",
+  "generated_by": "course-template/tools/build_indexes.py",
+  "total": 215,
+  "urls": [
+    {
+      "path": "/",
+      "label": "课程首页",
+      "column": "home",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/about/",
+      "label": "课程介绍",
+      "column": "about",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/about/team/",
+      "label": "课程团队",
+      "column": "team",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/syllabus/",
+      "label": "教学大纲",
+      "column": "syllabus",
+      "level": 0,
+      "status": "extend",
+      "types": [
+        "syllabus-unit",
+        "module"
+      ]
+    },
+    {
+      "path": "/calendar/",
+      "label": "教学日历",
+      "column": "calendar",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "calendar-entry"
+      ]
+    },
+    {
+      "path": "/policies/",
+      "label": "考核与学习规则",
+      "column": "policies",
+      "level": 0,
+      "status": "extend",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/announcements/",
+      "label": "课程通知",
+      "column": "announcements",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "announcement"
+      ]
+    },
+    {
+      "path": "/integration/",
+      "label": "对接与数据说明",
+      "column": "integration",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/sitemap/",
+      "label": "站点地图",
+      "column": "sitemap",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "course"
+      ]
+    },
+    {
+      "path": "/sessions/",
+      "label": "课次主轴",
+      "column": "sessions",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "session",
+        "module"
+      ]
+    },
+    {
+      "path": "/sessions/01/",
+      "label": "课次聚合页｜第 1 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/02/",
+      "label": "课次聚合页｜第 2 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/03/",
+      "label": "课次聚合页｜第 3 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/04/",
+      "label": "课次聚合页｜第 4 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/05/",
+      "label": "课次聚合页｜第 5 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/06/",
+      "label": "课次聚合页｜第 6 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/07/",
+      "label": "课次聚合页｜第 7 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/08/",
+      "label": "课次聚合页｜第 8 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/09/",
+      "label": "课次聚合页｜第 9 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/10/",
+      "label": "课次聚合页｜第 10 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/11/",
+      "label": "课次聚合页｜第 11 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/12/",
+      "label": "课次聚合页｜第 12 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/13/",
+      "label": "课次聚合页｜第 13 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/14/",
+      "label": "课次聚合页｜第 14 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/15/",
+      "label": "课次聚合页｜第 15 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/16/",
+      "label": "课次聚合页｜第 16 次课",
+      "column": "session-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "session"
+      ]
+    },
+    {
+      "path": "/sessions/01/plan/",
+      "label": "教案｜第 1 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/02/plan/",
+      "label": "教案｜第 2 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/03/plan/",
+      "label": "教案｜第 3 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/04/plan/",
+      "label": "教案｜第 4 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/05/plan/",
+      "label": "教案｜第 5 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/06/plan/",
+      "label": "教案｜第 6 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/07/plan/",
+      "label": "教案｜第 7 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/08/plan/",
+      "label": "教案｜第 8 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/09/plan/",
+      "label": "教案｜第 9 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/10/plan/",
+      "label": "教案｜第 10 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/11/plan/",
+      "label": "教案｜第 11 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/12/plan/",
+      "label": "教案｜第 12 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/13/plan/",
+      "label": "教案｜第 13 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/14/plan/",
+      "label": "教案｜第 14 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/15/plan/",
+      "label": "教案｜第 15 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/sessions/16/plan/",
+      "label": "教案｜第 16 次课",
+      "column": "session-plan",
+      "level": 2,
+      "status": "extend",
+      "types": [
+        "lesson-plan"
+      ]
+    },
+    {
+      "path": "/textbook/",
+      "label": "教材",
+      "column": "textbook",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "textbook-chapter"
+      ]
+    },
+    {
+      "path": "/textbook/01/",
+      "label": "教材章节｜第 1 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/02/",
+      "label": "教材章节｜第 2 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/03/",
+      "label": "教材章节｜第 3 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/04/",
+      "label": "教材章节｜第 4 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/05/",
+      "label": "教材章节｜第 5 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/06/",
+      "label": "教材章节｜第 6 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/07/",
+      "label": "教材章节｜第 7 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/08/",
+      "label": "教材章节｜第 8 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/09/",
+      "label": "教材章节｜第 9 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/10/",
+      "label": "教材章节｜第 10 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/11/",
+      "label": "教材章节｜第 11 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/12/",
+      "label": "教材章节｜第 12 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/13/",
+      "label": "教材章节｜第 13 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/14/",
+      "label": "教材章节｜第 14 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/15/",
+      "label": "教材章节｜第 15 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/textbook/16/",
+      "label": "教材章节｜第 16 次课",
+      "column": "textbook-chapter",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "textbook-chapter",
+        "asset",
+        "case"
+      ]
+    },
+    {
+      "path": "/courseware/",
+      "label": "课件中心",
+      "column": "courseware",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/01/",
+      "label": "课件播放｜第 1 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/02/",
+      "label": "课件播放｜第 2 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/03/",
+      "label": "课件播放｜第 3 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/04/",
+      "label": "课件播放｜第 4 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/05/",
+      "label": "课件播放｜第 5 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/06/",
+      "label": "课件播放｜第 6 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/07/",
+      "label": "课件播放｜第 7 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/08/",
+      "label": "课件播放｜第 8 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/09/",
+      "label": "课件播放｜第 9 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/10/",
+      "label": "课件播放｜第 10 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/11/",
+      "label": "课件播放｜第 11 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/12/",
+      "label": "课件播放｜第 12 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/13/",
+      "label": "课件播放｜第 13 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/14/",
+      "label": "课件播放｜第 14 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/15/",
+      "label": "课件播放｜第 15 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/courseware/16/",
+      "label": "课件播放｜第 16 次课",
+      "column": "courseware-detail",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "deck",
+        "deck-file"
+      ]
+    },
+    {
+      "path": "/exercises/",
+      "label": "习题",
+      "column": "exercises",
+      "level": 0,
+      "status": "extend",
+      "types": [
+        "exercise"
+      ]
+    },
+    {
+      "path": "/exercises/01/",
+      "label": "综合任务单｜第 1 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/02/",
+      "label": "综合任务单｜第 2 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/03/",
+      "label": "综合任务单｜第 3 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/04/",
+      "label": "综合任务单｜第 4 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/05/",
+      "label": "综合任务单｜第 5 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/06/",
+      "label": "综合任务单｜第 6 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/07/",
+      "label": "综合任务单｜第 7 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/08/",
+      "label": "综合任务单｜第 8 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/09/",
+      "label": "综合任务单｜第 9 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/10/",
+      "label": "综合任务单｜第 10 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/11/",
+      "label": "综合任务单｜第 11 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/12/",
+      "label": "综合任务单｜第 12 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/13/",
+      "label": "综合任务单｜第 13 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/14/",
+      "label": "综合任务单｜第 14 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/15/",
+      "label": "综合任务单｜第 15 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/exercises/16/",
+      "label": "综合任务单｜第 16 次课",
+      "column": "exercise-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "exercise",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/practice/",
+      "label": "实践环节",
+      "column": "practice",
+      "level": 0,
+      "status": "extend",
+      "types": [
+        "practice-kit"
+      ]
+    },
+    {
+      "path": "/practice/01/",
+      "label": "课次实践资源包｜第 1 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/02/",
+      "label": "课次实践资源包｜第 2 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/03/",
+      "label": "课次实践资源包｜第 3 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/04/",
+      "label": "课次实践资源包｜第 4 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/05/",
+      "label": "课次实践资源包｜第 5 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/06/",
+      "label": "课次实践资源包｜第 6 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/07/",
+      "label": "课次实践资源包｜第 7 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/08/",
+      "label": "课次实践资源包｜第 8 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/09/",
+      "label": "课次实践资源包｜第 9 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/10/",
+      "label": "课次实践资源包｜第 10 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/11/",
+      "label": "课次实践资源包｜第 11 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/12/",
+      "label": "课次实践资源包｜第 12 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/13/",
+      "label": "课次实践资源包｜第 13 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/14/",
+      "label": "课次实践资源包｜第 14 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/15/",
+      "label": "课次实践资源包｜第 15 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/practice/16/",
+      "label": "课次实践资源包｜第 16 次课",
+      "column": "practice-detail",
+      "level": 1,
+      "status": "extend",
+      "types": [
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/downloads/",
+      "label": "下载中心",
+      "column": "downloads",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "deck-file",
+        "practice-kit",
+        "asset"
+      ]
+    },
+    {
+      "path": "/knowledge/",
+      "label": "知识图谱",
+      "column": "knowledge",
+      "level": 0,
+      "status": "new",
+      "types": [
+        "knowledge-point",
+        "module"
+      ]
+    },
+    {
+      "path": "/knowledge/modules/",
+      "label": "知识模块",
+      "column": "knowledge-modules",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "module"
+      ]
+    },
+    {
+      "path": "/knowledge/points/",
+      "label": "知识点索引",
+      "column": "knowledge-points",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-01/",
+      "label": "三次浪潮与两次寒冬",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-02/",
+      "label": "五个概念的层次",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-03/",
+      "label": "2026 年工具全景",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-04/",
+      "label": "AI Index 2026 数据",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-05/",
+      "label": "数据安全红线",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-06/",
+      "label": "模型与编排的分工",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-07/",
+      "label": "n-gram 与词向量",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-08/",
+      "label": "循环神经网络的局限",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-09/",
+      "label": "Transformer 与自注意力",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-10/",
+      "label": "预训练、微调、对齐",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-11/",
+      "label": "推理模型与思维链",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-12/",
+      "label": "Token 与上下文成本",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-13/",
+      "label": "扩散模型与 GAN",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-14/",
+      "label": "多模态能力",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-15/",
+      "label": "提示工程四要素",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-16/",
+      "label": "锯齿状智能",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-17/",
+      "label": "幻觉的成因",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m1-18/",
+      "label": "验证与核对方法",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-01/",
+      "label": "长文档结构化",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-02/",
+      "label": "会议纪要流程",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-03/",
+      "label": "PPT 信息层级",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-04/",
+      "label": "知识管理",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-05/",
+      "label": "WorkBuddy 六种扩展",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-06/",
+      "label": "交付与验收",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-07/",
+      "label": "智能表格两类形态",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-08/",
+      "label": "自然语言生成公式",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-09/",
+      "label": "五类脏数据与处理步骤",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-10/",
+      "label": "AI 公式的三类风险",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-11/",
+      "label": "可追溯与抽样复核",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-12/",
+      "label": "代码解释器原理",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-13/",
+      "label": "描述统计到结论链路",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-14/",
+      "label": "图表选择原则",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-15/",
+      "label": "结论可复现性",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-16/",
+      "label": "三类统计误用",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-17/",
+      "label": "指标体系与口径治理",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-18/",
+      "label": "NL2SQL 与对话式 BI",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-19/",
+      "label": "归因分析",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-20/",
+      "label": "经营分析报告流程",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m2-21/",
+      "label": "分析与行动的衔接",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-01/",
+      "label": "智能体四要素",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-02/",
+      "label": "感知规划行动反思循环",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-03/",
+      "label": "工具调用与函数调用",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-04/",
+      "label": "MCP 协议",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-05/",
+      "label": "WorkBuddy 扩展机制",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-06/",
+      "label": "智能体能力边界",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-07/",
+      "label": "工作流编排的四类控制",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-08/",
+      "label": "RAG 五步链路",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-09/",
+      "label": "资料库与检索",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-10/",
+      "label": "book-to-skill",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-11/",
+      "label": "技能与知识库的区别",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-12/",
+      "label": "需求拆解四问",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-13/",
+      "label": "知识准备与脱敏",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-14/",
+      "label": "命中率/忠实度/拒答",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-15/",
+      "label": "WorkBuddy 完整实操",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-16/",
+      "label": "上线与验收",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-17/",
+      "label": "四种协作拓扑",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-18/",
+      "label": "子代理机制",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-19/",
+      "label": "专家与专家团",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-20/",
+      "label": "Trajectory 只追加日志",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m3-21/",
+      "label": "成本与失败模式",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-01/",
+      "label": "Harness 的定义",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-02/",
+      "label": "五层分层",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-03/",
+      "label": "四项组成",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-04/",
+      "label": "两个实例对照",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-05/",
+      "label": "脚手架 token 成本",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-06/",
+      "label": "代码智能体工作闭环",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-07/",
+      "label": "上下文与仓库规则",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-08/",
+      "label": "四种预设与 PTC",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-09/",
+      "label": "模型与 Harness 解耦",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-10/",
+      "label": "代码审查与测试",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-11/",
+      "label": "规则文件",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-12/",
+      "label": "Hook 钩子",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-13/",
+      "label": "子代理分工",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-14/",
+      "label": "权限与沙箱",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-15/",
+      "label": "SKILL.md 编写",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-16/",
+      "label": "连接器与 MCP",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-17/",
+      "label": "从想法到应用全流程",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-18/",
+      "label": "数据持久化与云服务",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-19/",
+      "label": "用 Sites 发布上线",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-20/",
+      "label": "Creator 写插件",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m4-21/",
+      "label": "上线验收清单",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m5-01/",
+      "label": "答辩五项评分标准",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m5-02/",
+      "label": "AI Index 2026 前沿数据",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m5-03/",
+      "label": "负责任 AI 与治理",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m5-04/",
+      "label": "就业结构变化实证",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/points/kp-m5-05/",
+      "label": "个人能力建设路径",
+      "column": "knowledge-point-detail",
+      "level": 2,
+      "status": "new",
+      "types": [
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/knowledge/terms/",
+      "label": "术语词典",
+      "column": "terms",
+      "level": 1,
+      "status": "existing",
+      "types": [
+        "term"
+      ]
+    },
+    {
+      "path": "/cases/",
+      "label": "案例库",
+      "column": "cases",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "case"
+      ]
+    },
+    {
+      "path": "/cases/case-01/",
+      "label": "Klarna：AI 客服的完整弧线，从「替代 700 人」到重新招人",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-02/",
+      "label": "澳大利亚联邦银行：宣布裁员 45 人，数周后撤回并道歉",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-03/",
+      "label": "工具不难，口径与流程才难：三条企业级证据",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-04/",
+      "label": "WorkBuddy：一个可以照着做的全场景 AI 工作台",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-05/",
+      "label": "DeepSeek Harness：开源智能体运行时的能力与成本",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-06/",
+      "label": "斯坦福 AI Index 2026：正面证据与反面证据并置",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-07/",
+      "label": "Gartner：集成在加速，项目取消也在加速",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/cases/case-08/",
+      "label": "Gartner：集成在加速，项目取消也在加速",
+      "column": "case-detail",
+      "level": 1,
+      "status": "new",
+      "types": [
+        "case",
+        "asset",
+        "knowledge-point"
+      ]
+    },
+    {
+      "path": "/trends/",
+      "label": "技术趋势",
+      "column": "trends",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "reading",
+        "case"
+      ]
+    },
+    {
+      "path": "/resources/",
+      "label": "拓展资源",
+      "column": "resources",
+      "level": 0,
+      "status": "existing",
+      "types": [
+        "reading",
+        "asset"
+      ]
+    },
+    {
+      "path": "/assets/{id}",
+      "label": "素材原件",
+      "column": "assets",
+      "level": 9,
+      "status": "existing",
+      "types": [
+        "asset"
+      ]
+    },
+    {
+      "path": "/content/{manifest|graph|nav}.json",
+      "label": "结构化数据出口",
+      "column": "data-api",
+      "level": 9,
+      "status": "new",
+      "types": [
+        "*"
+      ]
+    },
+    {
+      "path": "/sitemap.xml | /search-index.json | /404.html",
+      "label": "机器可读入口",
+      "column": "machine",
+      "level": 9,
+      "status": "new",
+      "types": [
+        "*"
+      ]
+    }
+  ]
+}

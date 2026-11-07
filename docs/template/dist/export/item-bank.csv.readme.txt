@@ -1,0 +1,6 @@
+本文件由 course-template/tools/build_indexes.py 自动生成，采用站点规范列名。
+导入超星前须按 model/chaoxing-field-mapping.json 做列名适配；
+超星模板实际列名与开放接口字段名标记为「待核验」，须以本校泛雅后台导出模板为准。
+文件仅含课程内容，不含任何学生个人信息。
+
+教师核验卡（标准答案）默认不导出到学生可见题库。

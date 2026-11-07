@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://course-template.local/schema/course.config.schema.json",
+  "title": "通用课程站点 · 按课程可配置项",
+  "description": "模板中「随课程变化」的全部内容集中在此文件。固定结构（目录约定、URL 约定、内容类型字典、关联词表、元数据核心字段、构建与校验管线、导航规则、对接协议）不在此列，见 model/ 与 README.md。",
+  "type": "object",
+  "required": ["course_id", "title", "course_type", "hours", "session_count", "session_minutes", "lecture_minutes", "practice_minutes", "modules", "sessions", "navigation", "integration"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {"type": "string"},
+    "course_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]{2,39}$", "description": "全站稳定标识，用于内容实例 course_id；发布后不得变更。"},
+    "title": {"type": "string", "minLength": 2, "description": "课程题目，全站主线。"},
+    "subtitle": {"type": ["string", "null"]},
+    "course_type": {"type": "string", "enum": ["专业选修课", "专业必修课", "通识课", "公共基础课", "实训课", "其他"]},
+    "school": {"type": ["string", "null"]},
+    "department": {"type": ["string", "null"]},
+    "major": {"type": ["string", "null"]},
+    "course_code": {"type": ["string", "null"], "description": "本校教务课程编码；未经教务确认必须为 null，不得编造。"},
+    "credits": {"type": ["number", "null"], "minimum": 0},
+    "hours": {"type": "integer", "minimum": 1},
+    "session_count": {"type": "integer", "minimum": 1, "maximum": 64},
+    "session_minutes": {"type": "integer", "minimum": 30},
+    "lecture_minutes": {"type": "integer", "minimum": 0},
+    "practice_minutes": {"type": "integer", "minimum": 0, "description": "练习与实践时长；习题任务另立时长下限，见 rubric.min_exercise_minutes。"},
+    "term": {"type": ["string", "null"], "description": "开课学期；无校历时为 null 并在 calendar 中标注待补充。"},
+    "calendar_start": {"type": ["string", "null"], "format": "date", "description": "教务校历起始日；仅在校方提供时填写，用于生成教学日历具体日期。"},
+    "language": {"type": "string", "default": "zh-CN"},
+    "license": {"type": "string"},
+    "modules": {
+      "type": "array", "minItems": 1, "maxItems": 12,
+      "items": {
+        "type": "object", "required": ["id", "no", "name", "session_range"], "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^M\\d+$"},
+          "no": {"type": "integer", "minimum": 1},
+          "name": {"type": "string", "minLength": 1},
+          "session_range": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 2, "maxItems": 2},
+          "accent": {"type": "string", "description": "主题色 token 名，取 theme.tokens 中的键"}
+        }
+      }
+    },
+    "sessions": {
+      "type": "array", "minItems": 1, "maxItems": 64,
+      "description": "课次主轴。数组长度必须等于 session_count，no 必须连续且唯一，module_id 必须命中 modules[].id。",
+      "items": {
+        "type": "object", "required": ["no", "title", "module_id"], "additionalProperties": false,
+        "properties": {
+          "no": {"type": "integer", "minimum": 1},
+          "title": {"type": "string", "minLength": 1},
+          "module_id": {"type": "string", "pattern": "^M\\d+$"},
+          "hours": {"type": "integer", "minimum": 1},
+          "slug": {"type": "string", "description": "可选 URL 片段；缺省用两位课次号。"}
+        }
+      }
+    },
+    "tools": {
+      "type": "array", "description": "本课程使用的工具清单，用于习题元数据、资源包与能力对齐。",
+      "items": {
+        "type": "object", "required": ["name", "role"], "additionalProperties": false,
+        "properties": {
+          "name": {"type": "string"}, "role": {"type": "string"},
+          "core": {"type": "boolean", "default": false},
+          "url": {"type": ["string", "null"]},
+          "availability": {"type": "string", "enum": ["可用", "待开通", "模拟演示"], "default": "可用"}
+        }
+      }
+    },
+    "navigation": {
+      "type": "object", "required": ["primary"], "additionalProperties": false,
+      "description": "导航项顺序与文案可配置；层级规则与组件行为固定。primary 建议不超过 7 项。",
+      "properties": {
+        "primary": {
+          "type": "array", "minItems": 3, "maxItems": 7,
+          "items": {
+            "type": "object", "required": ["id", "label", "href"], "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"}, "label": {"type": "string"}, "href": {"type": "string"},
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "object", "required": ["label", "href"], "additionalProperties": false,
+                  "properties": {"label": {"type": "string"}, "href": {"type": "string"}}
+                }
+              }
+            }
+          }
+        },
+        "footer": {"type": "array", "items": {"type": "object", "required": ["label", "href"], "additionalProperties": false, "properties": {"label": {"type": "string"}, "href": {"type": "string"}}}},
+        "show_breadcrumb": {"type": "boolean", "default": true},
+        "show_prev_next": {"type": "boolean", "default": true}
+      }
+    },
+    "theme": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "preset": {"type": "string", "enum": ["light", "high-contrast"], "default": "light"},
+        "brand": {"type": "string", "description": "主色，十六进制"},
+        "tokens": {"type": "object", "description": "模块配色 token → 颜色值；键需与 modules[].accent 对应", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "features": {
+      "type": "object", "additionalProperties": false,
+      "description": "功能开关。关闭的功能不生成页面与导航项，但内容类型仍保留在模型中。",
+      "properties": {
+        "textbook": {"type": "boolean", "default": true},
+        "lesson_plan_public": {"type": "boolean", "default": false, "description": "教案默认仅教师可见；改为 true 需先完成脱敏审查。"},
+        "knowledge_graph": {"type": "boolean", "default": true},
+        "cases": {"type": "boolean", "default": true},
+        "glossary": {"type": "boolean", "default": true},
+        "trends": {"type": "boolean", "default": true},
+        "announcements": {"type": "boolean", "default": true},
+        "downloads": {"type": "boolean", "default": true},
+        "site_accounts": {"type": "boolean", "default": false, "description": "必须为 false：账号、登录、选课由超星承担，避免功能重复。"},
+        "site_gradebook": {"type": "boolean", "default": false, "description": "必须为 false：成绩与学情由超星承担。"}
+      }
+    },
+    "integration": {
+      "type": "object", "required": ["mode", "chaoxing", "datasets", "restricted_zone"], "additionalProperties": false,
+      "properties": {
+        "mode": {"type": "string", "enum": ["complementary", "standalone"], "default": "complementary", "description": "complementary=与超星互补；standalone=独立运行（不同步）。"},
+        "chaoxing": {
+          "type": "object", "required": ["platform_url", "course_space_url", "sso_enabled", "api_contract_status"], "additionalProperties": false,
+          "properties": {
+            "platform_url": {"type": "string", "description": "平台入口；公开资料为 https://i.chaoxing.com"},
+            "course_space_url": {"type": ["string", "null"], "description": "本校课程空间 URL；须由教务提供，未提供则为 null。"},
+            "sso_enabled": {"type": "boolean", "default": false},
+            "api_contract_status": {"type": "string", "enum": ["已获取校方接口文档", "待核验"], "default": "待核验"}
+          }
+        },
+        "datasets": {
+          "type": "object", "description": "各数据集同步开关与方向；键必须出自 model/chaoxing-field-mapping.json 的 datasets[].id。",
+          "additionalProperties": {
+            "type": "object", "required": ["enabled", "direction"], "additionalProperties": false,
+            "properties": {
+              "enabled": {"type": "boolean"},
+              "direction": {"type": "string", "enum": ["out", "in", "off"]},
+              "transport": {"type": "string", "enum": ["template", "export", "api", "manual"]},
+              "frequency": {"type": "string"}
+            }
+          }
+        },
+        "restricted_zone": {
+          "type": "object", "required": ["path", "publish_excluded", "deidentify"], "additionalProperties": false,
+          "properties": {
+            "path": {"type": "string", "description": "入站受控区目录，不得进入静态发布产物。"},
+            "publish_excluded": {"type": "boolean", "default": true},
+            "deidentify": {"type": "boolean", "default": true},
+            "retention_days": {"type": ["integer", "null"]}
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "evidence_levels_enabled": {"type": "array", "items": {"type": "string", "enum": ["A", "B", "C"]}, "default": ["A", "B", "C"]},
+        "require_source_for_A": {"type": "boolean", "default": true},
+        "default_visibility": {"type": "object", "additionalProperties": {"type": "string", "enum": ["public", "campus", "teacher", "internal"]}},
+        "min_exercise_minutes": {"type": "integer", "default": 60, "description": "每课次习题与实践的最短时长下限。"},
+        "rubric_total": {"type": "integer", "default": 100}
+      }
+    },
+    "sources": {
+      "type": "object", "description": "内容原件所在路径（相对于项目根）；构建器据此生成 content-manifest.json，不复制原件。",
+      "additionalProperties": false,
+      "properties": {
+        "decks": {"type": "string"}, "textbook": {"type": "string"}, "courseware_files": {"type": "string"},
+        "exercises": {"type": "string"}, "downloads": {"type": "string"},
+        "glossary": {"type": "string"}, "cases": {"type": "string"}, "screenshots": {"type": "string"}
+      }
+    },
+    "build": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "out_dir": {"type": "string"}, "base_url": {"type": "string"},
+        "static": {"type": "boolean", "default": true},
+        "generate": {"type": "array", "items": {"type": "string", "enum": ["nav.json", "sitemap.xml", "sitemap.json", "search-index.json", "graph.json", "content-manifest.json"]}}
+      }
+    },
+    "extensions": {"type": "object", "description": "课程自定义扩展键值；不得覆盖上述任何保留键。", "default": {}}
+  }
+}

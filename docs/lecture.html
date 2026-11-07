@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>课件播放 · 《人工智能工具应用实践》</title>
+<meta name="description" content="课程课件在线播放：支持翻页、目录跳转、全屏演示与打印导出 PDF。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="container"><div data-crumb="课件中心"></div></div>
+
+<section class="section" style="padding-top:22px">
+  <div class="container">
+    <div class="flex between wrap center gap2 mb2">
+      <div style="min-width:260px;flex:1">
+        <span class="eyebrow" id="deckKicker">课件</span>
+        <h1 id="deckTitle" style="font-size:clamp(1.35rem,3vw,1.95rem);margin:8px 0 6px">加载中…</h1>
+        <p class="muted mb0" id="deckSummary"></p>
+      </div>
+      <div class="flex gap1 wrap">
+        <a class="btn btn-outline btn-sm" href="courseware.html">← 课件中心</a>
+        <a class="btn btn-outline btn-sm" id="prevDeck">上一课</a>
+        <a class="btn btn-outline btn-sm" id="nextDeck">下一课</a>
+      </div>
+    </div>
+
+    <div class="slides-wrap" id="deckWrap">
+      <div class="slides-bar">
+        <div class="sb-title"><span id="sbTitle">课件</span><small id="sbSub"></small></div>
+        <div class="sb-tools">
+          <button class="icon-btn" id="btnOutline" title="目录（O）" aria-label="目录">☰</button>
+          <button class="icon-btn" id="btnFull" title="全屏演示（F）" aria-label="全屏演示">⛶</button>
+          <button class="icon-btn" id="btnPrint" title="打印 / 导出 PDF" aria-label="打印 / 导出 PDF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></button>
+        </div>
+      </div>
+
+      <div id="outlineBox" class="hidden" style="padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface)"></div>
+
+      <div class="slide-stage" id="slideStage">
+        <div class="slide" id="slide"></div>
+      </div>
+
+      <div class="slides-foot">
+        <button class="btn btn-outline btn-sm" id="btnPrev">← 上一页</button>
+        <div class="progress"><i id="bar" style="width:0"></i></div>
+        <span class="slide-counter" id="counter">0 / 0</span>
+        <button class="btn btn-primary btn-sm" id="btnNext">下一页 →</button>
+      </div>
+    </div>
+
+    <div class="hidden" id="printHead" style="margin:10px 0">
+      <button class="btn btn-primary btn-sm" id="btnBackPlay">返回播放模式</button>
+      <span class="muted small" style="margin-left:10px">已展开全部幻灯片，可直接打印或导出为 PDF。</span>
+    </div>
+
+    <div class="alert alert-info mt3" style="display:block">
+      <b>快捷键：</b>← / → 翻页 · Home / End 首末页 · <b>O</b> 目录 · <b>F</b> 全屏 · <b>P</b> 打印导出。
+      想复习概念可前往 <a href="glossary.html">术语词典</a>，想看应用场景可前往 <a href="cases.html">案例展示</a>。
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/decks/deck-01.js"></script>
+<script src="assets/js/decks/deck-02.js"></script>
+<script src="assets/js/decks/deck-03.js"></script>
+<script src="assets/js/decks/deck-04.js"></script>
+<script src="assets/js/decks/deck-05.js"></script>
+<script src="assets/js/decks/deck-06.js"></script>
+<script src="assets/js/decks/deck-07.js"></script>
+<script src="assets/js/decks/deck-08.js"></script>
+<script src="assets/js/decks/deck-09.js"></script>
+<script src="assets/js/decks/deck-10.js"></script>
+<script src="assets/js/decks/deck-11.js"></script>
+<script src="assets/js/decks/deck-12.js"></script>
+<script src="assets/js/decks/deck-13.js"></script>
+<script src="assets/js/decks/deck-14.js"></script>
+<script src="assets/js/decks/deck-15.js"></script>
+<script src="assets/js/decks/deck-16.js"></script>
+<script>
+(function () {
+  var DECKS = (window.LECTURES || []).slice().sort(function (a, b) { return a.n - b.n; });
+  var MOD = { 1: '模块一 · AI 基础与背景', 2: '模块二 · AI 办公与数据分析', 3: '模块三 · 智能体技术', 4: '模块四 · Harness 与 AI 集成开发环境', 5: '模块五 · 综合实践与前沿' };
+  var n = parseInt(App.qs('n'), 10);
+  if (!n || isNaN(n)) n = 1;
+  var deck = DECKS.find(function (d) { return d.n === n; }) || DECKS[0];
+  if (!deck) { document.getElementById('deckTitle').textContent = '课件不存在'; return; }
+
+  var idx = 0, printAll = false;
+
+  function pad(x) { return x < 10 ? '0' + x : '' + x; }
+
+  function slideHtml(s, i, total) {
+    if (s.c) {
+      return '<div class="slide cover" data-i="' + i + '">' +
+        '<div class="s-kicker">' + App.esc(s.k || '') + '</div>' +
+        '<h2>' + App.esc(s.t) + '</h2>' +
+        (s.sub ? '<p class="muted">' + App.esc(s.sub) + '</p>' : '') +
+        (s.meta ? '<div class="meta">' + s.meta.map(function (m) { return '<span class="badge gray">' + App.esc(m) + '</span>'; }).join('') + '</div>' : '') +
+        '<div class="slide-no">' + pad(i + 1) + ' / ' + total + '</div></div>';
+    }
+    return '<div class="slide" data-i="' + i + '">' +
+      '<div class="s-kicker">' + App.esc(s.k || '') + '</div>' +
+      '<h2>' + App.esc(s.t) + '</h2>' +
+      (s.h || '') +
+      '<div class="slide-no">' + pad(i + 1) + ' / ' + total + '</div></div>';
+  }
+
+  function renderOutline() {
+    var box = document.getElementById('outlineBox');
+    box.innerHTML = '<ul class="outline-list">' + deck.slides.map(function (s, i) {
+      return '<li><a href="#" data-go="' + i + '"' + (i === idx ? ' class="active"' : '') + '>' +
+        '<span class="oi">' + pad(i + 1) + '</span><span>' + App.esc(s.t) + '</span></a></li>';
+    }).join('') + '</ul>';
+    box.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        go(parseInt(a.getAttribute('data-go'), 10));
+      });
+    });
+  }
+
+  function render() {
+    var total = deck.slides.length;
+    document.getElementById('deckTitle').textContent = deck.title;
+    document.getElementById('deckSummary').textContent = deck.summary;
+    document.getElementById('deckKicker').textContent = '第 ' + deck.n + ' 次课 · ' + (MOD[deck.module] || '') + ' · ' + deck.hours + ' 课时';
+    document.getElementById('sbTitle').textContent = deck.title;
+    document.getElementById('sbSub').textContent = (deck.points || []).join(' · ');
+    document.title = '第 ' + deck.n + ' 次课课件 · ' + deck.title;
+
+    var stage = document.getElementById('slideStage');
+    if (printAll) {
+      stage.innerHTML = deck.slides.map(function (s, i) { return slideHtml(s, i, total); }).join('');
+      return;
+    }
+    stage.innerHTML = slideHtml(deck.slides[idx], idx, total);
+    document.getElementById('counter').textContent = (idx + 1) + ' / ' + total;
+    document.getElementById('bar').style.width = ((idx + 1) / total * 100) + '%';
+    document.getElementById('btnPrev').disabled = idx === 0;
+    document.getElementById('btnNext').disabled = idx === total - 1;
+    if (location.hash !== '#s=' + (idx + 1)) history.replaceState(null, '', '#s=' + (idx + 1));
+    if (!document.getElementById('outlineBox').classList.contains('hidden')) renderOutline();
+  }
+
+  function go(i) {
+    var total = deck.slides.length;
+    idx = Math.max(0, Math.min(total - 1, i));
+    render();
+    if (!printAll) window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function setPrintAll(v) {
+    printAll = v;
+    document.getElementById('printHead').classList.toggle('hidden', !v);
+    /* 不能用 .hidden 隐藏 deckWrap：幻灯片舞台就在它内部，会被一并隐藏导致打印空白页。
+       改用 .print-all 只收起交互控件，保留并展开全部幻灯片。 */
+    document.getElementById('deckWrap').classList.toggle('print-all', v);
+    var ob = document.getElementById('outlineBox');
+    if (ob) ob.classList.add('hidden');
+    render();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 上一课 / 下一课
+    var pos = DECKS.indexOf(deck);
+    var pd = DECKS[pos - 1], nd = DECKS[pos + 1];
+    document.getElementById('prevDeck').textContent = pd ? '← 第 ' + pd.n + ' 次课' : '已是第一课';
+    document.getElementById('nextDeck').textContent = nd ? '第 ' + nd.n + ' 次课 →' : '已是最后一课';
+    if (pd) document.getElementById('prevDeck').href = 'lecture.html?n=' + pd.n;
+    if (nd) document.getElementById('nextDeck').href = 'lecture.html?n=' + nd.n;
+    document.getElementById('prevDeck').style.visibility = pd ? 'visible' : 'hidden';
+    document.getElementById('nextDeck').style.visibility = nd ? 'visible' : 'hidden';
+
+    var m = /#s=(\d+)/.exec(location.hash);
+    if (m) idx = Math.max(0, Math.min(deck.slides.length - 1, parseInt(m[1], 10) - 1));
+
+    document.getElementById('btnPrev').addEventListener('click', function () { go(idx - 1); });
+    document.getElementById('btnNext').addEventListener('click', function () { go(idx + 1); });
+    document.getElementById('btnOutline').addEventListener('click', function () {
+      var box = document.getElementById('outlineBox');
+      box.classList.toggle('hidden');
+      if (!box.classList.contains('hidden')) renderOutline();
+    });
+    document.getElementById('btnFull').addEventListener('click', toggleFull);
+    document.getElementById('btnPrint').addEventListener('click', function () { setPrintAll(true); setTimeout(function () { window.print(); }, 300); });
+    document.getElementById('btnBackPlay').addEventListener('click', function () { setPrintAll(false); });
+
+    document.addEventListener('keydown', function (e) {
+      if (printAll) return;
+      if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(idx + 1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(idx - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); go(0); }
+      else if (e.key === 'End') { e.preventDefault(); go(deck.slides.length - 1); }
+      else if (e.key === 'o' || e.key === 'O') {
+        var box = document.getElementById('outlineBox');
+        box.classList.toggle('hidden');
+        if (!box.classList.contains('hidden')) renderOutline();
+      }
+      else if (e.key === 'f' || e.key === 'F') toggleFull();
+      else if (e.key === 'p' || e.key === 'P') { setPrintAll(true); setTimeout(function () { window.print(); }, 300); }
+    });
+
+    function toggleFull() {
+      var wrap = document.getElementById('deckWrap');
+      if (!document.fullscreenElement) { (wrap.requestFullscreen || wrap.webkitRequestFullscreen || function () {}).call(wrap); }
+      else { document.exitFullscreen(); }
+    }
+
+    render();
+    if (App.qs('print') === '1') { setPrintAll(true); setTimeout(function () { window.print(); }, 500); }
+  });
+})();
+</script>
+</body>
+</html>

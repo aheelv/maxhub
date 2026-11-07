@@ -1,0 +1,97 @@
+﻿content_id,type,title,url,session_no,module_id,kp_ids,evidence_level,source,source_url,captured_at
+TXT-01,textbook-chapter,课程导论与AI工具全景,/textbook/01/,1,M1,KP-M1-01;KP-M1-02;KP-M1-03;KP-M1-04;KP-M1-05;KP-M1-06,,教材/分章/第01章_课程导论与AI工具全景.md,,
+DECK-01,deck,课程导论：人工智能 70 年与 AI 工具全景,/courseware/01/,1,M1,KP-M1-01;KP-M1-02;KP-M1-03;KP-M1-04;KP-M1-05;KP-M1-06,,site/assets/js/decks/deck-01.js,,
+PPT-01,deck-file,第 1 次课课件文件（PPTX）,,1,M1,,,deliverables/第01次课_课程导论/第01次课_课程导论.pptx,,
+KIT-01,practice-kit,资源包_第1次课_工具全景与个人红线,/practice/01/,1,M1,KP-M1-01;KP-M1-02;KP-M1-03;KP-M1-04;KP-M1-05;KP-M1-06,,site/downloads/资源包_第1次课_工具全景与个人红线.zip,,
+TXT-02,textbook-chapter,大语言模型与Token成本,/textbook/02/,2,M1,KP-M1-07;KP-M1-08;KP-M1-09;KP-M1-10;KP-M1-11;KP-M1-12,,教材/分章/第02章_大语言模型与Token成本.md,,
+DECK-02,deck,大语言模型：从 n-gram 到 Transformer 与推理模型,/courseware/02/,2,M1,KP-M1-07;KP-M1-08;KP-M1-09;KP-M1-10;KP-M1-11;KP-M1-12,,site/assets/js/decks/deck-02.js,,
+PPT-02,deck-file,第 2 次课课件文件（PPTX）,,2,M1,,,deliverables/第02次课_大语言模型/第02次课_大语言模型.pptx,,
+KIT-02,practice-kit,资源包_第2次课_Token与上下文成本实测,/practice/02/,2,M1,KP-M1-07;KP-M1-08;KP-M1-09;KP-M1-10;KP-M1-11;KP-M1-12,,site/downloads/资源包_第2次课_Token与上下文成本实测.zip,,
+TXT-03,textbook-chapter,生成式AI多模态与提示工程,/textbook/03/,3,M1,KP-M1-13;KP-M1-14;KP-M1-15;KP-M1-16;KP-M1-17;KP-M1-18,,教材/分章/第03章_生成式AI多模态与提示工程.md,,
+DECK-03,deck,生成式 AI 与多模态：AIGC 与提示工程进阶,/courseware/03/,3,M1,KP-M1-13;KP-M1-14;KP-M1-15;KP-M1-16;KP-M1-17;KP-M1-18,,site/assets/js/decks/deck-03.js,,
+PPT-03,deck-file,第 3 次课课件文件（PPTX）,,3,M1,,,deliverables/第03次课_生成式 AI 与多模态/第03次课_生成式 AI 与多模态.pptx,,
+KIT-03,practice-kit,资源包_第3次课_多模态读图与素材生成,/practice/03/,3,M1,KP-M1-13;KP-M1-14;KP-M1-15;KP-M1-16;KP-M1-17;KP-M1-18,,site/downloads/资源包_第3次课_多模态读图与素材生成.zip,,
+TXT-04,textbook-chapter,AI办公实践与知识管理,/textbook/04/,4,M2,KP-M2-01;KP-M2-02;KP-M2-03;KP-M2-04;KP-M2-05;KP-M2-06,,教材/分章/第04章_AI办公实践与知识管理.md,,
+DECK-04,deck,AI 办公实践：文档、PPT 与知识管理,/courseware/04/,4,M2,KP-M2-01;KP-M2-02;KP-M2-03;KP-M2-04;KP-M2-05;KP-M2-06,,site/assets/js/decks/deck-04.js,,
+PPT-04,deck-file,第 4 次课课件文件（PPTX）,,4,M2,,,deliverables/第04次课_AI 办公实践/第04次课_AI 办公实践.pptx,,
+KIT-04,practice-kit,资源包_第4次课_文档演示与知识归档,/practice/04/,4,M2,KP-M2-01;KP-M2-02;KP-M2-03;KP-M2-04;KP-M2-05;KP-M2-06,,site/downloads/资源包_第4次课_文档演示与知识归档.zip,,
+TXT-05,textbook-chapter,AI表格公式与数据清洗,/textbook/05/,5,M2,KP-M2-07;KP-M2-08;KP-M2-09;KP-M2-10;KP-M2-11,,教材/分章/第05章_AI表格公式与数据清洗.md,,
+DECK-05,deck,AI + 表格：智能表格、公式生成与数据清洗,/courseware/05/,5,M2,KP-M2-07;KP-M2-08;KP-M2-09;KP-M2-10;KP-M2-11,,site/assets/js/decks/deck-05.js,,
+PPT-05,deck-file,第 5 次课课件文件（PPTX）,,5,M2,,,deliverables/第05次课_AI + 表格/第05次课_AI + 表格.pptx,,
+KIT-05,practice-kit,资源包_第5次课_表格清洗与公式复核,/practice/05/,5,M2,KP-M2-07;KP-M2-08;KP-M2-09;KP-M2-10;KP-M2-11,,site/downloads/资源包_第5次课_表格清洗与公式复核.zip,,
+TXT-06,textbook-chapter,自然语言数据分析,/textbook/06/,6,M2,KP-M2-12;KP-M2-13;KP-M2-14;KP-M2-15;KP-M2-16,,教材/分章/第06章_自然语言数据分析.md,,
+DECK-06,deck,用自然语言做数据分析：代码解释器与 AI 分析师,/courseware/06/,6,M2,KP-M2-12;KP-M2-13;KP-M2-14;KP-M2-15;KP-M2-16,,site/assets/js/decks/deck-06.js,,
+PPT-06,deck-file,第 6 次课课件文件（PPTX）,,6,M2,,,deliverables/第06次课_用自然语言做数据分析/第06次课_用自然语言做数据分析.pptx,,
+KIT-06,practice-kit,资源包_第6次课_自然语言数据分析,/practice/06/,6,M2,KP-M2-12;KP-M2-13;KP-M2-14;KP-M2-15;KP-M2-16,,site/downloads/资源包_第6次课_自然语言数据分析.zip,,
+TXT-07,textbook-chapter,BI与AI协同经营分析,/textbook/07/,7,M2,KP-M2-17;KP-M2-18;KP-M2-19;KP-M2-20;KP-M2-21,,教材/分章/第07章_BI与AI协同经营分析.md,,
+DECK-07,deck,管理场景数据分析综合：BI × AI 协同,/courseware/07/,7,M2,KP-M2-17;KP-M2-18;KP-M2-19;KP-M2-20;KP-M2-21,,site/assets/js/decks/deck-07.js,,
+PPT-07,deck-file,第 7 次课课件文件（PPTX）,,7,M2,,,deliverables/第07次课_管理场景数据分析综合/第07次课_管理场景数据分析综合.pptx,,
+KIT-07,practice-kit,资源包_第7次课_BI口径卡与经营报告,/practice/07/,7,M2,KP-M2-17;KP-M2-18;KP-M2-19;KP-M2-20;KP-M2-21,,site/downloads/资源包_第7次课_BI口径卡与经营报告.zip,,
+TXT-08,textbook-chapter,智能体原理与MCP协议,/textbook/08/,8,M3,KP-M3-01;KP-M3-02;KP-M3-03;KP-M3-04;KP-M3-05;KP-M3-06,,教材/分章/第08章_智能体原理与MCP协议.md,,
+DECK-08,deck,从工具到智能体：Agent 原理与 MCP 协议,/courseware/08/,8,M3,KP-M3-01;KP-M3-02;KP-M3-03;KP-M3-04;KP-M3-05;KP-M3-06,,site/assets/js/decks/deck-08.js,,
+PPT-08,deck-file,第 8 次课课件文件（PPTX）,,8,M3,,,deliverables/第08次课_从工具到智能体/第08次课_从工具到智能体.pptx,,
+KIT-08,practice-kit,资源包_第8次课_智能体端到端与权限,/practice/08/,8,M3,KP-M3-01;KP-M3-02;KP-M3-03;KP-M3-04;KP-M3-05;KP-M3-06,,site/downloads/资源包_第8次课_智能体端到端与权限.zip,,
+TXT-09,textbook-chapter,工作流RAG与知识库,/textbook/09/,9,M3,KP-M3-07;KP-M3-08;KP-M3-09;KP-M3-10;KP-M3-11,,教材/分章/第09章_工作流RAG与知识库.md,,
+DECK-09,deck,提示到编排：工作流、RAG 与知识库,/courseware/09/,9,M3,KP-M3-07;KP-M3-08;KP-M3-09;KP-M3-10;KP-M3-11,,site/assets/js/decks/deck-09.js,,
+PPT-09,deck-file,第 9 次课课件文件（PPTX）,,9,M3,,,deliverables/第09次课_提示到编排/第09次课_提示到编排.pptx,,
+KIT-09,practice-kit,资源包_第9次课_知识库RAG与工作流,/practice/09/,9,M3,KP-M3-07;KP-M3-08;KP-M3-09;KP-M3-10;KP-M3-11,,site/downloads/资源包_第9次课_知识库RAG与工作流.zip,,
+TXT-10,textbook-chapter,低代码智能体平台实战,/textbook/10/,10,M3,KP-M3-12;KP-M3-13;KP-M3-14;KP-M3-15;KP-M3-16,,教材/分章/第10章_低代码智能体平台实战.md,,
+DECK-10,deck,低代码智能体平台实战：搭建企业问答智能体,/courseware/10/,10,M3,KP-M3-12;KP-M3-13;KP-M3-14;KP-M3-15;KP-M3-16,,site/assets/js/decks/deck-10.js,,
+PPT-10,deck-file,第 10 次课课件文件（PPTX）,,10,M3,,,deliverables/第10次课_低代码智能体平台实战/第10次课_低代码智能体平台实战.pptx,,
+KIT-10,practice-kit,资源包_第10次课_低代码问答智能体实战,/practice/10/,10,M3,KP-M3-12;KP-M3-13;KP-M3-14;KP-M3-15;KP-M3-16,,site/downloads/资源包_第10次课_低代码问答智能体实战.zip,,
+TXT-11,textbook-chapter,多智能体协作与AgentOps,/textbook/11/,11,M3,KP-M3-17;KP-M3-18;KP-M3-19;KP-M3-20;KP-M3-21,,教材/分章/第11章_多智能体协作与AgentOps.md,,
+DECK-11,deck,多智能体协作与 AgentOps,/courseware/11/,11,M3,KP-M3-17;KP-M3-18;KP-M3-19;KP-M3-20;KP-M3-21,,site/assets/js/decks/deck-11.js,,
+PPT-11,deck-file,第 11 次课课件文件（PPTX）,,11,M3,,,deliverables/第11次课_多智能体协作与 AgentOps/第11次课_多智能体协作与 AgentOps.pptx,,
+KIT-11,practice-kit,资源包_第11次课_多智能体与AgentOps,/practice/11/,11,M3,KP-M3-17;KP-M3-18;KP-M3-19;KP-M3-20;KP-M3-21,,site/downloads/资源包_第11次课_多智能体与AgentOps.zip,,
+TXT-12,textbook-chapter,Harness编排层,/textbook/12/,12,M4,KP-M4-01;KP-M4-02;KP-M4-03;KP-M4-04;KP-M4-05,,教材/分章/第12章_Harness编排层.md,,
+DECK-12,deck,什么是 Harness：模型之外的编排层,/courseware/12/,12,M4,KP-M4-01;KP-M4-02;KP-M4-03;KP-M4-04;KP-M4-05,,site/assets/js/decks/deck-12.js,,
+PPT-12,deck-file,第 12 次课课件文件（PPTX）,,12,M4,,,deliverables/第12次课_什么是 Harness/第12次课_什么是 Harness.pptx,,
+KIT-12,practice-kit,资源包_第12次课_Harness结构与成本,/practice/12/,12,M4,KP-M4-01;KP-M4-02;KP-M4-03;KP-M4-04;KP-M4-05,,site/downloads/资源包_第12次课_Harness结构与成本.zip,,
+TXT-13,textbook-chapter,AIIDE与编程智能体,/textbook/13/,13,M4,KP-M4-06;KP-M4-07;KP-M4-08;KP-M4-09;KP-M4-10,,教材/分章/第13章_AIIDE与编程智能体.md,,
+DECK-13,deck,AI IDE 与编程智能体实战,/courseware/13/,13,M4,KP-M4-06;KP-M4-07;KP-M4-08;KP-M4-09;KP-M4-10,,site/assets/js/decks/deck-13.js,,
+PPT-13,deck-file,第 13 次课课件文件（PPTX）,,13,M4,,,deliverables/第13次课_AI IDE 与编程智能体实战/第13次课_AI IDE 与编程智能体实战.pptx,,
+KIT-13,practice-kit,资源包_第13次课_AI IDE CSV检查器,/practice/13/,13,M4,KP-M4-06;KP-M4-07;KP-M4-08;KP-M4-09;KP-M4-10,,site/downloads/资源包_第13次课_AI IDE CSV检查器.zip,,
+TXT-14,textbook-chapter,Harness工程护栏,/textbook/14/,14,M4,KP-M4-11;KP-M4-12;KP-M4-13;KP-M4-14;KP-M4-15;KP-M4-16,,教材/分章/第14章_Harness工程护栏.md,,
+DECK-14,deck,Harness 工程实践：规则、Hook、子代理与权限,/courseware/14/,14,M4,KP-M4-11;KP-M4-12;KP-M4-13;KP-M4-14;KP-M4-15;KP-M4-16,,site/assets/js/decks/deck-14.js,,
+PPT-14,deck-file,第 14 次课课件文件（PPTX）,,14,M4,,,deliverables/第14次课_Harness 工程实践/第14次课_Harness 工程实践.pptx,,
+KIT-14,practice-kit,资源包_第14次课_工程护栏与Hook,/practice/14/,14,M4,KP-M4-11;KP-M4-12;KP-M4-13;KP-M4-14;KP-M4-15;KP-M4-16,,site/downloads/资源包_第14次课_工程护栏与Hook.zip,,
+TXT-15,textbook-chapter,AI集成开发环境构建应用,/textbook/15/,15,M4,KP-M4-17;KP-M4-18;KP-M4-19;KP-M4-20;KP-M4-21,,教材/分章/第15章_AI集成开发环境构建应用.md,,
+DECK-15,deck,用 AI 集成开发环境构建专业应用,/courseware/15/,15,M4,KP-M4-17;KP-M4-18;KP-M4-19;KP-M4-20;KP-M4-21,,site/assets/js/decks/deck-15.js,,
+PPT-15,deck-file,第 15 次课课件文件（PPTX）,,15,M4,,,deliverables/第15次课_用 AI 集成开发环境构建专业应用/第15次课_用 AI 集成开发环境构建专业应用.pptx,,
+KIT-15,practice-kit,资源包_第15次课_校园活动报名应用,/practice/15/,15,M4,KP-M4-17;KP-M4-18;KP-M4-19;KP-M4-20;KP-M4-21,,site/downloads/资源包_第15次课_校园活动报名应用.zip,,
+TXT-16,textbook-chapter,综合答辩与技术前沿,/textbook/16/,16,M5,KP-M5-01;KP-M5-02;KP-M5-03;KP-M5-04;KP-M5-05,,教材/分章/第16章_综合答辩与技术前沿.md,,
+DECK-16,deck,综合项目答辩与技术前沿展望,/courseware/16/,16,M5,KP-M5-01;KP-M5-02;KP-M5-03;KP-M5-04;KP-M5-05,,site/assets/js/decks/deck-16.js,,
+PPT-16,deck-file,第 16 次课课件文件（PPTX）,,16,M5,,,deliverables/第16次课_综合项目答辩与技术前沿展望/第16次课_综合项目答辩与技术前沿展望.pptx,,
+KIT-16,practice-kit,资源包_第16次课_综合答辩与AI前沿,/practice/16/,16,M5,KP-M5-01;KP-M5-02;KP-M5-03;KP-M5-04;KP-M5-05,,site/downloads/资源包_第16次课_综合答辩与AI前沿.zip,,
+CASE-01,case,Klarna：AI 客服的完整弧线，从「替代 700 人」到重新招人,,,,,A,site/cases.html,/cases/case-01/,
+CASE-02,case,澳大利亚联邦银行：宣布裁员 45 人，数周后撤回并道歉,,,,,A,site/cases.html,/cases/case-02/,
+CASE-03,case,工具不难，口径与流程才难：三条企业级证据,,,,,A,site/cases.html,/cases/case-03/,
+CASE-04,case,WorkBuddy：一个可以照着做的全场景 AI 工作台,,,,,A,site/cases.html,/cases/case-04/,
+CASE-05,case,DeepSeek Harness：开源智能体运行时的能力与成本,,,,,A,site/cases.html,/cases/case-05/,
+CASE-06,case,斯坦福 AI Index 2026：正面证据与反面证据并置,,,,,A,site/cases.html,/cases/case-06/,
+CASE-07,case,Gartner：集成在加速，项目取消也在加速,,,,,A,site/cases.html,/cases/case-07/,
+CASE-08,case,Gartner：集成在加速，项目取消也在加速,,,,,A,site/cases.html,/cases/case-08/,
+SHOT-S01,asset,课程门户首页,,,,,A,textbook-build/screenshots/S01.png,https://aheelv.github.io/,2026-11-06 21:13
+SHOT-S02,asset,课程大纲页（五模块 16 次课）,,,,,A,textbook-build/screenshots/S02.png,https://aheelv.github.io/syllabus.html,2026-11-06 21:13
+SHOT-S03,asset,知识模块与知识体系页,,,,,A,textbook-build/screenshots/S03.png,https://aheelv.github.io/modules.html,2026-11-06 21:13
+SHOT-S04,asset,课件中心（16 套课件卡片）,,,,,A,textbook-build/screenshots/S04.png,https://aheelv.github.io/courseware.html,2026-11-06 21:13
+SHOT-S05,asset,案例展示页（可核查真实案例）,,,,,A,textbook-build/screenshots/S05.png,https://aheelv.github.io/cases.html,2026-11-06 21:13
+SHOT-S06,asset,技术趋势页,,,,,A,textbook-build/screenshots/S06.png,https://aheelv.github.io/trends.html,2026-11-06 21:13
+SHOT-S07,asset,16 次课练习资源下载页,,,,,A,textbook-build/screenshots/S07.png,https://aheelv.github.io/exercises.html,2026-11-06 21:13
+SHOT-S08,asset,独立练习资源站（16 课任务详情）,,,,,A,textbook-build/screenshots/S08.png,https://aheelv.github.io/practice/index.html,2026-11-06 21:13
+SHOT-S09,asset,拓展资源页（工具清单与数据来源）,,,,,A,textbook-build/screenshots/S09.png,https://aheelv.github.io/resources.html,2026-11-06 21:13
+SHOT-S10,asset,术语词典页,,,,,A,textbook-build/screenshots/S10.png,https://aheelv.github.io/glossary.html,2026-11-06 21:13
+SHOT-S11,asset,第 8 次课课件播放页,,,,,A,textbook-build/screenshots/S11.png,https://aheelv.github.io/lecture.html?n=8,2026-11-06 21:13
+SHOT-S12,asset,第 12 次课课件播放页,,,,,A,textbook-build/screenshots/S12.png,https://aheelv.github.io/lecture.html?n=12,2026-11-06 21:13
+SHOT-S13,asset,WorkBuddy 官方产品首页,,,,,A,textbook-build/screenshots/S13.png,https://www.workbuddy.cn/,2026-11-06 21:13
+SHOT-S14,asset,WorkBuddy 官方文档 · 概览,,,,,A,textbook-build/screenshots/S14.png,https://www.workbuddy.cn/docs/workbuddy/Overview,2026-11-06 21:13
+SHOT-S15,asset,MCP 官方站点首页,,,,,A,textbook-build/screenshots/S15.png,https://modelcontextprotocol.io/,2026-11-06 21:13
+SHOT-S16,asset,MCP 2026-07-28 规范页,,,,,A,textbook-build/screenshots/S16.png,https://modelcontextprotocol.io/specification/2026-07-28,2026-11-06 21:13
+SHOT-S17,asset,MCP 扩展（Extensions）总览,,,,,A,textbook-build/screenshots/S17.png,https://modelcontextprotocol.io/extensions/overview,2026-11-06 21:13
+SHOT-S18,asset,Stanford HAI《2026 AI Index》报告主页,,,,,A,textbook-build/screenshots/S18.png,https://hai.stanford.edu/ai-index/2026-ai-index-report,2026-11-06 21:13
+SHOT-S19,asset,AI Index 2026 · 技术性能章,,,,,A,textbook-build/screenshots/S19.png,https://hai.stanford.edu/ai-index/2026-ai-index-report/technical-performance,2026-11-06 21:13
+SHOT-S20,asset,AI Index 2026 · 负责任 AI 章,,,,,A,textbook-build/screenshots/S20.png,https://hai.stanford.edu/ai-index/2026-ai-index-report/responsible-ai,2026-11-06 21:13
+SHOT-S21,asset,Stanford AI Index 项目主页,,,,,A,textbook-build/screenshots/S21.png,https://aiindex.stanford.edu/,2026-11-06 21:13
+SHOT-S22,asset,Trae 官方产品首页,,,,,A,textbook-build/screenshots/S22.png,https://www.trae.ai/,2026-11-06 21:13
+SHOT-S23,asset,DeepSeek 官方站点首页,,,,,A,textbook-build/screenshots/S23.png,https://www.deepseek.com/,2026-11-06 21:13
+SHOT-S24,asset,AI Index 2026 · 教育章,,,,,A,textbook-build/screenshots/S24.png,https://hai.stanford.edu/ai-index/2026-ai-index-report/education,2026-11-06 21:13

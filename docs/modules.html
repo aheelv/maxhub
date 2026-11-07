@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>知识模块 · 《人工智能工具应用实践》</title>
+<meta name="description" content="五大知识模块与知识体系图：AI基础、AI办公与数据分析、智能体、Harness与AI集成开发环境、综合实践。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="hero">
+  <div class="container hero-inner" style="padding:56px 0 52px">
+    <span class="eyebrow">Knowledge Modules</span>
+    <h1 style="font-size:clamp(1.7rem,3.4vw,2.5rem)">知识模块与知识体系</h1>
+    <p class="lead">五大模块彼此衔接，形成「认知 → 应用 → 编排 → 建造 → 迁移」的完整能力链。下图可拖拽、缩放，探索知识点之间的关联。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="chart-card reveal">
+      <h3>知识体系图</h3>
+      <p class="chart-sub">节点大小代表知识点的权重；连线代表先修与关联关系</p>
+      <div class="chart tall" data-chart="knowledge"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Modules</span>
+      <h2>模块详解</h2>
+      <p>每个模块都给出「核心概念 — 关键工具 — 能达到的能力」。</p>
+    </div>
+
+    <div class="grid grid-2 reveal" style="align-items:start">
+      <div class="card" style="border-top:4px solid var(--primary)">
+        <span class="card-num">MODULE 01 · 6 课时</span>
+        <h3 class="mt1">AI 基础与背景</h3>
+        <p>为后续一切工具实践建立认知地基，讲清 AI 的来龙去脉与能力边界。</p>
+        <div class="chips mb2">
+          <span class="chip">人工智能发展史</span><span class="chip">机器学习 / 深度学习</span>
+          <span class="chip">Transformer</span><span class="chip">大语言模型</span>
+          <span class="chip">生成式 AI</span><span class="chip">多模态</span><span class="chip">提示工程</span>
+        </div>
+        <p class="small muted mb0"><b>能力产出：</b>能准确解释大模型能做什么、不能做什么；能写出结构化、可复用的高质量提示。</p>
+      </div>
+
+      <div class="card" style="border-top:4px solid var(--accent)">
+        <span class="card-num">MODULE 02 · 8 课时</span>
+        <h3 class="mt1">AI 办公与数据分析</h3>
+        <p>把 AI 变成日常生产力，覆盖文档、演示、表格与分析全链路。</p>
+        <div class="chips mb2">
+          <span class="chip">AI 写作</span><span class="chip">AI 生成 PPT</span>
+          <span class="chip">会议纪要</span><span class="chip">智能表格</span>
+          <span class="chip">公式与清洗</span><span class="chip">自然语言分析</span><span class="chip">BI × AI</span>
+        </div>
+        <p class="small muted mb0"><b>能力产出：</b>能用一份原始数据独立完成从清洗、分析到「一页管理简报」的全过程。</p>
+      </div>
+
+      <div class="card" style="border-top:4px solid var(--violet)">
+        <span class="card-num">MODULE 03 · 8 课时</span>
+        <h3 class="mt1">智能体（Agent）技术</h3>
+        <p>从会生成到会行动：理解并搭建可用的智能体系统。</p>
+        <div class="chips mb2">
+          <span class="chip">Agent 循环</span><span class="chip">ReAct</span>
+          <span class="chip">Function Calling</span><span class="chip">MCP / A2A</span>
+          <span class="chip">RAG 知识库</span><span class="chip">工作流编排</span>
+          <span class="chip">多智能体</span><span class="chip">AgentOps</span>
+        </div>
+        <p class="small muted mb0"><b>能力产出：</b>能基于低代码平台搭建一个带知识库与工具的、可分享的智能体。</p>
+      </div>
+
+      <div class="card" style="border-top:4px solid var(--emerald)">
+        <span class="card-num">MODULE 04 · 8 课时 · 重点模块</span>
+        <h3 class="mt1">Harness 与 AI 集成开发环境</h3>
+        <p>本课程的核心增量：理解编排层机制，并用 AI IDE 把想法变成应用。</p>
+        <div class="chips mb2">
+          <span class="chip">Harness 六要素</span><span class="chip">上下文工程</span>
+          <span class="chip">工具执行与沙箱</span><span class="chip">循环 / 重试</span>
+          <span class="chip">规则文件</span><span class="chip">Hook</span>
+          <span class="chip">子代理</span><span class="chip">权限模型</span><span class="chip">MCP 接入</span>
+        </div>
+        <p class="small muted mb0"><b>能力产出：</b>能用自然语言驱动 AI IDE 独立完成一个小型应用 / 数据工具的构建与发布。</p>
+      </div>
+
+      <div class="card" style="border-top:4px solid var(--amber)">
+        <span class="card-num">MODULE 05 · 2 课时</span>
+        <h3 class="mt1">综合实践与前沿</h3>
+        <p>汇聚本学期成果并展望前沿：项目答辩 + 治理伦理 + 前沿展望。</p>
+        <div class="chips mb2">
+          <span class="chip">项目答辩</span><span class="chip">AI 伦理</span>
+          <span class="chip">数据合规</span><span class="chip">技术前沿</span>
+        </div>
+        <p class="small muted mb0"><b>能力产出：</b>完成一个可演示、可交付的综合作品，并形成个人 AI 应用方法论。</p>
+      </div>
+
+      <div class="card" style="background:var(--grad-soft);border-color:#d7dff5">
+        <span class="card-num">TOOLCHAIN</span>
+        <h3 class="mt1">课程工具生态</h3>
+        <p>20+ 工具并非并列罗列，而是按能力层次组织：底层模型 → 生产力工具 → 编排与智能体 → 集成开发环境。</p>
+        <div class="chart short" data-chart="tools"></div>
+      </div>
+    </div>
+    <div class="text-center mt3 reveal">
+      <a href="courseware.html" class="btn btn-primary">查看各模块对应课件</a>
+      <a href="glossary.html" class="btn btn-outline">查询模块术语</a>
+      <a href="cases.html" class="btn btn-outline">浏览案例展示</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Progression</span>
+      <h2>模块之间的递进关系</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>层次</th><th>模块</th><th>回答的问题</th><th>典型产出</th></tr></thead>
+        <tbody>
+          <tr><td>认知</td><td>模块一</td><td>AI 是什么？为什么能行？边界在哪？</td><td>提示模板、能力边界判断</td></tr>
+          <tr><td>应用</td><td>模块二</td><td>怎么用 AI 把日常工作效率提升数倍？</td><td>文档/PPT、清洗后的数据、分析简报</td></tr>
+          <tr><td>编排</td><td>模块三</td><td>怎么让 AI 自主完成任务而不只是回答？</td><td>知识库问答智能体、工作流</td></tr>
+          <tr><td>建造</td><td>模块四</td><td>怎么把想法变成可运行、可分发的应用？</td><td>AI IDE 构建的小工具 / 应用</td></tr>
+          <tr><td>迁移</td><td>模块五</td><td>怎么把能力用在真实专业问题上并守住底线？</td><td>综合项目作品集</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt3 reveal">
+      <a href="syllabus.html" class="btn btn-primary">查看 16 次课详细安排</a>
+      <a href="courseware.html" class="btn btn-outline">打开课件中心</a>
+      <a href="glossary.html" class="btn btn-outline">浏览术语词典</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/vendor/echarts.min.js"></script>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/charts.js"></script>
+</body>
+</html>

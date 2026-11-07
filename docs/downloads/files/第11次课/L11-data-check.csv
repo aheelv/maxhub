@@ -1,0 +1,9 @@
+check_id,检查内容,标准结果,实际结果,结论,证据
+D01,问卷行数,30,,,survey.csv
+D02,yes/no/空值,18/8/4,,,survey.csv interested
+D03,ID唯一数,30,,,respondent_id
+D04,全体比例,18/30=60%,,,survey.csv
+D05,有效比例,18/26≈69.2%,,,survey.csv
+D06,memo_A,错误；18不是21,,,memo_A.txt
+D07,memo_B,18/26，分母非空回答,,,memo_B.txt
+D08,承办费用,"¥2,500/预算¥3,000",,,event_costs.csv

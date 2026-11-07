@@ -1,0 +1,851 @@
+{
+  "$meta": {
+    "name": "课程站点 ↔ 超星学习通 / 泛雅平台 · 字段映射与同步契约",
+    "version": "1.0.0",
+    "scope": "互补式对接：站点是课程内容主数据源，超星是教学运行与学情主系统；两边不做同一件事。",
+    "verification_policy": "verification=已核验 表示字段名称或功能可在下列公开材料中找到；=待核验 表示须以本校泛雅后台实际导出的表头、模板或经授权的开放接口文档为准，实施前必须由教务/平台管理员确认，禁止按推测写死。",
+    "canonical_side": "左侧 canonical 字段为站点内部标准名，适配层只负责转换，不允许平台字段反向污染站点模型。",
+    "transport_priority": [
+      "① 超星官方模板导入 / 后台导出表（CSV、XLSX）——当前可核验、无需接口授权",
+      "② 经校方授权的开放接口 —— 字段与鉴权待核验",
+      "③ 人工下载 + 适配层转换 —— 兜底"
+    ],
+    "privacy_rule": "学生个人信息与个人级学情一律不得写入公开站点；入站数据仅进入受控分析区，且默认聚合、脱敏后再用于内容改进展示。"
+  },
+  "authority_sources": [
+    {
+      "id": "SRC-1",
+      "title": "《知识图谱操作手册（教师版）》",
+      "publisher": "石家庄学院（公开附件）",
+      "url": "https://www.sjzc.edu.cn/lsxy/atm/7/20241022155144210.pdf",
+      "captured_at": "2026-11-07",
+      "confirmed": [
+        "知识点支持同级 / 子级添加",
+        "关系设置支持前置、后置、关联",
+        "属性编辑支持标签、教学目标、认知维度、知识点分类",
+        "导入方式：手动添加、智能导入（上传教学大纲 / 书籍教材）、模板导入、xmind 导入、课程章节导入",
+        "知识点可关联资源；课程章节编辑页的任务点可关联知识点；视频可按时间点标记知识点",
+        "题库题目可关联知识点，支持按知识点选题与按知识点抽题组卷",
+        "学情统计含知识点资源关联情况、平均完成率、平均掌握率、学生掌握详情"
+      ]
+    },
+    {
+      "id": "SRC-2",
+      "title": "《超星泛雅智慧课程平台使用手册》页面说明",
+      "publisher": "厦门理工学院教务处",
+      "url": "https://jwc.xmut.edu.cn/info/1043/10431.htm",
+      "captured_at": "2026-11-07",
+      "confirmed": [
+        "平台定位为知识图谱与智慧课程建设，整合课程资源、教学活动与评价反馈",
+        "覆盖课前、课中、课后全过程：作业、考试、学习提醒、难点答疑、资源推荐、智能出题",
+        "支持教师课程建设、资源管理、教学互动与数据分析",
+        "平台入口 i.chaoxing.com"
+      ]
+    },
+    {
+      "id": "SRC-3",
+      "title": "《基于「超星泛雅平台+学习通」快速完善课程的技巧和实践》表 1 学情统计表",
+      "publisher": "《大学化学》（北京大学主办期刊网站公开全文）",
+      "url": "https://www.dxhx.pku.edu.cn/article/2020/1000-8438/20200534.shtml",
+      "captured_at": "2026-11-07",
+      "confirmed": [
+        "学情统计表分项：综合成绩、任务点、课程视频、课程测验、讨论、作业、访问数、签到、课程互动及各自权重",
+        "综合完成情况字段：任务完成数、课程视频进度、视频观看时长、课程测验进度、讨论数、访问数、任务点完成百分比",
+        "作业详情：分数、上交时间；视频学习详情：时长、完成度；随堂测试详情：分数、上交时间"
+      ]
+    },
+    {
+      "id": "SRC-4",
+      "title": "GitHub · kazemnejad/jekyll-course-website-template（同类课程教学站点结构参考）",
+      "publisher": "GitHub 公开仓库 README",
+      "url": "https://github.com/kazemnejad/jekyll-course-website-template",
+      "captured_at": "2026-11-07",
+      "confirmed": [
+        "按内容类型分集合：_lectures / _assignments / _events / _announcements",
+        "讲座与作业以 YAML front matter 承载 date、title、links、pdf、solutions、attachment、due_event 等元数据",
+        "日程页与公告区由内容自动生成",
+        "导航菜单放入 _data/nav.yml；课程名、学期、学校、主题等集中在 _config.yml",
+        "可按学期新建仓库复用同一模板"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "knowledge-graph",
+      "name": "知识图谱（知识点 · 关系 · 属性 · 关联）",
+      "direction": "outbound-primary",
+      "authority": "site",
+      "target": "chaoxing",
+      "transport": "模板导入（CSV/XLSX）优先；亦可由教学大纲 / 教材智能导入，或用 xmind 导入",
+      "scope": "全课程知识点、层级、关系、属性及其与章节 / 资源 / 题目的关联；不含任何学生数据",
+      "trigger": "内容发布或知识点审核通过后由教师手动触发",
+      "frequency": "按版本发布，非实时",
+      "idempotency_key": "kp.id",
+      "conflict_rule": "站点为权威源，覆盖超星同名知识点；超星侧教师手工增补的知识点进入差异报告，不自动回写",
+      "fields": [
+        {
+          "canonical": "kp.id",
+          "type": "string",
+          "chaoxing_label": "知识点编号（模板列，名称待核验）",
+          "chaoxing_api_field": null,
+          "transform": "直接输出 KP-{module}-{nn}",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "SRC-1 确认支持模板导入，但未公开模板列名",
+          "notes": "作为幂等键与后续回写锚点，必须在超星侧保留"
+        },
+        {
+          "canonical": "kp.title",
+          "type": "string",
+          "chaoxing_label": "知识点名称",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验",
+          "evidence": "SRC-1『添加知识点』",
+          "notes": "取自课件 points[]，非语义推断"
+        },
+        {
+          "canonical": "kp.parent_id",
+          "type": "string",
+          "chaoxing_label": "父级知识点 / 同级知识点 / 子级知识点",
+          "chaoxing_api_field": null,
+          "transform": "module → 一级节点；session → 二级分组；知识点 → 子级",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验",
+          "evidence": "SRC-1『添加同级知识点；添加子级知识点』",
+          "notes": "层级由 module / session 确定性推导"
+        },
+        {
+          "canonical": "kp.level",
+          "type": "integer",
+          "chaoxing_label": "知识点层级（模板列，待核验）",
+          "chaoxing_api_field": null,
+          "transform": "1=模块，2=课次下知识点",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "SRC-1 未列层级字段名",
+          "notes": "若模板无此列则省略，由父子关系表达"
+        },
+        {
+          "canonical": "kp.relations.prerequisite_of",
+          "type": "string[]",
+          "chaoxing_label": "前置",
+          "chaoxing_api_field": null,
+          "transform": "仅导出教师已核定为 confirmed 的边",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验（功能）/ 待核验（接口列名）",
+          "evidence": "SRC-1『关系设置：前置、后置、关联』",
+          "notes": "由教学顺序推导的关系不得冒充前置依赖；未核定则留空并列入差异报告"
+        },
+        {
+          "canonical": "kp.relations.next",
+          "type": "string[]",
+          "chaoxing_label": "后置",
+          "chaoxing_api_field": null,
+          "transform": "导出并附标记『由教学顺序推断，待教师复核』",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验（功能）/ 待核验（接口列名）",
+          "evidence": "SRC-1 同上",
+          "notes": "避免把课次先后当作知识先修"
+        },
+        {
+          "canonical": "kp.relations.related_to",
+          "type": "string[]",
+          "chaoxing_label": "关联",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1 同上",
+          "notes": ""
+        },
+        {
+          "canonical": "kp.tag",
+          "type": "string[]",
+          "chaoxing_label": "标签",
+          "chaoxing_api_field": null,
+          "transform": "由 module / 工具 / 难度生成",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『属性编辑：添加标签』",
+          "notes": ""
+        },
+        {
+          "canonical": "kp.teaching_objective",
+          "type": "string",
+          "chaoxing_label": "教学目标",
+          "chaoxing_api_field": null,
+          "transform": "由教材章节学习目标映射",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『属性编辑：添加教学目标』",
+          "notes": "当前站点该字段为空，标注待补充，不编造"
+        },
+        {
+          "canonical": "kp.cognitive_dimension",
+          "type": "string",
+          "chaoxing_label": "认知维度",
+          "chaoxing_api_field": null,
+          "transform": "枚举映射，须教师核定",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『属性编辑：选择认知维度』",
+          "notes": "枚举取值待核验，空值不导出"
+        },
+        {
+          "canonical": "kp.category",
+          "type": "string",
+          "chaoxing_label": "知识点分类",
+          "chaoxing_api_field": null,
+          "transform": "枚举映射，须教师核定",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『属性编辑：选择知识点分类』",
+          "notes": "枚举取值待核验"
+        },
+        {
+          "canonical": "kp.resource_urls",
+          "type": "string[]",
+          "chaoxing_label": "相关资源 / 添加资源",
+          "chaoxing_api_field": null,
+          "transform": "教材章节 URL + 课件 URL + 实践包 URL",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验",
+          "evidence": "SRC-1『关联资源』『课程章节任务关联知识点』",
+          "notes": "外链形式，站点持有文件，不重复上传"
+        },
+        {
+          "canonical": "kp.item_ids",
+          "type": "string[]",
+          "chaoxing_label": "题库题目关联知识点",
+          "chaoxing_api_field": null,
+          "transform": "由 exercises.assesses 生成",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『题库管理-关联知识点』『按知识点选题 / 抽题组卷』",
+          "notes": "题目正文由站点题目数据转换，站点不承担在线考试"
+        },
+        {
+          "canonical": "kp.video_timestamp",
+          "type": "string|null",
+          "chaoxing_label": "视频时间点标记知识点",
+          "chaoxing_api_field": null,
+          "transform": "不生成",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验（功能存在）",
+          "evidence": "SRC-1『视频-插入对象-在时间点上标记知识点』",
+          "notes": "站点无课程视频资源，明确留空；如后续有视频再补"
+        }
+      ]
+    },
+    {
+      "id": "course-structure",
+      "name": "课程结构与教学大纲",
+      "direction": "outbound",
+      "authority": "site",
+      "target": "chaoxing",
+      "transport": "教学大纲文档上传（供智能导入）/ 章节模板导入",
+      "scope": "课程名、课程代码、学分学时、模块、课次、学时、大纲单元、教材章节清单",
+      "trigger": "学期开课前一次；大纲变更时增量",
+      "frequency": "学期级",
+      "idempotency_key": "course_id + session.no",
+      "conflict_rule": "站点为权威源；超星侧仅做引用与任务点挂载",
+      "fields": [
+        {
+          "canonical": "course.title",
+          "type": "string",
+          "chaoxing_label": "课程名称",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "SRC-2 确认平台支持课程建设，未公开字段",
+          "notes": ""
+        },
+        {
+          "canonical": "course.course_code",
+          "type": "string",
+          "chaoxing_label": "课程代码",
+          "chaoxing_api_field": null,
+          "transform": "由 config.course_code 提供",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "须以本校教务编码为准，本站不自行编造"
+        },
+        {
+          "canonical": "course.hours / credits",
+          "type": "integer/number",
+          "chaoxing_label": "学时 / 学分",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "现有 about.html 记为 32 课时 / 2 学分（建议）"
+        },
+        {
+          "canonical": "module.name",
+          "type": "string",
+          "chaoxing_label": "课程章节（分组）",
+          "chaoxing_api_field": null,
+          "transform": "M1..M5 → 章节分组",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验（功能）",
+          "evidence": "SRC-1『课程章节导入』『课程章节编辑页』",
+          "notes": ""
+        },
+        {
+          "canonical": "session.title / hours",
+          "type": "string/integer",
+          "chaoxing_label": "章节任务点",
+          "chaoxing_api_field": null,
+          "transform": "16 课次 → 章节任务点",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验（功能）",
+          "evidence": "SRC-1『课程章节编辑页面-任务点』",
+          "notes": "任务点的学习行为数据由超星产生，站点不采集"
+        },
+        {
+          "canonical": "syllabus-unit.summary",
+          "type": "string",
+          "chaoxing_label": "教学大纲（智能导入源文件）",
+          "chaoxing_api_field": null,
+          "transform": "导出为独立大纲文档上传",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『智能导入：上传教学大纲智能识别提取知识点』",
+          "notes": "与模板导入二选一，避免知识点重复创建"
+        },
+        {
+          "canonical": "textbook-chapter.path",
+          "type": "string",
+          "chaoxing_label": "书籍教材（智能导入源文件）",
+          "chaoxing_api_field": null,
+          "transform": "导出教材章节文件上传",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『智能导入：上传书籍教材智能识别提取知识点』",
+          "notes": "同样只作识别源，不替代站点教材正文"
+        }
+      ]
+    },
+    {
+      "id": "item-bank",
+      "name": "题库 / 作业题目",
+      "direction": "outbound",
+      "authority": "site",
+      "target": "chaoxing",
+      "transport": "题库批量导入模板 / 智能导入（题目带知识点标注）",
+      "scope": "16 套综合任务单及其量规；站点只提供题目与素材，组卷、作答、判分、成绩均在超星",
+      "trigger": "题目发布或修订后",
+      "frequency": "按课次",
+      "idempotency_key": "exercise.id",
+      "conflict_rule": "站点为题目内容权威源；作答与得分权威源为超星",
+      "fields": [
+        {
+          "canonical": "exercise.id",
+          "type": "string",
+          "chaoxing_label": "题目编号（模板列，待核验）",
+          "chaoxing_api_field": null,
+          "transform": "EX-{nn}",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "SRC-1 确认支持批量导入，未公开列名",
+          "notes": "用于去重与幂等"
+        },
+        {
+          "canonical": "exercise.title / question",
+          "type": "string",
+          "chaoxing_label": "题干",
+          "chaoxing_api_field": null,
+          "transform": "任务说明 + 背景资料拼接",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "综合任务题，题型映射待核验"
+        },
+        {
+          "canonical": "exercise.kp_ids",
+          "type": "string[]",
+          "chaoxing_label": "知识点（关联知识点 / 智能导入标注）",
+          "chaoxing_api_field": null,
+          "transform": "由 assesses 关系生成",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验",
+          "evidence": "SRC-1『题库管理-关联知识点』『批量导入-智能导入-知识点标注』",
+          "notes": "这是组卷与学情按知识点统计的前提"
+        },
+        {
+          "canonical": "exercise.rubric_total",
+          "type": "integer",
+          "chaoxing_label": "分值",
+          "chaoxing_api_field": null,
+          "transform": "100",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "SRC-3 学情统计表含分值、权重",
+          "notes": "具体分值权重由教师在超星侧设定"
+        },
+        {
+          "canonical": "practice-kit.url",
+          "type": "string",
+          "chaoxing_label": "题目附件 / 课程资料",
+          "chaoxing_api_field": null,
+          "transform": "资源包下载外链",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验（功能）",
+          "evidence": "SRC-1『关联资源』",
+          "notes": "学生在超星下载，站点不记录下载人"
+        },
+        {
+          "canonical": "exercise.teacher_key",
+          "type": "string",
+          "chaoxing_label": "答案 / 解析",
+          "chaoxing_api_field": null,
+          "transform": "教师核验卡，仅教师可见",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "默认不导出到学生可见题库，避免泄露标准答案"
+        }
+      ]
+    },
+    {
+      "id": "resource-index",
+      "name": "课程资源与素材清单",
+      "direction": "outbound",
+      "authority": "site",
+      "target": "chaoxing",
+      "transport": "资源清单（CSV/JSON）→ 超星资料库外链或批量上传",
+      "scope": "教材章节、网页课件、PPTX、案例、截图、拓展阅读的 URL 与元数据",
+      "trigger": "内容发布后",
+      "frequency": "按版本",
+      "idempotency_key": "content.id",
+      "conflict_rule": "站点持有原件；超星侧只建引用，避免双份维护",
+      "fields": [
+        {
+          "canonical": "content.id",
+          "type": "string",
+          "chaoxing_label": "资源编号（待核验）",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": ""
+        },
+        {
+          "canonical": "content.title / url / type",
+          "type": "string",
+          "chaoxing_label": "资源名称 / 链接 / 类型",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验（功能）",
+          "evidence": "SRC-1『添加资源』『勾选资料中的资源进行关联』；SRC-2『资源管理』",
+          "notes": "公开外链，无需学生账号"
+        },
+        {
+          "canonical": "content.kp_ids",
+          "type": "string[]",
+          "chaoxing_label": "关联知识点",
+          "chaoxing_api_field": null,
+          "transform": "由 covers / illustrates 生成",
+          "direction": "out",
+          "required": true,
+          "verification": "已核验",
+          "evidence": "SRC-1『关联资源』",
+          "notes": ""
+        },
+        {
+          "canonical": "content.evidence_level / source_url / captured_at",
+          "type": "string",
+          "chaoxing_label": "资源说明（来源）",
+          "chaoxing_api_field": null,
+          "transform": "拼接为备注",
+          "direction": "out",
+          "required": false,
+          "verification": "不适用",
+          "evidence": "—",
+          "notes": "保留 A/B/C 分级，防止把虚构教学数据当真实案例"
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "教学日历与截止",
+      "direction": "outbound-optional",
+      "authority": "site（结构）/ registrar（日期）",
+      "target": "chaoxing",
+      "transport": "日历条目导出；或由教师在超星侧按校历设定",
+      "scope": "周次、课次、学时、交付物、建议截止；具体日期由教务校历注入",
+      "trigger": "学期开课前",
+      "frequency": "学期级",
+      "idempotency_key": "calendar.no",
+      "conflict_rule": "日期以教务校历为准，站点不推断；有冲突时以超星侧教师设置为准并回写差异报告",
+      "fields": [
+        {
+          "canonical": "calendar.week_no",
+          "type": "integer",
+          "chaoxing_label": "教学周",
+          "chaoxing_api_field": null,
+          "transform": "直接输出",
+          "direction": "out",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": ""
+        },
+        {
+          "canonical": "calendar.date",
+          "type": "date|null",
+          "chaoxing_label": "日期 / 截止时间",
+          "chaoxing_api_field": null,
+          "transform": "空值不导出",
+          "direction": "out",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "站点现有材料无校历，字段一律置空并标注待补充，禁止编造日期"
+        },
+        {
+          "canonical": "calendar.deliverable",
+          "type": "string",
+          "chaoxing_label": "作业 / 交付物",
+          "chaoxing_api_field": null,
+          "transform": "由课次习题标题生成",
+          "direction": "out",
+          "required": false,
+          "verification": "已核验（功能）",
+          "evidence": "SRC-2『作业、考试、学习提醒』",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "student-roster",
+      "name": "学生信息与选课名单",
+      "direction": "inbound-controlled",
+      "authority": "chaoxing / registrar",
+      "target": "site-restricted-zone",
+      "transport": "超星后台或教务导出 CSV/XLSX → 适配层 → 受控分析区（不进入公开站点）",
+      "scope": "仅用于班级维度的匿名统计与内容改进；不用于登录、不在公开页面展示、不落盘到静态发布目录",
+      "trigger": "学期初及名单变更",
+      "frequency": "学期级 / 变更时",
+      "idempotency_key": "student_id_hash",
+      "conflict_rule": "以超星 / 教务为唯一权威源；站点不得新建或修改学生身份记录",
+      "fields": [
+        {
+          "canonical": "student.hashed_id",
+          "type": "string",
+          "chaoxing_label": "学号（导出表列名待核验）",
+          "chaoxing_api_field": null,
+          "transform": "SHA-256(salt + 学号) 后仅存哈希",
+          "direction": "in",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "字段名须以本校导出表头为准",
+          "notes": "最小必要原则；原始学号不写入站点数据库"
+        },
+        {
+          "canonical": "student.display_name",
+          "type": "string|null",
+          "chaoxing_label": "学生姓名",
+          "chaoxing_api_field": null,
+          "transform": "不导入；仅在受控区做临时关联后丢弃",
+          "direction": "in",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "公开站点永不出现姓名"
+        },
+        {
+          "canonical": "student.class / major / department",
+          "type": "string",
+          "chaoxing_label": "班级 / 专业 / 院系",
+          "chaoxing_api_field": null,
+          "transform": "保留为聚合维度",
+          "direction": "in",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "仅用于班级粒度统计"
+        },
+        {
+          "canonical": "student.enrollment_status",
+          "type": "enum",
+          "chaoxing_label": "选课状态",
+          "chaoxing_api_field": null,
+          "transform": "枚举映射待核验",
+          "direction": "in",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "站点的选课登记功能应下线，避免重复"
+        },
+        {
+          "canonical": "student.chaoxing_uid",
+          "type": "string",
+          "chaoxing_label": "平台用户 ID",
+          "chaoxing_api_field": null,
+          "transform": "仅存映射表，用于去重",
+          "direction": "in",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "不得用于站点登录"
+        }
+      ]
+    },
+    {
+      "id": "learning-analytics",
+      "name": "学情与知识点掌握度",
+      "direction": "inbound-aggregate",
+      "authority": "chaoxing",
+      "target": "site-restricted-zone",
+      "transport": "超星后台导出 / 学情统计报表 → 适配层聚合 → 内容改进标记",
+      "scope": "按知识点、按课次的聚合指标；个人级明细只在受控区，不发布",
+      "trigger": "每模块结束后或教师手动",
+      "frequency": "模块级 / 按需",
+      "idempotency_key": "kp.id + term + aggregate_level",
+      "conflict_rule": "学情数据唯一权威源为超星；站点只读，不回算成绩、不产生评价结论",
+      "fields": [
+        {
+          "canonical": "analytics.kp_completion_rate",
+          "type": "number",
+          "chaoxing_label": "知识点平均完成率",
+          "chaoxing_api_field": null,
+          "transform": "百分比 → 0..1",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1『知识点掌握率详情：平均完成率和平均掌握率』",
+          "notes": "用于标记哪些教材章节需要补充讲解"
+        },
+        {
+          "canonical": "analytics.kp_mastery_rate",
+          "type": "number",
+          "chaoxing_label": "知识点平均掌握率",
+          "chaoxing_api_field": null,
+          "transform": "百分比 → 0..1",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-1 同上",
+          "notes": ""
+        },
+        {
+          "canonical": "analytics.task_completion_pct",
+          "type": "number",
+          "chaoxing_label": "任务点完成百分比",
+          "chaoxing_api_field": null,
+          "transform": "百分比 → 0..1",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-3 表『综合完成情况』",
+          "notes": ""
+        },
+        {
+          "canonical": "analytics.video_minutes",
+          "type": "number",
+          "chaoxing_label": "视频观看时长/分钟",
+          "chaoxing_api_field": null,
+          "transform": "直接映射",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-3 表『综合完成情况』",
+          "notes": "站点无视频资源时该值为空"
+        },
+        {
+          "canonical": "analytics.homework_score / submitted_at",
+          "type": "number/datetime",
+          "chaoxing_label": "作业分数 / 上交时间",
+          "chaoxing_api_field": null,
+          "transform": "仅聚合，不存个人行",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-3『作业详情：分数、上交时间』",
+          "notes": "成绩权威源为超星"
+        },
+        {
+          "canonical": "analytics.quiz_score",
+          "type": "number",
+          "chaoxing_label": "随堂测试详情 / 分数",
+          "chaoxing_api_field": null,
+          "transform": "仅聚合",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-3『随堂测试详情/分数』",
+          "notes": ""
+        },
+        {
+          "canonical": "analytics.discussion_count / visit_count / sign_in",
+          "type": "integer",
+          "chaoxing_label": "讨论数 / 访问数 / 签到",
+          "chaoxing_api_field": null,
+          "transform": "仅聚合",
+          "direction": "in",
+          "required": false,
+          "verification": "已核验",
+          "evidence": "SRC-3 表『学情统计表』『综合完成情况』",
+          "notes": "站点不自建签到与讨论功能"
+        },
+        {
+          "canonical": "analytics.improvement_flag",
+          "type": "enum",
+          "chaoxing_label": "（站点派生）内容改进标记",
+          "chaoxing_api_field": null,
+          "transform": "由聚合指标阈值生成，写回内容实例 ext.review_hint",
+          "direction": "internal",
+          "required": false,
+          "verification": "不适用",
+          "evidence": "—",
+          "notes": "这是入站数据唯一的公开用途，且只呈现为『本章建议补充』，不呈现任何学生数据"
+        }
+      ]
+    },
+    {
+      "id": "identity-and-notification",
+      "name": "身份认证与消息通知",
+      "direction": "redirect-only",
+      "authority": "chaoxing",
+      "target": "site",
+      "transport": "链接跳转；SSO 与消息接口待核验",
+      "scope": "不交换身份数据，只提供『前往超星完成登录 / 提交作业 / 查看成绩』的明确出口",
+      "trigger": "用户点击",
+      "frequency": "实时跳转",
+      "idempotency_key": "不适用",
+      "conflict_rule": "站点不得保留并行账号体系",
+      "fields": [
+        {
+          "canonical": "link.chaoxing_course_url",
+          "type": "string",
+          "chaoxing_label": "课程空间入口",
+          "chaoxing_api_field": null,
+          "transform": "由 config.integration.chaoxing_course_url 注入",
+          "direction": "config",
+          "required": true,
+          "verification": "待核验",
+          "evidence": "SRC-2 给出平台入口 i.chaoxing.com；本校课程空间具体 URL 待教务提供",
+          "notes": ""
+        },
+        {
+          "canonical": "auth.sso",
+          "type": "boolean",
+          "chaoxing_label": "统一身份认证",
+          "chaoxing_api_field": null,
+          "transform": "默认 false",
+          "direction": "config",
+          "required": false,
+          "verification": "待核验",
+          "evidence": "—",
+          "notes": "启用前须取得校方接口文档与授权；静态站点无需登录态"
+        }
+      ]
+    }
+  ],
+  "responsibility_matrix": [
+    {
+      "capability": "课程介绍 / 大纲 / 教材 / 课件 / 案例 / 术语 / 公开资源",
+      "site": "唯一权威源，负责生产与发布",
+      "chaoxing": "引用外链或上传副本（副本不回写）",
+      "duplicate_risk": "低",
+      "rule": "一份内容一个原件，超星只引用"
+    },
+    {
+      "capability": "教学日历（周次与交付物）",
+      "site": "结构权威源",
+      "chaoxing": "具体日期、提醒与截止的执行方",
+      "duplicate_risk": "中",
+      "rule": "站点不推断日期；日期以教务校历 / 超星设置为准"
+    },
+    {
+      "capability": "教案 / 教师备课",
+      "site": "教师可见，面向教学设计",
+      "chaoxing": "不承载",
+      "duplicate_risk": "无",
+      "rule": "教案不导出为学生学习对象"
+    },
+    {
+      "capability": "知识图谱",
+      "site": "知识点、关系、属性、资源关联的权威源",
+      "chaoxing": "图谱展示、按知识点组卷、掌握度计算",
+      "duplicate_risk": "中",
+      "rule": "站点导出，超星消费；超星侧的人工增补只进差异报告，不自动回写",
+      "note": "易双份维护"
+    },
+    {
+      "capability": "题库题目与素材",
+      "site": "题目正文、附件、量规的权威源",
+      "chaoxing": "在线作答、判分、组卷、成绩记录",
+      "duplicate_risk": "中",
+      "rule": "站点不采集作答；超星不改写题目正文"
+    },
+    {
+      "capability": "学生身份 / 选课 / 登录",
+      "site": "不承载，仅提供跳转出口",
+      "chaoxing": "唯一权威源",
+      "duplicate_risk": "高",
+      "rule": "下线站点自有注册、登录、选课、扫码登录、个人中心",
+      "note": "现状已有重复"
+    },
+    {
+      "capability": "学情 / 成绩 / 签到 / 讨论 / 通知",
+      "site": "不采集、不存储个人级数据",
+      "chaoxing": "唯一权威源与唯一执行方",
+      "duplicate_risk": "高",
+      "rule": "站点只接收聚合、脱敏指标用于内容改进",
+      "note": "现状已有重复"
+    },
+    {
+      "capability": "课程反馈 / 问卷",
+      "site": "不自建反馈库",
+      "chaoxing": "问卷、评教与互动",
+      "duplicate_risk": "高",
+      "rule": "站点反馈入口改为跳转超星",
+      "note": "现状已有重复"
+    },
+    {
+      "capability": "公开资源下载通道",
+      "site": "唯一入口（按课次打包）",
+      "chaoxing": "以资源外链方式引用",
+      "duplicate_risk": "低",
+      "rule": "学生从任一入口进入都落到同一份原件"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>扫码登录确认 · 《人工智能工具应用实践》</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="section" style="padding-top:40px">
+  <div class="container" style="max-width:460px">
+    <div class="card reveal" id="qrCard">
+      <div class="text-center">
+        <div class="card-ico" style="margin:6px auto 14px"></div>
+        <h3>扫码登录确认</h3>
+        <p class="muted small" id="qrSub">正在校验二维码…</p>
+      </div>
+      <div class="alert alert-err" id="qrErr"></div>
+      <div class="alert alert-ok" id="qrOk"></div>
+      <div id="qrBody"></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  function qs(n) { var m = new RegExp('[?&]' + n + '=([^&]*)').exec(location.search); return m ? decodeURIComponent(m[1]) : ''; }
+  var token = qs('t');
+  var body = document.getElementById('qrBody');
+  var sub = document.getElementById('qrSub');
+
+  function err(m) { var e = document.getElementById('qrErr'); e.textContent = m; e.classList.add('show'); }
+  function ok(m) { var e = document.getElementById('qrOk'); e.textContent = m; e.classList.add('show'); }
+
+  function confirmBox(user) {
+    sub.textContent = '确认后，你将在电脑端登录课程门户';
+    body.innerHTML =
+      '<div class="card card-flat" style="background:var(--surface-2);text-align:center">' +
+      '<div class="avatar" style="width:52px;height:52px;font-size:1.1rem;margin:0 auto 10px">' + App.esc((user.name||'U').slice(0,1)) + '</div>' +
+      '<b>' + App.esc(user.name) + '</b>' +
+      '<div class="small muted">' + (user.role === 'teacher' ? '教师账号' : '学生账号') + ' · ' + App.esc(user.account) + '</div>' +
+      '</div>' +
+      '<button class="btn btn-primary btn-block mt2" id="confirmBtn">确认登录</button>' +
+      '<button class="btn btn-outline btn-block mt1" id="cancelBtn">取消</button>';
+    document.getElementById('confirmBtn').addEventListener('click', function () {
+      document.getElementById('confirmBtn').disabled = true;
+      App.api('/api/qr/confirm', { method: 'POST', body: { token: token } }).then(function (r) {
+        if (r.data && r.data.ok) { ok('已确认，请回到电脑端继续'); sub.textContent = '你可以关闭本页面'; body.innerHTML = ''; }
+        else { err((r.data && r.data.message) || '确认失败，请刷新电脑端二维码重试'); document.getElementById('confirmBtn').disabled = false; }
+      });
+    });
+    document.getElementById('cancelBtn').addEventListener('click', function () { err('已取消本次登录'); });
+  }
+
+  function loginBox() {
+    sub.textContent = '请先在此设备登录，然后确认电脑端登录';
+    body.innerHTML =
+      '<div class="seg" id="qseg"><button class="active" data-f="login">登录</button><button data-f="reg">注册</button></div>' +
+      '<form id="qLogin"><div class="form-row"><label>学号 / 账号</label><input class="input" name="account" required></div>' +
+      '<div class="form-row"><label>密码</label><input class="input" name="password" type="password" required></div>' +
+      '<button class="btn btn-primary btn-block" type="submit">登录</button></form>' +
+      '<form id="qReg" class="hidden"><div class="form-row"><label>学号 / 账号</label><input class="input" name="account" required></div>' +
+      '<div class="form-row"><label>姓名</label><input class="input" name="name" required></div>' +
+      '<div class="form-row"><label>密码（至少 6 位）</label><input class="input" name="password" type="password" required></div>' +
+      '<button class="btn btn-primary btn-block" type="submit">注册并登录</button></form>';
+
+    var seg = document.getElementById('qseg');
+    seg.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      var f = e.target.getAttribute('data-f');
+      seg.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      document.getElementById('qLogin').classList.toggle('hidden', f !== 'login');
+      document.getElementById('qReg').classList.toggle('hidden', f !== 'reg');
+    });
+    document.getElementById('qLogin').addEventListener('submit', function (e) {
+      e.preventDefault();
+      App.api('/api/auth/login', { method: 'POST', body: { account: e.target.account.value, password: e.target.password.value } }).then(function (r) {
+        if (r.data && r.data.ok) afterAuth();
+        else err((r.data && r.data.message) || '登录失败');
+      });
+    });
+    document.getElementById('qReg').addEventListener('submit', function (e) {
+      e.preventDefault();
+      App.api('/api/auth/register', { method: 'POST', body: { account: e.target.account.value, name: e.target.name.value, password: e.target.password.value } }).then(function (r) {
+        if (r.data && r.data.ok) afterAuth();
+        else err((r.data && r.data.message) || '注册失败');
+      });
+    });
+  }
+
+  function afterAuth() {
+    App.api('/api/auth/me').then(function (r) {
+      if (r.data && r.data.user) confirmBox(r.data.user);
+      else { sub.textContent = '登录状态获取失败，请重新登录'; loginBox(); }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!token) { sub.textContent = '二维码无效'; err('缺少二维码参数，请重新扫码'); return; }
+    setTimeout(function () {
+      App.api('/api/auth/me').then(function (r) {
+        if (r.data && r.data.user) confirmBox(r.data.user);
+        else loginBox();
+      });
+    }, 500);
+  });
+})();
+</script>
+</body>
+</html>

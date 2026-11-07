@@ -1,0 +1,454 @@
+{
+  "$schema": "../schema/course.config.schema.json",
+  "course_id": "AI-TOOLS-APPLY",
+  "title": "人工智能工具应用实践",
+  "subtitle": "面向经管类本科生的 AI 工具应用能力课：用最新 AI 工具解决真实管理、数据与业务问题",
+  "course_type": "专业选修课",
+  "school": "大连财经学院",
+  "department": "管理学院",
+  "major": "大数据管理与应用",
+  "course_code": null,
+  "credits": 2,
+  "hours": 32,
+  "session_count": 16,
+  "session_minutes": 90,
+  "lecture_minutes": 45,
+  "practice_minutes": 45,
+  "term": null,
+  "calendar_start": null,
+  "language": "zh-CN",
+  "license": "课程组自建，仅用于教学；第三方材料均标注出处",
+  "modules": [
+    {
+      "id": "M1",
+      "no": 1,
+      "name": "AI 基础与背景",
+      "session_range": [
+        1,
+        3
+      ],
+      "accent": "m1"
+    },
+    {
+      "id": "M2",
+      "no": 2,
+      "name": "AI 办公与数据分析",
+      "session_range": [
+        4,
+        7
+      ],
+      "accent": "m2"
+    },
+    {
+      "id": "M3",
+      "no": 3,
+      "name": "智能体（Agent）技术",
+      "session_range": [
+        8,
+        11
+      ],
+      "accent": "m3"
+    },
+    {
+      "id": "M4",
+      "no": 4,
+      "name": "Harness 与 AI 集成开发环境",
+      "session_range": [
+        12,
+        15
+      ],
+      "accent": "m4"
+    },
+    {
+      "id": "M5",
+      "no": 5,
+      "name": "综合实践与前沿",
+      "session_range": [
+        16,
+        16
+      ],
+      "accent": "m5"
+    }
+  ],
+  "sessions": [
+    {
+      "no": 1,
+      "title": "课程导论：人工智能 70 年与 AI 工具全景",
+      "module_id": "M1",
+      "hours": 2
+    },
+    {
+      "no": 2,
+      "title": "大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "module_id": "M1",
+      "hours": 2
+    },
+    {
+      "no": 3,
+      "title": "生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "module_id": "M1",
+      "hours": 2
+    },
+    {
+      "no": 4,
+      "title": "AI 办公实践：文档、PPT 与知识管理",
+      "module_id": "M2",
+      "hours": 2
+    },
+    {
+      "no": 5,
+      "title": "AI + 表格：智能表格、公式生成与数据清洗",
+      "module_id": "M2",
+      "hours": 2
+    },
+    {
+      "no": 6,
+      "title": "用自然语言做数据分析：代码解释器与 AI 分析师",
+      "module_id": "M2",
+      "hours": 2
+    },
+    {
+      "no": 7,
+      "title": "管理场景数据分析综合：BI × AI 协同",
+      "module_id": "M2",
+      "hours": 2
+    },
+    {
+      "no": 8,
+      "title": "从工具到智能体：Agent 原理与 MCP 协议",
+      "module_id": "M3",
+      "hours": 2
+    },
+    {
+      "no": 9,
+      "title": "提示到编排：工作流、RAG 与知识库",
+      "module_id": "M3",
+      "hours": 2
+    },
+    {
+      "no": 10,
+      "title": "低代码智能体平台实战：搭建企业问答智能体",
+      "module_id": "M3",
+      "hours": 2
+    },
+    {
+      "no": 11,
+      "title": "多智能体协作与 AgentOps",
+      "module_id": "M3",
+      "hours": 2
+    },
+    {
+      "no": 12,
+      "title": "什么是 Harness：模型之外的编排层",
+      "module_id": "M4",
+      "hours": 2
+    },
+    {
+      "no": 13,
+      "title": "AI IDE 与编程智能体实战",
+      "module_id": "M4",
+      "hours": 2
+    },
+    {
+      "no": 14,
+      "title": "Harness 工程实践：规则、Hook、子代理与权限",
+      "module_id": "M4",
+      "hours": 2
+    },
+    {
+      "no": 15,
+      "title": "用 AI 集成开发环境构建专业应用",
+      "module_id": "M4",
+      "hours": 2
+    },
+    {
+      "no": 16,
+      "title": "综合项目答辩与技术前沿展望",
+      "module_id": "M5",
+      "hours": 2
+    }
+  ],
+  "tools": [
+    {
+      "name": "WorkBuddy",
+      "role": "核心 AI 工作台：自然语言交互、自主规划执行、多模态任务、本地文件操作、多任务并行与结果交付",
+      "core": true,
+      "url": "https://www.workbuddy.cn/",
+      "availability": "可用"
+    },
+    {
+      "name": "Trae",
+      "role": "AI IDE：代码生成、项目构建与调试演示",
+      "core": false,
+      "url": null,
+      "availability": "待开通"
+    },
+    {
+      "name": "DeepSeek Harness",
+      "role": "开源智能体运行时：Harness 编排层原理与工程护栏讲解",
+      "core": false,
+      "url": null,
+      "availability": "待开通"
+    },
+    {
+      "name": "MCP / Skills / Tasks",
+      "role": "智能体集成平台协议与扩展机制（官方规范 2026-07-28）",
+      "core": false,
+      "url": "https://modelcontextprotocol.io/",
+      "availability": "模拟演示"
+    }
+  ],
+  "navigation": {
+    "primary": [
+      {
+        "id": "overview",
+        "label": "课程总览",
+        "href": "/",
+        "children": [
+          {
+            "label": "课程介绍",
+            "href": "/about/"
+          },
+          {
+            "label": "教学大纲",
+            "href": "/syllabus/"
+          },
+          {
+            "label": "教学日历",
+            "href": "/calendar/"
+          },
+          {
+            "label": "考核方式",
+            "href": "/policies/"
+          }
+        ]
+      },
+      {
+        "id": "sessions",
+        "label": "课次主轴",
+        "href": "/sessions/"
+      },
+      {
+        "id": "textbook",
+        "label": "教材",
+        "href": "/textbook/"
+      },
+      {
+        "id": "courseware",
+        "label": "课件",
+        "href": "/courseware/"
+      },
+      {
+        "id": "practice",
+        "label": "习题与实践",
+        "href": "/exercises/",
+        "children": [
+          {
+            "label": "综合任务单",
+            "href": "/exercises/"
+          },
+          {
+            "label": "资源包下载",
+            "href": "/downloads/"
+          }
+        ]
+      },
+      {
+        "id": "knowledge",
+        "label": "知识图谱",
+        "href": "/knowledge/",
+        "children": [
+          {
+            "label": "知识模块",
+            "href": "/knowledge/modules/"
+          },
+          {
+            "label": "知识点",
+            "href": "/knowledge/points/"
+          },
+          {
+            "label": "术语词典",
+            "href": "/knowledge/terms/"
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "label": "案例与资源",
+        "href": "/cases/",
+        "children": [
+          {
+            "label": "案例库",
+            "href": "/cases/"
+          },
+          {
+            "label": "技术趋势",
+            "href": "/trends/"
+          },
+          {
+            "label": "课程通知",
+            "href": "/announcements/"
+          },
+          {
+            "label": "前往超星学习通",
+            "href": "https://i.chaoxing.com"
+          }
+        ]
+      }
+    ],
+    "footer": [
+      {
+        "label": "站点地图",
+        "href": "/sitemap/"
+      },
+      {
+        "label": "对接与数据说明",
+        "href": "/integration/"
+      },
+      {
+        "label": "课程团队",
+        "href": "/about/team/"
+      },
+      {
+        "label": "公开站点",
+        "href": "https://aheelv.github.io/"
+      }
+    ],
+    "show_breadcrumb": true,
+    "show_prev_next": true
+  },
+  "theme": {
+    "preset": "light",
+    "brand": "#2563eb",
+    "tokens": {
+      "m1": "#2563eb",
+      "m2": "#0d9488",
+      "m3": "#7c3aed",
+      "m4": "#059669",
+      "m5": "#d97706"
+    }
+  },
+  "features": {
+    "textbook": true,
+    "lesson_plan_public": false,
+    "knowledge_graph": true,
+    "cases": true,
+    "glossary": true,
+    "trends": true,
+    "announcements": true,
+    "downloads": true,
+    "site_accounts": false,
+    "site_gradebook": false
+  },
+  "integration": {
+    "mode": "complementary",
+    "chaoxing": {
+      "platform_url": "https://i.chaoxing.com",
+      "course_space_url": null,
+      "sso_enabled": false,
+      "api_contract_status": "待核验"
+    },
+    "datasets": {
+      "knowledge-graph": {
+        "enabled": true,
+        "direction": "out",
+        "transport": "template",
+        "frequency": "按版本发布"
+      },
+      "course-structure": {
+        "enabled": true,
+        "direction": "out",
+        "transport": "export",
+        "frequency": "学期级"
+      },
+      "item-bank": {
+        "enabled": true,
+        "direction": "out",
+        "transport": "template",
+        "frequency": "按课次"
+      },
+      "resource-index": {
+        "enabled": true,
+        "direction": "out",
+        "transport": "export",
+        "frequency": "按版本发布"
+      },
+      "calendar": {
+        "enabled": true,
+        "direction": "out",
+        "transport": "manual",
+        "frequency": "学期级"
+      },
+      "student-roster": {
+        "enabled": false,
+        "direction": "in",
+        "transport": "export",
+        "frequency": "学期级"
+      },
+      "learning-analytics": {
+        "enabled": false,
+        "direction": "in",
+        "transport": "export",
+        "frequency": "模块级"
+      },
+      "identity-and-notification": {
+        "enabled": true,
+        "direction": "off",
+        "transport": "manual",
+        "frequency": "实时跳转"
+      }
+    },
+    "restricted_zone": {
+      "path": "_restricted/",
+      "publish_excluded": true,
+      "deidentify": true,
+      "retention_days": null
+    }
+  },
+  "content": {
+    "evidence_levels_enabled": [
+      "A",
+      "B",
+      "C"
+    ],
+    "require_source_for_A": true,
+    "default_visibility": {
+      "lesson-plan": "teacher",
+      "calendar-entry": "public",
+      "asset": "public"
+    },
+    "min_exercise_minutes": 60,
+    "rubric_total": 100
+  },
+  "sources": {
+    "decks": "site/assets/js/decks/",
+    "textbook": "教材/分章/",
+    "courseware_files": "deliverables/",
+    "exercises": "course-exercises-site/resources/",
+    "downloads": "site/downloads/",
+    "glossary": "site/assets/js/glossary-data.js",
+    "cases": "site/cases.html",
+    "screenshots": "textbook-build/screenshots/"
+  },
+  "build": {
+    "out_dir": "dist/",
+    "base_url": "https://aheelv.github.io/",
+    "static": true,
+    "generate": [
+      "nav.json",
+      "sitemap.xml",
+      "sitemap.json",
+      "search-index.json",
+      "graph.json",
+      "content-manifest.json"
+    ]
+  },
+  "extensions": {
+    "notes": [
+      "course_code / term / calendar_start / chaoxing.course_space_url 暂无可核验来源，置 null 并标注待补充。",
+      "教学日历 16 条仅有周次，具体日期须由教务校历注入。",
+      "教案由 site/syllabus.html 的五环节正文抽取，分钟级时间分配与教学目标标注待补充。",
+      "知识点语义前置/后置关系未由教师核定，当前仅保留教学顺序，不冒充先修依赖。"
+    ]
+  }
+}

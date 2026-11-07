@@ -1,0 +1,268 @@
+{
+  "course": "人工智能工具应用实践",
+  "course_id": "AI-TOOLS-APPLY",
+  "primary": [
+    {
+      "id": "overview",
+      "label": "课程总览",
+      "href": "/",
+      "children": [
+        {
+          "label": "课程介绍",
+          "href": "/about/"
+        },
+        {
+          "label": "教学大纲",
+          "href": "/syllabus/"
+        },
+        {
+          "label": "教学日历",
+          "href": "/calendar/"
+        },
+        {
+          "label": "考核方式",
+          "href": "/policies/"
+        }
+      ]
+    },
+    {
+      "id": "sessions",
+      "label": "课次主轴",
+      "href": "/sessions/"
+    },
+    {
+      "id": "textbook",
+      "label": "教材",
+      "href": "/textbook/"
+    },
+    {
+      "id": "courseware",
+      "label": "课件",
+      "href": "/courseware/"
+    },
+    {
+      "id": "practice",
+      "label": "习题与实践",
+      "href": "/exercises/",
+      "children": [
+        {
+          "label": "综合任务单",
+          "href": "/exercises/"
+        },
+        {
+          "label": "资源包下载",
+          "href": "/downloads/"
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "label": "知识图谱",
+      "href": "/knowledge/",
+      "children": [
+        {
+          "label": "知识模块",
+          "href": "/knowledge/modules/"
+        },
+        {
+          "label": "知识点",
+          "href": "/knowledge/points/"
+        },
+        {
+          "label": "术语词典",
+          "href": "/knowledge/terms/"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "label": "案例与资源",
+      "href": "/cases/",
+      "children": [
+        {
+          "label": "案例库",
+          "href": "/cases/"
+        },
+        {
+          "label": "技术趋势",
+          "href": "/trends/"
+        },
+        {
+          "label": "课程通知",
+          "href": "/announcements/"
+        },
+        {
+          "label": "前往超星学习通",
+          "href": "https://i.chaoxing.com"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "站点地图",
+      "href": "/sitemap/"
+    },
+    {
+      "label": "对接与数据说明",
+      "href": "/integration/"
+    },
+    {
+      "label": "课程团队",
+      "href": "/about/team/"
+    },
+    {
+      "label": "公开站点",
+      "href": "https://aheelv.github.io/"
+    }
+  ],
+  "breadcrumb": true,
+  "prev_next": true,
+  "sessions": [
+    {
+      "no": 1,
+      "label": "第 1 次课",
+      "title": "课程导论：人工智能 70 年与 AI 工具全景",
+      "href": "/sessions/01/",
+      "module_id": "M1"
+    },
+    {
+      "no": 2,
+      "label": "第 2 次课",
+      "title": "大语言模型：从 n-gram 到 Transformer 与推理模型",
+      "href": "/sessions/02/",
+      "module_id": "M1"
+    },
+    {
+      "no": 3,
+      "label": "第 3 次课",
+      "title": "生成式 AI 与多模态：AIGC 与提示工程进阶",
+      "href": "/sessions/03/",
+      "module_id": "M1"
+    },
+    {
+      "no": 4,
+      "label": "第 4 次课",
+      "title": "AI 办公实践：文档、PPT 与知识管理",
+      "href": "/sessions/04/",
+      "module_id": "M2"
+    },
+    {
+      "no": 5,
+      "label": "第 5 次课",
+      "title": "AI + 表格：智能表格、公式生成与数据清洗",
+      "href": "/sessions/05/",
+      "module_id": "M2"
+    },
+    {
+      "no": 6,
+      "label": "第 6 次课",
+      "title": "用自然语言做数据分析：代码解释器与 AI 分析师",
+      "href": "/sessions/06/",
+      "module_id": "M2"
+    },
+    {
+      "no": 7,
+      "label": "第 7 次课",
+      "title": "管理场景数据分析综合：BI × AI 协同",
+      "href": "/sessions/07/",
+      "module_id": "M2"
+    },
+    {
+      "no": 8,
+      "label": "第 8 次课",
+      "title": "从工具到智能体：Agent 原理与 MCP 协议",
+      "href": "/sessions/08/",
+      "module_id": "M3"
+    },
+    {
+      "no": 9,
+      "label": "第 9 次课",
+      "title": "提示到编排：工作流、RAG 与知识库",
+      "href": "/sessions/09/",
+      "module_id": "M3"
+    },
+    {
+      "no": 10,
+      "label": "第 10 次课",
+      "title": "低代码智能体平台实战：搭建企业问答智能体",
+      "href": "/sessions/10/",
+      "module_id": "M3"
+    },
+    {
+      "no": 11,
+      "label": "第 11 次课",
+      "title": "多智能体协作与 AgentOps",
+      "href": "/sessions/11/",
+      "module_id": "M3"
+    },
+    {
+      "no": 12,
+      "label": "第 12 次课",
+      "title": "什么是 Harness：模型之外的编排层",
+      "href": "/sessions/12/",
+      "module_id": "M4"
+    },
+    {
+      "no": 13,
+      "label": "第 13 次课",
+      "title": "AI IDE 与编程智能体实战",
+      "href": "/sessions/13/",
+      "module_id": "M4"
+    },
+    {
+      "no": 14,
+      "label": "第 14 次课",
+      "title": "Harness 工程实践：规则、Hook、子代理与权限",
+      "href": "/sessions/14/",
+      "module_id": "M4"
+    },
+    {
+      "no": 15,
+      "label": "第 15 次课",
+      "title": "用 AI 集成开发环境构建专业应用",
+      "href": "/sessions/15/",
+      "module_id": "M4"
+    },
+    {
+      "no": 16,
+      "label": "第 16 次课",
+      "title": "综合项目答辩与技术前沿展望",
+      "href": "/sessions/16/",
+      "module_id": "M5"
+    }
+  ],
+  "session_tabs": [
+    {
+      "label": "教材",
+      "type": "textbook-chapter",
+      "href_tpl": "/textbook/{nn}/"
+    },
+    {
+      "label": "课件",
+      "type": "deck",
+      "href_tpl": "/courseware/{nn}/"
+    },
+    {
+      "label": "教案",
+      "type": "lesson-plan",
+      "href_tpl": "/sessions/{nn}/plan/",
+      "teacher_only": true
+    },
+    {
+      "label": "习题",
+      "type": "exercise",
+      "href_tpl": "/exercises/{nn}/"
+    },
+    {
+      "label": "实践包",
+      "type": "practice-kit",
+      "href_tpl": "/practice/{nn}/"
+    },
+    {
+      "label": "知识点",
+      "type": "knowledge-point",
+      "href_tpl": "/knowledge/points/"
+    }
+  ]
+}
