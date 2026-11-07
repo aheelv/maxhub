@@ -4,6 +4,8 @@
 *.jpg binary
 *.jpeg binary
 *.ico binary
+*.mp4 binary
+*.srt binary
 *.woff2 binary
 *.docx binary
 *.xlsx binary

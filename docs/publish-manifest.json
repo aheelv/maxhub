@@ -23,13 +23,13 @@
   "status": "已取消；468 个文件与全部提交历史保持不变"
  },
  "source_of_truth": "本地当前源码；未复制旧发布仓库内容",
- "file_count": 630,
- "total_bytes": 21542827,
+ "file_count": 652,
+ "total_bytes": 66333233,
  "files": [
   {
    "path": "docs/.gitattributes",
-   "bytes": 166,
-   "sha256": "17d6161ed65a9ff3c5ccfb5ad4eb7b53d273d853df1256f9969683b01476d51b"
+   "bytes": 194,
+   "sha256": "0139ec9554d53218d2d8a9e4b5f69cad1456b96f4df29921245a5dbeff3dbb6f"
   },
   {
    "path": "docs/.nojekyll",
@@ -43,13 +43,13 @@
   },
   {
    "path": "docs/PUBLISH.md",
-   "bytes": 3674,
-   "sha256": "945fce6eee83e60ac5b493ee64668fb63672c370c3411aa11d9381c07a904185"
+   "bytes": 4217,
+   "sha256": "c92ca272eaa5d5e10ba963d64eb4a76fdd4ce3f05a14381b48a88e000f9478f6"
   },
   {
    "path": "docs/README.md",
-   "bytes": 4695,
-   "sha256": "f05f51909136b4fd382c6efed66ad7ae972a4a634cf38a74012398831b4e3a40"
+   "bytes": 4902,
+   "sha256": "7cd42740fc3e648bf81eee178ea52e41ed3307cfbc5f8fe794172211adeea7b8"
   },
   {
    "path": "docs/about.html",
@@ -1188,33 +1188,33 @@
   },
   {
    "path": "docs/downloads/最热AI应用实践课_全套资料.zip",
-   "bytes": 2419592,
-   "sha256": "1b8d8f0c05e35378dcd6e42fac187ab4c5b4acee78182afaa6c7dd2d2ea4934d"
+   "bytes": 2419945,
+   "sha256": "502103bb2041bf2ab24a233e628e82328a89c5a32eb53d147de7ac7a5b7fcf0e"
   },
   {
    "path": "docs/downloads/最热AI应用实践课_第1课_AI短剧一站式制作_素材包.zip",
    "bytes": 2337318,
-   "sha256": "0dd8de2d02e9946d25f7ad4ec1dc326ed9ef590a58c09ba4e801aaf4a76b5539"
+   "sha256": "debac26b19689f2614de86a648f80da1509982c493eb3a14656cb57e1b465b0f"
   },
   {
    "path": "docs/downloads/最热AI应用实践课_第2课_AI小说与IP设定集创作_素材包.zip",
    "bytes": 17031,
-   "sha256": "e1fc8662f32f79c2ff30dfd62c198e24b739ccc319a2c2516633a53ff31b3a28"
+   "sha256": "bc786525242f827fc58e7a36d2c64ecc90b5d3a3715b177943325bbd9a1e5d6a"
   },
   {
    "path": "docs/downloads/最热AI应用实践课_第3课_AI智能问答助手与课程知识库搭建_素材包.zip",
    "bytes": 17525,
-   "sha256": "429f0e55fedb4b91aab8ed9570de64069d3e7e3463f7460821e2850400f15ba2"
+   "sha256": "5a13efcc17c76012f132872fe1a87590873beb46583a80b307508ebd4905b4f8"
   },
   {
    "path": "docs/downloads/最热AI应用实践课_第4课_AI办公文档·PPT·数据报告一体化产出_素材包.zip",
    "bytes": 17149,
-   "sha256": "5af86f294769fec0a64deb0db10a4881cbba8a9f2125eff5345c93a94ca48f93"
+   "sha256": "b14a11a462494d8b5b69408880b3477dd38fd8580c98051d1c4331b2cdedc0c1"
   },
   {
    "path": "docs/downloads/最热AI应用实践课_第5课_AI编程与智能体小应用搭建_素材包.zip",
    "bytes": 16828,
-   "sha256": "4051a0eb81b73293b016a3d7e741a201a09f85a6bf84c274487c40ec1873d29a"
+   "sha256": "7d92c7af6f78a24735582ce9657d3708bafc8b932c0b606e4c2dd463628874d6"
   },
   {
    "path": "docs/downloads/第11-16次课课堂AI综合练习设计_单人独立完成版.docx",
@@ -1323,8 +1323,8 @@
   },
   {
    "path": "docs/hot/assets/hot.css",
-   "bytes": 4831,
-   "sha256": "c612b5f3ba8239bc715652c9305e46d522151c4888b2809acc0eda17a94aa89a"
+   "bytes": 5683,
+   "sha256": "c8b06aa0670fce9a70b0c676a96603d84c7adb907cd8c5033c94b856c3374692"
   },
   {
    "path": "docs/hot/index.html",
@@ -1333,8 +1333,8 @@
   },
   {
    "path": "docs/hot/lesson1.html",
-   "bytes": 40298,
-   "sha256": "043c2f0e6f7bcf9f9fd32887417a412810700f8058ea30f4d6f935b61230063b"
+   "bytes": 46247,
+   "sha256": "5e50ca2c47fa2ef780847a5153690a3a234ddf13935eb3564d92fb6ea9c41f11"
   },
   {
    "path": "docs/hot/lesson2.html",
@@ -1587,14 +1587,124 @@
    "sha256": "5e7cf8bcb952b7497def1613c3a0048141fbee0957e0253d8d2c0dcf1af43523"
   },
   {
+   "path": "docs/hot/samples/lesson1/00_成果样例说明.md",
+   "bytes": 1738,
+   "sha256": "273b235a9d76635297e6eb510623b06e758df9ac21fb49d871b462ec287df531"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/01_一句话梗概与选题说明.md",
+   "bytes": 2760,
+   "sha256": "9d5aba1de1b591e33164c3f25333a7db43d085923e3fee34546965b89019a9d1"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/02_剧本_五十元的一周.md",
+   "bytes": 8502,
+   "sha256": "f619050e3bdaff2ae33818e005b9282aefbe14c5f6347258cb9ad7ac0d856272"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/03_人物设定卡.csv",
+   "bytes": 2094,
+   "sha256": "17fdda7e90ea7c873c5ad693524fbc6f5ae353f19e2a4a98cf921fe462d86ac8"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/04_分镜表.csv",
+   "bytes": 11045,
+   "sha256": "4eeb0788161206429e77d3ce768f618a69ae438deb9486280d73b8580643beb4"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/01.png",
+   "bytes": 2304416,
+   "sha256": "dc1c94af60a9adbad0d067ae7ee0685d40eccc3e188583d91da4e42d8421384c"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/02.png",
+   "bytes": 2665598,
+   "sha256": "a7bfe5bb8f10f613419fb1e2201a6a38d659c653f5addbe132282e845727b7bc"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/03.png",
+   "bytes": 2742079,
+   "sha256": "b5638b6ddce1f596876d0575fe3b0681d102b2c4d973c6bae8c547327c90f00e"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/04.png",
+   "bytes": 2636120,
+   "sha256": "d1159eb3d184279aa42603abfdbd1e0d1f4c7eeec6057355ee952f42cb6e1629"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/05.png",
+   "bytes": 2566126,
+   "sha256": "739678600524cfa1f29c8c53df858e8ae32312403e4f1efaa59cd80dcb0c73ae"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/06.png",
+   "bytes": 2354869,
+   "sha256": "1208997ac7c87118657fd9367995deaef15aa93557e1541aeee5f54957746dd3"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/07.png",
+   "bytes": 2494146,
+   "sha256": "ef992ba6b7010e723031c78bdd0b8121535f48a5523ef66eee6f1c5252500405"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/05_分镜图/08.png",
+   "bytes": 2538187,
+   "sha256": "75ac240085a22883502af77eee9af38b4fda8dbb5fd2b975b60310b58fa5d430"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/06_字幕.srt",
+   "bytes": 448,
+   "sha256": "0f3f22ce8eea7e7f6bcbe88c9480a4fb466faf96767a14e77329b6740980540d"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/07_片头片尾文案.md",
+   "bytes": 1750,
+   "sha256": "d93024393130be339540c42cd67b63d532f4c7cf9187a588481650b979edd3c0"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/08_分镜预览.html",
+   "bytes": 13176,
+   "sha256": "98af44f8a80c7a2e28370330877745a052f9f2cf48f1159373488dcd61717813"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/09_制作说明.md",
+   "bytes": 14314,
+   "sha256": "4091b240d5287297843d9234dc5df7a379597cc06cc9579bc11dc13cb6a70774"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/index.html",
+   "bytes": 65556,
+   "sha256": "ea941210a7a5b70c6b1bb6ae4a23983b14fab23ec359a6a6e73b0eacc91f6c55"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/lesson1_10s.mp4",
+   "bytes": 1951273,
+   "sha256": "a9c211fc222abec4d647d6b20d3afc355bcbc1881681d2213d17a4aeb056e006"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/poster.jpg",
+   "bytes": 112283,
+   "sha256": "7ce6007b23676bf45f6edcc669fbd8639dd440209c936461cbebca33c574fd69"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/第1课_成果样例包.zip",
+   "bytes": 22277336,
+   "sha256": "888c04171cf22df15f20ff094369219f0f85a066e5b43cea34e55429ed81577f"
+  },
+  {
+   "path": "docs/hot/samples/lesson1/附录_素材清单_对应位置与假设说明.md",
+   "bytes": 16605,
+   "sha256": "d2dc9bc306e45522ad4c91aa9f9141f45e1a56dee8c2fc70a43d1fa8b918b889"
+  },
+  {
    "path": "docs/hot/verify.html",
-   "bytes": 20657,
-   "sha256": "7e25072f8be490a672ba47af4284aef647551e89c60e9f000ff13a7369dc6ea0"
+   "bytes": 22109,
+   "sha256": "7bcc8178b2d0860954ecc92b7840efd564ead8ac8e04e0cf5949a25e533bb567"
   },
   {
    "path": "docs/index.html",
-   "bytes": 26818,
-   "sha256": "e477bb9b02c477a2d57b605c0f299f613f85b3c630db4ee56ce9e68ba2f0985a"
+   "bytes": 27003,
+   "sha256": "e36c93857614bc700e83782c093668739da627eccde129250287ac27ce4bd255"
   },
   {
    "path": "docs/lecture.html",
@@ -2713,8 +2823,8 @@
   },
   {
    "path": "docs/release.html",
-   "bytes": 4664,
-   "sha256": "5a9648bc3f80dac1b4f4f699e92f48c289c1b7259a6cf8d78d6c7bbd4d5d969e"
+   "bytes": 5080,
+   "sha256": "522b35f527280198322ed6cd980221521cf8d56adff204bef64eeef987771bad"
   },
   {
    "path": "docs/resources.html",

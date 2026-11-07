@@ -62,5 +62,15 @@ padding:16px 18px;margin:14px 0;background:#fff}
 .toc{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
 .toc a{border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:13px;background:#fff}
 footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px;padding:20px 0}
+/* 第 1 课成果样例 */
+.sample-video{display:block;width:100%;max-width:760px;border-radius:12px;background:#0f1a33;
+border:1px solid var(--line);box-shadow:0 4px 18px rgba(20,36,74,.12);margin:10px 0 16px}
+.sample-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:14px 0}
+.sample-grid figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface2)}
+.sample-grid img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.sample-grid figcaption{font-size:12px;padding:6px 9px;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:10px 0;background:var(--surface2)}
+details summary{cursor:pointer;font-weight:700;color:var(--primary);font-size:14px}
+details pre{max-height:420px;overflow:auto;margin:10px 0 0}
 @media(max-width:640px){.hero h1{font-size:25px}section{padding:16px}.kv th{width:110px}}
 @media print{.site-head,.hero,footer,.btn{display:none}section{break-inside:avoid;box-shadow:none}}

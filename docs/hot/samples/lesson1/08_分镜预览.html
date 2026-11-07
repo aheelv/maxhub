@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>五十元的一周 · 分镜预览</title>
+<style>
+  :root{--bg:#11141a;--panel:#1b2029;--line:#2c3441;--fg:#eef2f8;--dim:#9aa6b8;--accent:#e8b26a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;padding:24px 16px 40px}
+  .wrap{max-width:960px;margin:0 auto}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:14px}
+  h1{font-size:20px;margin:0;font-weight:650;letter-spacing:.5px}
+  header .meta{font-size:13px;color:var(--dim)}
+  .stage{position:relative;width:100%;aspect-ratio:16/9;background:#0a0c10;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  #placeholder{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8%;background:repeating-linear-gradient(45deg,#171c25,#171c25 14px,#1d2330 14px,#1d2330 28px);color:var(--dim)}
+  #placeholder .no{font-size:34px;font-weight:700;color:var(--accent);margin-bottom:10px}
+  #placeholder .txt{font-size:14px;line-height:1.8;max-width:640px}
+  .screen{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6%;background:radial-gradient(circle at 50% 40%,#26303f 0%,#0d1016 75%)}
+  .screen.on{display:flex}
+  .screen .big{font-size:clamp(26px,5vw,48px);font-weight:700;letter-spacing:4px;margin-bottom:14px}
+  .screen .mid{font-size:clamp(13px,2vw,17px);color:var(--dim);margin-bottom:20px}
+  .screen .mark{font-size:clamp(11px,1.6vw,14px);color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:7px 18px}
+  .screen .note{font-size:clamp(11px,1.5vw,13px);color:var(--dim);line-height:1.9;margin-top:18px;max-width:660px}
+  #subtitle{position:absolute;left:0;right:0;bottom:6%;text-align:center;font-size:clamp(15px,2.6vw,26px);font-weight:600;letter-spacing:1px;text-shadow:0 2px 8px #000,0 0 3px #000;pointer-events:none;padding:0 8%}
+  #hud{position:absolute;top:12px;right:14px;background:rgba(10,12,16,.72);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font-size:12px;color:var(--fg);font-variant-numeric:tabular-nums}
+  .bar{height:6px;background:var(--panel);border-radius:999px;margin:12px 0 14px;overflow:hidden;border:1px solid var(--line)}
+  .bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#e8b26a,#e07d5c);transition:width .1s linear}
+  .ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  button{background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:7px;padding:9px 16px;font-size:14px;cursor:pointer;font-family:inherit}
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  button.primary{background:var(--accent);color:#1a1206;border-color:var(--accent);font-weight:650;min-width:96px}
+  .clock{margin-left:auto;font-size:13px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .shots{margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+  .shots h2{font-size:14px;color:var(--dim);font-weight:600;margin:0 0 10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:10px 12px;font-size:12px;color:var(--dim);line-height:1.7;cursor:pointer}
+  .card b{color:var(--fg);font-size:13px}
+  .card:hover{border-color:var(--accent)}
+  footer{margin-top:24px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--dim);line-height:2}
+  @media(max-width:560px){body{padding:14px 10px 30px}button{padding:8px 11px;font-size:13px}.clock{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>五十元的一周</h1>
+    <span class="meta">校园财商微短剧 · 8 镜 / 60 秒 · 分镜预览页</span>
+  </header>
+
+  <div class="stage" id="stage">
+    <img id="frame" alt="">
+    <div id="placeholder"><div class="no" id="phNo"></div><div class="txt" id="phTxt"></div></div>
+    <div class="screen" id="intro">
+      <div class="big">五十元的一周</div>
+      <div class="mid">校园财商微短剧 · 60 秒</div>
+      <div class="mark">本片画面由 AI 生成 · 课堂练习作品</div>
+    </div>
+    <div class="screen" id="outro">
+      <div class="big">账本翻到下一页</div>
+      <div class="mid">本片人物、场景、事件与台词均为课堂虚构素材，不含真实个人信息与品牌。</div>
+      <div class="mark">课程《最热AI应用实践课》第 1 课 · 制作工具 WorkBuddy · 制作日期 2026-11-07</div>
+    </div>
+    <div id="subtitle"></div>
+    <div id="hud">片头 · 00:00 / 01:08</div>
+  </div>
+
+  <div class="bar"><i id="prog"></i></div>
+  <div class="ctrl">
+    <button class="primary" id="btnPlay">▶ 播放</button>
+    <button id="btnPrev">← 上一镜</button>
+    <button id="btnNext">下一镜 →</button>
+    <button id="btnReplay">↺ 重播</button>
+    <span class="clock" id="clock">00:00.0 / 01:08.0</span>
+  </div>
+
+  <div class="shots">
+    <h2>分镜索引（点击可跳转）</h2>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <footer>
+    课程：《最热AI应用实践课》第 1 课 · AI 短剧一站式制作<br>
+    作品：《五十元的一周》 · 8 镜 / 60 秒 · 片头 3 秒 + 正片 60 秒 + 片尾 5 秒 = 68 秒<br>
+    制作工具：WorkBuddy（WB-CHAT / WB-FILE / WB-IMAGE / WB-HTML / WB-CMD）· 制作日期：2026-11-07<br>
+    本片画面由 AI 生成 · 课堂练习作品。人物、场景、事件与台词均为课堂虚构素材，不含真实个人信息与品牌。<br>
+    键盘操作：空格 = 播放/暂停，← = 上一镜，→ = 下一镜。图片相对路径 05_分镜图/01.png—08.png。
+  </footer>
+</div>
+
+<script>
+var SHOTS = [
+  {
+    "no": "01",
+    "sec": 7,
+    "sub": "一周 只剩五十元",
+    "size": "近景",
+    "scene": "S1",
+    "visual": "林小满坐在宿舍书桌前翻开牛皮纸封面记账本，手指停在最后一格，眉头微蹙、嘴唇轻抿。",
+    "img": "05_分镜图/01.png"
+  },
+  {
+    "no": "02",
+    "sec": 8,
+    "sub": "两份套餐 只能选一份",
+    "size": "中景",
+    "scene": "S2",
+    "visual": "食堂窗口前两位学生并肩看窗口，林小满一手抱牛皮纸封面记账本、一手指着两份餐盘，另一只手收在身前犹豫；周砚抬手想替她决定。",
+    "img": "05_分镜图/02.png"
+  },
+  {
+    "no": "03",
+    "sec": 7,
+    "sub": "报名表 二十元",
+    "size": "全景",
+    "scene": "S3",
+    "visual": "校园林荫道长椅旁，周砚举着一张空白通知单、张嘴提议；林小满把牛皮纸封面记账本抱在胸前低头迟疑；陈屿站在稍远处低头看着地面。",
+    "img": "05_分镜图/03.png"
+  },
+  {
+    "no": "04",
+    "sec": 8,
+    "sub": "一张海报 又一笔开支",
+    "size": "中景",
+    "scene": "S4",
+    "visual": "三位学生站在公告栏前，陈屿低头看着手里的报名表，周砚抬手指向海报，林小满抱紧牛皮纸封面记账本、目光迟疑。",
+    "img": "05_分镜图/04.png"
+  },
+  {
+    "no": "05",
+    "sec": 8,
+    "sub": "包在我身上",
+    "size": "中景",
+    "scene": "S5",
+    "visual": "便利店玻璃门外，周砚两手各拎着纸杯、另一只纸杯夹在臂弯，笑着递向同伴；林小满抱着牛皮纸封面记账本、眼睛睁大略显意外；陈屿低头站在一旁。",
+    "img": "05_分镜图/05.png"
+  },
+  {
+    "no": "06",
+    "sec": 7,
+    "sub": "小票 对不上",
+    "size": "特写",
+    "scene": "S5",
+    "visual": "桌面上一张空白收银小票挨着摊开的牛皮纸封面记账本，林小满一只手按住记账本、另一只手指尖停在小票边缘，眉头紧锁、嘴唇抿紧；画面以手部与小臂为主、脸部在画面上缘半入镜。",
+    "img": "05_分镜图/06.png"
+  },
+  {
+    "no": "07",
+    "sec": 7,
+    "sub": "都行 我的那份让出来",
+    "size": "中景",
+    "scene": "S6",
+    "visual": "宿舍楼下的石桌旁，陈屿安静地把自己面前的纸杯推向桌子中央，手边放着一支黑色细头笔；林小满与周砚同时看向他，周砚动作停在半途，桌上另有一本合着的牛皮纸封面记账本。",
+    "img": "05_分镜图/07.png"
+  },
+  {
+    "no": "08",
+    "sec": 8,
+    "sub": "账本翻到下一页",
+    "size": "俯拍中景",
+    "scene": "S6",
+    "visual": "石桌中央摊开牛皮纸封面记账本，一支黑色细头笔放在账本上，旁边有三只纸杯；三只手同时从画面三侧伸向账本，共同把账本推向桌心，翻开下一页，动作温和而果断。全片结尾无台词、无旁白。",
+    "img": "05_分镜图/08.png"
+  }
+];
+var INTRO = 3, OUTRO = 5;
+var BODY = SHOTS.reduce(function(a,s){return a+s.sec;},0);
+var TOTAL = INTRO + BODY + OUTRO;
+var STARTS = [], acc = INTRO;
+for (var i=0;i<SHOTS.length;i++){ STARTS.push(acc); acc += SHOTS[i].sec; }
+
+var t = 0, playing = false, last = 0, raf = null, cur = -1;
+var $ = function(id){ return document.getElementById(id); };
+var frame = $('frame'), ph = $('placeholder'), intro = $('intro'), outro = $('outro');
+
+function fmt(x){ var m=Math.floor(x/60), s=x-m*60; return (m<10?'0':'')+m+':'+(s<10?'0':'')+s.toFixed(1); }
+function mmss(x){ var m=Math.floor(x/60), s=Math.floor(x-m*60); return (m<10?'0':'')+m+':'+(s<10?'0':'')+s; }
+function shotAt(x){
+  if (x < INTRO) return -1;
+  if (x >= INTRO + BODY) return SHOTS.length;
+  for (var i=SHOTS.length-1;i>=0;i--){ if (x >= STARTS[i]) return i; }
+  return 0;
+}
+frame.onerror = function(){
+  frame.style.display='none';
+  if (cur>=0 && cur<SHOTS.length){
+    $('phNo').textContent = '本镜图片待补 · 镜 ' + SHOTS[cur].no;
+    $('phTxt').textContent = SHOTS[cur].size + ' ｜ ' + SHOTS[cur].scene + ' ｜ ' + SHOTS[cur].visual;
+    ph.style.display='flex';
+  }
+};
+frame.onload = function(){ frame.style.display='block'; ph.style.display='none'; };
+
+function render(){
+  var idx = shotAt(t);
+  intro.classList.toggle('on', idx === -1);
+  outro.classList.toggle('on', idx === SHOTS.length);
+  var inShots = idx >= 0 && idx < SHOTS.length;
+
+  if (inShots){
+    if (cur !== idx){
+      cur = idx;
+      ph.style.display='none';
+      frame.style.display='block';
+      frame.src = SHOTS[idx].img;
+      $('subtitle').textContent = SHOTS[idx].sub;
+      $('hud').textContent = '镜 ' + SHOTS[idx].no + '/08 · ' + SHOTS[idx].size + ' · ' + mmss(t) + ' / ' + mmss(TOTAL);
+      var cards = document.querySelectorAll('.card');
+      for (var k=0;k<cards.length;k++){ cards[k].style.borderColor = (k===idx) ? '#e8b26a' : ''; }
+    } else {
+      $('hud').textContent = '镜 ' + SHOTS[idx].no + '/08 · ' + SHOTS[idx].size + ' · ' + mmss(t) + ' / ' + mmss(TOTAL);
+    }
+  } else {
+    cur = -1;
+    frame.removeAttribute('src');
+    frame.style.display='none';
+    ph.style.display='none';
+    $('subtitle').textContent = '';
+    $('hud').textContent = (idx === -1 ? '片头' : '片尾') + ' · ' + mmss(t) + ' / ' + mmss(TOTAL);
+  }
+  $('prog').style.width = (t/TOTAL*100) + '%';
+  $('clock').textContent = fmt(t) + ' / ' + fmt(TOTAL);
+  $('btnPlay').textContent = playing ? '❚❚ 暂停' : '▶ 播放';
+}
+
+function tick(now){
+  if (!playing) return;
+  if (!last) last = now;
+  t += (now-last)/1000; last = now;
+  if (t >= TOTAL){ t = TOTAL; playing = false; render(); return; }
+  render();
+  raf = requestAnimationFrame(tick);
+}
+function play(){
+  if (t >= TOTAL) t = 0;
+  if (playing) return;
+  playing = true; last = 0; render(); raf = requestAnimationFrame(tick);
+}
+function pause(){ playing = false; if (raf) cancelAnimationFrame(raf); render(); }
+function toggle(){ playing ? pause() : play(); }
+function seek(x){ t = Math.max(0, Math.min(TOTAL, x)); last = 0; render(); }
+function jump(idx){ if (idx < 0) seek(0); else if (idx >= SHOTS.length) seek(INTRO+BODY); else seek(STARTS[idx]); }
+
+$('btnPlay').onclick = toggle;
+$('btnPrev').onclick = function(){ var i=shotAt(t); jump(i<=0 ? 0 : i-1); };
+$('btnNext').onclick = function(){ var i=shotAt(t); jump(i<0 ? 0 : (i>=SHOTS.length ? SHOTS.length : i+1)); };
+$('btnReplay').onclick = function(){ t=0; cur=-1; playing=false; if(raf) cancelAnimationFrame(raf); play(); };
+document.addEventListener('keydown', function(e){
+  if (e.code === 'Space'){ e.preventDefault(); toggle(); }
+  else if (e.key === 'ArrowLeft'){ e.preventDefault(); $('btnPrev').click(); }
+  else if (e.key === 'ArrowRight'){ e.preventDefault(); $('btnNext').click(); }
+});
+
+var grid = $('grid');
+SHOTS.forEach(function(s,i){
+  var d = document.createElement('div');
+  d.className = 'card';
+  d.innerHTML = '<b>镜 ' + s.no + ' · ' + s.sec + 's · ' + s.scene + '</b><br>' + s.sub + '<br>' + s.size + ' ｜ ' + s.visual.slice(0,26) + '…';
+  d.onclick = function(){ jump(i); };
+  grid.appendChild(d);
+});
+render();
+</script>
+</body>
+</html>
