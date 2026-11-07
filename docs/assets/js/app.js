@@ -11,6 +11,7 @@
     { href: 'syllabus.html', label: '课程大纲' },
     { href: 'courseware.html', label: '课件中心' },
     { href: 'exercises.html', label: '练习下载' },
+    { href: 'hot/index.html', label: '最热AI实践课' },
     { href: 'modules.html', label: '知识模块' },
     { href: 'cases.html', label: '案例展示' },
     { href: 'glossary.html', label: '术语词典' },

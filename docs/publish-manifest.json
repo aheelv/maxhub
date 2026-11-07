@@ -23,8 +23,8 @@
   "status": "已取消；468 个文件与全部提交历史保持不变"
  },
  "source_of_truth": "本地当前源码；未复制旧发布仓库内容",
- "file_count": 569,
- "total_bytes": 14122240,
+ "file_count": 630,
+ "total_bytes": 21542560,
  "files": [
   {
    "path": "docs/.gitattributes",
@@ -43,13 +43,13 @@
   },
   {
    "path": "docs/PUBLISH.md",
-   "bytes": 3232,
-   "sha256": "7f5a3486ab74cfde38e942c5b33ed46414b979dcd2f59dbe1c4181cc10481db2"
+   "bytes": 3674,
+   "sha256": "945fce6eee83e60ac5b493ee64668fb63672c370c3411aa11d9381c07a904185"
   },
   {
    "path": "docs/README.md",
-   "bytes": 3793,
-   "sha256": "19e70b8e162ab235378734b5d7e277f61087480cb2e75b839e0fd80c547cce1b"
+   "bytes": 4695,
+   "sha256": "f05f51909136b4fd382c6efed66ad7ae972a4a634cf38a74012398831b4e3a40"
   },
   {
    "path": "docs/about.html",
@@ -113,8 +113,8 @@
   },
   {
    "path": "docs/assets/js/app.js",
-   "bytes": 13278,
-   "sha256": "f7b6c6788b2198e88ded97195ef526dbb49eaa961205b2d9a706f990cf2f5aba"
+   "bytes": 13338,
+   "sha256": "608edcad7d339966059d0a5e1253521eaeafc77ba42e6f7332378185238784e7"
   },
   {
    "path": "docs/assets/js/charts.js",
@@ -208,8 +208,8 @@
   },
   {
    "path": "docs/assets/js/static-mode.js",
-   "bytes": 2545,
-   "sha256": "dd7f66a03600bc45f76db8485e685f3d75e67429f154b31fdfb33a5c7f5e371b"
+   "bytes": 2604,
+   "sha256": "68e09e9f53d17e5dedc9be86818fc8c46a8d22e281677872715f8abba5ed7546"
   },
   {
    "path": "docs/assets/vendor/echarts.min.js",
@@ -1187,6 +1187,36 @@
    "sha256": "349f799d3d59dc6cdc5c0714aec1b06cde4cfad478838dfa140384d9da873fd6"
   },
   {
+   "path": "docs/downloads/最热AI应用实践课_全套资料.zip",
+   "bytes": 2419407,
+   "sha256": "f9ce88f9c290fe13e3a9654c5d01f873ab1f8eaadd9b696d6bbad3e8033a670a"
+  },
+  {
+   "path": "docs/downloads/最热AI应用实践课_第1课_AI短剧一站式制作_素材包.zip",
+   "bytes": 2337318,
+   "sha256": "1fba96ae3d0e8b30db396949801829e0d9eed3c3cca265db7b52cdef87564a7f"
+  },
+  {
+   "path": "docs/downloads/最热AI应用实践课_第2课_AI小说与IP设定集创作_素材包.zip",
+   "bytes": 17031,
+   "sha256": "e31039b2c84a126dded0456cd4809df76fb600423001c556e6c3a2c31e2bf8c9"
+  },
+  {
+   "path": "docs/downloads/最热AI应用实践课_第3课_AI智能问答助手与课程知识库搭建_素材包.zip",
+   "bytes": 17525,
+   "sha256": "f2662d8c632696dbf2b4f61a0be85874b761df339169e35f88cbf6c078451ad0"
+  },
+  {
+   "path": "docs/downloads/最热AI应用实践课_第4课_AI办公文档·PPT·数据报告一体化产出_素材包.zip",
+   "bytes": 17149,
+   "sha256": "8870531249f9737a9783723617564c87c56d7169e1806524a89ba4c62c35e20f"
+  },
+  {
+   "path": "docs/downloads/最热AI应用实践课_第5课_AI编程与智能体小应用搭建_素材包.zip",
+   "bytes": 16828,
+   "sha256": "ed4c56186356e98ae6952df97fa3a6a29c0dd3d6388482f7ee2894b3c8da02f9"
+  },
+  {
    "path": "docs/downloads/第11-16次课课堂AI综合练习设计_单人独立完成版.docx",
    "bytes": 30862,
    "sha256": "da61e6c80ce3c760d3e6181e6f2f1a7f025fd4335c888f36b09c3200d2f7e214"
@@ -1287,9 +1317,284 @@
    "sha256": "397a4a75335155935eb1d14370ffca26e02d6066171e1cf2265a6a9620de2277"
   },
   {
+   "path": "docs/hot/access.html",
+   "bytes": 4766,
+   "sha256": "b6b0b231c9637560cd64140a8ef7c6e53eccf53707f35b519ebff465c47f7ff5"
+  },
+  {
+   "path": "docs/hot/assets/hot.css",
+   "bytes": 4831,
+   "sha256": "c612b5f3ba8239bc715652c9305e46d522151c4888b2809acc0eda17a94aa89a"
+  },
+  {
+   "path": "docs/hot/index.html",
+   "bytes": 17463,
+   "sha256": "4e7a06ba648c20deb23cd769ef2d7adca213929cc10630d88ea5c2dd11f5d616"
+  },
+  {
+   "path": "docs/hot/lesson1.html",
+   "bytes": 40298,
+   "sha256": "043c2f0e6f7bcf9f9fd32887417a412810700f8058ea30f4d6f935b61230063b"
+  },
+  {
+   "path": "docs/hot/lesson2.html",
+   "bytes": 32432,
+   "sha256": "722a24f8ed30c3f66187b6210a76db871cf77348f18409276f6997d843062d31"
+  },
+  {
+   "path": "docs/hot/lesson3.html",
+   "bytes": 32794,
+   "sha256": "ea0814746eaa4f37511ac658da3c5fac6b5d066dc852ca42392cb8c7d38cb854"
+  },
+  {
+   "path": "docs/hot/lesson4.html",
+   "bytes": 32253,
+   "sha256": "dc1b019e534dd1330b771ad10b47f67162875fb8259cfb3b0e72f6ae8d80df5f"
+  },
+  {
+   "path": "docs/hot/lesson5.html",
+   "bytes": 33293,
+   "sha256": "5254f9eac07846027be3851ed62fe787d5c18ae890efaefa970c36ecee5a197d"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/01_题材设定包.md",
+   "bytes": 1492,
+   "sha256": "ea1ce79ac58d1d12ab3fe0080415ad6a2fafb560ceb7cec214c500c7d60b7011"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/02_人物卡.csv",
+   "bytes": 573,
+   "sha256": "0fe862105de912508492a3e232d0a4660acf3b595a38f80308c4d05e36c08f23"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/03_场景清单.csv",
+   "bytes": 561,
+   "sha256": "9ec11eda3eb24347453a960ba2cf351550968a9e5e62b91e33167410fa173966"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/04_原始事件素材.md",
+   "bytes": 1402,
+   "sha256": "a2cb60d7603aa49d45916ff38619178d9197f3573925a3dd159cad8417ca5ddf"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/05_分镜表模板.csv",
+   "bytes": 311,
+   "sha256": "4e4de93db09c6f8ccb44e66a15952aab3af01920f6f2c17c37e1480e9cbc1a1b"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/06_提示词库.md",
+   "bytes": 3048,
+   "sha256": "9855009c10b3fa79e655b119653962741ed39f95cca5c2f5a590b632f4a11824"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/07_字幕模板.srt",
+   "bytes": 421,
+   "sha256": "911dc0ee6360f28436c6b7b9604f1a320a3ea58e8b206e28f8a57fe3a7b7c31d"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/08_片头片尾文案.md",
+   "bytes": 988,
+   "sha256": "dd7f18108b8b5469b1cc98e25b83de78f766e90aeb31c92276dcc5ced93acbde"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/09_验收量表.csv",
+   "bytes": 817,
+   "sha256": "243a2d23213738d7c82ac18801ace21690afdb2c58800993cd8d567a5e79e58a"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/10_合规与授权清单.md",
+   "bytes": 1139,
+   "sha256": "4dbed242a387a2a09f70d96c929a46c1d447a13ab86404874ec2b5c3d49f8ddf"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/README.md",
+   "bytes": 1104,
+   "sha256": "7ffd9f82d706552bcc4ece5639ef00f10839dd814e0410a61d9c76f8d62a6fb0"
+  },
+  {
+   "path": "docs/hot/materials/第1课_AI短剧制作/示例_分镜图_01.png",
+   "bytes": 2314586,
+   "sha256": "90b46eb05959da782a18ad71b04efb4c30697662d0e599baa4e45aba19ec321b"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/01_世界观设定包.md",
+   "bytes": 1899,
+   "sha256": "36a5b9ff810498c081848a7dada3c60c309d5edcd91e0021ae98b8833c02821b"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/02_人物小传模板.csv",
+   "bytes": 594,
+   "sha256": "93abc90cc6011ece920e1bfa7ab83a49dc42d8f20c2564ad7ae8a038cb1c195c"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/03_章节大纲模板.csv",
+   "bytes": 248,
+   "sha256": "6fc211445c1419bd400bddb3b5ba278b64254a5c6774c3b36b410a205db88925"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/04_风格样章.md",
+   "bytes": 1490,
+   "sha256": "4238f4a90ed3d942673860df0a3d88baedbf204312ad0b8f7674888744675026"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/05_连续性检查表.csv",
+   "bytes": 682,
+   "sha256": "b0deba8b00720dd045cfbe7d8785b09fbd3245e48ea772a7414e8344ec4db6a8"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/06_提示词库.md",
+   "bytes": 2040,
+   "sha256": "242cc21220100c767bade65522ff09e5aab90d63f03898f77f4d46d8bd2afd60"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/07_封面提示词.md",
+   "bytes": 996,
+   "sha256": "00cafaa47213927648098d8c19bd0d229383bbe75e87471dd7e12aaf2163429e"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/08_验收量表.csv",
+   "bytes": 758,
+   "sha256": "25b42f9e3ec13a5edf20c7c676044de58fa13323200d037837eeeb89d318bd7a"
+  },
+  {
+   "path": "docs/hot/materials/第2课_AI小说创作/README.md",
+   "bytes": 687,
+   "sha256": "054534096a8156b5e53bf209ca280c4344aec08347ef565325949fe047841d61"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/01_FAQ原始语料.csv",
+   "bytes": 3648,
+   "sha256": "24a424adaf0d444b75d2574f52fc50d165fb677c320868620e440b341acf80b5"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/02_术语表.csv",
+   "bytes": 742,
+   "sha256": "5b80a018e2e5caf7312252bfca676f6c8b75a1c8028a495bb3257a6eb9b020da"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/03_越界问题清单.csv",
+   "bytes": 1478,
+   "sha256": "6004604c7c9e762eb385f28451e49ac596526b4e5966808b693e557d694b3f43"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/04_评测集.csv",
+   "bytes": 1805,
+   "sha256": "8ff0deaf532d6871c7709c334d90b27728804c8e32a1bb7ac684a6a6b03a7673"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/05_知识库模板.json",
+   "bytes": 443,
+   "sha256": "7075eeab66ba20719324b388d8c9bdc2d7bfcfde8a5ddd50842111aac34c4098"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/06_提示词库.md",
+   "bytes": 1955,
+   "sha256": "8851f050ee625805758d11c57ea9c8bbd6e3193b63b3f54dd2e5dded84ad6b1e"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/07_评分表.csv",
+   "bytes": 716,
+   "sha256": "0ba6858d2a71d157cab2d15dce605d0a35c3eee77c085bae328b6262cf419a5e"
+  },
+  {
+   "path": "docs/hot/materials/第3课_问答助手/README.md",
+   "bytes": 839,
+   "sha256": "8b23cbd8ea42f611b4297c8dd1ac10643a0d4c6fd3bdaa45256622728b68ce66"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/01_会议原始记录.txt",
+   "bytes": 2712,
+   "sha256": "ce16cbf362b3490e6bac7da7939b52032cb22bf690b5e2225c601b4500aabf2f"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/02_经营数据.csv",
+   "bytes": 912,
+   "sha256": "1278b75f4457c4a4892c889b9bd312c376ce87f95f8722559bbdb9f6460dc855"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/03_口径说明.md",
+   "bytes": 1741,
+   "sha256": "c4106efaa0bd5d60d54bdd087b27f160be4b1156f7fee641a63c232eef70d6d8"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/04_报告模板.md",
+   "bytes": 773,
+   "sha256": "d65d2581632e37bb805a9c8e9d209b0d13f38da644b8f206babe6a40cd6ec039"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/05_PPT大纲模板.md",
+   "bytes": 602,
+   "sha256": "99ff7733643d1a08e789f53f20ddf6af49cc966bf5e97f7ba4aeac089890cd49"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/06_核对题.csv",
+   "bytes": 756,
+   "sha256": "f4f6e61f5905abe3a79907bb96bb4d45f6c8f435ede74a638f85f4247cd05aee"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/07_提示词库.md",
+   "bytes": 1874,
+   "sha256": "63dccf6e79c01e129e5a0270a33729ecdc1641e1fbf9d711ad07db7b215cc899"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/08_验收量表.csv",
+   "bytes": 722,
+   "sha256": "df6e8ddc993f0fee939aea6c147b7c650eaadbbfc801a3b08eed225d804f2c49"
+  },
+  {
+   "path": "docs/hot/materials/第4课_办公报告/README.md",
+   "bytes": 833,
+   "sha256": "f8faa8aecd12fdb886de526765641388caf4cb25768a8ddc6295385b42f3ad18"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/01_需求说明书.md",
+   "bytes": 1537,
+   "sha256": "8fc9e4fc817814f6bd696582bf507392d7c11e84be0be30f3aa8b3735c5a6c19"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/02_报名样例数据.csv",
+   "bytes": 1992,
+   "sha256": "ab8009e029aba860f886aa52d2412c4ac857816d1550b858d21352788c301923"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/03_验收测试用例.csv",
+   "bytes": 968,
+   "sha256": "7d5c51644224614abce30d8059c6e7a2b567695c14c17eaa0a178c70fbbf32fd"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/04_界面草图说明.md",
+   "bytes": 2288,
+   "sha256": "638b1cab54a41768327fe2dfb19d463bfd8584602821b64e556dd04df64dd22a"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/05_提示词库.md",
+   "bytes": 1906,
+   "sha256": "ca245ce26cc5239303638feebc90955dd013142ff84db75d134a68fca5d6d1bd"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/06_README模板.md",
+   "bytes": 949,
+   "sha256": "955e3ef8582ff9ffd2f07f894559c7c3e7f79d8a042c65e6cabe1dfc1753f384"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/07_验收量表.csv",
+   "bytes": 742,
+   "sha256": "a53af69a72ce182976e27d0dc3f87beb37f0307961c8a3cb967ebdd6b903aaad"
+  },
+  {
+   "path": "docs/hot/materials/第5课_智能体小应用/README.md",
+   "bytes": 753,
+   "sha256": "5e7cf8bcb952b7497def1613c3a0048141fbee0957e0253d8d2c0dcf1af43523"
+  },
+  {
+   "path": "docs/hot/verify.html",
+   "bytes": 20616,
+   "sha256": "3966d873d700dd43ae11b39379883e487bf3edf564598ef8dea0717d021b9a69"
+  },
+  {
    "path": "docs/index.html",
-   "bytes": 21913,
-   "sha256": "9c3f31f462d9ff77f9f017f1af2c8c6fd403e18928ccfca8b7b03ea81eace8b0"
+   "bytes": 26818,
+   "sha256": "383762a7a6df81ef99319dd1926248fedd7a1978b9f9762aad2fa9335eb903b4"
   },
   {
    "path": "docs/lecture.html",
@@ -2408,8 +2713,8 @@
   },
   {
    "path": "docs/release.html",
-   "bytes": 4238,
-   "sha256": "e4732da35902f68cc651c0e53ac8ecaaaf12fdee53169d7a9d8d01690639932d"
+   "bytes": 4664,
+   "sha256": "5a9648bc3f80dac1b4f4f699e92f48c289c1b7259a6cf8d78d6c7bbd4d5d969e"
   },
   {
    "path": "docs/resources.html",

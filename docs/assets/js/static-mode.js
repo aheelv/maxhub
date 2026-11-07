@@ -35,7 +35,7 @@
       'font:13px/1.65 "Segoe UI","Microsoft YaHei",Arial,sans-serif;' +
       'padding:9px 46px 9px 16px;text-align:center;letter-spacing:.01em';
     bar.innerHTML = '📘 课程门户静态展示版 · 登录与提交功能需本地后端；' +
-      '<b style="color:#fff">16 次课练习资源可直接下载</b>。' +
+      '<b style="color:#fff">16 次课练习资源与《最热AI应用实践课》全部素材无需登录即可直接下载</b>。' +
       '<button type="button" aria-label="关闭提示" style="position:absolute;right:12px;top:6px;' +
       'background:none;border:0;color:#dbe3fb;font-size:19px;line-height:1;cursor:pointer">×</button>';
     bar.querySelector('button').onclick = function () { bar.style.display = 'none'; };
