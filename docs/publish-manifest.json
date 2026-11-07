@@ -18,11 +18,13 @@
   "branch": "main",
   "commit": "a727a2f",
   "url": "https://aheelv.github.io/",
-  "status": "已取消（Pages 停用），仓库与历史保留"
+  "retire_method": "仓库设为私有 → GitHub 自动取消发布 Pages",
+  "current_status": "原地址 HTTP 404；仓库为私有历史留存",
+  "status": "已取消；468 个文件与全部提交历史保持不变"
  },
  "source_of_truth": "本地当前源码；未复制旧发布仓库内容",
  "file_count": 569,
- "total_bytes": 14120266,
+ "total_bytes": 14122240,
  "files": [
   {
    "path": "docs/.gitattributes",
@@ -41,13 +43,13 @@
   },
   {
    "path": "docs/PUBLISH.md",
-   "bytes": 3013,
-   "sha256": "4213714007b5f829e96c9f64d90f16a41f94c5ca6a52fcd085d71672e7706a93"
+   "bytes": 3232,
+   "sha256": "7f5a3486ab74cfde38e942c5b33ed46414b979dcd2f59dbe1c4181cc10481db2"
   },
   {
    "path": "docs/README.md",
-   "bytes": 3668,
-   "sha256": "240a988fbc1b6b1868b16a185af698449c0ee8afaa3e309b621329021588d51e"
+   "bytes": 3793,
+   "sha256": "19e70b8e162ab235378734b5d7e277f61087480cb2e75b839e0fd80c547cce1b"
   },
   {
    "path": "docs/about.html",
@@ -76,8 +78,8 @@
   },
   {
    "path": "docs/architecture/04_通用课程站点模板配置说明.md",
-   "bytes": 16357,
-   "sha256": "375fb9f4c7ef2b71f95f28c36584241f31cacf76f0a005dffb12b81767d9d886"
+   "bytes": 16364,
+   "sha256": "0954eb5272a7cf31c4801faaa98bd6d34d67aa3c8b794c761b015d1225aa4a65"
   },
   {
    "path": "docs/architecture/05_参考来源与核验状态.md",
@@ -2406,8 +2408,8 @@
   },
   {
    "path": "docs/release.html",
-   "bytes": 4127,
-   "sha256": "c03ea307ffc313f2a35c97709b94127100db5ef77983e91903b94b80437bf350"
+   "bytes": 4238,
+   "sha256": "e4732da35902f68cc651c0e53ac8ecaaaf12fdee53169d7a9d8d01690639932d"
   },
   {
    "path": "docs/resources.html",
@@ -2431,8 +2433,8 @@
   },
   {
    "path": "docs/template/config/人工智能工具应用实践.config.json",
-   "bytes": 11314,
-   "sha256": "75c55fdc210bee51d76d812d753f47e9842bbe41276f55adeb48c8a2d53d3b7b"
+   "bytes": 11328,
+   "sha256": "efb4593e9a4d0559deba9b31db595d4a8e3d96f584732e8f956564fdb831179e"
   },
   {
    "path": "docs/template/data/calendar.json",
@@ -2571,8 +2573,8 @@
   },
   {
    "path": "docs/template/dist/nav.json",
-   "bytes": 6314,
-   "sha256": "657852f6d129c4b9fc05facbe61747a9dc758111cb8d7439f49334d7b21de033"
+   "bytes": 6321,
+   "sha256": "cf6f709fc829dc01802eef386c7920d288ef8b84adedd403c262b0d62ca43c07"
   },
   {
    "path": "docs/template/dist/search-index.json",
@@ -2581,13 +2583,13 @@
   },
   {
    "path": "docs/template/dist/sitemap.json",
-   "bytes": 51875,
-   "sha256": "4ea8cee047e8ccbee5759a74ce22b65f11bdca2ae75b85221aaddf36d079e0db"
+   "bytes": 51882,
+   "sha256": "1295aae0cc283cf2ca1bc94750ebe4b0b856522307ace8dac10c9b9614309b55"
   },
   {
    "path": "docs/template/dist/sitemap.xml",
-   "bytes": 14773,
-   "sha256": "0fe85c6dc5da688b3603abc619aadaf26db0e659870cdd48a362478705e082fd"
+   "bytes": 16257,
+   "sha256": "1c4641c43a613868361fcdc5ed733758358e729f9fc1d10f5801fab6524ad196"
   },
   {
    "path": "docs/template/model/chaoxing-field-mapping.json",

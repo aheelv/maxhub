@@ -311,7 +311,7 @@
       },
       {
         "label": "公开站点",
-        "href": "https://aheelv.github.io/"
+        "href": "https://aheelv.github.io/maxhub/"
       }
     ],
     "show_breadcrumb": true,
@@ -432,7 +432,7 @@
   },
   "build": {
     "out_dir": "dist/",
-    "base_url": "https://aheelv.github.io/",
+    "base_url": "https://aheelv.github.io/maxhub/",
     "static": true,
     "generate": [
       "nav.json",
