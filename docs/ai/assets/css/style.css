@@ -694,3 +694,103 @@ sup.ref { font-size: .68rem; color: var(--primary); font-weight: 700; cursor: he
   .deck-grid { grid-template-columns: 1fr; }
   .to-top { right: 14px; bottom: 16px; }
 }
+
+
+/* =====================================================================
+   wb-responsive-patch-v1
+   多端适配增强：仅调整布局、滚动与点击区域，不改动课程内容/章节/链接。
+   ===================================================================== */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, .mono, .ref-list a, .li-body, .term-def, .src-note {
+    overflow-wrap: anywhere; word-break: break-word;
+  }
+  table { max-width: 100%; }
+  .table-wrap { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  /* 静态展示版提示条的关闭按钮在小屏也要有足够点击区域 */
+  #staticModeBanner button {
+    min-width: 40px !important; min-height: 40px !important;
+    right: 4px !important; top: 0 !important; font-size: 22px !important;
+  }
+}
+@media screen and (max-width: 1140px) {
+  /* 抽屉菜单在矮屏手机上可完整滚动，13 个入口不会被裁掉 */
+  .nav-links {
+    /* 抽屉以 .site-header（含 backdrop-filter）为定位包含块；页面顶部的静态展示提示条
+       在窄屏换行后，抽屉实际 top 可达约 170px。按最坏情况收紧高度并保留内部滚动，
+       保证 13 个导航入口在 320 及更矮的屏幕上都能滚动到达。 */
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+  .nav-links a { min-height: 44px; display: flex; align-items: center; }
+  .nav-toggle { min-width: 44px; min-height: 44px; }
+}
+@media screen and (max-width: 760px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .btn { min-height: 44px; }
+  .btn-sm { min-height: 40px; }
+  .icon-btn, .rating button, .filter-chips button, .tab, .seg button { min-height: 42px; }
+  .hero-inner { padding: 40px 0 42px; }
+  .hero .lead { font-size: 1rem; }
+  .section { padding: 38px 0; }
+  .section-head { margin-bottom: 24px; }
+  .slide-stage { padding: 12px; }
+  .slide { padding: 20px 18px; min-height: 0; }
+  .slide h2 { font-size: clamp(1.15rem, 5vw, 1.5rem); }
+  .slide .callout, .slide .eg { padding: 10px 12px; font-size: .88rem; }
+  .chart { height: 260px; }
+  .chart.tall { height: 320px; }
+  .chart.short { height: 220px; }
+  .acc-head { padding: 14px; gap: 10px; }
+  .acc-idx { width: 38px; height: 38px; flex-basis: 38px; }
+  .acc-body { padding: 4px 14px 18px; }
+  .acc-kv { grid-template-columns: 1fr; gap: 2px 0; }
+  .module-head, .module-body { padding-left: 16px; padding-right: 16px; }
+  .auth-side, .auth-main { padding: 22px 18px; }
+  .toolbar .search { min-width: 0; flex: 1 1 100%; }
+  .slides-bar .sb-title { min-width: 0; flex: 1 1 100%; }
+  .slides-foot .progress { min-width: 60px; }
+  .stat-card .stat-val { font-size: 1.6rem; }
+  .card { padding: 18px; }
+  .footer-grid { gap: 18px; }
+  .crumb { font-size: .78rem; }
+  .dl-grid, .dl-total { grid-template-columns: 1fr; }
+}
+@media screen and (max-width: 420px) {
+  .container { padding-left: 12px; padding-right: 12px; }
+  .brand small { display: none; }
+  .brand { font-size: .95rem; }
+  .hero h1 { font-size: 1.65rem; }
+  .hero-pill { font-size: .78rem; padding: 6px 10px; }
+  .btn { padding: 10px 14px; font-size: .88rem; }
+  .tabs .tab { padding: 9px 11px; font-size: .86rem; }
+}
+@media screen and (max-width: 360px) {
+  .hero-meta, .chips, .filter-chips, .tabs { gap: 6px; }
+  .card { padding: 15px; }
+  .badge, .chip { font-size: .74rem; }
+}
+/* 桌面导航：13 个入口 + 课程全称原先放不进 1180px 容器，右端链接会被裁切。
+   放宽头部容器并允许链接安全换行，保证任意桌面宽度下入口都完整可见、可点击。 */
+@media screen and (min-width: 1141px) {
+  .site-header .container { max-width: 1400px; }
+  .nav { flex-wrap: wrap; height: auto; min-height: 66px; padding: 8px 0; row-gap: 2px; }
+  .nav-links {
+    flex: 1 1 auto; min-width: 0; flex-wrap: wrap;
+    justify-content: flex-end; margin-left: auto;
+  }
+  .nav-links a { padding: 7px 9px; font-size: .87rem; }
+  .nav-user { margin-left: 4px; padding-left: 8px; }
+  html { scroll-padding-top: 110px; }
+}
+@media screen and (min-width: 1141px) and (max-width: 1279px) {
+  .nav-links { gap: 0; }
+  .nav-links a { padding: 7px 7px; font-size: .84rem; }
+  .brand { font-size: .92rem; }
+}
+/* wb-responsive-patch-v1 END */
