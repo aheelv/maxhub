@@ -63,7 +63,34 @@ figcaption b{color:var(--brand)}
 }
 @media(max-width:900px){.wrap{display:block}nav{position:static;width:auto;height:auto;
  border-right:0;border-bottom:1px solid var(--line)}main{padding:20px 16px 60px}}
-</style></head><body><div class="topbar"><b>《人工智能工具应用实践》· 修改详细说明</b><a href="《人工智能工具应用实践》教材文本.html" class="">教材文本</a><a href="《人工智能工具应用实践》修改详细说明.html" class="cur">修改详细说明</a><span class="sp"></span><span class="hint">逐章复盘 · T1—T6 六类调整　·　16 章　·　可用浏览器「打印 → 另存为 PDF」</span></div><div class="wrap"><nav><h4>章节导航</h4>
+</style>
+<style id="wb-responsive-patch-v1">
+/* 多端适配：表格局部滚动、媒体自适应、长文本断行；不改动正文与链接 */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, td, th { overflow-wrap: anywhere; word-break: break-word; }
+  .gallery { grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); }
+  .tbl-scroll {
+    display: block; width: 100%; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    margin: 14px 0;
+  }
+  .tbl-scroll > table { margin: 0; width: 100%; }
+}
+@media screen and (max-width: 900px) {
+  .tbl-scroll { margin: 10px 0; }
+}
+@media screen and (max-width: 560px) {
+  table { font-size: 12.5px; }
+  th, td { padding: 6px 8px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+</style>
+</head><body><div class="topbar"><b>《人工智能工具应用实践》· 修改详细说明</b><a href="《人工智能工具应用实践》教材文本.html" class="">教材文本</a><a href="《人工智能工具应用实践》修改详细说明.html" class="cur">修改详细说明</a><span class="sp"></span><span class="hint">逐章复盘 · T1—T6 六类调整　·　16 章　·　可用浏览器「打印 → 另存为 PDF」</span></div><div class="wrap"><nav><h4>章节导航</h4>
 <a data-ch="1" href="#ch1">第 1 章　课程导论：人工智能 70 年与 AI 工具全景</a>
 <a data-ch="2" href="#ch2">第 2 章　大语言模型：从 n-gram 到 Transformer 与推理模型</a>
 <a data-ch="3" href="#ch3">第 3 章　生成式 AI 与多模态：AIGC 与提示工程进阶</a>
@@ -91,16 +118,16 @@ figcaption b{color:var(--brand)}
 <h3>一、修订依据</h3>
 <ol><li><strong>主线依据：</strong>课程题目《人工智能工具应用实践》。原各章内容完整、知识点密集， 但导入与案例多以技术演进或教学构造示例切入，「为什么要用工具解决这类问题」的主线不够一贯。 本次为每章补写「课程主线定位」与「真实问题导入」，并把案例与实践任务统一到真实问题情境。</li><li><strong>技术依据：</strong>以智能体集成平台为代表的最新 AI 应用。依据 WorkBuddy 官方帮助文档、 MCP 2026-07-28 官方规范及扩展、Stanford HAI《2026 AI Index Report》官方页面（均已核验， 见教材「编写说明」技术基线表）补充各章技术内容。</li><li><strong>能力依据：</strong>「快速掌握并熟练使用最新 AI 工具」与「解决多类真实问题」两类能力。 每章给出可检验的能力表现，实践任务与已发布的 16 套练习资源包对齐。</li><li><strong>诚信依据：</strong>仅使用可核验截图与案例。原课件中的教学构造示例统一显式降级为 B 类「虚构教学数据」，不可核验的产品内部界面一律标注「待补充」。</li></ol>
 <h3>二、本次统一执行的六类调整</h3>
-<table><thead><tr><th>编号</th><th>调整类型</th><th>说明</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>编号</th><th>调整类型</th><th>说明</th></tr></thead><tbody>
 <tr><td>T1</td><td>主线化</td><td>每章新增「课程主线定位」与真实问题导入，标题后补主线副题，不改动原章题</td></tr>
 <tr><td>T2</td><td>技术更新</td><td>纳入智能体集成平台、MCP 2026-07-28 无状态规范与扩展、AI Index 2026 等可核验进展</td></tr>
 <tr><td>T3</td><td>案例规范</td><td>真实案例补「背景 / 适用知识点 / 来源或使用场景 / 面向真实问题的实践任务」四要素；虚构示例降级标注</td></tr>
 <tr><td>T4</td><td>截图规范</td><td>配置 A 类可核验真实界面截图（附来源 URL、抓取日期、使用场景）；不足处设 C 类「待补充」图位</td></tr>
 <tr><td>T5</td><td>能力对齐</td><td>学习目标改写为可检验能力，实践任务对接真实问题与现有练习资源包</td></tr>
 <tr><td>T6</td><td>素材盘点</td><td>逐章列出新增／替换素材清单与后续需补充内容</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>三、整体素材变动统计</h3>
-<table><thead><tr><th>项目</th><th>数量／说明</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>项目</th><th>数量／说明</th></tr></thead><tbody>
 <tr><td>章节数</td><td>16 章（框架、题目、定位未变）</td></tr>
 <tr><td>A 类可核验真实截图</td><td>24 张</td></tr>
 <tr><td>本章引用截图次数</td><td>74 次</td></tr>
@@ -108,39 +135,39 @@ figcaption b{color:var(--brand)}
 <tr><td>其中 A 类真实案例</td><td>48 条</td></tr>
 <tr><td>其中 C 类待补充案例</td><td>16 条</td></tr>
 <tr><td>分章教材文本</td><td>16 份</td></tr>
-</tbody></table>
+</tbody></table></div>
 <hr>
 <h2 id="ch1">第 1 章　课程导论：人工智能 70 年与 AI 工具全景</h2>
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章导入以「图灵之问—三次浪潮」的学科史切入，与课程题目《人工智能工具应用实践》中「工具」「应用实践」的关联是隐含的，学生第一节课不易建立「这门课要我具备什么能力」的认知。</li><li>原「2026 年工具全景：四个层次」为课程自归纳（页内标注「本课对 2026 年主流 AI 工具生态的分类归纳」），缺少可核验的第三方依据，尤其未把「智能体集成平台」作为独立一层给出官方定义。</li><li>原章引用的 AI Index 数据散落在 7 页「真实案例与数据」中，未与本次核验的官方页面十大要点逐条对齐，也未标注报告版本与中文版链接。</li><li>原章含多处教学构造示例（工具横向对比记录、幻觉法条、评分表），页内虽标注「教学构造」，但未在章级建立 A/B/C 素材分级，存在被误当作真实案例引用的风险。</li><li>原章无任何真实界面截图；「动手实操」页描述操作但缺少可核验的界面证据。</li><li>实践任务为「分组任务（约二十五分钟）」，与课程网站已发布的「70 分钟、单人独立完成」第 1 次课练习资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面页 + 学习目标 + 本课路线图（原 1—3 页）</td><td>保留三页；新增「本章定位与主线」并给出真实问题导入（导入：社团资料整理与工具选择困难）</td><td>T1 主线化，内容不删改</td></tr>
 <tr><td>「核心概念与原理 5/6」2026 年 AI 工具全景：四个层次</td><td>保留四层结构；第三层改以 WorkBuddy 官方帮助文档的「全场景 AI 工作台」定义与六项核心能力为可核验依据</td><td>T2 技术更新 + 加注出处</td></tr>
 <tr><td>「真实案例与数据 1—7/7」散点引用 AI Index</td><td>整合为「最新 AI 技术跟进」5 条，逐条对应官方页 Takeaway 1/4/5/7 与图 S18—S20</td><td>T2 + T3 证据对齐</td></tr>
 <tr><td>「示例：一次工具横向对比记录」「案例：幻觉的样子」等构造页</td><td>保留为 B 类课堂演练素材，章级显式标注「虚构教学数据，非真实案例」，与 A 类案例分栏呈现</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类可核验截图（S01/S02/S03/S21/S18）+ 2 个 C 类「待补充」图位</td><td>T4 截图规范</td></tr>
 <tr><td>「课堂练习」分组任务约 25 分钟</td><td>改为对接第 1 次课资源包的 70 分钟单人独立任务，补充成果要求与核验路径</td><td>T5 能力对齐</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、教学定位、原有 47 页课件结构全部保留，不新增或删除章节。</li><li>新增「课程主线定位」一句话，把章题挂到「认识工具、判断工具边界」上；导入改为可操作的三问（选哪类工具／哪些数据不能上传／错了怎么发现）。</li><li>「工具全景」第三层补入智能体集成平台的官方定义与六项核心能力，来源为 WorkBuddy 官方帮助文档（图 S14 真实页面），并说明它与通用对话工具的区别。</li><li>用 Stanford HAI 2026 AI Index 官方页原文数据替换无出处的采用率表述，补入 OSWorld 12%→约 66%、AI 事件 233→362、人口采用率 53% 等可核验条目，并注明官方中文版 PDF 链接。</li><li>建立 A/B/C 素材分级表，把「一条不存在的法条」等构造示例统一标为 B 类；新增 1 条 C 类待补充案例（本地单位一手访谈），明确不编写未授权情节。</li><li>配 5 张真实界面截图，逐图给出来源 URL、抓取日期与教学使用场景；另列 2 个待补充图位及须记录的产品版本、日期与授权信息。</li><li>实践任务改为与 <code>资源包_第1次课_工具全景与个人红线.zip</code> 对齐的 70 分钟单人独立任务，补入分钟级步骤与 5 项成果要求。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>智能体集成平台作为工具全景独立一层</td><td>WorkBuddy 官方帮助文档《WorkBuddy 简介》（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握最新 AI 工具：能按任务类型选择工具类别</td><td>学生能在四层全景表中指出「能自己打开文件夹并规划执行」属于第三层，并说出选择理由</td></tr>
 <tr><td>AI Index 2026 采用率 88%、OSWorld 12%→约 66%</td><td>Stanford HAI 官方页 Top Takeaway 1/4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S19）</td><td>判断能力边界，解决「哪些问题能交给工具」的真实问题</td><td>学生填写数据核验卡并为五项子任务各写一条人工核验方法</td></tr>
 <tr><td>AI 事件 233→362、负责任 AI 披露滞后</td><td>Stanford HAI 官方页 Takeaway 5（图 S20）</td><td>负责任使用工具；识别并规避真实数据安全风险</td><td>个人红线清单不少于 6 条且每条含替代做法</td></tr>
 <tr><td>A/B/C 素材分级与「待补充」机制</td><td>本次核验的 24 张真实截图与课程案例页 8 个带出处案例；原课件 197 条 src 标注</td><td>独立核验信息真伪，避免把虚构演练当作行业事实</td><td>成果中能正确区分 A 类数据与 B 类虚构数据，C 类不出现未核验图像</td></tr>
 <tr><td>70 分钟单人独立任务 + 独立新会话审校</td><td>课程网站第 1 次课练习资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>熟练使用工具各项功能；独立解决多类真实问题</td><td>独立完成全景表、核验卡、红线清单、审校记录、自检表 5 项成果</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S01 / S02 / S03 / S21 / S18</td><td>A 类真实界面截图</td><td>课程公开站点与 Stanford AI Index 官方页（见来源总表）</td><td>新增，随教材提供 PNG 并逐图注明来源与场景</td></tr>
 <tr><td>图 1-补1、图 1-补2</td><td>C 类待补充图位</td><td>WorkBuddy 官方帮助文档 / 所用工具隐私设置页</td><td>新增占位，未取到真实截图前不使用图像</td></tr>
 <tr><td>案例 1-1 / 1-2 / 1-3</td><td>A 类真实案例与数据</td><td>AI Index 2026 官方页、课程案例页案例 01/06</td><td>新增四要素（背景／知识点／来源／实践任务），替换无出处表述</td></tr>
 <tr><td>案例 1-4</td><td>B 类虚构演练素材</td><td>课件第 1 章构造示例</td><td>保留但显式降级标注，不计入真实案例</td></tr>
 <tr><td>案例 1-5</td><td>C 类待补充案例</td><td>校企合作访谈／公开采购公示（尚未取得）</td><td>新增占位，不编写具体情节</td></tr>
 <tr><td>第 1 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原「25 分钟分组任务」为 70 分钟单人独立任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐 2 个待补充图位：智能体平台新建任务界面、账号隐私与数据权限设置界面，并记录产品版本与抓取日期。</li><li>补充本地单位工具选型一手案例，须有书面授权与可核验出处。</li><li>AI Index 报告版本更新时复核本章全部数字；如官方页 Takeaway 表述变化，同步更新「最新 AI 技术跟进」5 条。</li><li>待 WorkBuddy 官方帮助文档新增「连接器／技能／专家」章节的公开截图后，可替换图 1-补1 为可核验真实截图。</li></ul>
 <hr>
@@ -148,7 +175,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 46 页以技术演进为主干（n-gram → 词向量 → RNN → Transformer → 三阶段训练），与课程题目「工具应用实践」的连接集中在 5 页「Token」中，导入未建立成本意识。</li><li>原「真实案例与数据」引用 SWE-bench、Terminal-Bench 2.1、METR／RE-Bench 等，但未与本次核验的 AI Index 2026 官方页 Takeaway 逐条对齐，部分性能数值依赖厂商公开文档的历史版本，存在时效性风险。</li><li>原章含多处算术示意与教学构造示例（上下文窗口换算、两次回答不同），页内虽有标注，但章级未建立 A/B/C 分级。</li><li>原章无真实界面截图，成本估算缺少「官方定价页应当日查询」的规范提示。</li><li>实践任务为「分组任务（约二十分钟）」，与课程网站第 2 次课 70 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图（原 1—3 页）</td><td>保留；新增「课程主线定位」与真实问题导入（忘记前文与用量超预期）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念与原理 1—9/9」技术演进</td><td>全部保留；每个技术点补一句「对应的使用决策」，不改动原有讲解顺序</td><td>T1 + T2 微调</td></tr>
 <tr><td>「Token 1—5/5」成本讲解</td><td>保留；补入「脚手架固定成本」与「官方定价页须当日查询」两条规范；历史单价不作为当期事实</td><td>T2 + T3 证据时效</td></tr>
@@ -156,26 +183,26 @@ figcaption b{color:var(--brand)}
 <tr><td>「示例：上下文窗口换算」等构造页</td><td>保留并统一标为 B 类虚构演练素材；新增 1 条 C 类待补充案例（当月定价与真实账单）</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S10/S19/S23/S04）+ 2 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」分组约 20 分钟</td><td>改为对接第 2 次课资源包的 70 分钟单人独立任务</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 46 页结构与知识点顺序全部保留。</li><li>新增「把模型怎么工作换算成怎么算账」的主线定位；导入改为承接上一章的真实问题（长任务遗忘、用量超预期）。</li><li>在「最新 AI 技术跟进」中引用 AI Index 2026 官方页 Takeaway 1 的 SWE-bench Verified 60%→近 100%，并明确「基准提升 ≠ 我的任务一定做对」。</li><li>把 METR／RE-Bench 短任务与长任务落差整理为可核验条目，落到「拆分长任务、设置检查点」的操作结论。</li><li>补入「脚手架 Token 固定成本」与「官方定价页须当日查询并注明日期」两条规范；对 DeepSeek Harness 公开文档中的性能数值不独立确认，一律写明「以官方文档当前版本为准」。</li><li>配 4 张真实界面截图；另列 2 个待补充图位（用量计费页、长任务轨迹截断），并规定须记录的厂商、版本、查询日期与脱敏要求。</li><li>实践任务改为与第 2 次课资源包对齐的 70 分钟单人独立成本实测，明确学生不得预读教师核验卡。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>SWE-bench Verified 一年内 60%→近 100%</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 1（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S19）</td><td>快速判断最新模型能力，合理选择「让工具写代码」的工作方式</td><td>能说明基准提升与自身任务成功之间的三点差异</td></tr>
 <tr><td>短任务强、长任务弱</td><td>METR（2025）、斯坦福 RE-Bench；课程案例页案例 03</td><td>独立解决真实问题：把复杂任务拆为可验证、可回滚的步骤</td><td>产出不超过 5 步的拆分清单，每步含中间产物与回滚点</td></tr>
 <tr><td>脚手架固定 Token 成本</td><td>DeepSeek Harness 公开文档（developer preview）；课程案例页案例 05</td><td>熟练使用工具：理解上下文构成，降低无效开销</td><td>写出「固定成本 + 每轮增量」估算式并给出两项降本操作</td></tr>
 <tr><td>官方定价当日核验</td><td>厂商官方 API 定价页（C 类待补齐）</td><td>形成可迁移的核验习惯，避免使用过期数据</td><td>成果中的单价附来源 URL 与查询日期</td></tr>
 <tr><td>70 分钟单人独立实测</td><td>课程网站第 2 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立核算成本与复核结果</td><td>独立完成估算表、精简方案、拆分清单与复核记录</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S10 / S19 / S23 / S04</td><td>A 类真实界面截图</td><td>课程公开站点、AI Index 官方页、DeepSeek 官方站点</td><td>新增，附来源 URL、抓取日期与场景</td></tr>
 <tr><td>图 2-补1、图 2-补2</td><td>C 类待补充图位</td><td>厂商官方用量／计费页、Harness 执行日志文档</td><td>新增占位，含脱敏与版本记录要求</td></tr>
 <tr><td>案例 2-1 / 2-2 / 2-3</td><td>A 类真实数据与公开实测</td><td>AI Index 2026 官方页、METR／RE-Bench、DeepSeek Harness 公开文档</td><td>新增四要素并加注时效说明</td></tr>
 <tr><td>案例 2-4</td><td>B 类虚构演练素材</td><td>课件第 2 章算术示意</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 2-5</td><td>C 类待补充案例</td><td>厂商官方定价页（查询当日）</td><td>新增占位，教材不预设价格</td></tr>
 <tr><td>第 2 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 20 分钟分组任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐用量／计费页面与长任务轨迹截断两张截图，记录厂商、版本、日期并脱敏。</li><li>由学生在每次开课时按当日官方定价页补齐成本案例，教材仅保留方法不保留单价。</li><li>跟踪 DeepSeek Harness 官方文档版本，复核「四种预设」「脚手架成本」相关表述。</li></ul>
 <hr>
@@ -183,7 +210,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 46 页以技术路径（GAN／扩散模型）、提示工程四要素、幻觉成因与验证方法为主线，内容完整，但导入未把「生成内容能否进入正式交付」这一真实问题立起来。</li><li>原「案例：锯齿状智能」「示例：公共政策问答」等页中，真实数据与教学构造示例混排；页内虽有单页标注，章级缺少统一的 A/B/C 分级，容易被误引。</li><li>原引用的「AI 事件 233→362」等数据未与本次核验的 AI Index 2026 官方页 Takeaway 5 对齐，也未提示官方中文版 PDF 可作为课堂精读材料。</li><li>原章无真实界面截图，「验证方法 1—3/3」缺少可核验的证据组织范例。</li><li>实践任务为「分组任务（约二十分钟）」，与课程网站第 3 次课 75 分钟单人独立资源包不一致；读图会话与真值表之间也未建立防污染规则。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图</td><td>保留；新增主线定位与真实问题导入（招新材料中的读图错误、虚构规定、图片文字乱码）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念与原理 1—8/8」与「幻觉成因」「锯齿状智能」</td><td>全部保留；补入 AI Index 2026 官方页原文数据作为可核验依据</td><td>T2 + T3</td></tr>
 <tr><td>「真实案例与数据 1—3/3」</td><td>整合为「最新 AI 技术跟进」5 条，逐条给出官方 URL 与图号</td><td>T2</td></tr>
@@ -191,26 +218,26 @@ figcaption b{color:var(--brand)}
 <tr><td>「示例：公共政策问答」「示例：基础率与误报」等构造页</td><td>保留并统一标为 B 类虚构演练素材；新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S19/S20/S05/S14）+ 2 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」分组约 20 分钟</td><td>改为 75 分钟单人独立任务，补入「读图会话不得预读真值表」的防污染规则</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 46 页结构与知识点顺序全部保留。</li><li>导入改为真实交付场景（招新材料中出现读错数字、虚构规定、图片文字乱码），把主线立为「生成能否进入正式交付」。</li><li>把锯齿状智能、OSWorld、AI 事件数统一对齐到 AI Index 2026 官方页 Takeaway 4/5，并补入官方中文版 PDF 的精读路径。</li><li>新增「课程案例页的证据组织方式」作为 A 类真实案例，用图 S05 示范来源标注与厂商自报／预测值的区分。</li><li>把「一条不存在的法条」「基础率与误报」等构造示例统一标为 B 类，明确不得作为事实引用；新增 C 类待补充的行业多模态差错案例。</li><li>配 4 张真实界面截图；另列 2 个待补充图位并规定须记录的版本、输入输出全文与脱敏要求。</li><li>实践任务改为 75 分钟单人独立核验，明确「读图盲审会话不得预读真值表」以避免实验污染，并把「待核验」标注纳入成果要求。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>锯齿状前沿与 OSWorld 数据</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S19）</td><td>判断工具可不可信，独立识别高风险读取场景</td><td>四类产出按验证强度分级，并写出两条独立来源核验路径</td></tr>
 <tr><td>AI 事件 233→362、负责任 AI 披露滞后</td><td>同页 Takeaway 5（图 S20）</td><td>负责任使用最新 AI 工具</td><td>「引用规范卡」正确标注口径，不把「已记录事件」写成「全部事故」</td></tr>
 <tr><td>案例页证据组织规范</td><td>课程案例页（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>，图 S05）</td><td>把 AI 产出纳入正式交付前的质检能力</td><td>能区分厂商自报、预测值与经审计事实</td></tr>
 <tr><td>多模态任务处理进入通用工作台</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握最新工具的多模态功能范围</td><td>说明能力范围与验证义务并存，不以「支持」代替「可靠」</td></tr>
 <tr><td>75 分钟单人独立核验 + 盲审隔离</td><td>课程网站第 3 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决「生成内容能否交付」的真实问题</td><td>独立完成核验记录、提示词对照、三角验证表与待核验标注</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S19 / S20 / S05 / S14</td><td>A 类真实界面截图</td><td>AI Index 官方页、课程案例页、WorkBuddy 官方文档</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 3-补1、图 3-补2</td><td>C 类待补充图位</td><td>课堂现场演示 / 官方提示词指南</td><td>新增占位与记录规范</td></tr>
 <tr><td>案例 3-1 / 3-2 / 3-3</td><td>A 类真实案例与数据</td><td>AI Index 2026 官方页、课程案例页</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 3-4</td><td>B 类虚构演练素材</td><td>课件第 3 章构造示例</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 3-5</td><td>C 类待补充案例</td><td>行业事故报告 / 官方事后说明（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 3 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 20 分钟分组任务，增加防污染规则</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐两次读图对照、提示词强弱对照两张截图，记录版本与完整输入输出。</li><li>补充带公开出处的行业多模态读图差错案例。</li><li>报告版本更新时复核本章全部官方数字；跟进官方中文版 PDF 的章节映射。</li></ul>
 <hr>
@@ -218,7 +245,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 47 页已含「从单点工具到工作台」「WorkBuddy 工作界面：四个区域」「六种扩展」等内容，但导入以办公场景描述为主，未把「可署名交付」这一真实责任立为主线。</li><li>「WorkBuddy 1—6/6」六页的产品能力描述标注为「WorkBuddy 官方说明」，但未给出可核验的官方文档 URL 与页面截图，学生无法自行复核；「六种扩展」亦缺少与官方文档的逐项对应。</li><li>原「真实案例与数据 1—3/3」引用 MIT NANDA、METR、McKinsey 三条证据，但未与课程案例页案例 03 的出处清单互相印证，也未补入 AI Index 2026 关于「高使用率、低政策清晰度」的最新数据。</li><li>原章多处教学构造示例（记录转纪要、报告骨架、扩展方式选型、生活场景）虽逐页标注，章级缺少 A/B/C 分级。</li><li>原章无真实界面截图；「动手实操 1—8/8」描述步骤但缺少界面证据。</li><li>实践任务为「分组任务（约二十五分钟）」，与课程网站第 4 次课 80 分钟单人独立资源包不一致，也未要求「矛盾数据不得取平均」的处置纪律。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（从招新材料升级为可署名交付）</td><td>T1 主线化</td></tr>
 <tr><td>「WorkBuddy 1—6/6」工作界面与六种扩展</td><td>保留讲解结构；产品能力改以官方帮助文档《WorkBuddy 简介》六项核心能力为可核验依据，配图 S14；官方文档未列明的能力写「待补充」</td><td>T2 + T3</td></tr>
 <tr><td>「示例：扩展方式选型」</td><td>保留；补入「按官方文档核对」的要求，并把选型结果纳入成果要求</td><td>T2 + T5</td></tr>
@@ -226,26 +253,26 @@ figcaption b{color:var(--brand)}
 <tr><td>「示例：记录转纪要」「示例：报告骨架」等构造页</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例（单位级验收规范）</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S14/S07/S08/S01）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」分组约 25 分钟</td><td>改为 80 分钟单人独立任务，补入矛盾数据处置纪律与验收清单要求</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 47 页结构与知识点顺序全部保留。</li><li>导入改为「交付一套能署名、能沿用、每个数字可追溯的成果」，把主线从「办公自动化」明确为「工具应用实践中的交付责任」。</li><li>把产品能力描述锚定到 WorkBuddy 官方帮助文档《WorkBuddy 简介》六项核心能力与适用场景表（图 S14 真实页面），并规定官方文档未列明者写「待补充」。</li><li>整合三条企业级证据与 AI Index 2026 Takeaway 8，形成「以可验收成果为准、以规则保障可沿用」的实证依据。</li><li>新增「16 次课资源按课次打包与逐份下载」A 类真实界面案例，用图 S07/S08 讲解三级归档组织方式。</li><li>建立 A/B/C 分级；把「记录转纪要」「报告骨架」等构造示例标为 B 类，新增 C 类单位级验收规范待补充案例。</li><li>配 4 张真实截图与 3 个待补充图位（含「须使用虚构教学数据、遮蔽账号信息」的记录要求）。</li><li>实践任务改为 80 分钟单人独立交付，明确「矛盾数据不取平均、不自行裁决，标注待确认并列出两处出处」。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>WorkBuddy 六项核心能力与适用场景</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握并熟练使用以智能体集成平台为代表的最新 AI 工具</td><td>六项能力对照表逐项写明「用到哪一项、在哪个步骤、如何验证」</td></tr>
 <tr><td>多数试点未产生可衡量成效、提效感受失真</td><td>MIT NANDA（2025）、McKinsey（2025）、METR（2025）；课程案例页案例 03</td><td>解决「用了 AI 不等于产生价值」的真实问题</td><td>交付验收清单不少于 8 项，每项以可查看产物判断</td></tr>
 <tr><td>AI 使用率高、政策清晰度低</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 8（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>）</td><td>建立规范的归档与署名责任意识</td><td>归档规则含命名、版本、出处留存三条可执行约定</td></tr>
 <tr><td>按课次打包的三级资源组织</td><td>课程下载页与练习资源站（图 S07/S08，<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决「成果可被他人复用」的真实问题</td><td>为成果包设计命名规则与目录结构</td></tr>
 <tr><td>80 分钟单人独立交付 + 独立新会话审校</td><td>课程网站第 4 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立完成可署名成果并自我复核</td><td>简报、演示、归档规则、验收清单、审校记录齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S14 / S07 / S08 / S01</td><td>A 类真实界面截图</td><td>WorkBuddy 官方文档、课程公开站点</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 4-补1 至 4-补3</td><td>C 类待补充图位</td><td>WorkBuddy 官方帮助文档 / 产品内实际操作</td><td>新增占位与脱敏、版本记录要求</td></tr>
 <tr><td>案例 4-1 / 4-2 / 4-3</td><td>A 类真实案例与界面</td><td>WorkBuddy 官方文档、课程案例页、课程公开站点</td><td>新增四要素与官方 URL</td></tr>
 <tr><td>案例 4-4</td><td>B 类虚构演练素材</td><td>课件第 4 章示例、第 4 次课资源包</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 4-5</td><td>C 类待补充案例</td><td>公开的行业规范 / 单位信息管理办法（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 4 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 25 分钟分组任务，增加矛盾数据处置纪律</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐 WorkBuddy 新建任务、扩展管理、成果预览三张真实界面截图，使用虚构教学数据并遮蔽账号信息。</li><li>补充带公开出处的单位级文档交付验收规范案例。</li><li>跟踪 WorkBuddy 官方帮助文档的能力与扩展类型变更，同步更新六项能力对照表。</li></ul>
 <hr>
@@ -253,33 +280,33 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 47 页已完整覆盖五类脏数据、公式三类风险与抽样复核，但导入以「表格工具三代演进」的叙述为主，未把「数字看起来干净但口径错了」这一真实责任问题立为主线。</li><li>原「真实案例与数据 1—7/7」大量引用课程案例页的企业证据，但部分页把教学构造示例与真实数据并置，章级缺少 A/B/C 分级。</li><li>原引用的 Gartner 新闻稿（2025-08-26）为预测性数据，未逐页提示「须写清前提」；Stanford HAI 报告亦未给出官方 URL。</li><li>原章无真实界面截图；「动手实操 1—7/7」步骤完整但缺少界面证据与可复算的复算机制。</li><li>实践任务为「动手任务（约 35 分钟）」，与课程网站第 5 次课 80 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—4/4</td><td>保留；新增主线定位与真实问题导入（负数记录被误删、单位混用）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—9/9」五类脏数据与公式</td><td>全部保留；补入「负数与退款不默认删除」的业务判断纪律</td><td>T1 + T5 微调</td></tr>
 <tr><td>「真实案例与数据 1—7/7」</td><td>整合为「最新 AI 技术跟进」5 条，逐条给出出处与图号；预测性数据须写清前提</td><td>T2 + T3</td></tr>
 <tr><td>「示例：单位换算」「对照示例：报销表清洗」等构造页</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S14/S05/S07/S09）+ 2 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」动手任务约 35 分钟</td><td>改为 80 分钟单人独立任务，补入独立新会话复算与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 47 页结构与知识点顺序全部保留。</li><li>导入改为「两条负数为什么被删掉」的真实提问，把主线明确为「交付可复核的过程」。</li><li>补入「负数与退款按业务定义决定保留但排除有效合计」的处理纪律，并纳入规则清单成果要求。</li><li>把企业证据、Gartner 预测性数据与 AI Index 官方页整合为 5 条技术跟进，明确「预测性数据须写清前提」，不转述未经核验的具体比例。</li><li>建立 A/B/C 分级；把 <code>orders_raw.csv</code> 与课件示例统一标为 B 类，新增 C 类公开口径差错案例待补充。</li><li>配 4 张真实截图与 2 个待补充图位，规定图位须记录提示词全文、公式全文、数据文件名与虚构标注。</li><li>实践任务改为 80 分钟单人独立清洗，新增「独立新会话仅依据规则清单复算、学生本人签核」的防自证机制。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>表格与数据分析属于工作台多模态任务、本地文件操作</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握最新 AI 工具的表格处理能力</td><td>能在同一工作台完成读取、清洗、汇总，并说明官方能力边界</td></tr>
 <tr><td>等效换算、厂商自报、预测值的区分</td><td>课程案例页案例 01（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>独立解决「数字看起来对但口径错」的真实问题</td><td>口径说明明确写出排除的行与合计含义</td></tr>
 <tr><td>三条企业级证据：工具普及不等于结果可靠</td><td>MIT NANDA（2025）、McKinsey（2025）、METR（2025）；课程案例页案例 03</td><td>建立可追溯、可复算的工作纪律</td><td>抽样复核方案可被另一位同学独立复算</td></tr>
 <tr><td>锯齿状前沿：能写对公式也可能读错单位</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S19）</td><td>形成验证义务与风险识别能力</td><td>两条具体到列名的复核动作</td></tr>
 <tr><td>80 分钟单人独立任务 + 独立会话复算</td><td>课程网站第 5 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决结构化数据清洗问题</td><td>五类成果齐全，含规则清单、复核记录与本人签核</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S14 / S05 / S07 / S09</td><td>A 类真实界面截图</td><td>WorkBuddy 官方文档、课程公开站点</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 5-补1、图 5-补2</td><td>C 类待补充图位</td><td>官方公式指南 / 课堂现场演示</td><td>新增占位与记录要求</td></tr>
 <tr><td>案例 5-1 / 5-2 / 5-3</td><td>A 类真实案例与数据</td><td>课程案例页、AI Index 2026 官方页</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 5-4</td><td>B 类虚构演练素材</td><td>课件第 5 章示例、第 5 次课资源包</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 5-5</td><td>C 类待补充案例</td><td>公开审计报告 / 监管通报（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 5 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 35 分钟任务，增加复算签核机制</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐公式生成对照与清洗前后对照两张截图，记录提示词、公式全文与虚构标注。</li><li>补充带公开出处的企业口径／单位差错案例。</li><li>Gartner 与 AI Index 数据更新时复核本章引用前提与年份。</li></ul>
 <hr>
@@ -287,33 +314,33 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 48 页已覆盖代码解释器、统计误用与结论可复现性，但导入以「分析工具链的三次演进」叙述为主，未把「一句结论能否被追问」的真实情境立为主线。</li><li>原章「示例：辛普森悖论」标注为真实发表数据，但其余 5 个「真实案例与数据」页多为虚构教学场景，二者混排在同名栏目下，章级缺少 A/B/C 分级，容易误导引用。</li><li>引用的 METR／RE-Bench、MIT NANDA、McKinsey 三条证据未与课程案例页案例 03 的出处清单互证，也未补入 AI Index 2026 官方页的智能体能力数据。</li><li>原章无真实界面截图；「动手实操 1—7/7」缺少「代码是否真的执行」的界面辨认训练。</li><li>实践任务为「动手任务（约 35 分钟）」，与课程网站第 6 次课 80 分钟单人独立资源包不一致，也未要求独立复算与签核。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—4/4</td><td>保留；新增主线定位与真实问题导入（「A 校区效果更好」被追问三句）</td><td>T1 主线化</td></tr>
 <tr><td>「示例：辛普森悖论」</td><td>保留真实发表数据；在案例区显式标为 A 类，与 B 类虚构场景分栏，教材不改写原始数值</td><td>T3 证据分级</td></tr>
 <tr><td>「真实案例与数据 1—6/6」</td><td>整合为「最新 AI 技术跟进」5 条与 5 条分级案例，逐条给出出处与图号</td><td>T2 + T3</td></tr>
 <tr><td>「反例：相关当因果」「对照示例：图表选择」等构造页</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例</td><td>T3</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S05/S09/S19/S08）+ 2 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」动手任务约 35 分钟</td><td>改为 80 分钟单人独立任务，补入独立新会话复算与本人签核、结论责任说明</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 48 页结构与知识点顺序全部保留。</li><li>导入改为「一句结论被追问三句」的真实情境，把主线明确为「结论站得住」。</li><li>把肾结石治疗对照数据（真实发表数据）显式升为 A 类案例，与虚构门店／促销／分层场景分栏呈现，教材不改写其分层数值。</li><li>整合 METR／RE-Bench、三条企业级证据与 AI Index 2026 Takeaway 4，形成「必须留可复核中间产物」的技术依据。</li><li>新增「可核验的公开经营分析数据集案例」C 类待补充项，明确不编造企业数据。</li><li>配 4 张真实截图与 2 个待补充图位，图位要求记录提示词、代码全文、执行输出与数据真实性标注。</li><li>实践任务改为 80 分钟单人独立分析，新增「独立新会话仅依据数据与代码复算、学生本人签核」及《结论责任说明》。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>真实分层数据的证据地位</td><td>肾结石治疗对照数据（真实发表数据，课件第 6 章标注）</td><td>识别分层反转，独立解决真实分析判断问题</td><td>四段说明能指出管理场景中的混淆变量</td></tr>
 <tr><td>短任务强、长任务弱；智能体仍约每三次失败一次</td><td>METR（2025）、RE-Bench；AI Index 2026 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S19）</td><td>把复杂分析拆为带检查点的可复现步骤</td><td>不超过 5 个检查点，每点注明出错后从哪步重跑</td></tr>
 <tr><td>三条企业级证据：用上工具与算出结果是两件事</td><td>MIT NANDA（2025）、McKinsey（2025）、METR（2025）；课程案例页案例 03</td><td>建立「结论责任在人」的职业判断</td><td>报告含数据版本、代码、输出、限制四部分</td></tr>
 <tr><td>工作台中的数据分析能力</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>熟练使用最新工具完成数据分析</td><td>能确认代码真实执行并保存输出</td></tr>
 <tr><td>80 分钟单人独立任务 + 独立会话复算</td><td>课程网站第 6 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决「结论能否被他人复算」的真实问题</td><td>可复现报告、分层复核记录、复算对照、责任说明齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S05 / S09 / S19 / S08</td><td>A 类真实界面截图</td><td>课程公开站点、AI Index 官方页</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 6-补1、图 6-补2</td><td>C 类待补充图位</td><td>官方代码解释器指南 / 课堂演示</td><td>新增占位与真实性标注要求</td></tr>
 <tr><td>案例 6-1 / 6-2 / 6-3</td><td>A 类真实数据与证据</td><td>真实发表对照数据、METR／RE-Bench、课程案例页</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 6-4</td><td>B 类虚构演练素材</td><td>课件第 6 章示例、第 6 次课资源包</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 6-5</td><td>C 类待补充案例</td><td>公开数据集平台（尚未取得许可与出处）</td><td>新增占位</td></tr>
 <tr><td>第 6 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 35 分钟任务，增加复算签核与责任说明</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐代码解释器执行同屏与分层反转图表对照两张截图，明确标注真实／虚构数据来源。</li><li>补充带许可说明与公开出处的真实经营分析数据集。</li><li>补充肾结石对照数据的完整原始文献信息，并在课件与教材同步标注。</li></ul>
 <hr>
@@ -321,26 +348,26 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 48 页已完整覆盖指标体系、NL2SQL、归因边界与经营报告流程，但导入以「BI 是什么：从报表工具到对话式平台」叙述为主，未把「三张报表三个数字」这一真实管理冲突立为主线。</li><li>原「真实案例与数据 1—7/7」中，真实企业案例（案例 02、03、Klarna）与虚构教学场景（两个活跃口径、销量归因、离职率归因）混排于同一栏目，章级缺少 A/B/C 分级。</li><li>引用的 Gartner 预测性数据、Stanford HAI 报告未给出官方 URL 或版本标注；「预测值须写清前提」的要求未逐条落实。</li><li>原章无真实界面截图，也缺少与第 8 章智能体 / MCP 的技术衔接。</li><li>实践任务为「小组任务（约 35 分钟）」，与课程网站第 7 次课 85 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—4/4</td><td>保留；新增主线定位与真实问题导入（207 万 / 192 万 / 180 万三个执行额）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—10/10」指标体系与 NL2SQL</td><td>全部保留；补入「口径未写明即被工具默认」的风险提示</td><td>T1 + T3 微调</td></tr>
 <tr><td>「真实案例与数据 1—7/7」</td><td>整合为 5 条技术跟进与 5 条分级案例；真实案例与虚构场景分栏，逐条给出出处与图号</td><td>T2 + T3</td></tr>
 <tr><td>「示例：两个活跃口径」等构造页</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图、无协议衔接</td><td>新增 4 张 A 类截图（S05/S20/S07/S16）+ 2 个待补充图位；章末以 MCP 2026-07-28 官方规范衔接第 8 章</td><td>T2 + T4</td></tr>
 <tr><td>「课堂练习」小组任务约 35 分钟</td><td>改为 85 分钟单人独立任务，补入差额闭合验证、独立复算与签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 48 页结构与知识点顺序全部保留。</li><li>导入改为「三张报表三个执行额」的真实管理冲突，把主线明确为「口径治理优先于工具自动化」。</li><li>把课程案例页案例 02（联邦银行撤回裁员）与案例 03（三条企业级证据）显式列为 A 类，与虚构的口径演练场景分栏呈现。</li><li>为 Gartner 预测性数据补入「须写清前提」的方法论要求，为 Stanford HAI 报告补入官方 URL 与中文版说明。</li><li>新增章末技术衔接：以 MCP 2026-07-28 官方规范的「Resources 作为服务端能力」「用户同意与控制」说明数据源接入智能体的协议基础（图 S16）。</li><li>配 4 张真实截图与 2 个待补充图位；新增 C 类组织级口径治理文档待补充案例。</li><li>实践任务改为 85 分钟单人独立任务，明确差额拆解须合计闭合、不得取平均、不得声称因果，并增加独立复算与签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>口径与流程才是落地难点</td><td>MIT NANDA（2025）、McKinsey（2025）、METR（2025）；课程案例页案例 03</td><td>独立解决多口径管理分析这一真实问题</td><td>三张口径卡五要素齐全，能指出工具默认口径的风险</td></tr>
 <tr><td>在验证之前宣布结果的公开教训</td><td>课程案例页案例 02（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>形成「先验证再宣布」的职业判断</td><td>三条发布前验证清单，每条可查看、可复核</td></tr>
 <tr><td>权威数据的口径标注示范</td><td>Stanford HAI 2026 AI Index 官方页（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S20）</td><td>把数据标注纪律迁移到自己的报告</td><td>报告含口径说明、限制与下一步检查项</td></tr>
 <tr><td>MCP 2026-07-28 规范：Resources 与用户同意</td><td>MCP 官方规范页（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>理解最新智能体连接标准，为第 8 章铺路</td><td>能说出数据源接入智能体需要协议与用户同意</td></tr>
 <tr><td>85 分钟单人独立任务 + 差额闭合 + 复算签核</td><td>课程网站第 7 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立拆解差额并交付经营报告</td><td>差额拆解合计闭合，报告不取平均、不声称因果</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S05 / S20 / S07 / S16</td><td>A 类真实界面截图</td><td>课程案例页、AI Index 官方页、课程下载页、MCP 官方规范</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 7-补1、图 7-补2</td><td>C 类待补充图位</td><td>官方对话式分析指南 / 第 7 次课口径卡模板</td><td>新增占位与记录要求</td></tr>
 <tr><td>案例 7-1 / 7-2 / 7-3</td><td>A 类真实案例与数据</td><td>课程案例页案例 01/02/03</td><td>新增四要素与出处</td></tr>
@@ -348,7 +375,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 7-5</td><td>C 类待补充案例</td><td>行业标准 / 政府统计口径说明（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>MCP 规范衔接段落</td><td>技术更新素材</td><td><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a></td><td>新增，用于模块二到模块三的过渡</td></tr>
 <tr><td>第 7 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 35 分钟小组任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐对话式 BI 同屏截图与口径卡填写界面截图，记录提问、SQL 全文与虚构标注。</li><li>补充可公开核验的组织级指标口径治理文档。</li><li>MCP 规范版本更新时复核本章末与第 8 章的协议表述及图 S16 版本标注。</li></ul>
 <hr>
@@ -356,7 +383,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 48 页已讲智能体四要素、ReAct 循环、工具调用与 WorkBuddy 七页实例，但「MCP 协议」部分未标注规范版本与官方 URL，学生无法核验协议当前状态。</li><li>原章未纳入 2026-07-28 版规范的无状态核心、逐请求能力协商、Elicitation 与三项安全原则，也未提及 Tasks / Skills over MCP / MCP Apps 等官方扩展，与「跟进最新 AI 技术、重点纳入智能体集成平台」的要求有差距。</li><li>导入以「从工具到智能体」的技术演进叙述为主，未把「同一句话在 2022 年与现在的差别」这一可操作对比立为主线，也未点明学生角色的转变。</li><li>原「示例：ReAct」「示例：MCP」「对照示例：三类扩展」及轨迹示意均标注为教学构造，但与真实企业案例混排，章级缺少 A/B/C 分级。</li><li>原章无真实界面截图；「动手实操 2/5 用 WorkBuddy 完成一个端到端任务」「4/5 接入一个工具或连接器」缺少可核验的界面证据与授权范围说明。</li><li>实践任务为「动手任务（约 30 分钟）」，与课程网站第 8 次课 80 分钟单人独立资源包不一致，也未要求权限清单与越界拦截。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—4/4</td><td>保留；新增主线定位与真实问题导入（同一句查询在 2022 年与现在的差别），点明角色转变</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—10/10」四要素、循环、工具调用</td><td>全部保留；补入「工具描述属于不可信输入」的规范提示</td><td>T2 + T3 微调</td></tr>
 <tr><td>「示例：MCP」协议说明（未标版本）</td><td>改为以 MCP 2026-07-28 官方规范页（图 S16）为依据，逐条列出无状态请求、能力协商、三类服务端能力、Elicitation 与三项安全原则</td><td>T2 技术更新（替换依据，不删原讲解）</td></tr>
@@ -365,20 +392,20 @@ figcaption b{color:var(--brand)}
 <tr><td>「真实案例与数据 1—6/6」与构造示例混排</td><td>整合为 5 条技术跟进与 5 条分级案例；轨迹示意显式标为「非真实产品日志」，新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 6 张 A 类截图（S16/S15/S17/S13/S14/S11）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」动手任务约 30 分钟</td><td>改为 80 分钟单人独立任务，补入权限与同意清单、越界拦截、纯对话对照实验与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 48 页结构与知识点顺序全部保留，不新增或删除章节。</li><li>导入改为「同一句查询在 2022 年与现在的差别」，把主线明确为「学生从操作者变为任务定义者 + 边界设定者 + 结果验收者」。</li><li>把 MCP 协议讲解锚定到官方规范 2026-07-28 版（图 S16），补入无状态自包含请求、逐请求能力协商、Resources / Prompts / Tools、Elicitation 与三项安全原则，全部采用规范原文表述。</li><li>新增「MCP 扩展机制」技术条目（图 S17）：Tasks、Skills over MCP、MCP Apps，并说明均为 opt-in、须双方显式支持与初始化协商，为第 11 章长任务与多智能体编排铺路。</li><li>把平台能力描述锚定到 WorkBuddy 官方帮助文档六项核心能力（图 S14）与官网首页（图 S13）；课程案例页案例 04 作为 A 类真实案例，官方文档未列明的能力一律写「待补充」。</li><li>用 AI Index 2026 官方页 Takeaway 4 的 OSWorld 数据说明「能力跃升不等于可靠」，据此强化权限、轨迹与人工确认的必要性。</li><li>建立 A/B/C 分级；把 <code>agent_trace.csv</code> 与课件轨迹示意显式标为「虚构教学数据 / 非真实产品日志」，新增 C 类企业真实 MCP 集成案例待补充。</li><li>配 6 张真实界面截图（本章为技术重点章，配图最多）与 3 个待补充图位，图位规定须遮蔽账号与密钥、使用虚构教学数据。</li><li>实践任务改为 80 分钟单人独立任务，新增《权限与同意清单》、越界拦截规则、纯对话对照实验、六项能力核对表与本人签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>MCP 2026-07-28 无状态规范、能力协商、三项安全原则</td><td>MCP 官方规范页（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>快速掌握最新 AI 工具的连接标准，理解工具调用前的用户同意</td><td>权限与同意清单逐条对应规范三项原则</td></tr>
 <tr><td>Tasks / Skills over MCP / MCP Apps 扩展</td><td>MCP 官方扩展总览（<a href="https://modelcontextprotocol.io/extensions/overview" target="_blank" rel="noopener">https://modelcontextprotocol.io/extensions/overview</a>，图 S17）</td><td>理解长任务与工作流编排的最新机制，衔接第 11 章</td><td>能说明扩展为何 opt-in、须初始化协商</td></tr>
 <tr><td>智能体集成平台六项核心能力</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）与官网首页（图 S13）</td><td>熟练使用以智能体集成平台为代表的最新 AI 应用</td><td>六项能力核对表逐项写明在哪一步被调用、产出是什么</td></tr>
 <tr><td>OSWorld 12%→约 66%、仍约每三次失败一次</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S19）</td><td>识别能力边界，独立解决「何时必须人工确认」的真实问题</td><td>可做 / 需确认 / 禁止三类动作清单，保留转人工入口</td></tr>
 <tr><td>范围治理而非能力不足导致落地失败</td><td>课程案例页案例 01（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>把真实企业教训迁移到权限设计</td><td>用 Klarna 证据说明为何必须保留人工兜底</td></tr>
 <tr><td>80 分钟单人独立端到端任务 + 对照实验 + 签核</td><td>课程网站第 8 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立跑通智能体并验收结果</td><td>轨迹标注、越界拦截、对照记录、审校记录齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S16 / S15 / S17 / S13 / S14 / S11</td><td>A 类真实界面截图</td><td>MCP 官方规范与扩展、WorkBuddy 官网与文档、课程课件播放页</td><td>新增 6 张，逐图附官方 URL、抓取日期与场景</td></tr>
 <tr><td>图 8-补1 至 8-补3</td><td>C 类待补充图位</td><td>平台连接器配置、执行日志、权限审批界面</td><td>新增占位与脱敏要求</td></tr>
 <tr><td>案例 8-1 MCP 官方规范</td><td>A 类官方规范案例</td><td><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a></td><td>新增，替换原无版本标注的协议说明依据</td></tr>
@@ -387,7 +414,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 8-5</td><td>C 类待补充案例</td><td>厂商官方客户案例 / 公开事故复盘（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>MCP 扩展机制技术条目</td><td>技术更新素材</td><td><a href="https://modelcontextprotocol.io/extensions/overview" target="_blank" rel="noopener">https://modelcontextprotocol.io/extensions/overview</a></td><td>新增，衔接第 11 章</td></tr>
 <tr><td>第 8 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 30 分钟任务，增加权限清单与对照实验</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐连接器授权、真实执行轨迹、人工确认弹窗三张截图，遮蔽账号与密钥并使用虚构教学数据。</li><li>补充带公开出处的企业真实 MCP 集成与权限治理案例，并标注证据等级（厂商自报／独立来源）。</li><li>MCP 规范与扩展更新时复核版本号与能力清单，同步刷新图 S16/S17 及第 11、14 章相关表述。</li><li>WorkBuddy 官方帮助文档扩展类型变更时同步复核六项能力核对表。</li></ul>
 <hr>
@@ -395,7 +422,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 44 页已覆盖工作流四类控制、RAG 五步链路、资料库与 book-to-skill，但导入以「从写一条好提示升级到编排一条流程」的抽象表述为主，未用「同一问题三次不同答案」的真实情境立起主线。</li><li>原章「真实案例 1：奖助学金政策问答助手」「示例（政务办事场景）」在本课程内均标注为教学构造／虚构案例，却置于「真实案例」栏目下，章级缺少 A/B/C 分级，易被误当作真实政策或机构案例。</li><li>原章未纳入 MCP 2026-07-28 规范中的 Resources / Prompts 定位，也未提及 Skills over MCP 这一最新的工作流指令标准化扩展。</li><li>引用的 Gartner 新闻稿与 MIT NANDA 报告未逐条提示「预测性数据须写清前提」；book-to-skill 缺少可核验的公开仓库地址。</li><li>原章无真实界面截图；「动手实操 1—3/3」缺少界面证据。</li><li>实践任务为「练习一 25 分钟 + 练习二 25 分钟」，与课程网站第 9 次课 85 分钟单人独立资源包不一致，也未规定检索／生成会话与标准答案的隔离。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（同一问题三次不同答案）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—9/9」「失效点与对策」</td><td>全部保留；失效点补入「答案未附出处」一项并纳入测试集核对</td><td>T1 + T5 微调</td></tr>
 <tr><td>「真实案例 1 奖助学金政策问答助手」「示例（政务办事场景）」</td><td>保留教学场景，但显式改列 B 类「虚构教学数据，非真实案例」，与 A 类案例分栏</td><td>T3 诚信规范（重要纠正）</td></tr>
@@ -403,26 +430,26 @@ figcaption b{color:var(--brand)}
 <tr><td>无协议层内容</td><td>新增 5 条技术跟进：Skills over MCP、MCP 2026-07-28 Resources/Prompts、平台官方能力、社区技能线索、AI Index 边界数据</td><td>T2 技术更新</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S17/S16/S14/S08）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」25 分钟 + 25 分钟</td><td>改为 85 分钟单人独立任务，补入盲测隔离、引用出处核对与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 44 页结构与知识点顺序全部保留。</li><li>导入改为「同一问题三次不同答案」的真实情境，把主线明确为「编排一条可验证、可复用的流程」。</li><li>把「奖助学金政策问答助手」「政务办事场景」等教学构造场景从「真实案例」表述中显式降级为 B 类，明确不得当作真实政策引用；这是本次复盘的诚信纠正点。</li><li>新增 Skills over MCP 官方扩展条目（图 S17），说明结构化工作流指令可被发现与消费、扩展须 opt-in 与初始化协商。</li><li>新增 MCP 2026-07-28 规范中 Resources / Prompts / Tools 与能力协商的定位（图 S16），把资料库与模板化提示挂到协议层。</li><li>为 Gartner 预测性数据补「须写清前提」的要求；book-to-skill 只讲思路并注明缺少可核验公开仓库地址，列入后续补充。</li><li>配 4 张真实截图与 3 个待补充图位；新增 C 类机构级 RAG 上线案例待补充。</li><li>实践任务改为 85 分钟单人独立任务，明确「检索／生成会话不得预先拿到标准答案」的防污染规则，并把引用出处核对与失效点归因纳入成果。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>Skills over MCP 与扩展协商</td><td>MCP 官方扩展总览（<a href="https://modelcontextprotocol.io/extensions/overview" target="_blank" rel="noopener">https://modelcontextprotocol.io/extensions/overview</a>，图 S17）</td><td>掌握最新工作流指令标准化机制</td><td>能说明技能与资料库在调用方式上的差别及扩展为何 opt-in</td></tr>
 <tr><td>MCP 2026-07-28 Resources / Prompts / 能力协商</td><td>MCP 官方规范页（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>把资料库与模板化提示放进标准协议框架理解</td><td>能指出 RAG 五步链路中哪几步对应 Resources</td></tr>
 <tr><td>平台六项核心能力与适用场景</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>熟练使用以智能体集成平台为代表的最新 AI 工具</td><td>四步实操逐步标注用到的官方能力</td></tr>
 <tr><td>一次答对不等于流程可靠</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S19）</td><td>独立解决「答案必须可追溯」的真实问题</td><td>12 题测试集三类分组统计 + 引用出处逐条核对</td></tr>
 <tr><td>85 分钟单人独立任务 + 盲测隔离</td><td>课程网站第 9 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立搭建并验收知识问答流程</td><td>流程图、测试集结果、出处核对、失效点归因、审校签核齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S17 / S16 / S14 / S08</td><td>A 类真实界面截图</td><td>MCP 官方扩展与规范、WorkBuddy 官方文档、课程练习站</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 9-补1 至 9-补3</td><td>C 类待补充图位</td><td>平台资料库／工作流官方指南或课堂演示</td><td>新增占位与虚构数据标注要求</td></tr>
 <tr><td>案例 9-1 / 9-2 / 9-3</td><td>A 类官方扩展与真实数据</td><td>MCP 官方扩展与规范、WorkBuddy 官方文档、课程案例页案例 04/07</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 9-4</td><td>B 类虚构演练素材（由「真实案例」降级）</td><td>课件第 9 章示例、第 9 次课资源包</td><td>本次复盘的诚信纠正点：显式标注非真实案例</td></tr>
 <tr><td>案例 9-5</td><td>C 类待补充案例</td><td>厂商官方客户案例 / 机构公开复盘（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 9 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原两段 25 分钟练习，增加盲测隔离</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐资料库挂载、答案与出处同屏、工作流画布三张截图，使用虚构教学数据。</li><li>补充带公开出处与证据等级的机构级 RAG 上线案例。</li><li>补充 book-to-skill 社区技能的公开仓库地址或官方文档 URL。</li><li>MCP 扩展更新时复核 Skills over MCP 表述与图 S17 抓取日期。</li></ul>
 <hr>
@@ -430,7 +457,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 44 页已包含需求拆解、知识准备、九步动手实操与验收标准，内容完整，但导入以「从会用工具到会造系统」的能力叙述为主，未把「一句话需求背后四个没写下来的问题」这一真实交付风险立为主线。</li><li>原「真实案例 1：学院事务咨询智能体」在本课程内标注为教学构造案例，却与「真实案例 2：Klarna」并列置于「真实案例」栏目，章级缺少 A/B/C 分级。</li><li>产品能力描述虽标注「WorkBuddy 官方公开介绍 / 官方文档」，但未给出可核验的官方 URL 与页面截图；「发布上线」相关页面未明确「未启用时须标注模拟」的规则。</li><li>引用的 Gartner 预测性数据与 McKinsey 报告未逐条提示前提；连接器授权缺少协议层依据。</li><li>原章无真实界面截图；「动手实操 1—9/9」步骤完整但缺少界面证据与授权范围检查点。</li><li>实践任务为「15 + 30 + 20 分钟」三段课堂练习，与课程网站第 10 次课 90 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（一句话需求背后的四问）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—10/10」工作界面与四种扩展</td><td>全部保留；补入「官方文档未列明的能力写待补充」的核验要求</td><td>T2 + T3 微调</td></tr>
 <tr><td>「真实案例 1 学院事务咨询智能体」</td><td>保留教学场景，但显式改列 B 类「虚构教学数据，非真实案例」，与 A 类 Klarna 案例分栏</td><td>T3 诚信规范（重要纠正）</td></tr>
@@ -438,19 +465,19 @@ figcaption b{color:var(--brand)}
 <tr><td>「参考资料」Gartner / McKinsey</td><td>整合为 5 条技术跟进；预测性数据须写清前提，不转述未经核验的比例</td><td>T2</td></tr>
 <tr><td>无截图</td><td>新增 4 张 A 类截图（S08/S14/S07/S16）+ 4 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」15 + 30 + 20 分钟三段</td><td>改为 90 分钟单人独立任务，补入盲测隔离、脱敏记录、模拟标注与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 44 页结构与九步实操顺序全部保留。</li><li>导入改为「一句话需求背后四个没写下来的问题」，把主线明确为「把边界写下来」。</li><li>把「学院事务咨询智能体」教学构造场景显式降级为 B 类，与 Klarna 真实案例分栏；这是本章的诚信纠正点。</li><li>把平台能力描述锚定到 WorkBuddy 官方帮助文档（图 S14）与课程案例页案例 04，规定官方文档未列明的能力写「待补充」。</li><li>为连接器授权步骤补入 MCP 2026-07-28 官方规范三项安全原则（图 S16）作为协议层检查点；为发布步骤补入「模拟／未启用／未上线」标注规则。</li><li>配 4 张真实截图与 4 个待补充图位；发布状态图位明确要求若为模拟须在图注标注。</li><li>实践任务改为 90 分钟单人独立任务，新增 9 处敏感占位统计、20 题盲测隔离、模拟标注与本人签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>平台六项核心能力与适用场景</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握并熟练使用智能体集成平台各项功能</td><td>四类扩展各写选型理由并注明官方文档依据</td></tr>
 <tr><td>MCP 三项安全原则</td><td>MCP 2026-07-28 官方规范（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>理解连接器授权的范围与用户同意</td><td>授权范围记录逐项对照用户同意与控制</td></tr>
 <tr><td>范围治理而非能力不足导致失败</td><td>课程案例页案例 01（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>独立解决「何时必须转人工」的真实问题</td><td>两条硬约束写入任务约束并保留转人工入口</td></tr>
 <tr><td>「模拟／未启用」标注规则</td><td>课程资源站通用执行规程与本站真实界面（图 S08）</td><td>形成诚实标注能力，不把演练说成上线</td><td>成果中未启用能力均显式标注</td></tr>
 <tr><td>90 分钟单人独立任务 + 盲测 + 脱敏 + 签核</td><td>课程网站第 10 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立交付带边界与验收的智能体方案</td><td>需求、脱敏、授权、评估、验收五类成果齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S08 / S14 / S07 / S16</td><td>A 类真实界面截图</td><td>课程独立练习站、WorkBuddy 官方文档、课程下载页、MCP 官方规范</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 10-补1 至 10-补4</td><td>C 类待补充图位</td><td>平台连接器／资料库／测试／发布官方指南或课堂演示</td><td>新增占位；发布状态图位含模拟标注要求</td></tr>
 <tr><td>案例 10-1 / 10-2 / 10-3</td><td>A 类真实案例与界面</td><td>课程案例页案例 01/04/07、WorkBuddy 官方文档、课程公开站点</td><td>新增四要素与出处</td></tr>
@@ -458,7 +485,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 10-5</td><td>C 类待补充案例</td><td>厂商官方客户案例 / 公开招标文件（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>模拟替代规则与协议检查点</td><td>技术更新素材</td><td><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a></td><td>新增，用于授权与发布两步</td></tr>
 <tr><td>第 10 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原三段课堂练习</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐连接器授权、扩展安装状态、测试集结果、发布状态四张截图，发布图须标注是否模拟。</li><li>补充带公开出处与证据等级的企业问答智能体上线验收案例。</li><li>平台官方文档更新扩展类型或发布能力时，同步复核选型表与模拟替代规则。</li><li>MCP 规范更新时复核连接器授权检查点。</li></ul>
 <hr>
@@ -466,33 +493,33 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 46 页已覆盖四种拓扑、子代理、专家团、Trajectory、成本与失败模式，但导入以「当任务复杂到一台智能体不够用」的能力叙述为主，未把「一个会话写到一半忘口径、自查等于自评」的真实失败情境立为主线。</li><li>原「真实案例 1 / 2 / 反面案例」在本课程内均标注为教学构造示例，却置于「真实案例」栏目，章级缺少 A/B/C 分级。</li><li>原章引用 DeepSeek Harness 公开文档与 WorkBuddy 官方文档，但未给出可核验 URL 与页面截图；未纳入 MCP Tasks 这一最新的长任务异步扩展。</li><li>引用的「回复 PONG 约 13,467 输入 Token」为公开实测数据，但未与课程案例页案例 05 的出处清单互证，也未说明「教材不扩展未核验性能数值」。</li><li>原章无真实界面截图；「动手实操 1—7/7」缺少界面证据。</li><li>实践任务为「20 分钟 + 25 分钟」两段课堂练习，与课程网站第 11 次课 85 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（忘口径、自我审校）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—15/15」四种拓扑与子代理</td><td>全部保留；补入「角色间信息隔离」与「防止自我审校」的操作要求</td><td>T1 + T5 微调</td></tr>
 <tr><td>「真实案例 1 / 2 / 反面案例」</td><td>保留教学场景，但显式改列 B 类「虚构教学数据，非真实案例」</td><td>T3 诚信规范</td></tr>
 <tr><td>「参考资料」DeepSeek Harness / WorkBuddy 文档</td><td>整合为 5 条技术跟进；新增 MCP Tasks 扩展与 MCP 2026-07-28 无状态核心，逐条给出官方 URL 与图号</td><td>T2 技术更新</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类截图（S17/S16/S14/S23/S12）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」20 + 25 分钟两段</td><td>改为 85 分钟单人独立任务，补入隔离规则、成本上限、回滚演练与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 46 页结构与知识点顺序全部保留。</li><li>导入改为「忘记口径 + 自己给自己打分」的真实失败情境，把主线明确为「把复杂任务管到可控」。</li><li>把三处教学构造案例显式降级为 B 类，明确不得当作真实产品日志或企业案例引用。</li><li>新增 MCP Tasks 官方扩展条目（异步执行、轮询、持久句柄、opt-in 协商）与 MCP 2026-07-28 无状态核心条目，为长任务编排提供可核验依据。</li><li>把 Trajectory 与脚手架成本锚定到 DeepSeek Harness 公开文档及课程案例页案例 05，并声明「教材不扩展未核验性能数值」。</li><li>配 5 张真实截图与 3 个待补充图位；新增 C 类企业 AgentOps 公开案例待补充。</li><li>实践任务改为 85 分钟单人独立任务，明确「审校会话不得拿撰写者自评结论」「评委视角用独立新会话、最终判断由本人签核」。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>MCP Tasks 长任务异步扩展</td><td>MCP 官方扩展总览（<a href="https://modelcontextprotocol.io/extensions/overview" target="_blank" rel="noopener">https://modelcontextprotocol.io/extensions/overview</a>，图 S17）</td><td>掌握最新长任务编排机制</td><td>能画出主任务→子任务→轮询→汇总时间线并标出失败点</td></tr>
 <tr><td>MCP 2026-07-28 无状态核心与逐请求协商</td><td>MCP 官方规范页（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>理解多智能体每步请求自带上下文</td><td>能说明扩展为何不能默认开启</td></tr>
 <tr><td>Trajectory 只追加日志与脚手架固定成本</td><td>DeepSeek Harness 公开文档；课程案例页案例 05（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>建立可观测性与成本治理能力</td><td>成本预算说明区分固定成本、每步增量与并行倍数</td></tr>
 <tr><td>专家／专家团与多任务并行</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>熟练使用平台的多角色协作功能</td><td>四角色输入范围与禁止接触信息明确</td></tr>
 <tr><td>85 分钟单人独立任务 + 隔离 + 回滚 + 签核</td><td>课程网站第 11 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决复杂任务的分工与治理问题</td><td>拓扑图、预算、轨迹标注、回滚记录、评委记录齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S17 / S16 / S14 / S23 / S12</td><td>A 类真实界面截图</td><td>MCP 官方扩展与规范、WorkBuddy 官方文档、DeepSeek 官网、课程课件播放页</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 11-补1 至 11-补3</td><td>C 类待补充图位</td><td>平台专家团／执行日志／用量预算官方指南</td><td>新增占位与记录要求</td></tr>
 <tr><td>案例 11-1 / 11-2 / 11-3</td><td>A 类官方扩展与公开实测</td><td>MCP 官方扩展、DeepSeek Harness 公开文档、WorkBuddy 官方文档</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 11-4</td><td>B 类虚构演练素材（由「真实案例」降级）</td><td>课件第 11 章示例、第 11 次课资源包</td><td>显式标注非真实案例</td></tr>
 <tr><td>案例 11-5</td><td>C 类待补充案例</td><td>厂商官方工程博客 / 公开技术复盘（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 11 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原两段课堂练习</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐专家团配置、执行轨迹、成本预算三张截图，明确标注虚构教学数据与版本。</li><li>补充带公开出处与证据等级的企业 AgentOps 可观测性／成本治理案例。</li><li>MCP 扩展与 DeepSeek Harness 文档更新时复核 Tasks、Trajectory 与成本表述。</li></ul>
 <hr>
@@ -500,7 +527,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 48 页已完整给出 Harness 定义、五层分层、四项组成、两个实例对照与成本约束，但导入以「本课程重点模块开篇」的定位说明为主，未用「同一模型、两种工具、结果与用量都不同」的可观察现象立起主线。</li><li>原章「实例 1—11/11」大量引用 DeepSeek Harness 公开文档（developer preview），但未给出可核验 URL、仓库与版本说明；部分性能数值存在时效性风险。</li><li>原章把 WorkBuddy 与 DeepSeek Harness 并列对照，但未点明二者分别代表「智能体集成平台」与「开源运行时」两种形态，也未与 MCP 协议层做分工说明。</li><li>原「示例 1—3/3」明确标注为教学构造场景，但与真实实例混排在「实例」栏目附近，章级缺少 A/B/C 分级。</li><li>原章无真实界面截图；「课堂练习」为 20 分钟动手任务，与课程网站第 12 次课 80 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（同模型不同工具的结果与用量差异）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—11/11」五层与四项组成</td><td>全部保留；每层补一句「缺失后的可观察问题」</td><td>T1 + T5 微调</td></tr>
 <tr><td>「实例对照 1—2/2」</td><td>保留对照结构；点明「智能体集成平台 / 开源运行时」两种形态，并要求每项注明官方文档依据、无法核验处写待补充</td><td>T2 + T3</td></tr>
@@ -509,19 +536,19 @@ figcaption b{color:var(--brand)}
 <tr><td>「示例 1—3/3」构造场景</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类截图（S23/S14/S12/S16/S18）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」20 分钟</td><td>改为 80 分钟单人独立任务，补入依据摘录卡、两次对照、成本估算与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 48 页结构与知识点顺序全部保留。</li><li>导入改为「同一模型、两种工具、结果与用量都不同」的可观察现象，把主线明确为「理解成本与可控性从哪来」。</li><li>明确点出 WorkBuddy 代表智能体集成平台、DeepSeek Harness 代表开源运行时，并新增「协议层（MCP）负责工具接入标准化、编排层负责调用与限权」的分工说明。</li><li>为 DeepSeek Harness 公开文档补入 MIT 许可、developer preview 与版本时效说明；教材不转述未经核验的性能数值。</li><li>把五条技术跟进全部锚定到官方 URL 与真实截图（S14/S16/S18/S23），并由课程案例页案例 04、05 互证。</li><li>把构造对照场景显式标为 B 类「非真实基准」，新增 C 类企业迁移复盘待补充案例。</li><li>配 5 张真实截图与 3 个待补充图位；实践任务改为 80 分钟单人独立对照实验，新增依据摘录卡、成本估算与「能跑不等于正确」复核规则。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>智能体集成平台作为编排层形态</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>快速掌握最新 AI 应用的运行时形态</td><td>能指出平台形态与开源运行时的五项对照差异</td></tr>
 <tr><td>开源运行时的 Trajectory / 沙箱 / 脚手架成本</td><td>DeepSeek Harness 公开文档与仓库；课程案例页案例 05（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>理解成本与可控性来源</td><td>脚手架成本估算表列出三类上下文来源与三项约束</td></tr>
 <tr><td>MCP 协议层与 Harness 编排层分工</td><td>MCP 2026-07-28 官方规范（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>把工具接入与调用控制区分开</td><td>依据摘录卡含规范角色定义与能力协商表述</td></tr>
 <tr><td>OSWorld 12%→约 66%、仍约每三次失败一次</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S19）</td><td>理解编排层终止条件与人工确认的必要性</td><td>80 字结论附官方出处</td></tr>
 <tr><td>80 分钟单人独立对照实验 + 签核</td><td>课程网站第 12 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解释并复核编排层差异</td><td>两次输出、轨迹、五层对照、成本估算、复核规则齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S23 / S14 / S12 / S16 / S18</td><td>A 类真实界面截图</td><td>DeepSeek 官网、WorkBuddy 官方文档、课程课件播放页、MCP 官方规范、AI Index 官方页</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 12-补1 至 12-补3</td><td>C 类待补充图位</td><td>Harness 公开文档 / 官方用量说明</td><td>新增占位与版本记录要求</td></tr>
 <tr><td>案例 12-1 / 12-2 / 12-3</td><td>A 类真实案例与数据</td><td>DeepSeek Harness 公开文档、WorkBuddy 官方文档、AI Index 2026 官方页</td><td>新增四要素与出处、版本时效说明</td></tr>
@@ -529,7 +556,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 12-5</td><td>C 类待补充案例</td><td>厂商官方工程博客 / 开源项目 release notes（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>协议层与编排层分工段落</td><td>技术更新素材</td><td><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a></td><td>新增</td></tr>
 <tr><td>第 12 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 20 分钟任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐 Harness 启动与预设、Trajectory 日志、token 用量三张截图，记录版本与查询日期。</li><li>补充带公开出处与证据等级的企业编排层迁移复盘。</li><li>DeepSeek Harness 与 MCP 规范更新时，复核预设、成本、角色定义与图 S16/S23 标注。</li></ul>
 <hr>
@@ -537,7 +564,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 44 页已覆盖代码智能体闭环、四种预设、PTC、模型与 Harness 解耦及代码审查，但导入以「AI IDE 是什么」的工具介绍为主，未把「无报错但漏检两列」这一真实质量风险立为主线。</li><li>原「DeepSeek Harness」12 页引用公开文档（developer preview）中的预设与评测数据，但未标注版本时效，也未说明「教材不独立确认未核验分数」。</li><li>原章提到 Trae 等工具但无可核验的官方页面截图；产品能力描述缺少官方 URL 依据。</li><li>原「示例 2/4 同一任务在四种预设下的差异」等为教学构造，章级缺少 A/B/C 分级。</li><li>原章无真实界面截图；「课堂练习」为 25 分钟小组任务，与课程网站第 13 次课 90 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（无报错但漏检两列）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—4/4」「DeepSeek Harness 1—12/12」</td><td>全部保留；补入「评测分数以官方文档当前版本为准、未核验者写待补充」的时效说明</td><td>T2 + T3</td></tr>
 <tr><td>工具介绍（Trae 等）</td><td>补入 2 张官方首页真实截图（S22/S23），明确仅用于说明官方信息入口，不据首页推断具体功能</td><td>T2 + T4</td></tr>
@@ -545,26 +572,26 @@ figcaption b{color:var(--brand)}
 <tr><td>无权威能力数据</td><td>新增 5 条技术跟进，含 AI Index 2026 Takeaway 1/4、MCP 规范角色定义、平台适用场景表</td><td>T2</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类截图（S22/S23/S19/S16/S14）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」25 分钟小组任务</td><td>改为 90 分钟单人独立任务，补入三类用例、缺陷记录与独立审查签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 44 页结构与知识点顺序全部保留。</li><li>导入改为「成功退出、没有报错，却漏检两列」的真实质量风险，把主线明确为「可验收的自动化」。</li><li>把 SWE-bench Verified 60%→近 100% 与「智能体仍约每三次失败一次」并置为可核验依据，解释「能跑不等于正确」。</li><li>为 DeepSeek Harness 公开文档补入版本时效说明：预设与评测分数以官方文档当前版本为准，教材不独立确认未核验数值。</li><li>补入 Trae 与 DeepSeek 官方首页真实截图（S22/S23），明确只用于说明官方信息入口，不据首页推断功能、定价或性能。</li><li>新增 MCP 2026-07-28 规范的角色定义与 WorkBuddy 官方文档适用场景表作为工具注册与轻量自动化的依据。</li><li>建立 A/B/C 分级；把四种预设对照示例标为 B 类，新增 C 类企业评测复盘待补充案例。</li><li>配 5 张真实截图与 3 个待补充图位；实践任务改为 90 分钟单人独立任务，新增三类测试用例、缺陷记录与独立审查签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>编程基准跃升与仍存失败率并置</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 1/4（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S19）</td><td>判断能力边界，建立验证义务</td><td>能解释「基准接近满分」与「检查器漏检」并不矛盾</td></tr>
 <tr><td>预设／配置与模型解耦</td><td>DeepSeek Harness 公开文档（developer preview）；课程案例页案例 05</td><td>熟练使用最新运行时的配置能力</td><td>最小必要上下文清单说明哪些文件必须给、哪些可省</td></tr>
 <tr><td>MCP Host / Client / Server 与能力协商</td><td>MCP 2026-07-28 官方规范（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>理解工具注册与调用的标准化基础</td><td>能说明工具清单从何而来</td></tr>
 <tr><td>官方信息入口的核验价值</td><td>Trae 官方首页（图 S22）、DeepSeek 官方站点（图 S23）</td><td>形成「查官方而非二手转述」的核验习惯</td><td>能区分首页可直接确认与须查文档才能确认的信息</td></tr>
 <tr><td>90 分钟单人独立任务 + 三类用例 + 独立审查</td><td>课程网站第 13 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立交付可验证的自动化工具</td><td>任务说明、代码与证据、用例表、缺陷记录、审查签核齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S22 / S23 / S19 / S16 / S14</td><td>A 类真实界面截图</td><td>Trae 官网、DeepSeek 官网、AI Index 官方页、MCP 官方规范、WorkBuddy 官方文档</td><td>新增，附来源与场景；明确不据首页推断功能</td></tr>
 <tr><td>图 13-补1 至 13-补3</td><td>C 类待补充图位</td><td>AI IDE 官方界面说明 / 课堂演示</td><td>新增占位与虚构数据标注要求</td></tr>
 <tr><td>案例 13-1 / 13-2 / 13-3</td><td>A 类真实数据与界面</td><td>AI Index 2026 官方页、DeepSeek Harness 公开文档、官方产品首页</td><td>新增四要素与出处</td></tr>
 <tr><td>案例 13-4</td><td>B 类虚构演练素材</td><td>课件第 13 章示例、第 13 次课资源包</td><td>保留并显式降级标注</td></tr>
 <tr><td>案例 13-5</td><td>C 类待补充案例</td><td>公开技术复盘 / 官方工程博客（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>第 13 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 25 分钟小组任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐 AI IDE 工作区、diff 与命令输出、测试运行结果三张截图，使用虚构教学数据并遮蔽账号信息。</li><li>补充带公开出处与证据等级的企业代码智能体评测复盘。</li><li>DeepSeek Harness 文档更新时复核四种预设与评测分数表述，教材不固化未核验数值。</li></ul>
 <hr>
@@ -572,7 +599,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 46 页已完整覆盖规则文件、Hook、子代理、权限与沙箱、技能、连接器与 MCP，但导入以「从能用到可控」的能力叙述为主，未用「顺手写回共享目录、还改了两个文件」的真实越界情境立起主线。</li><li>原「MCP 与工具注册」4 页未标注协议版本与官方 URL，也未把「用户同意与控制、数据隐私、工具安全」三项原则作为护栏设计的直接依据。</li><li>原章引用 DeepSeek Harness 与 WorkBuddy 官方文档，但未给出可核验入口；技能目录层级等细节缺少可核验 URL。</li><li>原「规则文件示例」「技能示例」明确标注为教学构造，章级缺少 A/B/C 分级。</li><li>原章无真实界面截图；「课堂练习」为 35 分钟小组任务，与课程网站第 14 次课 85 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（顺手写回共享目录导致越界）</td><td>T1 主线化</td></tr>
 <tr><td>「规则文件 1—2/2」「Hook 1—3/3」「权限与沙箱 1—3/3」</td><td>全部保留；每道护栏补入对应的 MCP 规范条款</td><td>T2 + T3</td></tr>
 <tr><td>「MCP 与工具注册 1—4/4」</td><td>保留；补入 MCP 2026-07-28 官方规范版本、三项安全原则与「工具描述不可信」表述（图 S16）</td><td>T2 技术更新</td></tr>
@@ -580,19 +607,19 @@ figcaption b{color:var(--brand)}
 <tr><td>「规则文件示例」「技能示例」等构造页</td><td>保留并统一标为 B 类；新增 1 条 C 类待补充案例</td><td>T3 诚信规范</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类截图（S16/S17/S14/S20/S23）+ 4 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」35 分钟小组任务</td><td>改为 85 分钟单人独立任务，补入依据卡、越界拦截、技能骨架与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 46 页结构与知识点顺序全部保留。</li><li>导入改为「顺手写回共享目录、还改了两个不该改的文件」的真实越界情境，把主线明确为「把能力关进可审计的边界」。</li><li>把 MCP 2026-07-28 官方规范三项安全原则与「工具描述属不可信输入」作为四道护栏的协议层依据，逐条对应到规则、Hook、权限与连接器治理。</li><li>补入官方扩展 opt-in 与初始化协商要求，说明「接进来的工具进同一张清单」须受同一套授权规则约束。</li><li>为 DeepSeek Harness 与 WorkBuddy 官方文档补入可核验入口说明；技能目录层级等未核验细节明确写「待补充」。</li><li>建立 A/B/C 分级；把规则文件与技能示例标为 B 类，新增 C 类企业配置失误复盘待补充案例。</li><li>配 5 张真实截图与 4 个待补充图位；实践任务改为 85 分钟单人独立任务，新增《护栏依据卡》、越界拦截日志、SKILL.md 骨架与本人签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>MCP 三项安全原则与工具描述不可信</td><td>MCP 2026-07-28 官方规范（<a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a>，图 S16）</td><td>把最新协议的安全要求变成可执行护栏</td><td>护栏依据卡逐条对应规范条款，并说明工具描述为何不可信</td></tr>
 <tr><td>扩展 opt-in 与初始化协商</td><td>MCP 官方扩展总览（<a href="https://modelcontextprotocol.io/extensions/overview" target="_blank" rel="noopener">https://modelcontextprotocol.io/extensions/overview</a>，图 S17）</td><td>理解工具清单与授权的统一治理</td><td>连接器／MCP 验证记录确认所有接入工具受同一套规则约束</td></tr>
 <tr><td>沙箱、规则注入与脚手架成本</td><td>DeepSeek Harness 公开文档；课程案例页案例 05</td><td>独立完成权限与成本兼顾的工程配置</td><td>规则文件达到「最小完备」，权限含白名单、审批与撤销入口</td></tr>
 <tr><td>技能结构与扩展工作能力</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）</td><td>熟练使用平台技能与连接器功能</td><td>SKILL.md 骨架含触发条件、输入、步骤、输出、禁止动作</td></tr>
 <tr><td>85 分钟单人独立任务 + 越界拦截 + 签核</td><td>课程网站第 14 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立解决「智能体越界」这一真实工程问题</td><td>拦截日志、回滚记录、四道护栏配置与审校签核齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S16 / S17 / S14 / S20 / S23</td><td>A 类真实界面截图</td><td>MCP 官方规范与扩展、WorkBuddy 官方文档、AI Index 官方页、DeepSeek 官网</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 14-补1 至 14-补4</td><td>C 类待补充图位</td><td>平台规则／Hook／权限／MCP 官方指南或课堂演示</td><td>新增占位与脱敏要求</td></tr>
 <tr><td>案例 14-1 / 14-2 / 14-3</td><td>A 类官方规范与真实案例</td><td>MCP 官方规范、DeepSeek Harness 公开文档、WorkBuddy 官方文档</td><td>新增四要素与出处</td></tr>
@@ -600,7 +627,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 14-5</td><td>C 类待补充案例</td><td>公开技术复盘 / 官方事故说明（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>护栏依据卡与规范条款对应</td><td>技术更新素材</td><td><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">https://modelcontextprotocol.io/specification/2026-07-28</a></td><td>新增</td></tr>
 <tr><td>第 14 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 35 分钟小组任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐规则文件、Hook 配置、权限审批与沙箱、MCP 服务器注册四张截图。</li><li>补充带公开出处的企业 Hook／权限配置失误复盘。</li><li>MCP 规范更新时复核三项安全原则表述，并同步第 8、9、11、13 章。</li><li>补入 WorkBuddy 技能目录层级的官方文档 URL，替换「待补充」。</li></ul>
 <hr>
@@ -608,7 +635,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 49 页已覆盖立项、骨架、云服务、认证、文件存储、发布、插件与验收清单，但导入以「把一个具体想法推进到可访问的线上应用」的目标陈述为主，缺少一个可核验的真实上线案例作为对照。</li><li>「发布上线 1—4/4」引用「WorkBuddy 官方文档对发布（Sites）能力的说明」，但课程材料中未保留该专项文档的可核验 URL，具体支持类型与操作步骤存在无法核验的风险。</li><li>原「真实案例 1—3/3」与「案例辨析」以 Klarna 为主，缺少课程自建、学生可直接访问核实的发布案例。</li><li>原「流程示例」「数据设计示例」「验收示例」及第 15 次课资源包均为教学构造，章级缺少 A/B/C 分级与「模拟／未启用」标注规则。</li><li>原章无真实界面截图；「课堂练习」为 30 分钟小组任务，与课程网站第 15 次课 100 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 学习目标 / 路线图 / 背景 1—3/3</td><td>保留；新增主线定位与真实问题导入（从想法到「别人能访问、每项有证据」）</td><td>T1 主线化</td></tr>
 <tr><td>「核心概念 1—6/6」「云服务 1—4/4」</td><td>全部保留；补入「账号数据不得进入公共模型服务」「测试／生产数据分离」两条规则</td><td>T1 + T3 微调</td></tr>
 <tr><td>「发布上线 1—4/4」</td><td>保留流程；补入「本次未取得发布能力专项文档可核验 URL」的说明，具体支持类型与步骤一律标「待补充」</td><td>T3 诚信规范（重要纠正）</td></tr>
@@ -616,19 +643,19 @@ figcaption b{color:var(--brand)}
 <tr><td>「流程示例」「数据设计示例」「验收示例」</td><td>保留并统一标为 B 类；补入「模拟／未启用／未上线」标注规则；新增 1 条 C 类待补充案例</td><td>T3</td></tr>
 <tr><td>无截图</td><td>新增 5 张 A 类截图（S01/S07/S08/S14/S22）+ 4 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」30 分钟小组任务</td><td>改为 100 分钟单人独立任务，补入上线案例观察卡、模拟标注、10 项验收清单与本人签核</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 49 页结构与知识点顺序全部保留。</li><li>导入改为「别人能通过链接访问、每项功能有可查看证据」的交付标准，把主线明确为「可访问的交付」。</li><li>新增本课程网站真实上线案例（<a href="https://aheelv.github.io/" target="_blank" rel="noopener">https://aheelv.github.io/</a>）为 A 类第一手案例：排除后端与账号数据、静态环境降级、链接与 ZIP 完整性验证，并配图 S01/S07/S08 三张线上真实截图。</li><li>对「发布（Sites）能力」作诚信处理：只引用 WorkBuddy 官方帮助文档适用场景表中的公开能力定位，专项文档 URL 未取得，故具体支持类型与操作步骤一律标注「待补充」。</li><li>把教学构造的流程／数据／验收示例统一标为 B 类，补入「模拟／未启用／未上线」标注规则，并新增 C 类企业上线验收公开规范待补充案例。</li><li>配 5 张真实截图与 4 个待补充图位；发布状态图位明确要求若为模拟须在图注标注。</li><li>实践任务改为 100 分钟单人独立任务，新增《上线案例观察卡》、不少于 10 项的验收清单、回滚与上线后三项检查、以及本人签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>本课程网站真实上线与静态化适配</td><td><a href="https://aheelv.github.io/（图" target="_blank" rel="noopener">https://aheelv.github.io/（图</a> S01/S07/S08，线上真实截图）</td><td>把「发布上线」从概念变成可核验的交付能力</td><td>上线案例观察卡按四类各写出一条可查看证据</td></tr>
 <tr><td>发布能力专项文档缺失的诚实标注</td><td>WorkBuddy 官方帮助文档（<a href="https://www.workbuddy.cn/docs/workbuddy/Overview" target="_blank" rel="noopener">https://www.workbuddy.cn/docs/workbuddy/Overview</a>，图 S14）；专项文档 URL 待补充</td><td>形成不把未核验能力写成已实现的习惯</td><td>成果中待补充项与模拟标注齐全</td></tr>
 <tr><td>上线后暴露的问题多在范围与人工兜底</td><td>课程案例页案例 01（<a href="https://aheelv.github.io/cases.html" target="_blank" rel="noopener">https://aheelv.github.io/cases.html</a>）</td><td>独立解决「上线后怎么管」的真实问题</td><td>验收清单含反馈入口、降级路径、回滚条件</td></tr>
 <tr><td>AI IDE 官方入口与能力定位</td><td>Trae 官方首页（图 S22）、WorkBuddy 官方文档（图 S14）</td><td>快速掌握最新构建与发布类工具</td><td>能区分官方页面可确认信息与须查文档确认的能力</td></tr>
 <tr><td>100 分钟单人独立任务 + 10 项验收 + 签核</td><td>课程网站第 15 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>独立完成从立项到验收的完整交付</td><td>七类成果齐全，模拟标注与本人签核明确</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S01 / S07 / S08 / S14 / S22</td><td>A 类真实界面截图</td><td>本课程已上线站点、WorkBuddy 官方文档、Trae 官网</td><td>新增，均为线上真实抓取，附 URL 与日期</td></tr>
 <tr><td>图 15-补1 至 15-补4</td><td>C 类待补充图位</td><td>平台云服务／认证／发布官方指南、验收清单模板</td><td>新增占位；发布图位含模拟标注要求</td></tr>
 <tr><td>案例 15-1 本课程网站真实上线</td><td>A 类第一手真实案例</td><td><a href="https://aheelv.github.io/" target="_blank" rel="noopener">https://aheelv.github.io/</a></td><td>新增，配 3 张线上真实截图</td></tr>
@@ -637,7 +664,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 15-5</td><td>C 类待补充案例</td><td>公开行业规范 / 厂商官方客户案例（尚未取得）</td><td>新增占位</td></tr>
 <tr><td>发布能力专项文档 URL 待补充项</td><td>诚信标注</td><td>WorkBuddy 官方帮助文档</td><td>新增，替换原无法核验的操作细节</td></tr>
 <tr><td>第 15 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原 30 分钟小组任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐云数据库、用户认证、发布状态、验收清单四张截图，发布图须标注是否模拟。</li><li>补入 WorkBuddy 发布（Sites）能力专项文档的官方 URL，再据其补齐支持类型与操作步骤。</li><li>补充带公开出处的企业应用上线验收规范或复盘。</li><li>本课程站点内容更新时同步复核图 S01/S07/S08 与观察卡证据。</li></ul>
 <hr>
@@ -645,7 +672,7 @@ figcaption b{color:var(--brand)}
 <h3>1. 原内容不足（复盘结论）</h3>
 <ol><li>原章 44 页已覆盖答辩五项标准、评分表、前沿数据、治理、就业与能力建设，但导入以「课程结语与前沿展望」的定位说明为主，未把「95% 提效被追问基线、样本、出处」这一贯穿全书的证据主线立起来。</li><li>原「前沿数据 1—10/10」引用 AI Index 2026 数据，但未与本次核验的官方页十大要点逐条对齐，也未提示官方中文版 PDF 与教育章可作为课堂精读材料。</li><li>原「示例：答辩提纲」「案例：同一句 95%」「实例：答辩质询」明确标注为教学构造或课程评分方案，章级缺少 A/B/C 分级。</li><li>就业与能力建设部分主要引用国际报告与教学构造示例，缺少本地／本专业可核验的就业数据，且未提醒「不作跨境直接比较」。</li><li>原章无真实界面截图；「课堂练习」为单次课堂任务，与课程网站第 16 次课 90 分钟单人独立资源包不一致。</li></ol>
 <h3>2. 调整前后对应关系</h3>
-<table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>原有内容／位置</th><th>调整后内容／位置</th><th>调整性质</th></tr></thead><tbody>
 <tr><td>封面 / 答辩总览 / 评分标准 1—5/5</td><td>保留；新增主线定位与真实问题导入（95% 提效被追问三点）</td><td>T1 主线化</td></tr>
 <tr><td>「前沿数据 1—10/10」</td><td>保留十页结构；整合为 6 条技术跟进，逐条对齐 AI Index 2026 官方页 Takeaway 1/4/5/8 与图号</td><td>T2 + T3</td></tr>
 <tr><td>「治理 1—3/3」「就业与能力建设 1—6/6」</td><td>保留；补入负责任 AI 维度间权衡与教育章官方数据；缺本地数据处标「待补充」并注明不作跨境直接比较</td><td>T2 + T3</td></tr>
@@ -653,19 +680,19 @@ figcaption b{color:var(--brand)}
 <tr><td>无官方原文核对路径</td><td>新增「引用前回到官方页原文核对」要求，并列出官方中文版 PDF 与教育章入口</td><td>T3</td></tr>
 <tr><td>无截图</td><td>新增 6 张 A 类截图（S18/S20/S24/S19/S05/S06）+ 3 个待补充图位</td><td>T4</td></tr>
 <tr><td>「课堂练习」单次课堂任务</td><td>改为 90 分钟单人独立任务，补入证据卡、正反证据并置、复现说明、模拟质询与三个月行动计划</td><td>T5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>3. 具体调整点</h3>
 <ol><li>章题、模块、学时、原有 44 页结构与知识点顺序全部保留。</li><li>导入改为「95% 提效被追问基线、样本、出处」，把全书证据主线在结语处收束，并回指第 1、5、6 章的方法。</li><li>把前沿数据逐条对齐 Stanford HAI《2026 AI Index Report》官方页十大要点（Takeaway 1/4/5/8），补入官方中文版 PDF 与教育章入口，要求引用前回到原文核对。</li><li>把「能力加速」「风险上升」「教育滞后」三组证据并置，强调「能力加速」与「锯齿状前沿 / 可靠性有限」必须同时写入结论。</li><li>建立 A/B/C 分级；把「同一句 95%」「答辩提纲」「答辩质询」等教学构造示例标为 B 类，新增 C 类本地就业数据待补充案例，并注明不作跨境直接比较。</li><li>配 6 张真实界面截图与 3 个待补充图位；技术趋势页（图 S06）作为课程自建的持续跟踪入口。</li><li>实践任务改为 90 分钟单人独立任务，新增《证据卡集》《正反证据并置卡》《复现说明》《模拟质询问答记录》与《三个月行动计划》，并要求本人签核。</li></ol>
 <h3>4. 与最新 AI 技术及学生能力提升目标的对应依据</h3>
-<table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>本次纳入／强化的技术要点</th><th>可核验依据</th><th>对应能力目标</th><th>能力可检验表现</th></tr></thead><tbody>
 <tr><td>能力加速：采用率 88%、SWE-bench 60%→近 100%</td><td>Stanford HAI 2026 AI Index 官方页 Takeaway 1（<a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a>，图 S18/S19）</td><td>用可核验数据判断前沿，制定持续学习路径</td><td>正反证据并置卡每组含机构、年份、口径与原文表述</td></tr>
 <tr><td>风险上升：AI 事件 233→362、披露零散</td><td>同页 Takeaway 5（图 S20）</td><td>形成负责任使用与治理意识</td><td>更新版红线清单与三个月计划含检查点</td></tr>
 <tr><td>教育滞后：使用率 &gt;80%、政策清晰度 6%</td><td>同页 Takeaway 8（图 S24）</td><td>理解规范不能只靠个人自觉</td><td>行动计划写明核验方式与检查点</td></tr>
 <tr><td>锯齿状前沿：模拟时钟 50.1%、OSWorld 约 66%</td><td>同页 Takeaway 4（图 S19）</td><td>把「仍需人工核验」写入结论</td><td>一句话说明能力加速与人工核验不矛盾</td></tr>
 <tr><td>90 分钟单人独立答辩 + 模拟质询 + 签核</td><td>课程网站第 16 次课资源包（<a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a>）</td><td>用证据说明能力，独立完成综合迁移</td><td>证据卡、并置卡、复现说明、质询记录、行动计划、签核齐全</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>5. 新增或替换素材清单</h3>
-<table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
+<div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>素材编号／名称</th><th>类型</th><th>来源或获取路径</th><th>处理方式</th></tr></thead><tbody>
 <tr><td>S18 / S20 / S24 / S19 / S05 / S06</td><td>A 类真实界面截图</td><td>AI Index 官方页、课程案例页、课程技术趋势页</td><td>新增，附来源与场景</td></tr>
 <tr><td>图 16-补1 至 16-补3</td><td>C 类待补充图位</td><td>评审表模板、官方报告原文 PDF、官方就业统计页</td><td>新增占位与版本记录要求</td></tr>
 <tr><td>案例 16-1 / 16-2 / 16-3</td><td>A 类真实数据与案例</td><td>AI Index 2026 官方页、课程案例页案例 01/02/06/08</td><td>新增四要素与出处</td></tr>
@@ -673,7 +700,7 @@ figcaption b{color:var(--brand)}
 <tr><td>案例 16-5</td><td>C 类待补充案例</td><td>学校就业质量报告 / 官方统计年鉴（尚未取得）</td><td>新增占位，注明不作跨境直接比较</td></tr>
 <tr><td>官方中文版 PDF 与原文核对路径</td><td>技术更新素材</td><td><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">https://hai.stanford.edu/ai-index/2026-ai-index-report</a></td><td>新增</td></tr>
 <tr><td>第 16 次课资源包引用</td><td>配套任务素材</td><td><a href="https://aheelv.github.io/exercises.html" target="_blank" rel="noopener">https://aheelv.github.io/exercises.html</a></td><td>替换原单次课堂任务</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>6. 后续需补充内容</h3>
 <ul><li>补齐答辩评分表、官方报告三处原文数据页、就业结构变化官方页面三张截图。</li><li>补充本校／本地区本专业可核验的就业结构变化数据，注明机构、年份与口径。</li><li>AI Index 报告版本更新时复核十大要点全部数字、官方中文版链接与图 S18/S19/S20/S24 抓取日期。</li></ul>
 <hr></main></div>

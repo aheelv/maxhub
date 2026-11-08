@@ -41,6 +41,33 @@
   footer{margin-top:24px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--dim);line-height:2}
   @media(max-width:560px){body{padding:14px 10px 30px}button{padding:8px 11px;font-size:13px}.clock{margin-left:0;width:100%}}
 </style>
+
+<style id="wb-responsive-patch-v1">
+/* 多端适配：表格局部滚动、媒体自适应、长文本断行；不改动正文与链接 */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, td, th { overflow-wrap: anywhere; word-break: break-word; }
+  .gallery { grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); }
+  .tbl-scroll {
+    display: block; width: 100%; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    margin: 14px 0;
+  }
+  .tbl-scroll > table { margin: 0; width: 100%; }
+}
+@media screen and (max-width: 900px) {
+  .tbl-scroll { margin: 10px 0; }
+}
+@media screen and (max-width: 560px) {
+  table { font-size: 12.5px; }
+  th, td { padding: 6px 8px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <div class="wrap">

@@ -17,6 +17,33 @@ main{padding:28px 0 80px}.section-heading{display:flex;justify-content:space-bet
 @media(max-width:560px){.shell{padding:0 15px}.topbar-inner{height:58px}.brand small{display:none}.hero{padding:38px 0 25px}.hero p{font-size:15px}.hero-panel{padding:19px}.stats{gap:8px}.stat{padding:11px}.stat strong{font-size:22px}.lesson-strip-wrap{top:58px}.lesson-nav{grid-template-columns:1fr 1fr;gap:8px}.lesson-nav a{padding:10px;gap:8px}.nav-num{flex-basis:32px;height:32px}.lesson-nav strong{font-size:12px}.lesson-nav small{font-size:10px}.lesson-head{padding:20px 17px 17px}.lesson-head h2{font-size:22px}.lesson-body{padding:18px 16px 20px}.steps li{grid-template-columns:34px 1fr;gap:8px;padding:11px}.steps li:before{width:30px;height:30px}.step-time{grid-column:2;padding-top:0;margin-top:-1px}.step-copy{grid-column:2;padding-top:0;margin-top:-8px}.resource-row{align-items:flex-start}.download-link{font-size:11px;padding:7px 8px}.footer-inner{align-items:flex-start;flex-direction:column}}
 @media print{.topbar,.lesson-strip-wrap,.hero-actions,.search,.download-link,.lesson-nav{display:none!important}body{background:white}.hero{padding:10px 0}.lesson-card{box-shadow:none;break-inside:avoid}.lesson-head,.lesson-body{padding:14px}.lesson-card{margin-bottom:12px}.shell{max-width:none}}
 </style>
+
+<style id="wb-responsive-patch-v1">
+/* 多端适配：表格局部滚动、媒体自适应、长文本断行；不改动正文与链接 */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, td, th { overflow-wrap: anywhere; word-break: break-word; }
+  .gallery { grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); }
+  .tbl-scroll {
+    display: block; width: 100%; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    margin: 14px 0;
+  }
+  .tbl-scroll > table { margin: 0; width: 100%; }
+}
+@media screen and (max-width: 900px) {
+  .tbl-scroll { margin: 10px 0; }
+}
+@media screen and (max-width: 560px) {
+  table { font-size: 12.5px; }
+  th, td { padding: 6px 8px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <header class="topbar">

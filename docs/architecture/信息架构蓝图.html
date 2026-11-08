@@ -187,6 +187,33 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
   h1{font-size:22px}
 }
 </style>
+
+<style id="wb-responsive-patch-v1">
+/* 多端适配：表格局部滚动、媒体自适应、长文本断行；不改动正文与链接 */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, td, th { overflow-wrap: anywhere; word-break: break-word; }
+  .gallery { grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); }
+  .tbl-scroll {
+    display: block; width: 100%; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    margin: 14px 0;
+  }
+  .tbl-scroll > table { margin: 0; width: 100%; }
+}
+@media screen and (max-width: 900px) {
+  .tbl-scroll { margin: 10px 0; }
+}
+@media screen and (max-width: 560px) {
+  table { font-size: 12.5px; }
+  th, td { padding: 6px 8px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <header class="hero">
@@ -327,7 +354,7 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
  </div>
 
  <h3>14 种有向关联谓词（含当前实际边数）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="predTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="predTable"></table></div></div>
  <div class="note warn"><b>纪律</b>：<code>prerequisite_of</code> 语义先修关系不得由课次顺序自动推断，当前边数为 <b>0</b>；<code>next</code> 只表示讲授先后。知识点 CSV 中前置/后置/关联三列刻意留空，附说明「须教师核定」。</div>
  <div class="note" id="extRefNote"></div>
 
@@ -353,7 +380,7 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
  <div class="note"><b>职责裁决</b>：站点不承担身份、选课、作答、成绩、签到、讨论、个人通知；超星不改写课程正文、不产生教材／课件原件。冲突时以单一权威源裁决，非权威侧人工改动只进差异报告。</div>
 
  <h3>职责边界矩阵（重复风险分布）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="respTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="respTable"></table></div></div>
 
  <h3>8 类数据集 · 字段映射契约（点击展开逐字段）</h3>
  <p class="lead">共 <b id="ds-fields"></b> 个字段；<code>chaoxing_api_field</code> 非 null 的字段：<b id="ds-api"></b> 个。展开后可查看每个字段的核验状态与证据说明。</p>
@@ -365,7 +392,7 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
  </div>
 
  <h3>待核验与待补充清单（上线前置条件）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="todoTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="todoTable"></table></div></div>
 
  <h3>隐私与合规要点</h3>
  <div class="grid2">
@@ -394,21 +421,21 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
  </div>
 
  <h3>配置实例对照（占位示例 vs 本课程真实配置）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="cfgTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="cfgTable"></table></div></div>
 
  <h3>工具链与实测结果</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="checkTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="checkTable"></table></div></div>
  <div class="note ok"><code>course-template/tools/scaffold.py</code> 用示例配置生成的新课程包：2 模块 / 8 课次 / 11 初始实体 / 10 条边，
   <code>validate.py</code> <b id="k-scaf-assert"></b> 次断言零错误，<code>build_indexes.py</code> 生成 <b id="k-scaf-url"></b> 条 URL，端到端通过。</div>
 
  <h3>构建产物（可随时重建，不手工编辑）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="distTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="distTable"></table></div></div>
 
  <h3>参考来源台账（本次复核全部 HTTP 200）</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="srcTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="srcTable"></table></div></div>
 
  <h3>交叉一致性核验：4 处修正</h3>
- <div class="card" style="padding:0;overflow:hidden"><table id="fixTable"></table></div>
+ <div class="card" style="padding:0;overflow:hidden"><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table id="fixTable"></table></div></div>
  <div class="note"><b>真值源优先级</b>：文档与 <code>course-template/</code> 下 JSON 不一致时，以 JSON 与 <code>dist/</code> 构建产物为准；
   任何内容变更后运行 <code>tools/validate.py</code> 与 <code>architecture-build/crosscheck.py</code>。</div>
 </section>
