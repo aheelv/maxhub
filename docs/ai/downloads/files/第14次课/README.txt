@@ -1,0 +1,1 @@
+项目：csv-checker-lab。基准products_a.csv。列名映射：sku→id、title→name、price→price_cny、qty→stock。输入含products_a/b/c、products_duplicate、products_bad_header、products_normal_alt。检查表头缺失、重复ID、空价格、负库存、跨文件多/少商品。固定测试见L13-test-cases.csv，禁止修改输入和预期。范围：离线、单页、本练习目录；不联网、不连数据库、不加依赖。

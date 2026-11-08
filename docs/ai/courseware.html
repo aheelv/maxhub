@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>课件中心 · 人工智能与创新设计应用课程</title>
+<meta name="description" content="16 次课完整课件：与每次课知识点一一对应的课堂演示文稿，支持在线播放、目录跳转与打印导出 PDF。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="container"><div data-crumb="课件中心"></div></div>
+
+<section class="hero">
+  <div class="container hero-inner" style="padding:48px 0 46px">
+    <span class="eyebrow">Courseware · 16 套课件</span>
+    <h1 style="font-size:clamp(1.7rem,3.4vw,2.5rem)">课件中心</h1>
+    <p class="lead">16 次课，每套课件都与该次课的知识点逐一对应：讲清「来龙去脉 → 核心知识点 → 最新实践 → 真实数据 → 课堂练习 → 小结与关键术语」。<b>每个概念、术语与机制都配具体示例</b>——计算示例、正误对照、反例、流程示例、场景示例与输入输出示例轮换出现，示例中的公式、代码与算术均已核对。支持在线翻页、目录跳转与打印导出 PDF。</p>
+    <div class="hero-meta">
+      <span class="hero-pill">16 套课件</span>
+      <span class="hero-pill">共 742 页（每套 44—49 页）</span>
+      <span class="hero-pill">73% 页面含具体示例</span>
+      <span class="hero-pill">可打印 / 导出 PDF</span>
+      <span class="hero-pill">关键术语已互链</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Decks</span>
+      <h2>按课次浏览课件</h2>
+      <p>点击任意课件进入播放页；播放页按 <b>← / →</b> 翻页，按 <b>O</b> 切换目录，右上角可打印导出。</p>
+    </div>
+    <div class="toolbar">
+      <div class="filter-chips" id="cwFilter">
+        <button class="active" data-mod="all">全部（16）</button>
+        <button data-mod="1">模块一 · AI 基础</button>
+        <button data-mod="2">模块二 · 办公与数据</button>
+        <button data-mod="3">模块三 · 智能体</button>
+        <button data-mod="4">模块四 · Harness / AI IDE</button>
+        <button data-mod="5">模块五 · 综合实践</button>
+      </div>
+    </div>
+    <div class="deck-grid" id="deckGrid"></div>
+
+    <div class="alert alert-info mt3" style="display:block">
+      <b>使用说明：</b>课件内容随技术迭代持续更新（最近更新：2026 年 10 月）。若发现内容需要补充或修正，可在 <a href="portal.html">个人中心</a> 提交学习反馈。所有引用的数据与出处见 <a href="resources.html#sources">拓展资源 · 数据来源</a>。
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How to use</span>
+      <h2>三种使用方式</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="card"><div class="card-ico"></div><h3>课堂讲授</h3><p>教师按课件顺序讲解，重点页配合板书与演示；每套课件的「课堂练习」页对应大纲中的实操环节。</p></div>
+      <div class="card"><div class="card-ico teal"></div><h3>课后复习</h3><p>学生按目录跳转到不懂的知识点，配合 <a href="glossary.html">术语词典</a> 查清概念，再回到课件看上下文。</p></div>
+      <div class="card"><div class="card-ico violet"></div><h3>打印 / 导出 PDF</h3><p>在播放页点击「打印 / PDF」，浏览器会按「一页一张幻灯片」排版，可直接导出为 PDF 存档或打印讲义。</p></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/decks/deck-01.js"></script>
+<script src="assets/js/decks/deck-02.js"></script>
+<script src="assets/js/decks/deck-03.js"></script>
+<script src="assets/js/decks/deck-04.js"></script>
+<script src="assets/js/decks/deck-05.js"></script>
+<script src="assets/js/decks/deck-06.js"></script>
+<script src="assets/js/decks/deck-07.js"></script>
+<script src="assets/js/decks/deck-08.js"></script>
+<script src="assets/js/decks/deck-09.js"></script>
+<script src="assets/js/decks/deck-10.js"></script>
+<script src="assets/js/decks/deck-11.js"></script>
+<script src="assets/js/decks/deck-12.js"></script>
+<script src="assets/js/decks/deck-13.js"></script>
+<script src="assets/js/decks/deck-14.js"></script>
+<script src="assets/js/decks/deck-15.js"></script>
+<script src="assets/js/decks/deck-16.js"></script>
+<script>
+(function () {
+  var DECKS = (window.LECTURES || []).slice().sort(function (a, b) { return a.n - b.n; });
+  var MOD = {
+    1: { name: '模块一 · AI 基础', badge: '' },
+    2: { name: '模块二 · 办公与数据', badge: 'teal' },
+    3: { name: '模块三 · 智能体', badge: 'violet' },
+    4: { name: '模块四 · Harness / AI IDE', badge: 'emerald' },
+    5: { name: '模块五 · 综合实践', badge: 'amber' }
+  };
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function render(mod) {
+    var grid = document.getElementById('deckGrid');
+    var list = DECKS.filter(function (d) { return mod === 'all' || String(d.module) === String(mod); });
+    grid.innerHTML = list.map(function (d) {
+      var m = MOD[d.module] || { name: '', badge: '' };
+      return '<article class="deck">' +
+        '<div class="deck-top"><div class="deck-no">' + pad(d.n) + '</div>' +
+        '<span class="badge ' + m.badge + ' deck-mod">' + m.name + '</span>' +
+        '<h3>' + App.esc(d.title) + '</h3></div>' +
+        '<div class="deck-body"><p>' + App.esc(d.summary) + '</p>' +
+        '<div class="deck-points">' + (d.points || []).map(function (p) {
+          return '<span>' + App.esc(p) + '</span>';
+        }).join('') + '</div>' +
+        '<div class="deck-actions">' +
+        '<a class="btn btn-primary btn-sm" href="lecture.html?n=' + d.n + '">打开课件</a>' +
+        '<a class="btn btn-outline btn-sm" href="lecture.html?n=' + d.n + '&print=1" target="_blank" rel="noopener">打印 / PDF</a>' +
+        '</div></div></article>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('cwFilter').addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      this.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      render(e.target.getAttribute('data-mod'));
+    });
+    render('all');
+  });
+})();
+</script>
+</body>
+</html>

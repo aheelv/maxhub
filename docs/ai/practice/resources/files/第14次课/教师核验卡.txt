@@ -1,0 +1,1 @@
+本课基线结论：CSV检查器离线运行，不需Connector/MCP。只有教师发放授权的只读mock端点才做连接测试。Hook、Connector、MCP未真实触发/连接时必须写“模拟/未连接”。

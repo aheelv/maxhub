@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>术语词典 · 人工智能与创新设计应用课程</title>
+<meta name="description" content="课程术语词典：人工智能基础、办公与数据分析、智能体、Harness与AI集成开发环境、治理与前沿五大类共90条名词的详细准确解释，附出处与相关术语。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="container"><div data-crumb="术语词典"></div></div>
+
+<section class="hero">
+  <div class="container hero-inner" style="padding:48px 0 46px">
+    <span class="eyebrow">Glossary · 名词解释</span>
+    <h1 style="font-size:clamp(1.7rem,3.4vw,2.5rem)">术语词典</h1>
+    <p class="lead">把课程中出现的每一个关键名词讲清楚：它是什么、从哪来、为什么重要、和谁相关。支持关键词搜索与模块筛选，每条术语均给出详细阐述与出处。</p>
+    <div class="hero-meta">
+      <span class="hero-pill" id="glossaryTotal">加载中…</span>
+      <span class="hero-pill">支持搜索</span>
+      <span class="hero-pill">相关术语互链</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="toolbar">
+      <div class="search"><input class="input" id="gSearch" type="search" placeholder="搜索术语、英文名或解释内容，如：MCP、幻觉、Harness…" autocomplete="off"></div>
+      <div class="filter-chips" id="gFilter">
+        <button class="active" data-cat="all">全部</button>
+        <button data-cat="m1">AI 基础</button>
+        <button data-cat="m2">办公与数据</button>
+        <button data-cat="m3">智能体</button>
+        <button data-cat="m4">Harness / AI IDE</button>
+        <button data-cat="m5">治理与前沿</button>
+      </div>
+    </div>
+    <div class="term-count" id="gCount"></div>
+    <div class="term-list" id="gList"></div>
+    <div class="glossary-empty hidden" id="gEmpty">
+      <div class="e-ico" style="font-size:2rem;opacity:.5"></div>
+      <p>没有找到匹配的术语，试试其他关键词。</p>
+    </div>
+
+    <div class="alert alert-info mt3" style="display:block">
+      <b>使用建议：</b>遇到不懂的名词，先在此处查清含义，再回到 <a href="courseware.html">课件中心</a> 对应课次查看上下文，最后到 <a href="cases.html">案例展示</a> 看它如何被用出来。术语解释力求准确，出处见 <a href="resources.html#sources">拓展资源 · 数据来源</a>。
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/glossary-data.js"></script>
+<script>
+(function () {
+  var DATA = window.GLOSSARY || [];
+  var CATS = { m1: '模块一 · AI 基础', m2: '模块二 · 办公与数据', m3: '模块三 · 智能体', m4: '模块四 · Harness / AI IDE', m5: '模块五 · 治理与前沿' };
+  var BADGE = { m1: '', m2: 'teal', m3: 'violet', m4: 'emerald', m5: 'amber' };
+
+  // 建立术语名 -> 锚点 的映射，用于相关术语互链（优先使用固定锚点）
+  var FIXED = window.GLOSSARY_IDS || {};
+  var index = {};
+  DATA.forEach(function (t, i) {
+    t._id = FIXED[t.t] ? ('term-' + FIXED[t.t]) : ('g-' + (i + 1));
+    index[t.t] = t._id;
+    t._plain = (t.t + ' ' + (t.en || '') + ' ' + strip(t.def)).toLowerCase();
+  });
+
+  function strip(html) { return String(html).replace(/<[^>]+>/g, ''); }
+  function esc(s) { return App.esc(s); }
+
+  function render(list) {
+    var host = document.getElementById('gList');
+    var empty = document.getElementById('gEmpty');
+    document.getElementById('gCount').textContent = '共 ' + list.length + ' 条术语' + (list.length !== DATA.length ? '（已筛选）' : '');
+    if (!list.length) { host.innerHTML = ''; empty.classList.remove('hidden'); return; }
+    empty.classList.add('hidden');
+    host.innerHTML = list.map(function (t) {
+      var rel = (t.rel || []).map(function (r) {
+        var id = index[r];
+        return id ? '<a href="#' + id + '">' + esc(r) + '</a>' : '<span class="muted">' + esc(r) + '</span>';
+      }).join('、');
+      return '<article class="term" id="' + t._id + '">' +
+        '<div class="term-head"><h3>' + esc(t.t) + '</h3>' +
+        '<span class="en">' + esc(t.en || '') + '</span>' +
+        '<span class="badge ' + (BADGE[t.cat] || '') + '">' + esc(CATS[t.cat] || '') + '</span></div>' +
+        '<p class="term-def">' + t.def + '</p>' +
+        '<div class="term-meta">' +
+        (rel ? '<span class="term-rel"><span class="k">相关：</span>' + rel + '</span>' : '') +
+        (t.src ? '<span><span class="k">出处：</span>' + esc(t.src) + '</span>' : '') +
+        '</div></article>';
+    }).join('');
+  }
+
+  var state = { cat: 'all', q: '' };
+
+  function apply() {
+    var q = state.q.trim().toLowerCase();
+    var list = DATA.filter(function (t) {
+      if (state.cat !== 'all' && t.cat !== state.cat) return false;
+      if (q && t._plain.indexOf(q) === -1) return false;
+      return true;
+    });
+    render(list);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('glossaryTotal').textContent = '共 ' + DATA.length + ' 条术语';
+
+    var qs = App.qs('q');
+    if (qs) { document.getElementById('gSearch').value = qs; state.q = qs; }
+
+    document.getElementById('gSearch').addEventListener('input', function (e) {
+      state.q = e.target.value; apply();
+    });
+    document.getElementById('gFilter').addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      this.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      state.cat = e.target.getAttribute('data-cat');
+      apply();
+    });
+
+    apply();
+
+    // 深链定位
+    if (location.hash) {
+      var el = document.querySelector(location.hash.replace(/[^#a-zA-Z0-9_-]/g, ''));
+      if (el && el.scrollIntoView) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 200);
+    }
+  });
+})();
+</script>
+</body>
+</html>

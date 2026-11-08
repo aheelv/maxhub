@@ -1,0 +1,2 @@
+WorkBuddy（按第12课PPT）：自然语言委派、自主规划和结果交付；扩展包括Expert、Skill、Connector、Library、Automation、Sites。课件将Connector/Skill连到工具注册，Library连到上下文，授权连到权限门，结果概览/产物连到会话与可观测性。来源：WorkBuddy官方介绍/文档（按课件）。
+DeepSeek Harness（按第12课PPT）：面向开发者，Cordis插件内核；Standard日常默认、Code/PTC程序编排多步工具但可能扩大副作用、Minimal为轻量基准复现、Creator用于开发插件测试而非生产审批。极简PONG首请求约13,467输入token是课件所引公开实测示例，不代表所有环境固定值。来源：DeepSeek Harness公开文档（developer preview，按课件）。课件未载明的价格/服务可用性写“课件未说明”。

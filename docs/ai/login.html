@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录 / 注册 · 人工智能与创新设计应用课程</title>
+<meta name="description" content="学生注册登录、教师入口与扫码登录。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="section" style="padding-top:44px">
+  <div class="container auth-wrap">
+    <div class="auth-card reveal">
+      <div class="auth-grid">
+        <!-- 左侧说明 + 扫码 -->
+        <div class="auth-side">
+          <span class="badge" style="background:rgba(255,255,255,.18);color:#fff">课程门户</span>
+          <h3 class="mt2">登录后你可以做什么？</h3>
+          <ul>
+            <li><b>学生：</b>提交选课意向、填写学习反馈、查看历史记录</li>
+            <li><b>教师：</b>管理课程内容与通知、查看反馈与选课统计</li>
+          </ul>
+          <hr class="divider" style="background:rgba(255,255,255,.2);margin:22px 0">
+          <h4 style="color:#fff;font-size:.95rem">扫码登录</h4>
+          <p style="font-size:.83rem;color:#cdd9f5;margin-bottom:12px">用手机扫描二维码，在手机上确认即可登录本设备</p>
+          <div class="qr-box" id="qrBox" style="min-height:172px"><div class="qr-fallback">正在生成二维码…</div></div>
+          <div class="qr-status" id="qrStatus" style="color:#dbe4fb"><span class="qr-dot"></span>请使用手机扫码</div>
+        </div>
+
+        <!-- 右侧表单 -->
+        <div class="auth-main" id="register">
+          <div class="seg" id="seg">
+            <button class="active" data-form="login">学生登录</button>
+            <button data-form="register">学生注册</button>
+            <button data-form="teacher">教师入口</button>
+          </div>
+
+          <div class="alert alert-err" id="authErr"></div>
+          <div class="alert alert-ok" id="authOk"></div>
+
+          <!-- 登录 -->
+          <form id="form-login">
+            <div class="form-row"><label>学号 / 账号</label><input class="input" name="account" autocomplete="username" placeholder="请输入学号" required></div>
+            <div class="form-row"><label>密码</label><input class="input" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" required></div>
+            <button class="btn btn-primary btn-block" type="submit">登录</button>
+            <p class="form-hint mt1">还没有账号？点击上方「学生注册」创建，或使用左侧扫码登录。</p>
+          </form>
+
+          <!-- 注册 -->
+          <form id="form-register" class="hidden">
+            <div class="form-grid">
+              <div class="form-row"><label>学号 / 账号 *</label><input class="input" name="account" placeholder="如 20240101" required></div>
+              <div class="form-row"><label>姓名 *</label><input class="input" name="name" placeholder="请填写真实姓名" required></div>
+            </div>
+            <div class="form-row">
+              <label>专业</label>
+              <select class="input" name="major">
+                <option>电子商务（商务智能方向）</option>
+                <option>工商管理</option>
+                <option>市场营销</option>
+                <option>会计学</option>
+                <option>财务管理</option>
+                <option>物流管理</option>
+                <option>信息管理与信息系统</option>
+                <option>其他</option>
+              </select>
+            </div>
+            <div class="form-row"><label>设置密码 *</label><input class="input" name="password" type="password" placeholder="至少 6 位" required><div class="form-hint">用于后续登录，请牢记。</div></div>
+            <button class="btn btn-primary btn-block" type="submit">注册并登录</button>
+          </form>
+
+          <!-- 教师 -->
+          <form id="form-teacher" class="hidden">
+            <div class="alert alert-info show" style="margin-bottom:14px">教师账号由课程负责人持有。若你已有学生账号，可在「个人中心」输入教师邀请码升级为教师权限。</div>
+            <div class="form-row"><label>教师账号</label><input class="input" name="account" placeholder="教师账号" autocomplete="username"></div>
+            <div class="form-row"><label>密码</label><input class="input" name="password" type="password" placeholder="教师密码" autocomplete="current-password"></div>
+            <div class="form-row"><label>教师邀请码（可选）</label><input class="input" name="code" placeholder="如已有账号需升级教师权限时填写"></div>
+            <button class="btn btn-primary btn-block" type="submit">进入教师端</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center muted small mt2">登录即表示同意课程门户仅将所提交信息用于教学管理用途。</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/vendor/qrcode.min.js"></script>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  function qs(name) {
+    var m = new RegExp('[?&]' + name + '=([^&]*)').exec(location.search);
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  var next = qs('next') || 'portal.html';
+
+  function err(msg) { var e = document.getElementById('authErr'); e.textContent = msg; e.classList.add('show'); document.getElementById('authOk').classList.remove('show'); }
+  function ok(msg) { var e = document.getElementById('authOk'); e.textContent = msg; e.classList.add('show'); document.getElementById('authErr').classList.remove('show'); }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    App.initQrLogin({ container: 'qrBox', status: 'qrStatus', redirect: next });
+
+    // 分段切换
+    var seg = document.getElementById('seg');
+    seg.addEventListener('click', function (e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      var name = e.target.getAttribute('data-form');
+      seg.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      ['login', 'register', 'teacher'].forEach(function (k) {
+        document.getElementById('form-' + k).classList.toggle('hidden', k !== name);
+      });
+      document.getElementById('authErr').classList.remove('show');
+    });
+
+    // 支持 login.html#register 直达注册
+    if (location.hash === '#register') {
+      var rb = seg.querySelector('[data-form="register"]');
+      if (rb) rb.click();
+    }
+
+    // 已登录直接跳转
+    if (qs('next') === '' && App.getUser && App.getUser()) { /* noop */ }
+
+    document.getElementById('form-login').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      App.api('/api/auth/login', { method: 'POST', body: { account: f.account.value, password: f.password.value } }).then(function (r) {
+        if (r.data && r.data.ok) { ok('登录成功，正在跳转…'); location.href = next; }
+        else err((r.data && r.data.message) || '登录失败');
+      });
+    });
+
+    document.getElementById('form-register').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      App.api('/api/auth/register', { method: 'POST', body: { account: f.account.value, name: f.name.value, major: f.major.value, password: f.password.value } }).then(function (r) {
+        if (r.data && r.data.ok) { ok('注册成功，正在进入个人中心…'); location.href = next; }
+        else err((r.data && r.data.message) || '注册失败');
+      });
+    });
+
+    document.getElementById('form-teacher').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var account = f.account.value.trim(), password = f.password.value, code = f.code.value.trim();
+      if (code && !account) {
+        // 就地升级：使用当前登录身份
+        App.api('/api/auth/teacher', { method: 'POST', body: { code: code } }).then(function (r) {
+          if (r.data && r.data.ok) { ok('教师身份已激活'); setTimeout(function () { location.href = 'portal.html'; }, 700); }
+          else err((r.data && r.data.message) || '激活失败');
+        });
+        return;
+      }
+      App.api('/api/auth/login', { method: 'POST', body: { account: account, password: password } }).then(function (r) {
+        if (!(r.data && r.data.ok)) { err((r.data && r.data.message) || '登录失败'); return; }
+        if (code) {
+          App.api('/api/auth/teacher', { method: 'POST', body: { code: code } }).then(function (r2) {
+            if (r2.data && r2.data.ok) { ok('教师身份已激活，正在进入教师端…'); setTimeout(function () { location.href = 'portal.html'; }, 700); }
+            else { err('登录成功，但教师邀请码不正确，已按学生身份登录'); setTimeout(function () { location.href = 'portal.html'; }, 1400); }
+          });
+        } else {
+          ok('登录成功，正在进入…'); location.href = 'portal.html';
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

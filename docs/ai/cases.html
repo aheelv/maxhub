@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>案例展示 · 人工智能与创新设计应用课程</title>
+<meta name="description" content="课程实践案例与行业真实案例：AI办公、数据分析、智能体搭建、Harness与AI IDE构建应用，含可核查的企业实测数据与出处。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233757d6'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>AI</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="container"><div data-crumb="案例展示"></div></div>
+
+<section class="hero">
+  <div class="container hero-inner" style="padding:48px 0 46px">
+    <span class="eyebrow">Cases</span>
+    <h1 style="font-size:clamp(1.7rem,3.4vw,2.5rem)">案例展示</h1>
+    <p class="lead">本页只放<b>可核查的真实素材</b>：每条案例按「背景 → 做法 → 结果（带数字与时间）→ 可借鉴点 → 来源」组织。厂商自报的数据会明确标注「厂商自报」，预测性数据会写清前提。</p>
+    <div class="hero-meta">
+      <span class="hero-pill">8 个案例</span>
+      <span class="hero-pill">4 个主题标签页</span>
+      <span class="hero-pill">数字均落到机构与年份</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div data-tabs>
+      <div class="tabs reveal">
+        <button class="tab active" data-tab="t1">一 · 真实企业案例</button>
+        <button class="tab" data-tab="t2">二 · 智能体与平台实践</button>
+        <button class="tab" data-tab="t3">三 · 实证数据与行业趋势</button>
+        <button class="tab" data-tab="t4">四 · 反面案例与失败模式</button>
+      </div>
+
+      <!-- 标签页一 · 真实企业案例 -->
+      <div class="tab-panel active" data-panel="t1">
+        <div class="grid grid-2 reveal">
+          <div class="card">
+            <span class="badge">案例 01 · 客户服务 · 金融科技</span>
+            <h3 class="mt1">Klarna：AI 客服的完整弧线，从「替代 700 人」到重新招人</h3>
+            <p><b>背景：</b>瑞典金融科技公司 Klarna 于 <b>2024-02-27</b> 与 OpenAI 合作上线 AI 客服助手，覆盖 <b>23 个市场</b>、支持 <b>35 种以上语言</b>，目标是用 AI 承接高频、标准化的咨询。它是目前公开信息最完整、也最值得复盘的 AI 客服案例。</p>
+            <dl class="acc-kv">
+              <dt>做法</dt><dd>把账单查询、退款进度、支付方式变更这类高频、标准化问题交给 AI 一线处理；复杂纠纷、情绪化升级、监管边缘情形与敏感财务处境保留人工。后期明确为「AI 优先 + 人工兜底」，并始终保留转人工入口。</dd>
+              <dt>结果</dt><dd>首月处理 <b>230 万次</b>对话，约占客服总量的 <b>2/3</b>，等效约 <b>700 名</b>全职客服工作量；平均解决时长由 <b>11 分钟降至 2 分钟以内</b>；重复咨询率下降 <b>25%</b>；预计 2024 年利润改善约 <b>4000 万美元（厂商自报，与模型供应商联合发布）</b>。</dd>
+              <dt>可借鉴点</dt><dd>AI 承担标准化、高频的一线问题，需要共情与判断的场景保留人工；「AI 优先」与「人工兜底」要同时写进流程，而不是二选一。</dd>
+            </dl>
+            <ul class="small">
+              <li><b>2024 年末：</b>员工总数由 2022 年末 <b>5527 人</b>降至 <b>3422 人</b>，主要通过自然流失（停止补招），并非直接裁掉 700 人。</li>
+              <li><b>2025-05：</b>CEO Sebastian Siemiatkowski 公开表示「走得太远」「过于以成本为导向，质量下降」，<b>重新招募人工客服</b>，转向混合模式。</li>
+              <li><b>2025 全年：</b>AI 处理 <b>80%</b> 客服对话，节省约 <b>5900 万美元</b>，等效 <b>850 名以上</b>全职客服；公司称 AI 对话的客户满意度与人工持平，且始终保留转人工入口。</li>
+              <li><b>2025 规模：</b>约 <b>1.18 亿</b>活跃消费者、<b>96.6 万</b>商户、<b>1280 亿美元</b> GMV。</li>
+            </ul>
+            <div class="callout amber"><b>三条必须分清：</b>①「替代 700 人」是工作量等效换算，不是裁员；② 4000 万美元是预测值，且由公司与模型供应商联合发布，属「意图」而非「经审计的事实」；③ 真正出问题的不是 AI 失效，而是<b>把 AI 用在了不该用的范围</b>——复杂纠纷、情绪化升级、监管边缘情形、敏感财务处境。</div>
+            <p class="src">来源：Klarna 与 OpenAI 联合公开声明（2024-02-27 上线；4000 万美元为厂商自报预测值）；Klarna 2024 年报与 2025 年公开披露；CEO 2025 年 5 月公开表态与媒体报道。</p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--rose)">
+            <span class="badge rose">案例 02 · 客户服务 · 银行</span>
+            <h3 class="mt1">澳大利亚联邦银行：宣布裁员 45 人，数周后撤回并道歉</h3>
+            <p><b>背景：</b><b>2025 年 7 月</b>，澳大利亚最大银行 Commonwealth Bank 宣布裁撤 <b>45 个</b>客服岗位，理由是 AI 语音机器人使每周来电减少 <b>2000 通</b>。</p>
+            <dl class="acc-kv">
+              <dt>做法</dt><dd>以「AI 语音机器人减少了来电」为依据宣布减员，但该结论在公告发布时尚未经独立验证。</dd>
+              <dt>结果</dt><dd><b>数周后</b>银行撤回决定并道歉，承认判断有误；工会举证显示来电<b>并未下降、反而上升</b>，银行不得不支付加班费、抽调管理人员接线。</dd>
+              <dt>可借鉴点</dt><dd>在 AI 尚未被验证能胜任之前就宣布裁员，是把公关稿当成了技术方案。先验证指标（来电通话量、解决率、满意度），再动编制。</dd>
+            </dl>
+            <p class="src">来源：Commonwealth Bank 2025 年 7 月公开声明与撤回公告；澳大利亚金融业工会（FSU）公开举证；主流媒体 2025 年 7—8 月报道。</p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--rose)">
+            <span class="badge rose">案例 03 · 办公与数据分析</span>
+            <h3 class="mt1">工具不难，口径与流程才难：三条企业级证据</h3>
+            <p><b>背景：</b>办公与数据分析是生成式 AI 落地最早的场景，也是「装了工具却看不到回报」最集中的地方。三条来自不同机构的研究指向同一个结论。</p>
+            <ul class="small">
+              <li><b>MIT NANDA（2025）：</b>约 <b>95%</b> 的企业生成式 AI 试点未产生可衡量的财务回报；研究指出单一最强预测因素是「企业倾向于自建工具」，而采购成熟方案的结果更可靠。</li>
+              <li><b>McKinsey《The State of AI》（2025）：</b><b>88%</b> 的组织在至少一个职能中使用 AI，但仅约 <b>6%</b> 属于高绩效者（AI 对 EBIT 影响超过 5%）。</li>
+              <li><b>METR（2025）：</b>资深开源开发者在<b>自己熟悉的代码库</b>上使用 AI 工具后，完成任务的速度<b>反而慢了 19%</b>——「感觉更快」与「实际更快」存在落差。</li>
+            </ul>
+            <dl class="acc-kv">
+              <dt>可借鉴点</dt><dd>决定回报的不是模型或工具，而是口径统一、流程重构与可衡量的指标。先把「用哪个指标衡量收益」写清楚，再谈用哪个工具。</dd>
+            </dl>
+            <p class="src">来源：MIT NANDA《The GenAI Divide: State of AI in Business 2025》；McKinsey《The State of AI》（2025）；METR（2025）。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 标签页二 · 智能体与平台实践 -->
+      <div class="tab-panel" data-panel="t2">
+        <div class="grid grid-2 reveal">
+          <div class="card">
+            <span class="badge teal">案例 04 · 智能体平台</span>
+            <h3 class="mt1">WorkBuddy：一个可以照着做的全场景 AI 工作台</h3>
+            <p><b>背景：</b>WorkBuddy 是腾讯出品的全场景 AI 工作台，也是本课程指定的智能体集成平台示例。官方定位是：用自然语言描述需求，由 WorkBuddy 自主规划和执行任务，交付文档、表格、PPT 等可直接使用的完整成果。</p>
+            <dl class="acc-kv">
+              <dt>做法</dt><dd>用六种扩展方式把「通用助手」变成「特定工作台」，各自解决的问题不同：</dd>
+            </dl>
+            <ul class="small">
+              <li><b>专家（Expert）：</b>提供特定专业角色、方法论或工作流；从左侧边栏「专家」入口进入专家中心，按分类浏览选择；同一会话只启用一个专家或专家团。</li>
+              <li><b>技能（Skill）：</b>一份可安装的「说明书」，核心是 <span class="mono">SKILL.md</span>，内含触发条件与执行步骤，可附带脚本与参考资料；分用户级（<span class="mono">~/.workbuddy/skills/</span>）与项目级（<span class="mono">{工作区}/.workbuddy/skills/</span>）。</li>
+              <li><b>连接器（Connector）：</b>接入第三方服务或系统，让 WorkBuddy 读取外部数据并执行操作，需用户授权后才可使用。</li>
+              <li><b>资料库（Library）：</b>集中管理文档、表格、CSV、网页链接，支持跨设备访问与协作，并可基于资料做检索、分析与生成。</li>
+              <li><b>自动化（Automation）：</b>一次性或周期性的定时任务，如「每周一 9 点汇总上周数据并生成报告」。</li>
+              <li><b>发布（Sites）：</b>把本地项目发布为可访问的在线链接（静态站点、Node/Python/Go 应用、小程序）。</li>
+            </ul>
+            <dl class="acc-kv">
+              <dt>结果</dt><dd>工作界面分四个区域：工具栏（顶部）、侧边栏（任务列表，按文件夹分组）、对话区（任务标题栏＋消息列表＋输入框）、结果区（右侧，含「概览」与「产物」两类）。可同时创建并处理多个任务，适合并行推进不同工作。</dd>
+              <dt>可借鉴点</dt><dd>平台能力的用法是「先选扩展、再交任务」：领域问题用专家，固定流程用技能，外部数据用连接器，长期资料用资料库，周期任务用自动化，要分享就用发布。</dd>
+            </dl>
+            <p class="src">来源：WorkBuddy 官方产品说明与帮助文档（腾讯）。</p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--emerald)">
+            <span class="badge emerald">案例 05 · 开源 Harness</span>
+            <h3 class="mt1">DeepSeek Harness：开源智能体运行时的能力与成本</h3>
+            <p><b>背景：</b>DeepSeek Harness（dsh）是由 DeepSeek 开源、<b>MIT 许可</b>的智能体运行时，基于 <b>Cordis 插件内核</b>，把模型之外的每一层——模型连接、工具、会话、沙箱、存储、界面——都做成可替换的插件。官方明确标注其处于 <b>developer preview（开发者预览）</b>阶段，会有破坏兼容性的变更，且<b>尚未通过安全审计</b>。</p>
+            <dl class="acc-kv">
+              <dt>做法</dt><dd>需要 <b>Node.js 22.19 及以上（22.x 线）或 Node.js 24+</b>；启动命令 <span class="mono">npx @deepseek-ai/dsh web</span>，Web UI 默认在 <span class="mono">http://127.0.0.1:3080</span>；配置目录 <span class="mono">~/.dsh</span>（可用 <span class="mono">DSH_HOME</span> 覆盖）；其他入口：无头单次运行 <span class="mono">dsh --profile headless "任务"</span>、官方 Python SDK（<span class="mono">pip install deepseek-harness-sdk</span>）；查看已装配插件树用 <span class="mono">dsh web --dump-config</span>。</dd>
+            </dl>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>预设</th><th>加载内容</th><th>适用场景</th></tr></thead>
+                <tbody>
+                  <tr><td>Standard</td><td>完整编码智能体：文件编辑、Shell、文件与网络搜索、技能、规划、目标、子代理、工作流</td><td>大多数日常工作的默认选择</td></tr>
+                  <tr><td>Code（PTC）</td><td>Standard 全部能力 + Code Mode SDK，允许模型编写 TypeScript 程序串联多步工具调用</td><td>复杂编排；也可能放大副作用与工具调用量</td></tr>
+                  <tr><td>Minimal</td><td>仅持久化 bash + <span class="mono">str_replace_editor</span></td><td>复现基准测试；V4 Flash 在 Terminal-Bench 2.1 的 82.7 分即在此模式测得</td></tr>
+                  <tr><td>Creator</td><td>Standard + 运行时检查、内存插件实验、预设编写；可在对话中安装/替换/移除插件</td><td>开发与测试插件；不是生产环境的审批层</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="small">
+              <li><b>Token 成本：</b>一次「回复 PONG」的极简任务，<b>首个请求消耗约 13,467 个输入 token</b>——默认系统提示、工具 schema、注入的仓库规则、技能摘要都会一并送入。</li>
+              <li><b>隔离成本：</b>默认沙箱只限制<b>写操作</b>，读取与网络访问<b>不受限制</b>；官方安全声明明确「sandboxing 与审批提示不保证隔离」。</li>
+              <li><b>体积成本：</b>一次独立评测显示 macOS 上 <span class="mono">npm install</span> 装入 <b>531 个包、306 MB</b>。</li>
+            </ul>
+            <div class="callout rose"><b>边界提醒：</b>处于 developer preview、未通过安全审计；<span class="mono">--host 0.0.0.0</span> 尚不支持，因此不能把 Web UI 暴露到局域网；GitHub Issues 处于关闭状态。</div>
+            <dl class="acc-kv">
+              <dt>可借鉴点</dt><dd>评估一个 Harness 不能只看能力清单，要同时看它在你环境里要付出的三种成本：token、隔离与体积。</dd>
+            </dl>
+            <p class="src">来源：DeepSeek Harness 官方文档与公开仓库（MIT 许可，developer preview）；「回复 PONG」约 13,467 输入 token 与 macOS 531 包 / 306 MB 为公开实测数据。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 标签页三 · 实证数据与行业趋势 -->
+      <div class="tab-panel" data-panel="t3">
+        <div class="grid grid-2 reveal">
+          <div class="card">
+            <span class="badge">案例 06 · 基准与能力</span>
+            <h3 class="mt1">斯坦福 AI Index 2026：正面证据与反面证据并置</h3>
+            <p><b>背景：</b>斯坦福 HAI《2026 年人工智能指数报告》（<b>2026-04-13</b> 发布，423 页，有官方中文版）同时记录了能力的快速跃升与明显的短板，必须成对阅读。</p>
+            <dl class="acc-kv">
+              <dt>正面</dt><dd>能力与采用面在快速推进。</dd>
+            </dl>
+            <ul class="small">
+              <li>组织采用率 <b>2025 年达 88%</b>（2024 年为 78%）；生成式 AI 在 <b>3 年内达到全球 53% 人口使用率</b>。</li>
+              <li>SWE-bench Verified 编程基准<b>一年内从 60% 升至接近 100%</b>。</li>
+              <li>智能体在 OSWorld 真实计算机任务上成功率 <b>12% → 约 66%</b>；Terminal-Bench <b>20%（2025）→ 77.3%</b>；网络安全任务 <b>15%（2024）→ 93%</b>。</li>
+            </ul>
+            <dl class="acc-kv">
+              <dt>反面</dt><dd>短板同样具体。</dd>
+            </dl>
+            <ul class="small">
+              <li><b>物理世界落差：</b>机器人在仿真家务任务成功率 <b>89.4%</b>，真实家务任务仅 <b>12.4%</b>。</li>
+              <li><b>锯齿状智能：</b>Gemini Deep Think 在 2025 国际数学奥赛以 <b>35/42</b> 夺得金牌，但顶尖模型在 ClockBench 上正确读取指针时钟的概率仅 <b>50.1%</b>（人类 90.1%）。</li>
+            </ul>
+            <dl class="acc-kv">
+              <dt>可借鉴点</dt><dd>用单点基准成绩判断能力会失真：同一个系统可以在数学奥赛拿金牌，却读不准指针时钟。评估要针对自己的真实任务分布。</dd>
+            </dl>
+            <p class="src">来源：Stanford HAI《2026 年人工智能指数报告》（2026-04-13 发布）。</p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--amber)">
+            <span class="badge amber">案例 07 · 行业预测</span>
+            <h3 class="mt1">Gartner：集成在加速，项目取消也在加速</h3>
+            <p><b>背景：</b>Gartner 的两组判断同时指向「采用面快速扩大」与「项目失败率居高不下」，两者并不矛盾。</p>
+            <ul class="small">
+              <li>到 <b>2026 年底</b>，<b>40%</b> 的企业应用将集成任务型智能体（2025 年不足 5%）——出自 Gartner <b>2025-08-26</b> 新闻稿。</li>
+              <li>预测：到 <b>2027 年底</b>，超过 <b>40%</b> 的智能体 AI（Agentic AI）项目将被取消。</li>
+            </ul>
+            <dl class="acc-kv">
+              <dt>可借鉴点</dt><dd>预测的前提是当前的部署节奏与治理水平不变。上马智能体项目时，先设定可量化的成功标准与退出条件，避免进入被取消的那 40%。</dd>
+            </dl>
+            <p class="src">来源：Gartner 新闻稿（2025-08-26）与 Gartner 公开预测。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 标签页四 · 反面案例与失败模式 -->
+      <div class="tab-panel" data-panel="t4">
+        <div class="alert alert-info show" style="display:block">
+          <b>阅读说明：</b>下面把前面出现过的教训整理成一份失败模式清单。每条都给出<b>识别信号</b>与<b>规避做法</b>，便于在项目评审时逐条对照。
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <thead><tr><th>失败模式</th><th>识别信号</th><th>规避做法</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><b>范围失控</b><br><span class="small muted">Klarna，2024—2025</span></td>
+                <td>把 AI 推向复杂纠纷、情绪化升级、监管边缘情形与敏感财务处境</td>
+                <td>明确「标准化、高频」交给 AI，需要共情与判断的场景保留人工；始终保留转人工入口</td>
+              </tr>
+              <tr>
+                <td><b>过早裁员</b><br><span class="small muted">Commonwealth Bank，2025-07</span></td>
+                <td>在指标尚未独立验证前，就以 AI 为由宣布减员 45 人</td>
+                <td>先验证来电通话量、解决率、满意度等指标，再动编制；把撤回与纠偏机制写进方案</td>
+              </tr>
+              <tr>
+                <td><b>AI 事件上升</b><br><span class="small muted">Stanford AI Index 2026</span></td>
+                <td>负责任 AI 滞后：已记录的 AI 事件从 2024 年 <b>233 起</b>升至 <b>362 起</b></td>
+                <td>建立事件登记与复盘机制，把可追溯、可定位当作上线门槛</td>
+              </tr>
+              <tr>
+                <td><b>透明度下降</b><br><span class="small muted">Stanford AI Index 2026</span></td>
+                <td>基础模型透明度指数平均分从 <b>58 降至 40</b></td>
+                <td>优先选择公开训练与评估信息的模型；对关键场景保留人工复核</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout rose mt3"><b>共同根源：</b>不是模型失效，而是把 AI 用在了范围、指标与治理都还没有准备好的地方。识别信号出现时，先停下来补流程，而不是加大投入。</div>
+        <p class="src">来源：Klarna 2024—2025 公开披露；Commonwealth Bank 与澳大利亚金融业工会 2025 年公开信息；Stanford HAI《2026 年人工智能指数报告》（AI 事件 233→362、透明度指数 58→40）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mapping</span>
+      <h2>案例 ↔ 能力映射</h2>
+      <p>每个案例都对应明确的能力训练点，避免「为做而做」。</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>案例</th><th>所属标签页</th><th>核心能力</th><th>难度</th></tr></thead>
+        <tbody>
+          <tr><td>01 Klarna AI 客服完整弧线</td><td>真实企业案例</td><td>能力边界 · 范围治理</td><td><span class="badge amber">进阶</span></td></tr>
+          <tr><td>02 联邦银行过早裁员</td><td>真实企业案例</td><td>指标验证 · 编制决策</td><td><span class="badge rose">挑战</span></td></tr>
+          <tr><td>03 MIT / McKinsey / METR 三条证据</td><td>真实企业案例</td><td>回报衡量 · 口径统一</td><td><span class="badge amber">进阶</span></td></tr>
+          <tr><td>04 WorkBuddy 平台能力</td><td>智能体与平台实践</td><td>智能体平台 · 扩展机制</td><td><span class="badge gray">入门</span></td></tr>
+          <tr><td>05 DeepSeek Harness</td><td>智能体与平台实践</td><td>Harness · 成本与安全边界</td><td><span class="badge rose">挑战</span></td></tr>
+          <tr><td>06 斯坦福 AI Index 2026</td><td>实证数据与行业趋势</td><td>基准解读 · 能力边界</td><td><span class="badge amber">进阶</span></td></tr>
+          <tr><td>07 Gartner 行业预测</td><td>实证数据与行业趋势</td><td>项目治理 · 退出条件</td><td><span class="badge amber">进阶</span></td></tr>
+          <tr><td>08 失败模式清单</td><td>反面案例与失败模式</td><td>风险识别 · 复盘</td><td><span class="badge rose">挑战</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt3 reveal">
+      <a href="courseware.html" class="btn btn-primary">查看对应课件</a>
+      <a href="resources.html#sources" class="btn btn-outline">查看全部数据来源</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/static-mode.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

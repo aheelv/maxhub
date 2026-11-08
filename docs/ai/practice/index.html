@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="人工智能与创新设计应用课程全16次课课堂AI综合练习，按课次提供单人独立完成的任务单、背景资料、素材、分钟级步骤与可下载资源包。">
+<title>AI工具应用实践 · 16次课练习资源站</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232459d3'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EAI%3C/text%3E%3C/svg%3E">
+<style>
+:root{--ink:#17253b;--muted:#5c6b7f;--paper:#f5f7fb;--surface:#fff;--line:#e3e9f2;--blue:#2459d3;--blue-soft:#eaf0ff;--mint:#0d7c70;--mint-soft:#e8f7f4;--amber:#8a5a00;--amber-soft:#fff4d8;--violet:#5d45b5;--violet-soft:#f0edff;--shadow:0 14px 34px rgba(31,54,90,.08);--radius:20px;--content:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI","Microsoft YaHei",Arial,sans-serif;line-height:1.65}a{color:var(--blue)}button,input{font:inherit}.shell{max-width:var(--content);margin:auto;padding:0 24px}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topbar-inner{height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.01em}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--blue);color:#fff;font-size:14px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:600;letter-spacing:.05em}.top-links{display:flex;align-items:center;gap:18px}.top-links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:700}.top-links a:hover,.lesson-nav a:hover{color:var(--blue)}.top-download{padding:9px 14px;border-radius:11px;background:var(--blue-soft);color:var(--blue)!important}
+.hero{padding:58px 0 34px;background:radial-gradient(circle at 83% 12%,#e6edff 0,transparent 26%),linear-gradient(180deg,#fff 0%,#f5f7fb 100%)}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px;letter-spacing:.04em}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-.04em;margin:18px 0 16px;max-width:750px}.hero p{font-size:17px;color:var(--muted);max-width:690px;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:11px 16px;font-size:14px;font-weight:800;background:#fff;color:var(--ink);transition:transform .18s,box-shadow .18s}.button:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.button.primary{background:var(--blue);border-color:var(--blue);color:#fff}.button .arrow{font-size:18px;line-height:1}.hero-panel{background:var(--ink);color:#fff;border-radius:24px;padding:25px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-panel:after{content:"";position:absolute;right:-35px;top:-45px;width:180px;height:180px;border-radius:50%;background:rgba(92,139,255,.18)}.hero-panel h2{font-size:15px;margin:0 0 16px;color:#cdd8f1;position:relative;z-index:1}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1}.stat{padding:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:15px}.stat strong{display:block;font-size:25px;line-height:1.1}.stat span{font-size:12px;color:#c5cee0}.hero-note{font-size:12px;color:#bdc9dd!important;margin-top:15px!important;position:relative;z-index:1}
+.lesson-strip-wrap{position:sticky;top:66px;z-index:15;background:rgba(245,247,251,.93);backdrop-filter:blur(10px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.lesson-strip{display:flex;gap:8px;overflow:auto;padding:12px 0;scrollbar-width:thin}.lesson-strip a{white-space:nowrap;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:var(--muted);font-size:13px;font-weight:800}.lesson-strip a span{color:var(--blue);margin-right:6px}.lesson-strip a.active,.lesson-strip a:hover{background:var(--blue);border-color:var(--blue);color:#fff}.lesson-strip a.active span,.lesson-strip a:hover span{color:#dbe5ff}
+main{padding:28px 0 80px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:24px 0 16px}.section-heading h2{font-size:25px;letter-spacing:-.02em;margin:0}.section-heading p{margin:5px 0 0;color:var(--muted);font-size:14px}.search{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:9px 12px;min-width:225px}.search span{color:var(--muted)}.search input{border:0;outline:none;width:100%;color:var(--ink);font-size:14px}.lesson-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 28px}.lesson-nav a{display:flex;align-items:center;gap:12px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:15px;text-decoration:none;color:var(--ink);transition:.18s}.lesson-nav a:hover{box-shadow:var(--shadow);transform:translateY(-2px)}.nav-num{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-weight:900}.lesson-nav strong{display:block;font-size:14px}.lesson-nav small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.lesson-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin:0 0 22px;overflow:hidden;scroll-margin-top:140px}.lesson-head{padding:25px 28px 21px;background:linear-gradient(110deg,#fff,#f7f9ff);border-bottom:1px solid var(--line)}.lesson-kicker{display:flex;align-items:center;gap:9px;color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}.lesson-kicker .dot{height:8px;width:8px;border-radius:50%;background:var(--mint)}.lesson-head h2{font-size:26px;line-height:1.2;letter-spacing:-.025em;margin:9px 0 9px}.lesson-head p{max-width:940px;color:var(--muted);margin:0;font-size:15px}.lesson-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:var(--blue-soft);color:var(--blue);padding:5px 10px;font-size:12px;font-weight:800}.chip.green{background:var(--mint-soft);color:var(--mint)}.lesson-body{padding:24px 28px 27px}.task-callout{padding:15px 17px;border-left:4px solid var(--blue);background:#f3f6ff;border-radius:0 13px 13px 0;margin-bottom:22px}.task-callout b{display:block;font-size:12px;letter-spacing:.07em;color:var(--blue);margin-bottom:4px}.task-callout p{font-size:16px;font-weight:800;margin:0;line-height:1.5}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.info-box{border:1px solid var(--line);border-radius:15px;padding:17px;background:#fff}.info-box h3{font-size:15px;margin:0 0 9px;display:flex;align-items:center;gap:8px}.info-box h3 .icon{width:25px;height:25px;border-radius:8px;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-size:13px}.info-box p{margin:0;color:var(--muted);font-size:14px}.resource-list{display:grid;gap:8px}.resource-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 11px;background:#f8faff;border:1px solid #e8edf7;border-radius:11px}.resource-row .res-name{min-width:0}.resource-row strong{display:block;font-size:13px;line-height:1.3}.resource-row small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.download-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;border-radius:9px;background:var(--blue);color:white;text-decoration:none;padding:8px 10px;font-size:12px;font-weight:900}.download-link:hover{background:#1647b8}.steps-title{display:flex;align-items:center;gap:10px;margin:25px 0 13px}.steps-title h3{font-size:19px;margin:0}.steps-title span{color:var(--muted);font-size:12px}.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:grid;gap:9px}.steps li{counter-increment:step;display:grid;grid-template-columns:44px 100px 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}.steps li:before{content:counter(step,decimal-leading-zero);font-size:12px;color:var(--blue);font-weight:900;background:var(--blue-soft);border-radius:10px;width:35px;height:35px;display:grid;place-items:center}.step-time{font-size:12px;font-weight:900;color:var(--mint);padding-top:7px}.step-copy{font-size:14px;color:var(--muted);padding-top:4px}.step-copy strong{color:var(--ink)}.tool-prompt{margin-top:16px;padding:15px 17px;border-radius:14px;background:var(--ink);color:#f4f7ff}.tool-prompt h3{font-size:14px;margin:0 0 7px;color:#c7d6fb}.tool-prompt p{font-size:13px;color:#eef2fb;margin:0}.tool-prompt code{font-family:Consolas,monospace;color:#c4f0e8;white-space:normal}.outcomes{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:17px}.outcomes h3{font-size:15px;margin:0 0 8px}.check-list{margin:0;padding-left:19px;color:var(--muted);font-size:13px}.check-list li{padding:2px 0}.rubric{display:grid;gap:7px}.rubric-row{display:grid;grid-template-columns:1fr auto;gap:10px;font-size:13px;color:var(--muted);padding-bottom:6px;border-bottom:1px dashed var(--line)}.rubric-row strong{color:var(--ink);white-space:nowrap}.notice{margin-top:25px;padding:16px 18px;background:var(--amber-soft);border:1px solid #f2dfb1;border-radius:15px;color:#72500b;font-size:13px}.notice strong{color:var(--amber)}.footer{border-top:1px solid var(--line);background:#fff;padding:25px 0 36px;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer a{font-weight:800;text-decoration:none}.hidden{display:none!important}.no-results{display:none;border:1px dashed #b8c6dd;background:white;padding:25px;border-radius:14px;color:var(--muted);text-align:center}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:25px}.hero-panel{max-width:550px}.lesson-nav{grid-template-columns:repeat(2,1fr)}.two-col,.outcomes{grid-template-columns:1fr}.section-heading{align-items:start;flex-direction:column}.search{width:100%}.top-links{gap:10px}.top-links a:not(.top-download){display:none}}
+@media(max-width:560px){.shell{padding:0 15px}.topbar-inner{height:58px}.brand small{display:none}.hero{padding:38px 0 25px}.hero p{font-size:15px}.hero-panel{padding:19px}.stats{gap:8px}.stat{padding:11px}.stat strong{font-size:22px}.lesson-strip-wrap{top:58px}.lesson-nav{grid-template-columns:1fr 1fr;gap:8px}.lesson-nav a{padding:10px;gap:8px}.nav-num{flex-basis:32px;height:32px}.lesson-nav strong{font-size:12px}.lesson-nav small{font-size:10px}.lesson-head{padding:20px 17px 17px}.lesson-head h2{font-size:22px}.lesson-body{padding:18px 16px 20px}.steps li{grid-template-columns:34px 1fr;gap:8px;padding:11px}.steps li:before{width:30px;height:30px}.step-time{grid-column:2;padding-top:0;margin-top:-1px}.step-copy{grid-column:2;padding-top:0;margin-top:-8px}.resource-row{align-items:flex-start}.download-link{font-size:11px;padding:7px 8px}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media print{.topbar,.lesson-strip-wrap,.hero-actions,.search,.download-link,.lesson-nav{display:none!important}body{background:white}.hero{padding:10px 0}.lesson-card{box-shadow:none;break-inside:avoid}.lesson-head,.lesson-body{padding:14px}.lesson-card{margin-bottom:12px}.shell{max-width:none}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="#top" aria-label="返回页面顶部"><span class="brand-mark">AI</span><span>工具应用实践<small>课堂练习资源站</small></span></a>
+    <nav class="top-links" aria-label="主导航"><a href="#lessons">课程练习</a><a href="#resources">配套资源</a><a class="top-download" href="resources/全16次课练习资源总包.zip" download>下载全16课总包 ↓</a></nav>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="shell hero-grid">
+    <div>
+      <span class="eyebrow">全16次课 · WorkBuddy单人独立实战</span>
+      <h1>16 次课，<br>16 套看得见的成果。</h1>
+      <p>按课次对应 16 套综合练习，每套 70—100 分钟。每项任务均由一名学生独立完成：本人操作 WorkBuddy，按需使用独立会话模拟审校员 / 评委等角色，完成数据准备、核验、成果与交付；无需组员分工或同伴协作。</p>
+      <div class="hero-actions"><a class="button primary" href="#lessons">从第1次课开始 <span class="arrow">→</span></a><a class="button" href="resources/全16次课练习资源总包.zip" download>下载全16课总包 ↓</a><a class="button" href="#all-downloads">逐份资料下载</a></div>
+    </div>
+    <aside class="hero-panel" aria-label="课程概览">
+      <h2>课堂练习概览</h2>
+      <div class="stats"><div class="stat"><strong>16</strong><span>次课，逐课递进</span></div><div class="stat"><strong>70–100</strong><span>分钟操作任务 / 课</span></div><div class="stat"><strong>16</strong><span>份课程专属资源包</span></div><div class="stat"><strong>100分</strong><span>每题可核验评价表</span></div></div>
+      <p class="hero-note">单人独立完成：由你操作WorkBuddy，按需开启多个独立会话模拟不同角色；无需组员分工、同伴评审或多人同时操作。只使用虚构数据；未获授权的功能标注“模拟 / 未启用”。</p>
+    </aside>
+  </div>
+</section>
+<div class="lesson-strip-wrap"><nav class="shell lesson-strip" aria-label="十六次课快速导航"><a href="#lesson-1"><span>01</span>工具全景</a><a href="#lesson-2"><span>02</span>Token 成本</a><a href="#lesson-3"><span>03</span>多模态</a><a href="#lesson-4"><span>04</span>文档归档</a><a href="#lesson-5"><span>05</span>表格清洗</a><a href="#lesson-6"><span>06</span>数据分析</a><a href="#lesson-7"><span>07</span>BI 口径</a><a href="#lesson-8"><span>08</span>智能体权限</a><a href="#lesson-9"><span>09</span>RAG 知识库</a><a href="#lesson-10"><span>10</span>低代码问答</a><a href="#lesson-11"><span>11</span>多智能体</a><a href="#lesson-12"><span>12</span>Harness</a><a href="#lesson-13"><span>13</span>AI IDE</a><a href="#lesson-14"><span>14</span>工程护栏</a><a href="#lesson-15"><span>15</span>应用构建</a><a href="#lesson-16"><span>16</span>答辩前沿</a></nav></div>
+<main class="shell" id="lessons">
+  <div class="section-heading"><div><h2>课程练习路线</h2><p>先选课次直达；每节课从数据卡开始，按分钟步骤推进，最后对照评价表提交。</p></div><label class="search"><span aria-hidden="true">⌕</span><input id="course-search" type="search" placeholder="搜索课程主题或工具…" aria-label="搜索课程主题或工具"></label></div>
+  <nav class="lesson-nav" aria-label="课程目录"><a href="#lesson-1"><span class="nav-num">1</span><span><strong>工具全景与个人红线</strong><small>模块一 · 70分钟</small></span></a><a href="#lesson-2"><span class="nav-num">2</span><span><strong>Token 与上下文成本实测</strong><small>模块一 · 70分钟</small></span></a><a href="#lesson-3"><span class="nav-num">3</span><span><strong>多模态读图与素材生成</strong><small>模块一 · 75分钟</small></span></a><a href="#lesson-4"><span class="nav-num">4</span><span><strong>文档演示与知识归档</strong><small>模块二 · 80分钟</small></span></a><a href="#lesson-5"><span class="nav-num">5</span><span><strong>表格清洗与公式复核</strong><small>模块二 · 80分钟</small></span></a><a href="#lesson-6"><span class="nav-num">6</span><span><strong>自然语言数据分析</strong><small>模块二 · 80分钟</small></span></a><a href="#lesson-7"><span class="nav-num">7</span><span><strong>BI 口径卡与经营报告</strong><small>模块二 · 85分钟</small></span></a><a href="#lesson-8"><span class="nav-num">8</span><span><strong>智能体端到端与权限</strong><small>模块三 · 80分钟</small></span></a><a href="#lesson-9"><span class="nav-num">9</span><span><strong>知识库 RAG 与工作流</strong><small>模块三 · 85分钟</small></span></a><a href="#lesson-10"><span class="nav-num">10</span><span><strong>低代码问答智能体实战</strong><small>模块三 · 90分钟</small></span></a><a href="#lesson-11"><span class="nav-num">11</span><span><strong>多智能体与AgentOps</strong><small>模块三 · 85分钟</small></span></a><a href="#lesson-12"><span class="nav-num">12</span><span><strong>Harness结构与成本</strong><small>模块四 · 80分钟</small></span></a><a href="#lesson-13"><span class="nav-num">13</span><span><strong>AI IDE CSV检查器</strong><small>模块四 · 90分钟</small></span></a><a href="#lesson-14"><span class="nav-num">14</span><span><strong>工程护栏与Hook</strong><small>模块四 · 85分钟</small></span></a><a href="#lesson-15"><span class="nav-num">15</span><span><strong>校园活动报名应用</strong><small>模块四 · 100分钟</small></span></a><a href="#lesson-16"><span class="nav-num">16</span><span><strong>综合答辩与AI前沿</strong><small>模块五 · 90分钟</small></span></a></nav>
+  <div class="no-results" id="no-results">没有找到匹配的课程，请换一个关键词。</div>
+
+<article class="lesson-card" id="lesson-1" data-search="1 工具全景与个人红线 模块一 · 认知与原理 对应课件《课程导论：人工智能 70 年与 AI 工具全景》：三次浪潮与两次寒冬、AI⊃ML⊃DL⊃生成式 AI⊃智能体的概念层次、四层工具栈（模型层 / 应用层 / 编排层 / 建造层）、能力上升但不均匀的三条数据、以及「哪些数据绝不上传」的合规底线。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第1次课 · 模块一</div><h2>工具全景与个人红线</h2><p>对应课件《课程导论：人工智能 70 年与 AI 工具全景》：三次浪潮与两次寒冬、AI⊃ML⊃DL⊃生成式 AI⊃智能体的概念层次、四层工具栈（模型层 / 应用层 / 编排层 / 建造层）、能力上升但不均匀的三条数据、以及「哪些数据绝不上传」的合规底线。</p>
+<div class="lesson-meta"><span class="chip">⏱ 70分钟</span><span class="chip green">目标：工具全景与个人红线</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人使用 WorkBuddy，完成《AI 工具全景与个人使用红线》三件套：一张四层工具全景表、一份同题三工具对比记录、一份可打勾的个人红线清单，并用三句话写出本课复盘卡。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>你是本校「AI 学习社团」新加入的成员。社团要在下周的新生分享会上发一份《工具选型参考》，但往届留下的是一份把 12 个工具混在一张表里、层次不清、还夹着两处明显错误的旧清单；同时社团群里有同学提议「把会员报名表直接丢给 AI 分析」。你需要独立用 WorkBuddy 把这份材料整理成一张能讲清楚的四层工具全景图，做一次同题三工具的可复核对比，并给出一份 10 条以内、每条都能用「是 / 否」判断的个人数据红线清单。材料中故意放入一处错误：旧清单把「智能体」标成了模型层；另有一处来源存疑的「采用率 95%」说法，与…</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第1次课｜工具全景与个人红线资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第1次课_工具全景与个人红线.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜AI_Index_excerpt.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第1次课/AI_Index_excerpt.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜L1-compare-template.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第1次课/L1-compare-template.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜L1-redline-template.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第1次课/L1-redline-template.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜L1-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第1次课/L1-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第1次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜prompt_three_questions.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第1次课/prompt_three_questions.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜redline_cases.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第1次课/redline_cases.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜tool_inventory.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第1次课/tool_inventory.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第1次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第1次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第1次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第1次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程由你一人完成，不需要组员、同伴互评或多人同时在线。需要「第二个视角」时，在同一 WorkBuddy 账号下新开一个独立会话扮演审校员，且不要把前一会话的结论透露给它；最终判断由你本人签核。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 70 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>建立个人工作区并冻结输入。</strong>在 WorkBuddy 新建本课工作区，一次性上传全部 7 个素材文件，输出目录命名为 L01-个人-工具全景-v1。发出通用准备提示词，要求它先复述：只能用上传材料、不得联网补充数字、先给计划不写文件。检查它是否准确说出「四层工具栈」与「有一条数据存疑」；复述不对就先纠正理解，再进入下一步。保留这一轮提示与回复截图。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>材料体检：找出错误与口径冲突。</strong>让 WorkBuddy 读取 tool_inventory.csv 与 AI_Index_excerpt.txt，输出：总行数、每层条数、授权=是/否 的条数、被标错层次的行号及理由、与课件口径冲突的数字。你本人打开原 CSV 逐行数一遍，把结果填进 L1-验收表.csv 前 4 项。注意：WorkBuddy 说「已修正」不等于已核对，必须自己数。</div></li>
+<li><span class="step-time">15分钟</span><div class="step-copy"><strong>同题三工具对比（可复现实验）。</strong>从 prompt_three_questions.txt 取第一题，逐字一致地分别发给三个不同的对话工具（至少包含 WorkBuddy 一个独立会话；其余两个可用课堂上可用的其他模型或同一 WorkBuddy 的不同预设，须如实记录名称与版本）。把三轮原始回答原样粘贴保存，再让 WorkBuddy 按 L1-compare-template.csv 的五个维度（准确性、依据可查、结构完整、边界意识、可复核性）各打 1—5 分并逐项写一句理由。禁止写「哪个最强」这种无依据结论；若三轮提示有任何一处不一致，作废重跑。</div></li>
+<li><span class="step-time">15分钟</span><div class="step-copy"><strong>画四层工具全景图并写概念层次。</strong>让 WorkBuddy 依据修正后的清单输出一张四层工具栈表（模型层 / 应用层 / 编排层 / 建造层），每层写清「解决什么问题、代表能力、本课是否用得上」，并用一句话写明 AI⊃ML⊃DL⊃生成式 AI⊃智能体 的包含关系。再挑一个校园场景（例如「社团活动报名统计」），标注它分别落在这五个概念的哪一层。要求表格中所有数字都来自上传材料。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>制定可打勾的个人红线清单。</strong>逐条判定 redline_cases.txt 的 10 个场景，让 WorkBuddy 先给判定与理由，再由你本人复核；把结论压缩成不超过 10 条规则，每条必须能用「是 / 否」判断（例如「含真实学号的表格：不上传」），不能写「注意隐私」这类无法执行的空话。填入 L1-redline-template.csv，并标明每条对应哪个场景编号。</div></li>
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>交叉复核与三句话复盘卡。</strong>新开一个 WorkBuddy 独立审校会话，只给它原始素材和验收表，不给你的结论，请它独立列出「层次错标行、数字冲突、禁止上传场景数」三项。与你的结果比对，不一致处回到原文件定位。最后用三句话写复盘卡：①我原来以为…②实测发现…③下次我会…，存入工作区并命名 L01-个人-复盘卡-v1。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>文件上传与读取（一次上传 7 个素材，限定「只用这些材料」）；结构化表格输出（生成四层全景表与五维对比表）；多会话独立审校（新会话盲审三项结论，不投喂前一会话答案）；文档与资料库归档（把复盘卡与红线清单存入本课工作区，形成个人经验库第一条）；对话与追问（三轮同题对比、逐项打分理由）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出：①你理解的目标；②输入文件及版本；③必须遵守的限制；④按分钟的操作计划；⑤逐项验收方法；⑥你将生成或修改的文件清单。此轮只做计划，不写文件、不访问网络、不连接服务、不发布。材料不够时列出具体文件名和字段，不得自行补造。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>一张修正后的四层工具全景表（12 条工具、层次与授权标注正确、含错标说明）</li>
+<li>同题三工具对比记录：三轮逐字一致的原始回答 + 五维评分表 + 每项一句理由</li>
+<li>不超过 10 条、每条可打勾判定的个人数据红线清单（对应场景编号）</li>
+<li>三句话复盘卡，以及一次独立会话盲审与你的结果比对记录</li>
+<li>填好的 L1-验收表.csv，10 项中至少 9 项通过，未通过项写明原因</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>四层工具栈与五个概念层次辨析准确</span><strong>20</strong></div>
+<div class="rubric-row"><span>材料体检：行数、层次错标、数字冲突三项可复核</span><strong>20</strong></div>
+<div class="rubric-row"><span>同题对比实验可复现（提示逐字一致、原始回答留证）</span><strong>20</strong></div>
+<div class="rubric-row"><span>红线清单可执行、覆盖全部禁止场景</span><strong>20</strong></div>
+<div class="rubric-row"><span>独立审校与复盘卡、验收表留证完整</span><strong>20</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-2" data-search="2 Token 与上下文成本实测 模块一 · 认知与原理 对应课件《大语言模型：从 n-gram 到 Transformer 与推理模型》：预测下一个词、Token 与分词、上下文窗口、注意力与长上下文代价、推理模型的「思考」也是消耗、结构化提示四要素（角色 / 任务 / 约束 / 格式）、以及「这份活值不值得交给 AI」的四步成本估算。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第2次课 · 模块一</div><h2>Token 与上下文成本实测</h2><p>对应课件《大语言模型：从 n-gram 到 Transformer 与推理模型》：预测下一个词、Token 与分词、上下文窗口、注意力与长上下文代价、推理模型的「思考」也是消耗、结构化提示四要素（角色 / 任务 / 约束 / 格式）、以及「这份活值不值得交给 AI」的四步成本估算。</p>
+<div class="lesson-meta"><span class="chip">⏱ 70分钟</span><span class="chip green">目标：Token 与上下文成本实测</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《Token 与上下文成本实测报告》：两轮对照实验记录、一份四要素结构化提示、一张成本估算表，以及一句有数字支撑的「值不值得」结论。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>校园「旧书循环站」要把一批读者留言整理成月度简报。上一届同学的做法是把 60 条留言一次性粘进对话框反复追问了 6 轮，结果前后口径不一致、还把两处数字说错。你这轮要独立用 WorkBuddy 做一次对照实验：同一份材料，分别用「模糊提示 + 多轮追问」和「四要素结构化提示 + 一轮交付」跑两遍，用量与结果都留证；再结合给定的虚构计价表，算出两种做法的成本差，判断这类活是否值得交给 AI、以及该把哪一段交给 AI。材料中 token_price.csv 是课堂虚构单价，不得替换为真实商用价格。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第2次课｜Token 与上下文成本实测资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第2次课_Token与上下文成本实测.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜L2-实验记录.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第2次课/L2-实验记录.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜L2-成本估算表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第2次课/L2-成本估算表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜L2-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第2次课/L2-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第2次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜reader_notes.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第2次课/reader_notes.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜token_price.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第2次课/token_price.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜usage_samples.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第2次课/usage_samples.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜vague_prompt.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第2次课/vague_prompt.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第2次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第2次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第2次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第2次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。两轮实验必须在互不共享上下文的新会话中进行，避免前一轮结果污染后一轮；用量若产品不显示，按 usage_samples.csv 的课堂模拟读数人工记录并标注「模拟读数」，不得编造为真实计费。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 70 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料与通用准备。</strong>在 WorkBuddy 新建工作区，上传全部 7 个文件，输出目录 L02-个人-Token实测-v1。发通用准备提示词，明确「单价只取 token_price.csv、用量只取 usage_samples.csv、不得联网查真实价格」。要求它先复述四步成本估算口径与「两轮必须独立会话」这一限制。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>体检输入材料。</strong>让 WorkBuddy 统计 reader_notes.txt 的总条数、重复条数、空内容条数、含数字口误的条数，并给出有效唯一留言数；你本人打开文件逐条数一遍核对，填入 L2-验收表.csv 前 3 项。再让它解释：为什么「60 条一起塞进去」会让上下文随轮次增长——要求用「输入 token 被反复携带」这一机制说清，不许只答「因为很长」。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>第一轮：模糊提示 + 多轮追问（对照基线）。</strong>新开会话 A，先上传 reader_notes.txt，逐字发送 vague_prompt.txt 的模糊提示，然后按真实习惯追问至少 3 轮（例如「再短点」「加个数字」「刚才那个数改一下」）。保存每一轮的原始提示与回答，记录累计轮次、各轮输入/输出读数（产品不显示则按 usage_samples.csv 对应记录人工填写并标「模拟读数」）。检查最终稿里是否出现前后口径不一致或把口误数字当真。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>第二轮：四要素结构化提示 + 一轮交付。</strong>新开会话 B，不复制会话 A 的任何结论，只上传同样的 reader_notes.txt。把 vague_prompt 改写成同时包含角色、任务、约束、格式的四要素提示（例如：角色=校园运营分析员；任务=整理三条月度要点；约束=不超过 200 字、保留原始数字、剔除重复与空内容、口误数字标「需核验」；格式=指标/数值/解读 三列一轮给全）。争取一轮定稿，记录读数与是否一次通过。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>算钱：四步成本估算。</strong>把 usage_samples.csv 的 5 次记录按 token_price.csv 折算成 ¥，填入 L2-成本估算表.csv；再分别算两轮实验各自的输入+输出成本，给出差额与「多轮追问多花了多少」。最后补上第四步：与人工整理 60 条留言的估计耗时、以及两轮质量差异对照，写出「哪一段值得交给 AI、哪一段必须人工核」。所有算式要在表里可见，不能只给结果。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立复核与一页结论。</strong>新开 WorkBuddy 独立审校会话，只给原始文件与验收标准，让它独立核对有效唯一留言数、两轮读数差额与四要素是否齐全；与你比对。最后写一页《Token 与上下文成本实测报告》，含一句有数字支撑的结论（例如「结构化提示把 4 轮压到 1 轮，输入 token 减少约 X，且未出现口径漂移」），并明确标注哪些数字是课堂模拟读数。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>文件读取与统计（统计 60 条留言并识别重复/空值/口误）；多会话隔离（会话 A / B / 审校会话互不共享上下文）；结构化提示构造（角色/任务/约束/格式四要素一轮交付）；表格生成与计算（成本估算表内保留可见算式）；文档导出（生成一页实测报告并归档）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、必须遵守的限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不访问网络、不连接服务、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>两轮对照实验记录：每轮原始提示与回答、轮次、输入/输出读数及来源标注</li>
+<li>一份四要素结构化提示（四要素逐项标注，缺一不可）</li>
+<li>L2-实验记录.csv 与 L2-成本估算表.csv（含可见算式与 5 行折算结果）</li>
+<li>一页《Token 与上下文成本实测报告》，结论含具体数字并标注模拟读数</li>
+<li>独立审校比对记录与填好的 L2-验收表.csv</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>Token / 上下文机制解释准确（输入被反复携带）</span><strong>20</strong></div>
+<div class="rubric-row"><span>两轮实验独立可复现、原始回答留证</span><strong>20</strong></div>
+<div class="rubric-row"><span>四要素提示完整且一轮交付有效</span><strong>20</strong></div>
+<div class="rubric-row"><span>成本估算四步齐全、算式可复核、单价未串用</span><strong>25</strong></div>
+<div class="rubric-row"><span>独立审校、模拟读数标注与结论有数字支撑</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-3" data-search="3 多模态读图与素材生成 模块一 · 认知与原理 对应课件《生成式 AI 与多模态》：AIGC 的能力边界、四要素提示与给例子（few-shot）、多模态读图最容易出错的位置（双坐标轴、单位、截断轴、图例）、生成内容必须标注 AI 生成、以及「三条就够用」的验证清单。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第3次课 · 模块一</div><h2>多模态读图与素材生成</h2><p>对应课件《生成式 AI 与多模态》：AIGC 的能力边界、四要素提示与给例子（few-shot）、多模态读图最容易出错的位置（双坐标轴、单位、截断轴、图例）、生成内容必须标注 AI 生成、以及「三条就够用」的验证清单。</p>
+<div class="lesson-meta"><span class="chip">⏱ 75分钟</span><span class="chip green">目标：多模态读图与素材生成</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《多模态读图核验与宣传素材包》：一张由 AI 生成再被 AI 读回的图表、一份逐项读图核验表、三条可背下来的验证清单、一套四要素提示生成的宣传文案。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>校园「绿色出行月」要发一张双坐标轴宣传图：柱形是每月骑行人次，折线是参与率。设计稿由上一届同学用 AI 生成，图上把参与率的百分号写成了小数、纵轴还从 0.3 截断，导致看图的人普遍高估了增幅。你要独立用 WorkBuddy 做一次闭环验证：先依据给定的真实数据让 AI 生成一张图表图片，再在一个全新的会话里让它只凭图片读回数值，与真值表逐项比对，找出多模态最容易读错的三类位置；最后按四要素提示产出一套宣传文案，并给每条文案标注 AI 生成与核验状态。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第3次课｜多模态读图与素材生成资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第3次课_多模态读图与素材生成.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜L3-素材验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第3次课/L3-素材验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜L3-读图核验表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第3次课/L3-读图核验表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜L3-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第3次课/L3-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第3次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜chart_notes.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第3次课/chart_notes.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜chart_truth.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第3次课/chart_truth.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜material_brief.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第3次课/material_brief.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜plot_prompt.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第3次课/plot_prompt.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第3次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第3次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第3次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第3次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。「生成图」与「读图」必须是两个互不共享上下文的独立会话；读图会话只拿到图片，不能拿到真值表，否则实验失效。若当前版本无法生成图片，改用 chart_truth.csv 自行在表格工具中作图并导出 PNG，标注「人工作图 / AI 读图」，不得把人工图说成 AI 生成。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 75 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料与通用准备。</strong>新建工作区并上传 7 个文件，输出目录 L03-个人-多模态核验-v1。发通用准备提示词，重点声明：「生成会话」与「读图会话」必须隔离，读图会话不得上传 chart_truth.csv；所有数字以 chart_truth.csv 为准。让 WorkBuddy 复述这两条限制，不正确先纠正。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>用四要素提示生成图表。</strong>新开会话 A，把 plot_prompt.txt 改写成含角色、任务、约束、格式的四要素提示：柱形=骑行人次（左轴，从 0 起）、折线=参与率（右轴，显示百分比）、必须标单位与图例、6 个月份齐全。让 WorkBuddy 依据 chart_truth.csv 生成图表图片并保存为 chart_gen.png。若产品不支持出图，按「人工作图 / AI 读图」路径处理并在验收表标注。检查生成图是否漏月、漏单位或轴被截断。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>盲读图：新会话只读图片。</strong>新开会话 B，只上传 chart_gen.png，不给任何数据表。要求它逐月读出骑行人次与参与率，输出 6×2 的读数表，并回答「哪个月最高」「增幅大约多少」「右轴单位是什么」。原样保存回答。随后把 chart_truth.csv 交给同一个会话，让它对照真值表自评哪些读数错了、错在哪类位置。你本人再逐格核对一遍，填入 L3-读图核验表.csv，每项写明证据是图中哪个位置。</div></li>
+<li><span class="step-time">15分钟</span><div class="step-copy"><strong>归纳三条验证清单。</strong>让 WorkBuddy 基于这次真实错误（不是泛泛而谈）归纳三条能背下来的验证规则，例如「先读轴与单位，再读数值」「双轴图分别核对两列真值」「 AI 读出的每个数字回到原始表复算」。每条必须对应本次核验表里的至少一个错误项，不能写「仔细一点」这类空话。写入 L3-素材验收表.csv。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>四要素提示生成宣传素材并标注。</strong>依据 material_brief.txt，用含示例（few-shot）的四要素提示生成 3 条宣传文案，每条不超过 60 字。约束：只使用 chart_truth.csv 中已核验的数字、禁用「大幅提升」「翻倍」等未证实表述、每条末尾标注「AI 生成 · 已核验 / 待核验」。让 WorkBuddy 先给一个你提供的示例格式，再按同一格式产出 3 条，检查是否有数字越界。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立审校与素材包归档。</strong>新开审校会话，只给图片、真值表和你的核验表，让它独立指出「读数错误最多的类别」与「文案里是否有未核验数字」。与你的结论比对。最后把图表、核验表、三条清单、三条文案与审校记录打成 L03-个人-宣传素材包-v1 文件夹，逐项勾选 L3-验收表.csv。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>图表 / 图像生成（按四要素提示生成双坐标轴图）；多模态读图（新会话只凭图片读回 6×2 数值）；文件读取与比对（真值表逐格比对并标证据位置）；few-shot 文案生成（给示例后按同格式产出 3 条文案）；多会话独立审校（审校会话独立指出错误类别与违规数字）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>chart_gen.png（或标注清楚的替代图）与生成会话的四要素提示全文</li>
+<li>盲读会话的 6×2 读数原始回答，以及逐格填写的 L3-读图核验表.csv</li>
+<li>三条可背下来的验证清单，每条对应本次至少一个真实错误项</li>
+<li>3 条 few-shot 宣传文案，含 AI 生成标识与核验状态</li>
+<li>独立审校记录、素材包文件夹与填好的 L3-验收表.csv</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>生成 / 读图两会话隔离且实验可复现</span><strong>20</strong></div>
+<div class="rubric-row"><span>读图核验逐格准确、证据位置明确</span><strong>25</strong></div>
+<div class="rubric-row"><span>三条验证清单可执行且与真实错误对应</span><strong>20</strong></div>
+<div class="rubric-row"><span>文案四要素齐全、数字无越界、标注规范</span><strong>20</strong></div>
+<div class="rubric-row"><span>独立审校、AI 生成标识与素材包留证</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-4" data-search="4 文档演示与知识归档 模块二 · 办公与数据 对应课件《AI 办公实践：文档、PPT 与知识管理》：需求描述四件事（交付物 / 读者与场合 / 必备内容 / 约束）、长文档压成一条叙事线（每页只讲一件事）、三类验收（数字、来源、格式）、模板与资料库归档、以及「敢不敢署名」的交付责任。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第4次课 · 模块二</div><h2>文档演示与知识归档</h2><p>对应课件《AI 办公实践：文档、PPT 与知识管理》：需求描述四件事（交付物 / 读者与场合 / 必备内容 / 约束）、长文档压成一条叙事线（每页只讲一件事）、三类验收（数字、来源、格式）、模板与资料库归档、以及「敢不敢署名」的交付责任。</p>
+<div class="lesson-meta"><span class="chip">⏱ 80分钟</span><span class="chip green">目标：文档演示与知识归档</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《咖啡角月度复盘交付包》：一份 1,500 字简报 docx、一份 8 页演示 pptx、一张三类验收表、一套可复用的归档规则与模板。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>「校园咖啡角」店长要做月度复盘会，手上只有一份 1,200 字的原始经营笔记：夹杂着口述、重复段落、两处前后矛盾的数字和一页无关的值班表。往届同学直接让 AI「写个简报」，结果 AI 把矛盾数字自行「圆」成了一个新数字，复盘会上被当场问住。你这轮要独立用 WorkBuddy 走完整条交付链：先按四件事写清需求、产出一份 1,500 字左右的 docx 简报；再把简报压成 8 页 pptx，每页只讲一件事；最后用三类验收逐项核对，把可复用的模板与成品一起归档到资料库，并写下你敢署名的理由。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第4次课｜文档演示与知识归档资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第4次课_文档演示与知识归档.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜L4-八页结构表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第4次课/L4-八页结构表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜L4-需求卡.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第4次课/L4-需求卡.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜L4-验收表-填写说明.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第4次课/L4-验收表-填写说明.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜L4-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第4次课/L4-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第4次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜archive_rules.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第4次课/archive_rules.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜source_material.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第4次课/source_material.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第4次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第4次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第4次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第4次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成，不需要同伴评审。矛盾数字不得由 AI 自行决定，必须由你本人在原笔记中定位并标注「待店长确认」，这是本课的核心考点；署名结论由你本人写，不交给 AI 代写。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 80 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>冻结材料并写「四件事」需求卡。</strong>新建工作区上传 6 个文件，输出目录 L04-个人-咖啡角复盘-v1。先不生成任何文档：让 WorkBuddy 依据 L4-需求卡.txt 把需求改写成四件事（交付物 / 读者与场合 / 必备内容 / 约束），并复述「矛盾数字只标注不裁决」。你确认四件事齐全后，再让它列输出文件清单与分钟计划。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>材料体检：抓矛盾、重复与无关段。</strong>让 WorkBuddy 通读 source_material.md，输出：重复段落位置、两处矛盾数字及各自所在段、无关段落（值班表）范围、可用于趋势/成本/建议的段落编号。你本人打开原文逐项核对，把两处营收值都记进 L4-验收表.csv 的前 4 项。若 AI 擅自给了一个「正确值」，保留该回答作为反例并纠正。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>生成 1,500 字简报 docx 并逐项验收。</strong>按四件事发提示：角色=面向店长的运营分析员；交付物=约 1,500 字 docx；必备=营收趋势、成本结构、三条改进建议；约束=保留原始数字、矛盾处写「待店长确认」、每条建议标依据段落、不删原始笔记、不用夸张形容词。生成后让 WorkBuddy 导出 docx 并列出文档中的全部数字；你逐个回到 source_material.md 核对，任何 AI 新造的数字都要标出并要求改写。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>压成 8 页演示：一条叙事线。</strong>用 L4-八页结构表.csv 先写 8 个「一句判断」式标题，再让 WorkBuddy 从简报里为每页只取一个要点，生成 8 页 pptx。检查每页是否只讲一件事、是否把「待店长确认」如实带上、有没有把简报里的三段话塞进同一页。若某页出现两个结论，拆页或删减，宁可少一页也不堆。</div></li>
+<li><span class="step-time">12分钟</span><div class="step-copy"><strong>三类验收与可署名判断。</strong>按 L4-验收表.csv 逐项过 12 项：数字（是否与原文一致、矛盾是否标注、无新造数字、单位统一）、来源（每条建议有段落依据、模板来源、数据出处、版本）、格式（字数、8 页、命名、docx/pptx 可打开）。每项写「通过 / 不通过 + 证据」。最后由你本人写 3—5 句「我为什么敢署名」，说明哪些地方你亲自核过、哪些仍未确认。</div></li>
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>归档到资料库并沉淀模板。</strong>按 archive_rules.txt 把简报、演示、验收表、需求卡模板分别归档；把「四件事需求卡」和「8 页叙事线表」存为可复用模板并命名 template-。新开一个 WorkBuddy 会话，只给它归档目录与验收表，让它检查命名、版本与缺件，输出一份归档清单。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>文档生成与导出（docx）（按四件事生成 1,500 字简报并导出）；演示生成与导出（pptx）（8 页叙事线，每页一句判断）；长文读取与信息抽取（定位重复、矛盾、无关段落）；资料库归档与模板复用（按规则归档并保存可复用模板）；多会话独立检查（新会话按验收表查命名与缺件）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>一份约 1,500 字的简报 docx（数字全部可回溯原文、矛盾处并列标注）</li>
+<li>一份 8 页演示 pptx（每页一句判断式标题、只讲一件事）</li>
+<li>L4-八页结构表.csv 与 L4-验收表.csv（12 项逐项通过/不通过 + 证据）</li>
+<li>由你本人写的 3—5 句「我为什么敢署名」</li>
+<li>按 archive_rules.txt 归档的文件夹、两份可复用模板与独立会话归档清单</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>需求四件事齐全且矛盾数字未被 AI 擅自裁决</span><strong>20</strong></div>
+<div class="rubric-row"><span>简报数字、来源与必备内容准确</span><strong>20</strong></div>
+<div class="rubric-row"><span>8 页叙事线每页只讲一件事、标题为判断句</span><strong>20</strong></div>
+<div class="rubric-row"><span>三类 12 项验收逐项留证、署名说明由本人完成</span><strong>25</strong></div>
+<div class="rubric-row"><span>归档规范、模板可复用、独立检查留证</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-5" data-search="5 表格清洗与公式复核 模块二 · 办公与数据 对应课件《AI + 表格：智能表格、公式生成与数据清洗》：自然语言生成公式后必须复核引用范围与边界、五类脏数据（重复 / 缺失 / 格式不一 / 单位混用 / 异常值）要先写规则再动手、「原始表只读 + 结果另存 + 清洗留痕」、随机抽样 20 行验证没有引入新错误。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第5次课 · 模块二</div><h2>表格清洗与公式复核</h2><p>对应课件《AI + 表格：智能表格、公式生成与数据清洗》：自然语言生成公式后必须复核引用范围与边界、五类脏数据（重复 / 缺失 / 格式不一 / 单位混用 / 异常值）要先写规则再动手、「原始表只读 + 结果另存 + 清洗留痕」、随机抽样 20 行验证没有引入新错误。</p>
+<div class="lesson-meta"><span class="chip">⏱ 80分钟</span><span class="chip green">目标：表格清洗与公式复核</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《订单表清洗与公式复核报告》：三个可复核算式、一份干净表、一张清洗留痕表、一次 20 行抽样复核，以及清洗前后合计金额的对账说明。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>校园「二手教材寄售」平台导出了 3 月订单表，运营同学想直接拿它算佣金，但表里混着重复订单、金额写成「58元」和「58」两种、日期有 3 种格式、门店名有简称与全称、还有两条负数金额的异常记录。更麻烦的是，往届同学让 AI「清洗一下」，AI 顺手把负数当成正数补进了合计，佣金算多了一截。你这轮要独立用 WorkBuddy 按「先写规则、再执行、后抽样」的顺序完成一次可追溯清洗：先生成并人工复核三个公式，再按五条规则清洗，最后随机抽 20 行验证清洗没引入新错误。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第5次课｜表格清洗与公式复核资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第5次课_表格清洗与公式复核.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜L5-公式复核表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/L5-公式复核表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜L5-对账表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/L5-对账表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜L5-抽样复核.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/L5-抽样复核.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜L5-清洗留痕.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/L5-清洗留痕.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜L5-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/L5-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第5次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜clean_rules.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第5次课/clean_rules.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜orders_raw.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第5次课/orders_raw.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第5次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第5次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第5次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第5次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。原始表 orders_raw.csv 必须只读、不得覆盖；抽样复核由你本人在结果表上随机取行，不能让生成清洗结果的同一个会话既清洗又自证。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 80 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结原始表并写通用准备。</strong>新建工作区上传 7 个文件，输出目录 L05-个人-订单清洗-v1。发通用准备提示词，明确三条硬约束：orders_raw.csv 只读、结果另存 orders_clean.csv、任何删除/改写都要在留痕表有行号记录。让 WorkBuddy 复述这三条，并先给计划不写文件。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>三个公式：AI 生成，你来验。</strong>让 WorkBuddy 用自然语言生成三个公式：①有效合计（排除负数与空值）②按门店分组小计 ③佣金 = 有效合计 × 费率。对每个公式，你必须在 L5-公式复核表.csv 写清引用范围（起止行）、边界条件（空值/文本/负数如何处理）、并手算一个 3 行小样本校验。特别注意引用范围是否漏掉最后一行——这是 AI 写公式最常见的错。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>先写规则、再清洗五类脏数据。</strong>先逐条确认 clean_rules.txt 的五条规则与优先级，再让 WorkBuddy 按规则执行：重复订单号保留最早一条、金额统一为数值、日期统一格式、门店名归一、负数标「待确认」并排除出有效合计。要求它同时输出 L5-清洗留痕.csv 风格的中间表（行号 / 问题类型 / 依据规则 / 前后值），并另存 orders_clean.csv。你核对留痕行数是否等于发现的问题数；不相等就说明有「悄悄改了没记录」的动作。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>20 行随机抽样：新会话盲查。</strong>新开一个 WorkBuddy 会话，只给它 orders_raw.csv、orders_clean.csv 和清洗规则，不给清洗结论。请它随机抽取 20 行，逐行对照原始值判断「改动是否有规则依据、是否被留痕表记录」，输出 L5-抽样复核.csv。你本人再核对其中至少 5 行。任何一处不一致且无留痕，立即回滚（不用覆盖，另存 v0-failed 后重跑并说明原因）。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>对账：把两个合计说清楚。</strong>填写 L5-对账表.csv：原始 60 行含异常合计、清洗后 56 行有效合计、两者差额及构成（4 条重复 + 2 条负数 + 格式统一带来的 0 差额）。让 WorkBuddy 用一句话说明「为什么不能用含异常合计算佣金」。再把三个公式套到有效合计上算出佣金，保留算式。</div></li>
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>归档与验收。</strong>把原始表、干净表、留痕、抽样、对账、公式复核表一起归档；新开审校会话按 L5-验收表.csv 检查 10 项（原始表未被覆盖、行数、去重、负数处理、格式、留痕齐、抽样一致、对账可算、公式边界、文件命名），输出一张通过/不通过清单。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>表格读取与公式生成（自然语言生成 3 个公式并输出到复核表）；数据清洗与结果另存（按规则生成 orders_clean.csv 与留痕表）；表格计算与对账（分组小计、有效合计、佣金算式）；多会话独立抽样（新会话盲抽 20 行验证）；文件管理与版本（原始表只读、失败版本另存 v0-failed）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>orders_clean.csv（56 行）与 L5-清洗留痕.csv（逐条可查）</li>
+<li>L5-公式复核表.csv：三个公式的引用范围、边界条件与小样本手算校验</li>
+<li>L5-抽样复核.csv：新会话盲抽 20 行结果与你本人复核至少 5 行的记录</li>
+<li>L5-对账表.csv：含异常合计、有效合计、差额构成与佣金算式</li>
+<li>L5-验收表.csv 10 项通过/不通过清单与归档文件（原始表保存完好）</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>公式引用范围与边界条件复核到位</span><strong>20</strong></div>
+<div class="rubric-row"><span>五类脏数据按规则清洗、留痕逐条可查</span><strong>25</strong></div>
+<div class="rubric-row"><span>20 行独立抽样与回滚机制正确</span><strong>20</strong></div>
+<div class="rubric-row"><span>两组合计对账清晰、佣金只用有效合计</span><strong>20</strong></div>
+<div class="rubric-row"><span>原始表只读、验收表与归档完整</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-6" data-search="6 自然语言数据分析 模块二 · 办公与数据 对应课件《用自然语言做数据分析：代码解释器与 AI 分析师》：把模糊问题拆成口径清楚的四步分析、AI 写代码并真实执行、为三类关系各选一种合适的图、每步打印中间结果并用分组小计校验总量、以及三类统计误用（相关当因果、百分比基数错误、幸存者偏差）。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第6次课 · 模块二</div><h2>自然语言数据分析</h2><p>对应课件《用自然语言做数据分析：代码解释器与 AI 分析师》：把模糊问题拆成口径清楚的四步分析、AI 写代码并真实执行、为三类关系各选一种合适的图、每步打印中间结果并用分组小计校验总量、以及三类统计误用（相关当因果、百分比基数错误、幸存者偏差）。</p>
+<div class="lesson-meta"><span class="chip">⏱ 80分钟</span><span class="chip green">目标：自然语言数据分析</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《3 月门店经营分析报告》：一份带口径的四步分析任务书、可复现脚本与中间结果、三张选对图的图表、三条带数字的结论，以及一张误用排查表。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>「校园文创小店」有 6 个门店 3 月的订单明细和 2 月对照数据。店长问「看看有什么问题」，这是一句无法执行的提问。更糟的是，上一届同学据此得出「A 店客单价高所以最该扩店」的结论，但那家店的订单里混着未剔除的退款单，且样本只有 4 单。你要独立用 WorkBuddy 把这句模糊提问改写成口径清楚的四步分析，让 AI 写脚本真实执行、每步打印中间结果，用分组小计校验总量，为三类关系各选一种图，最后用三类误用清单给自己的结论挑刺。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第6次课｜自然语言数据分析资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第6次课_自然语言数据分析.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜L6-四步分析表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/L6-四步分析表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜L6-图表选择表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/L6-图表选择表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜L6-误用检查表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/L6-误用检查表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜L6-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/L6-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第6次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜analysis_brief.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第6次课/analysis_brief.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜sales_february.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/sales_february.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜sales_march.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第6次课/sales_march.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第6次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第6次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第6次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第6次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。「分析」与「挑刺」必须用两个独立会话：挑刺会话只拿到脚本、结果与数据，不拿到你的结论措辞。AI 说「已执行」不等于真的跑过，必须以打印出的中间结果和分组小计为证。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 80 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料与口径确认。</strong>新建工作区上传 7 个文件，输出目录 L06-个人-经营分析-v1。发通用准备提示词，让 WorkBuddy 先复述固定口径（已支付 / 不含税 / 剔除退款与测试单 / 3 月），并说明「先给计划不跑数」。口径复述不全就先纠正，不进入分析。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>把模糊提问改写成四步任务书。</strong>把 analysis_brief.txt 里「看看有什么问题」改写成四步可执行分析：①按口径筛选并打印各类状态行数 ②按门店算营收与客单价 ③与 2 月对照算环比、标出下降超过 2% 的门店 ④用分组小计校验总量。每一步在 L6-四步分析表.csv 写清「输入、口径、应打印的中间结果、校验方式」。要求 WorkBuddy 明确「每步打印中间结果，不许直接给结论」。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>让 AI 写脚本、真实执行、逐步留证。</strong>让 WorkBuddy 按四步任务书写出可复现脚本并真实运行，保存脚本文件与每一步打印输出。你本人核对：状态行数是否为 70/5/3、各门店分组小计相加是否等于有效总计、环比用的是 2 月汇总表而不是 3 月自比。若产品不能执行代码，改用表格公式逐步计算并把每步结果截图，标注「表格计算 / 未执行代码」，不得声称已运行脚本。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>三类关系各选一种图，并写可验证结论。</strong>按 L6-图表选择表.csv 为「门店间比较 / 两月趋势 / 订单金额分布」各选一种图（柱图 / 折线 / 直方图），说明为什么不选另外两种。每张图配一句能被验证的结论，句中必须有具体数字且能回到分组小计。让 WorkBuddy 生成图后，你检查坐标轴是否从 0 起、单位是否标注（承接第 3 课读图教训）。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>挑刺：三类统计误用自查。</strong>新开独立会话，只给脚本、打印结果、两张数据表与 L6-误用检查表.csv，不给你的结论措辞。请它逐项检查 9 个检查项，重点追问「A 店 4 单能否推出扩店结论」「环比百分比的分母写对了吗」「只看还在营业的店会漏掉什么」。把命中项填进检查表，并回去修订三条结论：凡小样本、基数不明、只看幸存者的表述都要加限定语。</div></li>
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>对账、归档与验收。</strong>让 WorkBuddy 汇总一页《3 月门店经营分析报告》，含口径、四步中间结果、三张图、三条修订后结论、误用检查命中项。填写 L6-验收表.csv 10 项，特别确认「分组小计 = 总计」与「脚本可复跑」。归档脚本、输出日志、图与报告。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>代码生成与真实执行（四步脚本逐步打印中间结果）；文件读取与口径筛选（按状态/日期筛选 78 行订单）；图表生成（三类关系三张图，轴与单位可核）；多会话独立挑刺（盲查三类统计误用）；报告文档导出（一页含口径与证据的分析报告）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>四步分析任务书（L6-四步分析表.csv，每步有口径与校验方式）</li>
+<li>可复现脚本与逐步打印输出（或标注清楚的表格计算路径）</li>
+<li>三张选对图型的图表 + L6-图表选择表.csv（含未选图型的理由）</li>
+<li>三条带数字、加过限定语的结论与 L6-误用检查表.csv 命中项</li>
+<li>一页分析报告与填好的 L6-验收表.csv</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>口径与四步任务书可执行、逐步留证</span><strong>20</strong></div>
+<div class="rubric-row"><span>脚本/表格计算真实可复跑、分组小计对得上总量</span><strong>25</strong></div>
+<div class="rubric-row"><span>三类关系图型选择正确、轴与单位无误</span><strong>15</strong></div>
+<div class="rubric-row"><span>三类统计误用至少各命中一次并修订结论</span><strong>25</strong></div>
+<div class="rubric-row"><span>报告、验收表与归档完整</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-7" data-search="7 BI 口径卡与经营报告 模块二 · 办公与数据 对应课件《管理场景数据分析综合：BI × AI 协同》：口径不一致比没有数据更危险、为三个核心指标各写一张口径卡、对话式查询要写清粒度与筛选并验证 SQL、把分析压成一页经营报告、每条建议都要能指回证据。本课的 27 万差额与课件图表呼应。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第7次课 · 模块二</div><h2>BI 口径卡与经营报告</h2><p>对应课件《管理场景数据分析综合：BI × AI 协同》：口径不一致比没有数据更危险、为三个核心指标各写一张口径卡、对话式查询要写清粒度与筛选并验证 SQL、把分析压成一页经营报告、每条建议都要能指回证据。本课的 27 万差额与课件图表呼应。</p>
+<div class="lesson-meta"><span class="chip">⏱ 85分钟</span><span class="chip green">目标：BI 口径卡与经营报告</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《口径治理与一页经营报告》：三张指标口径卡、6 条经核验的查询用例、27 万差额的逐项归因表、一页经营报告。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>学院「创新创业实践中心」要向教务汇报 3 月实践项目经费执行情况，三个部门交上来的报表对不上：财务按「已支付·含税」、项目组按「已立项·不含税」、系统导出按「已支付·不含税」。三张表的营收/执行额最大相差 27 万，会上争了半小时也没说清谁对。你要独立用 WorkBuddy 先把三个指标的口径卡写死，再用对话式查询生成 SQL 并逐条验证粒度与筛选，最后解释 27 万差额的构成，写出一页每条建议都带证据的经营报告。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第7次课｜BI 口径卡与经营报告资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第7次课_BI口径卡与经营报告.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜L7-SQL验证表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第7次课/L7-SQL验证表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜L7-口径卡.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第7次课/L7-口径卡.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜L7-差额归因表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第7次课/L7-差额归因表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜L7-报告模板.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第7次课/L7-报告模板.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜L7-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第7次课/L7-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第7次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜metric_definitions.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第7次课/metric_definitions.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜orders_wide.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第7次课/orders_wide.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第7次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第7次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第7次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第7次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。三张口径卡必须由你本人签核，不能让 AI 选一个「看起来合理」的口径；所有 SQL 先给语句让你确认，再谈结果——先跑后看是本课明令禁止的做法。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 85 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料与通用准备。</strong>新建工作区上传 7 个文件，输出目录 L07-个人-口径治理-v1。发通用准备提示词，声明「不预设哪张表是对的，先立口径再算数」，并要求 AI 复述三个部门口径的差异。复述不清就先纠正。</div></li>
+<li><span class="step-time">15分钟</span><div class="step-copy"><strong>写死三张指标口径卡。</strong>逐条读 metric_definitions.txt，为执行额、项目数、完成率各写一张 L7-口径卡.csv：业务定义、粒度、筛选条件、含税与否、责任人、例外处理。特别注意「完成率」的分母是什么。让 WorkBuddy 先给草案，再由你本人逐项签核——凡写「按常规」「视情况」的字段一律退回改成可判定条件。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>对话式查询：先给 SQL，再谈结果。</strong>对 L7-SQL验证表.csv 的 6 条用例，逐条让 WorkBuddy 把自然语言翻成 SQL，但必须先停在你确认这一步：你检查粒度（项目 × 月）、时间范围、状态筛选、含税字段是否与口径卡一致，确认后才让它给结果。第 04 条用例故意写错粒度，你要指出并改正；把预期值与实测值都填进表，不一致的写清原因。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>把 27 万差额拆开。</strong>让 WorkBuddy 按三种口径分别算执行额，填入 L7-差额归因表.csv，并逐项拆解：含税带来的差额是多少、状态筛选（已立项 vs 已支付）带来的差额是多少、两者相加是否等于 27 万。要求它打印每一步的中间小计，你本人用 orders_wide.csv 的分组结果复算。结论必须是「口径不同，不是谁算错」，并写明正确基准口径。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>一页经营报告：每条建议带证据。</strong>按 L7-报告模板.md 写一页报告：一句结论、三个关键数字、差额说明、三条改进建议、证据索引。每条建议后面用括号注明依据文件与行号/分组小计。让 WorkBuddy 生成后，新开一个独立会话只给它报告与原始表，让它逐条抽查「这条建议的证据能不能在文件里找到」，找不到的重写。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>验收与归档。</strong>填写 L7-验收表.csv 10 项：三张口径卡可判定、6 条 SQL 先确认后执行、第 04 条粒度被纠正、差额可复算、基准口径明确、建议均有证据等。把口径卡、SQL 验证表、差额归因表、报告与验收表归档，并记录「下一课如何用自动化把这套口径固定下来」的一句话（衔接第 8 课智能体编排）。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>文件读取与指标定义抽取（从三段口头定义抽出可判定口径）；对话式查询 / SQL 生成（6 条用例先给语句再给结果）；分组计算与差额归因（三种口径分别算并逐项拆解）；报告生成（docx / md）（一页报告含证据索引）；多会话独立抽查（盲查每条建议的证据可追溯性）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>三张由你本人签核、字段可判定的 L7-口径卡.csv</li>
+<li>L7-SQL验证表.csv：6 条用例含 SQL 全文、粒度核对、预期值与实测值、第 04 条纠错记录</li>
+<li>L7-差额归因表.csv：三种口径金额与 27 万差额的逐项拆解（含中间小计）</li>
+<li>一页经营报告（结论 / 三个数字 / 差额说明 / 三条带证据的建议 / 证据索引）</li>
+<li>独立抽查记录、L7-验收表.csv 与衔接下一课的一句话</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>三张口径卡可判定、完成率分母写清</span><strong>20</strong></div>
+<div class="rubric-row"><span>6 条 SQL 先确认后执行、第 04 条粒度纠错</span><strong>20</strong></div>
+<div class="rubric-row"><span>27 万差额拆解可复算、结论不误判为「算错」</span><strong>25</strong></div>
+<div class="rubric-row"><span>一页报告每条建议都能指回证据</span><strong>20</strong></div>
+<div class="rubric-row"><span>验收表、独立抽查与归档完整</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-8" data-search="8 智能体端到端与权限 模块三 · 智能体与编排 对应课件《从工具到智能体：Agent 原理与 MCP 协议》：从「你问它答」到「自己规划并执行」的循环（感知—规划—调用工具—观察—迭代）、五阶段轨迹拆解、连接器的授权边界（只读 / 写入 / 发布）、以及「纯对话 vs 带工具」对比实验。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第8次课 · 模块三</div><h2>智能体端到端与权限</h2><p>对应课件《从工具到智能体：Agent 原理与 MCP 协议》：从「你问它答」到「自己规划并执行」的循环（感知—规划—调用工具—观察—迭代）、五阶段轨迹拆解、连接器的授权边界（只读 / 写入 / 发布）、以及「纯对话 vs 带工具」对比实验。</p>
+<div class="lesson-meta"><span class="chip">⏱ 80分钟</span><span class="chip green">目标：智能体端到端与权限</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《智能体端到端实验报告》：一次真实端到端任务、五阶段轨迹拆解、纯对话 vs 带工具对比表、一张连接器权限矩阵与越界处置记录。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>校园「社团物资借用」要把 3 月的借用记录整理成月度小结，材料散落在多个文件里。上一届同学用纯对话工具问了三次，每次都得到一段「看起来很像」但没有真实读文件的文字；也有同学把整个目录的写权限一次性开给智能体，结果它顺手改了原始记录。你这轮要独立用 WorkBuddy 做一次受控实验：同一任务分别用「纯对话」和「带文件读取工具的智能体」跑一遍，把带工具那次的执行轨迹拆成五个阶段，定位轨迹里一次越界写入尝试，并画出一张最小权限矩阵。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第8次课｜智能体端到端与权限资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第8次课_智能体端到端与权限.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜L8-五阶段拆解表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/L8-五阶段拆解表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜L8-对比实验表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/L8-对比实验表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜L8-权限矩阵.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/L8-权限矩阵.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜L8-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/L8-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第8次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜agent_trace.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/agent_trace.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜borrow_records_march.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/borrow_records_march.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜materials_catalog.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第8次课/materials_catalog.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜task_brief.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第8次课/task_brief.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第8次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第8次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第8次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第8次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。连接器授权必须先写「只读」再执行；任何写入、联网、发布请求都要由你本人逐次确认。若课堂环境未开通连接器，使用 agent_trace.csv 的模拟轨迹完成拆解，并全程标注「模拟轨迹 / 未真实连接」，不得写成已接入。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 80 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料、写授权边界。</strong>新建工作区上传 8 个文件，输出目录 L08-个人-智能体实验-v1。发通用准备提示词，明确授权：文件只读、不联网、不发布、不写原始目录，产物只落输出目录。让 WorkBuddy 复述授权清单，并先给「将调用哪些工具」的一句话说明（承接第 12 课 Harness 开销概念）。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>第一轮：纯对话（对照基线）。</strong>新开会话 A，不上传任何文件，只把 task_brief.txt 的文字需求贴进去，让它给一份月度小结。原样保存回答。检查：它给出的数字是真实的还是编造的？能否指回具体文件行？把「不可核验」的地方逐条列进 L8-对比实验表.csv。这一轮的价值恰恰在于证明「没有工具做不到什么」。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>第二轮：带工具的端到端任务。</strong>新开会话 B，上传 borrow_records_march.csv 与 materials_catalog.csv，按 task_brief.txt 下需求：先列出将生成/修改的文件清单并等你确认，再执行「读文件 → 按物资汇总 → 生成小结 md → 生成汇总 csv → 输出轨迹说明」。逐次确认工具调用；若出现写原始目录或联网请求，拒绝并记录。保存产物与可见的工具调用记录。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>拆五阶段轨迹并定位越界。</strong>用 agent_trace.csv 的 10 步模拟轨迹（若会话 B 有真实轨迹则并列对照），填 L8-五阶段拆解表.csv：每阶段写对应步号、输入、工具动作、观察结果、是否合规。重点定位第 07 步的越界写入尝试：它想做什么、为什么该拒绝、应在哪个检查点被拦下、拒绝后如何继续。再用一句话说明「为什么能跑通不等于可交付」。</div></li>
+<li><span class="step-time">14分钟</span><div class="step-copy"><strong>画最小权限矩阵 + 对比表。</strong>填 L8-权限矩阵.csv：对纯对话 / 只读连接 / 写入 / 发布 / 联网五类能力，逐格写「需要 / 不需要 / 本课未授权」并给理由。补全 L8-对比实验表.csv 的四个维度（产物可核验性、数字来源、耗时、越界风险）。让 WorkBuddy 基于你填的表生成一段 150 字结论，你再核对有没有把「模拟」写成「真实」。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立审校与归档。</strong>新开审校会话，只给轨迹、权限矩阵与验收表，让它独立指出「第几步越界、应如何处理、哪一项权限被多给了」。与你的结论比对。归档两轮原始回答、产物、两张表、审校记录，填 L8-验收表.csv 10 项，并写一句衔接第 9 课的话（把这次跑通的步骤固化成可复用流程）。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>智能体端到端任务（一次从需求到多文件产物的真实任务）；多会话隔离（纯对话 / 带工具 / 审校三个会话互不污染）；连接器与权限（先声明只读授权、逐次确认调用）；轨迹阅读与表格输出（五阶段拆解、越界定位、权限矩阵）；文件写入与归档（产物只落输出目录并归档）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单，并用一句话说明本轮会加载哪些工具。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>两轮原始回答（纯对话一轮未上传文件、带工具一轮有工具记录）</li>
+<li>端到端产物：小结 md、汇总 csv、轨迹说明，数字均可回溯</li>
+<li>L8-五阶段拆解表.csv（10 步归五阶段、第 07 步越界处置）</li>
+<li>L8-权限矩阵.csv 与 L8-对比实验表.csv（四维度对比）</li>
+<li>独立审校记录、L8-验收表.csv 与归档文件</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>两轮实验隔离、纯对话未偷传文件</span><strong>20</strong></div>
+<div class="rubric-row"><span>端到端产物可核验、数字能回溯</span><strong>20</strong></div>
+<div class="rubric-row"><span>五阶段拆解准确、越界定位与处置正确</span><strong>25</strong></div>
+<div class="rubric-row"><span>最小权限矩阵合理、对比表四维度有证据</span><strong>20</strong></div>
+<div class="rubric-row"><span>模拟/真实标注、审校与验收完整</span><strong>15</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-9" data-search="9 知识库 RAG 与工作流 模块三 · 智能体与编排 对应课件《提示到编排：工作流、RAG 与知识库》：先证明「找得到」，再用最小测试集把「感觉能用」变成命中率 / 忠实度 / 拒答率三个数字、回答必须标注文件名与条款号、资料里没有就明说找不到、以及含分支与人工确认节点的工作流。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第9次课 · 模块三</div><h2>知识库 RAG 与工作流</h2><p>对应课件《提示到编排：工作流、RAG 与知识库》：先证明「找得到」，再用最小测试集把「感觉能用」变成命中率 / 忠实度 / 拒答率三个数字、回答必须标注文件名与条款号、资料里没有就明说找不到、以及含分支与人工确认节点的工作流。</p>
+<div class="lesson-meta"><span class="chip">⏱ 85分钟</span><span class="chip green">目标：知识库 RAG 与工作流</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《带出处知识问答最小可用包》：一个由四份制度构成的资料库、12 题测试集与三项指标、一条含分支和人工确认的工作流、以及一次命中失败的根因修正。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>学院要把四份学生事务制度做成问答助手，但上一版出了事故：资料里没有「补考收费」的规定，助手却根据常识编了一条金额；还有同学问「某位同学的处分情况」，助手试图从通讯录里拼答案。你这轮要独立用 WorkBuddy 建一个小型资料库，用 12 题测试集测出三项指标，把资料里没有的题明确拒答，并画一条含分支与人工确认的工作流，说明哪一步必须停下来交给人。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第9次课｜知识库 RAG 与工作流资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第9次课_知识库RAG与工作流.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜L9-工作流模板.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第9次课/L9-工作流模板.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜L9-指标表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第9次课/L9-指标表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜L9-测试集12.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第9次课/L9-测试集12.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜L9-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第9次课/L9-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第9次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜kb_图书借阅规则.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第9次课/kb_图书借阅规则.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜kb_奖学金评定办法.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第9次课/kb_奖学金评定办法.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜kb_考勤与请假规定.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第9次课/kb_考勤与请假规定.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜kb_补考与重修说明.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第9次课/kb_补考与重修说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第9次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第9次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第9次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第9次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成。测试会话与建库会话必须隔离：测试时不能把标准答案一起上传；每条回答必须带文件名与条款号，无出处即判不通过。指标由你本人按测试集逐题计数，不让 AI 自报「效果很好」。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 85 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">8分钟</span><div class="step-copy"><strong>冻结材料与通用准备。</strong>新建工作区上传 8 个文件，输出目录 L09-个人-知识问答-v1。发通用准备提示词，声明：建库阶段不上传测试集；测试阶段不上传标准答案；每条回答必须标文件名与条款号。让 WorkBuddy 复述这三条并给计划。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>建库并先证明「找得到」。</strong>把四份 kb_ 文档放进 WorkBuddy 资料库（或按顺序上传为新会话的只读材料），先做检索通路验证：用 3 道你自己在文档里能找到答案的已知问题提问，要求回答带文件名与条款号。若产品没有资料库功能，用「只读四份文档的单会话 + 明确禁止补充外部信息」替代，并标注「本地文件问答 / 未启用 RAG」。3 道都找到出处才进入测试。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>跑 12 题测试集，逐题计数。</strong>新开测试会话，只上传四份文档（不传 L9-测试集12.csv 的答案列，只取题干逐题提问）。把 12 条原始回答原样保存，逐题判定：①可答题是否命中 ②命中是否给了文件名与条款号（忠实）③资料外/越权题是否正确拒答或转人工。填入 L9-指标表.csv，算出命中率、忠实度、拒答率三个数字，与模板目标值对比。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>命中失败根因修正。</strong>针对至少 1 道未命中或答错的题，让 WorkBuddy 分析根因（分块过大 / 条款号没被引用 / 提示允许了自由发挥 / 文档命名不清），你本人核对是哪一类。采取一项具体修正（例如把文档按条款分块、在提示里加「找不到就写找不到」、给文件统一命名），重跑该题并记录前后变化。不得通过「把答案写进提示」来作弊提分。</div></li>
+<li><span class="step-time">17分钟</span><div class="step-copy"><strong>画含分支与人工确认的工作流。</strong>按 L9-工作流模板.md 画一条工作流：用户提问 → 检索 → 是否命中（否 → 明确告知资料中没有 → 结束）→ 命中后是否涉及金额/处分/个人信息（是 → 转人工确认 → 结束）→ 生成带出处回答 → 人工抽检。每个分支写明判断条件、每步写明输入与输出、至少标出一个必须由人确认的节点。让 WorkBuddy 输出流程表，你检查「资料外」和「越权」两条分支是否都真的走到了终点。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立审校与归档。</strong>新开审校会话，只给 12 条原始回答、四份文档与指标表，让它独立判定哪几条缺出处、哪几条出现了资料外内容。与你的计数比对。归档四份文档、测试集、原始回答、指标表、工作流、修正前后记录，填 L9-验收表.csv 10 项，并写一句衔接第 10 课的话（把这条流程做成可发布的智能体）。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>资料库 / 本地文件读取（四份文档建库并做检索通路验证）；多会话隔离（建库 / 测试 / 审校三会话互不投喂答案）；结构化测试与表格（12 题逐题计数三项指标）；提示约束与迭代（「找不到就写找不到」+ 分块修正前后对比）；流程 / 表格输出（含分支与人工确认的工作流表）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>四份制度文档构成的资料库（或标注清楚的本地文件问答替代）与 3 道通路验证记录</li>
+<li>12 条原始回答 + L9-指标表.csv（命中率 / 忠实度 / 拒答率三个具体数字）</li>
+<li>至少 1 道失败题的根因分析、修正动作与重跑前后对比</li>
+<li>一条含「未命中」「越权转人工」两条分支与人工确认节点的工作流</li>
+<li>独立审校记录、L9-验收表.csv 与归档文件</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>建库与检索通路验证留证完整</span><strong>15</strong></div>
+<div class="rubric-row"><span>12 题逐题计数、三项指标可复核</span><strong>25</strong></div>
+<div class="rubric-row"><span>回答带文件名与条款号、资料外不编造</span><strong>25</strong></div>
+<div class="rubric-row"><span>根因修正真实有效、未靠泄题提分</span><strong>15</strong></div>
+<div class="rubric-row"><span>工作流分支与人工确认节点完整、审校归档齐全</span><strong>20</strong></div>
+</div></section></div>
+</div></article>
+
+<article class="lesson-card" id="lesson-10" data-search="10 低代码问答智能体实战 模块三 · 智能体与编排 对应课件《低代码智能体平台实战》：用四问写清需求、语料脱敏与分块命名、挂载资料库并设定边界、用 20 题测出三项指标、发布不是终点（巡检、回滚、下线），以及「未开通就明确标模拟，不把文字草案说成已上线」。">
+<header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第10次课 · 模块三</div><h2>低代码问答智能体实战</h2><p>对应课件《低代码智能体平台实战》：用四问写清需求、语料脱敏与分块命名、挂载资料库并设定边界、用 20 题测出三项指标、发布不是终点（巡检、回滚、下线），以及「未开通就明确标模拟，不把文字草案说成已上线」。</p>
+<div class="lesson-meta"><span class="chip">⏱ 90分钟</span><span class="chip green">目标：低代码问答智能体实战</span><span class="chip">个人独立完成</span></div></header>
+<div class="lesson-body">
+<div class="task-callout"><b>本课大题</b><p>由你一人用 WorkBuddy 完成《学院事务问答智能体交付包》：一页四问需求、脱敏后的语料与命名表、20 题测试报告、发布验收 11 项与巡检回滚方案。</p></div>
+<div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与固定预期</h3><p>学院要上线一个「学生事务问答助手」，试运行版有三处隐患：语料里残留了真实姓名与学号占位、把「金额 / 处分 / 政策例外」也照答不误、上线后没人知道怎么回滚。你这轮要独立用 WorkBuddy 走完八步：四问需求、语料脱敏与分块、搭库设边界、跑 20 题测试集、做一次发布（或明确标注的模拟发布）、写巡检与回滚方案，并给出可判定的上线验收结论。</p></section>
+<section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list">
+<div class="resource-row"><span class="res-name"><strong>第10次课｜低代码问答智能体实战资源包（ZIP）</strong><small>任务单、背景资料、全部素材、模板与教师核验卡，一次下载</small></span><a class="download-link" href="resources/资源包_第10次课_低代码问答智能体实战.zip" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-发布验收.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第10次课/L10-发布验收.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-四问需求卡.md</strong><small>Markdown 任务单、模板或说明</small></span><a class="download-link" href="resources/files/第10次课/L10-四问需求卡.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-巡检回滚.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第10次课/L10-巡检回滚.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-测试集20.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第10次课/L10-测试集20.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-脱敏记录.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第10次课/L10-脱敏记录.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜L10-验收表.csv</strong><small>课堂数据 / 个人验收表 CSV，可导入 WorkBuddy</small></span><a class="download-link" href="resources/files/第10次课/L10-验收表.csv" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜WorkBuddy功能清单.md</strong><small>本课覆盖的 WorkBuddy 功能逐项勾选表（含留证要求）</small></span><a class="download-link" href="resources/files/第10次课/WorkBuddy功能清单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜corpus_raw_1.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第10次课/corpus_raw_1.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜corpus_raw_2.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第10次课/corpus_raw_2.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜corpus_raw_3.txt</strong><small>背景资料 / 需求卡 / 核验卡 TXT</small></span><a class="download-link" href="resources/files/第10次课/corpus_raw_3.txt" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜任务单.md</strong><small>单人完整任务单：分钟步骤、WorkBuddy 功能、提示词、成果要求与 100 分评价</small></span><a class="download-link" href="resources/files/第10次课/任务单.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜使用说明.md</strong><small>16 课通用执行规程与安全规则</small></span><a class="download-link" href="resources/files/第10次课/使用说明.md" download>下载 ↓</a></div>
+<div class="resource-row"><span class="res-name"><strong>第10次课｜教师核验卡.txt</strong><small>教师核验参考（标准答案），建议学生完成后查看</small></span><a class="download-link" href="resources/files/第10次课/教师核验卡.txt" download>下载 ↓</a></div>
+</div></section></div>
+<div class="notice"><strong>单人完成方式</strong><br>全程单人完成，不需要同伴试用或多人评审。「发布」若课堂未授权，必须走模拟替代：产出发布清单与页面草案，全篇标「模拟 / 未上线」，不得把草案写成真实可访问链接；任何写入、发布、连接动作由你本人先看变更清单再确认。</div>
+<div class="steps-title"><h3>课堂学习步骤</h3><span>合计 90 分钟，按顺序推进</span></div><ol class="steps">
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>四问需求 + 冻结材料。</strong>新建工作区上传 9 个文件，输出目录 L10-个人-事务助手-v1。先填 L10-四问需求卡.md：谁用（本院学生）、答什么（制度类问题）、不答什么（金额/处分/例外/个人情况）、错了谁负责（你本人复核 + 教务终审）。发通用准备提示词，明确「未授权功能一律标模拟」并让 WorkBuddy 复述四问与边界。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>语料脱敏、分块与命名。</strong>让 WorkBuddy 逐处定位三份语料中的敏感占位，输出 L10-脱敏记录.csv（文件名 / 位置 / 敏感类型 / 替换为 / 复核人），你本人再数一遍是否为 9 处。然后把条款按「一条一块」重排、统一命名 kb_主题_v1.md，保留条款号。注意：脱敏后的文件另存，原始语料只读不覆盖。</div></li>
+<li><span class="step-time">20分钟</span><div class="step-copy"><strong>搭库、设边界、跑 20 题。</strong>把脱敏语料放入资料库（或用只读单会话替代并标注），设定三条边界规则：只依据资料、每条带出处、金额/处分/例外一律转人工。新开测试会话只传题干，逐题跑完 20 道，保存原始回答；按三类分别统计正确条数，填 L10-发布验收.csv 之外的测试报告。任何给出「补考收费金额」或具体个人信息的回答，单列为严重问题并追根因。</div></li>
+<li><span class="step-time">18分钟</span><div class="step-copy"><strong>发布验收 11 项（真实或模拟）。</strong>逐项过 L10-发布验收.csv：功能 6 项（可访问、检索命中、出处可见、拒答生效、转人工生效、响应可读）+ 安全 5 项（语料已脱敏、无越权数据、最小权限、日志可查、可一键下线）。若课堂已授权发布，先让 WorkBuddy 列变更清单由你确认，再执行并保留链接与截图；若未授权，产出页面草案与发布清单，每项标「模拟 / 未上线」。禁止把草案说成真实上线。</div></li>
+<li><span class="step-time">16分钟</span><div class="step-copy"><strong>巡检与回滚方案 + 一次故障演练。</strong>填 L10-巡检回滚.txt：每日巡检项、触发条件（例如出现 1 条编造金额即下线）、回滚到哪个版本、谁批准、下线后如何告知用户。做一次演练：把一条故意错误的语料注入，观察回答是否变化，然后按方案回滚到 v1，记录前后证据与耗时。让 WorkBuddy 帮你把演练写成一个可复用的操作步骤清单。</div></li>
+<li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立审校、上线结论与归档。</strong>新开审校会话，只给脱敏记录、20 条原始回答与验收表，让它独立数「还剩几处敏感占位、哪几题越权、11 项里有几项标了模拟」。与你的结果比对。最后由你本人写一句可判定的上线结论（准予上线 / 暂缓并列出缺口），归档全部文件并填 L10-验收表.csv 12 项。</div></li>
+</ol>
+<div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>文件读取与脱敏扫描（逐处定位 9 处敏感占位并另存）；资料库 / 本地文件问答（按条款分块、统一命名并设边界）；多会话隔离（搭建 / 测试 / 审校三会话分离）；结构化测试与验收表（20 题三类统计 + 11 项逐项判定）；发布 / 页面草案（或模拟）（按变更清单确认后发布，或产出标注清楚的草案）；版本与归档（故障注入—回滚—前后证据）。首轮通用准备提示词：<code>你是我的课堂 AI 项目助理。我将独立完成本课任务，请只根据我上传的本课任务单和配套资料工作。先输出目标、输入文件及版本、限制、按分钟的操作计划、逐项验收方法、将生成或修改的文件清单。此轮只做计划，不写文件、不联网、不连接服务、不发布。</code> 完整提示词与全部功能勾选表见资源包内《任务单.md》《WorkBuddy功能清单.md》。</p></div>
+<div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list">
+<li>一页四问需求卡（谁用 / 答什么 / 不答什么 / 错了谁负责）</li>
+<li>L10-脱敏记录.csv（9 处逐处可查）与按条款分块、统一命名的脱敏语料</li>
+<li>20 题测试报告：三类各多少道正确、原始回答、严重问题及根因</li>
+<li>L10-发布验收.csv 11 项逐项判定（通过 / 不通过 / 模拟）与发布截图或草案</li>
+<li>L10-巡检回滚.txt 填写稿、故障演练前后证据、你本人签核的上线结论</li>
+<li>独立审校记录与 L10-验收表.csv</li>
+</ul></section><section><h3>评价要点 · 100分</h3><div class="rubric">
+<div class="rubric-row"><span>四问需求与四条边界可判定</span><strong>15</strong></div>
+<div class="rubric-row"><span>9 处敏感占位全部记录、语料分块命名规范</span><strong>20</strong></div>
+<div class="rubric-row"><span>20 题三类统计准确、严重问题被定位</span><strong>20</strong></div>
+<div class="rubric-row"><span>11 项发布验收逐项判定、模拟标注诚实</span><strong>20</strong></div>
+<div class="rubric-row"><span>巡检回滚可演练、上线结论由本人签核</span><strong>15</strong></div>
+<div class="rubric-row"><span>独立审校、归档与验收表完整</span><strong>10</strong></div>
+</div></section></div>
+</div></article>
+
+  <article class="lesson-card" id="lesson-11" data-search="11 多智能体 协作 AgentOps 拓扑 流水线 主管 工人 辩论 投票 专家 子代理 trajectory 成本 回滚 校园交换周">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第11次课 · 模块三</div><h2>多智能体协作与 AgentOps</h2><p>由你一人用WorkBuddy模拟校园交换周调研的角色与交接流程，比较两种拓扑，并用数据证明结构化复核如何发现错误，而不是堆角色数量。</p><div class="lesson-meta"><span class="chip">⏱ 85分钟</span><span class="chip green">目标：审计式决策简报</span><span class="chip">个人独立完成</span></div></header>
+    <div class="lesson-body">
+      <div class="task-callout"><b>本课大题</b><p>由你独立操作WorkBuddy，依次扮演资料员、分析员、审校员和主管，模拟两种协作拓扑，提交带决策依据、成本预算和回滚记录的调研简报。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>预算上限¥3,000。资源包含匿名意向调查、摊位价格、两份口径冲突的简报。核验时应得到：全体口径18/30=60%；有效回答口径18/26≈69.2%。memo_A里的21/30是故意错误项。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第11次课｜多智能体与AgentOps资源包（ZIP）</strong><small>完整任务单与全部数据，一次下载</small></span><a class="download-link" href="resources/资源包_第11次课_多智能体与AgentOps.zip" download aria-label="下载第11次课多智能体与AgentOps资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第11次课｜课堂任务单.md</strong><small>步骤、工具提示词、成果物与评价标准</small></span><a class="download-link" href="resources/files/第11次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第11次课｜匿名意向调查 survey.csv</strong><small>30条模拟记录：18 yes、8 no、4空值</small></span><a class="download-link" href="resources/files/第11次课/survey.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第11次课｜摊位报价 stall_prices.csv</strong><small>5个虚构摊位的模拟观察报价</small></span><a class="download-link" href="resources/files/第11次课/stall_prices.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第11次课｜错误简报 memo_A.txt</strong><small>故意设置错误说法，供核验与回滚练习</small></span><a class="download-link" href="resources/files/第11次课/memo_A.txt" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第11次课｜口径简报 memo_B.txt</strong><small>有效回答分母说明</small></span><a class="download-link" href="resources/files/第11次课/memo_B.txt" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>全程由你一人操作。需要多角色时在WorkBuddy中按顺序开独立会话；“审校员/主管”均由WorkBuddy会话模拟，你本人作最终决定，不需要组员分工或同伴评审。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>按顺序完成，最后2分钟个人复盘</span></div><ol class="steps"><li><span class="step-time">8分钟</span><div class="step-copy"><strong>建立个人工作区并锁定任务。</strong>你依次承担资料员、分析员、审校员、项目主管角色，但一次只运行一个WorkBuddy角色会话。加载资料和决策规则，确认预算、门槛和验收标准。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>核对数据与口径。</strong>让WorkBuddy输出行数、yes/no/空值、ID唯一性和简报冲突；你本人用原CSV/计算器独立复算，全体分母与有效回答分母分别记录。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>画四种拓扑。</strong>绘制流水线、主管—工人、辩论、投票；逐个写输入、输出、交接检查、适用条件和失败点。</div></li><li><span class="step-time">25分钟</span><div class="step-copy"><strong>单人运行两种结构。</strong>先运行流水线，再选主管—工人/辩论/投票之一；你在WorkBuddy中开独立会话扮演每个角色。流水线必须“核验→分析→独立审校”；辩论由独立会话分别给正反意见，再由裁判会话按口径裁决；投票用三次互不共享答案的判断。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>找第一次跑偏并回滚。</strong>WorkBuddy审校会话对照中间文件，指出第一次偏离；你本人标记错误版本、恢复最近正确数据，修正规则后重跑并记录变化。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>留下AgentOps记录并个人复盘。</strong>记录准确率目标4/4、出处覆盖率100%、每种拓扑调用上限12次、越界/误用目标0；由你录制或写出2分钟复盘，说明选型依据。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>由你本人完成全部环节。最多启用一个适配专家/专家团。原生子代理不可用时，你在同一WorkBuddy账号开独立新会话做审校并标“单人多会话模拟”；最终结论由你本人签核。提示词要求：<code>只按提供文件核验计数和口径；不要混淆18/30与18/26；输出数据核验表、冲突说明、可确认事实和未知项，不得补造数据。</code>保留可见提示、工具结果与文件版本；不要求隐式思维链。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>四种拓扑图与适用场景表</li><li>两种拓扑运行记录与交接检查</li><li>一页决策简报（含预算、分母、证据）</li><li>指标/成本上限与跑偏—回滚—回归记录</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>拓扑辨析与选型</span><strong>20</strong></div><div class="rubric-row"><span>数据、分母、引用</span><strong>25</strong></div><div class="rubric-row"><span>角色边界与交接检查</span><strong>20</strong></div><div class="rubric-row"><span>轨迹、回滚、回归</span><strong>20</strong></div><div class="rubric-row"><span>指标与成本上限</span><strong>15</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="lesson-12" data-search="12 Harness 模型 工具 上下文 权限 会话 五层 四项 组成 token 成本 问答助手">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第12次课 · 模块四重点</div><h2>什么是Harness：模型之外的编排层</h2><p>围绕学院事务问答助手，把模型、工具、上下文、权限和会话拆开；把四项组成映射到层次上，并用一组可复算数据看清成本。</p><div class="lesson-meta"><span class="chip">⏱ 80分钟</span><span class="chip green">目标：架构图 + 成本验算</span></div></header>
+    <div class="lesson-body"><div class="task-callout"><b>本课大题</b><p>为学院事务问答助手绘制Harness蓝图，映射WorkBuddy能力，并完成一次成本与权限验算。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>助手可回答校历问题；涉及处分/申诉转人工；不得自动修改学籍或成绩。成本卡：基准输入23,000 token、输出4,000；优化后输入19,000、输出4,000。课堂假设输入¥0.01/千、输出¥0.02/千，单次¥0.31与¥0.27，20次¥6.20与¥5.40。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第12次课｜Harness结构与成本资源包（ZIP）</strong><small>完整任务单与全部练习卡</small></span><a class="download-link" href="resources/资源包_第12次课_Harness结构与成本.zip" download aria-label="下载第12次课Harness结构与成本资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第12次课｜课堂任务单.md</strong><small>架构图、成本核验与权限测试步骤</small></span><a class="download-link" href="resources/files/第12次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第12次课｜需求卡.txt</strong><small>学院事务问答助手场景和权限边界</small></span><a class="download-link" href="resources/files/第12次课/需求卡.txt" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第12次课｜成本卡.csv</strong><small>token数量与课堂假设价格</small></span><a class="download-link" href="resources/files/第12次课/成本卡.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第12次课｜成本验算表.csv</strong><small>基准与优化方案填写模板</small></span><a class="download-link" href="resources/files/第12次课/成本验算表.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第12次课｜L12验收清单.csv</strong><small>五层、四项组成、费用与权限三类测试</small></span><a class="download-link" href="resources/files/第12次课/L12验收清单.csv" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>所有图表、复算和测试由你独立完成；若需复核，另开WorkBuddy“盲审/计算审计”会话，只提供原始卡片，不提供你先前的答案。最后由你本人签核。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>五层架构 → 四项组成 → 算成本 → 测权限</span></div><ol class="steps"><li><span class="step-time">8分钟</span><div class="step-copy"><strong>拆解目标和红线。</strong>把需求分成“可回答 / 必须转人工 / 禁止执行”，检查是否明确禁止改成绩。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>画五层分层图。</strong>填模型、工具、上下文、权限、会话；每层写一个本场景组件，并标出可配置项。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>映射四项组成。</strong>将工具注册、上下文装配、权限门、会话与可观测性映射到对应层；模型层不属于四项组成之一。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>比较WorkBuddy与DeepSeek Harness。</strong>按课件证据比较对象、封装程度、可见/可替换层和取舍；未知处标“课件未说明”。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>核算成本并独立复核。</strong>先自己按公式手算基准和优化费用，再新开WorkBuddy“计算审计”会话只提供成本卡和公式要求，不给前一结果；比较差异并说明上下文裁剪的质量代价。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>做权限桌面演练并个人签核。</strong>依次输入“校历咨询、处分申诉、直接改成绩”三种请求，按预期判定回答/转人工/拒绝；让WorkBuddy新会话独立复核，保存输入和输出证据。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>提示词要求基于需求卡和成本卡输出五层图、四项映射、实例对照、逐步计算及拒绝修改成绩的测试对话；未由材料支持的内容写“课件未说明”，把推断单独列出。学生复核单位、金额和图层是否齐全。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>五层Harness结构图</li><li>四项组成—对应层—场景实现映射表</li><li>实例对照表（未知不补写）</li><li>成本计算单与权限门测试对话</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>架构概念与映射</span><strong>25</strong></div><div class="rubric-row"><span>实例对比有据</span><strong>20</strong></div><div class="rubric-row"><span>成本算术与取舍</span><strong>20</strong></div><div class="rubric-row"><span>权限门测试</span><strong>20</strong></div><div class="rubric-row"><span>图表与假设标注</span><strong>15</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="lesson-13" data-search="13 AI IDE 编程智能体 CSV 代码 工作闭环 读 改 跑 看 测试审查 预设 trajectory">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第13次课 · 模块四</div><h2>AI IDE与编程智能体实战</h2><p>用固定的三份商品CSV做离线检查器，练习编程智能体完整闭环；用反例和固定预期验证“能跑不等于正确”。</p><div class="lesson-meta"><span class="chip">⏱ 90分钟</span><span class="chip green">目标：可运行CSV检查器</span></div></header>
+    <div class="lesson-body"><div class="task-callout"><b>本课大题</b><p>从明确需求到重复测试，完成一个离线CSV一致性检查器，并提交真实的“读—改—跑—看—再改”轨迹。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>检查三份商品CSV的列名、重复编号、缺失商品、空价格和负库存。映射为sku→id、title→name、price→price_cny、qty→stock。预期至少4个异常；A文件无异常。不得联网、改测试预期或新增依赖。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第13次课｜AI IDE CSV检查器资源包（ZIP）</strong><small>任务单、三份CSV与验收材料</small></span><a class="download-link" href="resources/资源包_第13次课_AI IDE CSV检查器.zip" download aria-label="下载第13次课AI IDE CSV检查器资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜课堂任务单.md</strong><small>90分钟流程、提示词、成果物与评分表</small></span><a class="download-link" href="resources/files/第13次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜商品CSV样例 A：products_a.csv</strong><small>基准数据，三条均应无问题</small></span><a class="download-link" href="resources/files/第13次课/products_a.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜商品CSV样例 B：products_b.csv</strong><small>列名不同，含缺失/多余商品</small></span><a class="download-link" href="resources/files/第13次课/products_b.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜商品CSV样例 C：products_c.csv</strong><small>含空价格与负库存</small></span><a class="download-link" href="resources/files/第13次课/products_c.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜L13-test-cases.csv</strong><small>固定异常、正常样例和结果证据栏</small></span><a class="download-link" href="resources/files/第13次课/L13-test-cases.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第13次课｜README.txt</strong><small>列名映射、固定预期与运行约束</small></span><a class="download-link" href="resources/files/第13次课/README.txt" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>你独立在WorkBuddy AI IDE中完成计划、代码和测试；独立审查通过WorkBuddy新会话模拟，复现由你本人从清洁预览/项目重新打开完成。无需同伴或组员。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>每项实现后立即验证</span></div><ol class="steps"><li><span class="step-time">8分钟</span><div class="step-copy"><strong>写清可验收任务。</strong>列目标、范围、约束、验收标准和验证方式；只做离线单页检查器。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>整理上下文。</strong>按README写明文件、列名映射、错误预期和运行方式；确认工作区只含练习文件。</div></li><li><span class="step-time">7分钟</span><div class="step-copy"><strong>选择预设并记录取舍。</strong>让WorkBuddy生成Standard、Code（PTC）、Minimal、Creator四行对照，由你本人选择Standard并写理由；若当前环境不能切换，标注“课件对照，未真实切换”。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>先搭最小骨架。</strong>WorkBuddy先检查工作区和文件清单，再生成上传CSV并显示文件名的最小入口，不一次生成所有功能。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>分项实现。</strong>逐一完成CSV读取、列名规范、ID对齐、异常检查和问题清单；每完成一项由你运行一次并保存结果。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>跑八个固定用例。</strong>按L13-test-cases.csv逐项运行；失败时只修程序，不删样例、不放宽测试。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>WorkBuddy独立代码审查。</strong>你新开一个WorkBuddy会话，提供规则、代码和固定测试表但不提供初次结果；要求它检查空值、重复ID、缺失商品、输入提示、依赖和测试是否被误改，给出文件/行证据。你本人决定修复项并重跑测试。</div></li><li><span class="step-time">5分钟</span><div class="step-copy"><strong>本人重新复现并提交。</strong>保存通过版本、运行截图和说明；关闭预览后由你自己按README从项目目录重新打开，重跑T02与T07。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>首轮只要求阅读并返回“理解 / 拟改文件 / 测试计划”，确认后再逐项实现。提示语要明确：<code>不得改测试数据或预期来让测试通过；运行固定用例并给出预期、实际、通过/失败和证据。</code>没有代码执行工具时，用浏览器手测并标注“浏览器手动测试”。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>离线检查器源文件与入口</li><li>运行说明和至少5项验收记录</li><li>代码审查清单与修复前后记录</li><li>可观察的执行轨迹表</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>需求清晰</span><strong>15</strong></div><div class="rubric-row"><span>实现符合离线检查</span><strong>25</strong></div><div class="rubric-row"><span>固定测试正确、无作弊</span><strong>25</strong></div><div class="rubric-row"><span>多轮闭环证据</span><strong>20</strong></div><div class="rubric-row"><span>边界审查</span><strong>15</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="lesson-14" data-search="14 工程护栏 规则 Hook 子代理 权限 SKILL MCP 连接器 安全">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第14次课 · 模块四</div><h2>Harness工程实践：规则、Hook、子代理与权限</h2><p>沿用CSV检查器项目，把口头提醒改成可判定的规则、可触发的Hook、最小权限表和可复用技能；证明护栏能响应。</p><div class="lesson-meta"><span class="chip">⏱ 85分钟</span><span class="chip green">目标：项目安全配置单</span></div></header>
+    <div class="lesson-body"><div class="task-callout"><b>本课大题</b><p>为CSV检查器项目装配“规则—Hook—权限—技能”护栏，并完成一次安全触发测试。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>先准备干净工作区、上一课CSV和固定测试清单，以及一个虚构scratch-demo.txt。风险清单至少列测试作弊、越界写入、误删、网络上传、规则含糊和Hook不触发。课堂不连真实服务或触碰真实文件。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第14次课｜工程护栏与Hook资源包（ZIP）</strong><small>任务单、CSV项目样例和安全检查资料</small></span><a class="download-link" href="resources/资源包_第14次课_工程护栏与Hook.zip" download aria-label="下载第14次课工程护栏与Hook资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第14次课｜课堂任务单.md</strong><small>规则、Hook、权限、技能和连接器步骤</small></span><a class="download-link" href="resources/files/第14次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第14次课｜L14-risk-checklist.csv</strong><small>六类项目风险与护栏检查栏</small></span><a class="download-link" href="resources/files/第14次课/L14-risk-checklist.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第14次课｜L14-hook-tests.csv</strong><small>规则、权限、Hook、技能测试项</small></span><a class="download-link" href="resources/files/第14次课/L14-hook-tests.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第14次课｜scratch-demo.txt</strong><small>仅用于无破坏性触发验证的虚构文件</small></span><a class="download-link" href="resources/files/第14次课/scratch-demo.txt" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>由你一人操作和签核。WorkBuddy负责生成规则/配置草案并用独立新会话检查；Hook原生能力未授权时只做手工模拟，不需要组员操作。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>先核能力，再配置，再验证</span></div><ol class="steps"><li><span class="step-time">8分钟</span><div class="step-copy"><strong>确认项目边界。</strong>检查工作区路径和文件清单，把风险分到规则、Hook、权限、技能/连接器决策。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>写项目规则并自审。</strong>让WorkBuddy生成至少5条技术/结构/行为规则；你逐条填证据，再让其新会话尝试判通过/违反并说明原因。</div></li><li><span class="step-time">18分钟</span><div class="step-copy"><strong>设置安全Hook。</strong>先核当前版本支持事件和字段；选无破坏动作，例如测试目录写入前提醒并暂停。无原生Hook则交草案并手动模拟。</div></li><li><span class="step-time">18分钟</span><div class="step-copy"><strong>划定权限和审批。</strong>独立填写工作区读写、越界路径、本地测试、网络、凭证、删除和发布策略；WorkBuddy新会话以最小权限清单审查，你本人核对理由。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>写可复用技能。</strong>主题固定为“CSV检查器发布前自检”，包含触发条件、输入、步骤、输出、验证和不适用场景；只读检查，不自动发布。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>决定MCP是否必要。</strong>离线任务默认说明不接入的理由；若有教师提供的只读练习服务，先核来源和授权范围。</div></li><li><span class="step-time">4分钟</span><div class="step-copy"><strong>触发并记录。</strong>用虚构文件触发一次提醒，记录条件、实际提示和决策；不支持时标“手工模拟”。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>规则提示要求每条可判断“通过/违反”；Hook字段不确定时必须先查当前版本官方说明，不猜配置。不得使用真实密钥或执行有破坏性的测试；MCP未授权不声称已连接。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>5条以上可判定规则</li><li>Hook配置/草案、触发证据和启用状态</li><li>六项以上权限与审批策略表</li><li>可复用技能、触发记录、MCP判断单</li><li>安全验收单与未覆盖风险</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>规则可判定</span><strong>20</strong></div><div class="rubric-row"><span>Hook设计与验证</span><strong>20</strong></div><div class="rubric-row"><span>最小权限与审批</span><strong>20</strong></div><div class="rubric-row"><span>技能结构和复用性</span><strong>20</strong></div><div class="rubric-row"><span>连接器/MCP决策与授权</span><strong>10</strong></div><div class="rubric-row"><span>安全验收证据与遗留风险</span><strong>10</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="lesson-15" data-search="15 AI IDE 应用 开发 数据库 认证 云服务 文件存储 Sites Creator 发布 验收 活动报名">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第15次课 · 模块四</div><h2>用AI集成开发环境构建专业应用</h2><p>把“校园活动报名页”从一页纸需求推进到最小可运行预览，验证持久化、认证、数据隔离、容量限制和移动端表现。</p><div class="lesson-meta"><span class="chip">⏱ 100分钟</span><span class="chip green">目标：可检验的活动报名应用</span></div></header>
+    <div class="lesson-body"><div class="task-callout"><b>本课大题</b><p>使用WorkBuddy把“校园活动报名页”从一页需求推进到可验证的线上预览/发布版本。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>访客看公开活动；登录学生报名并看本人报名；管理员建/关活动；名额不能超限。第一版不收身份证号、不上传照片、不做聊天/排行榜。数据含3条虚构活动、admin-demo与student-a/student-b模拟身份。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第15次课｜校园活动报名应用资源包（ZIP）</strong><small>任务单、活动数据、权限用例与模型草图</small></span><a class="download-link" href="resources/资源包_第15次课_校园活动报名应用.zip" download aria-label="下载第15次课校园活动报名应用资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜课堂任务单.md</strong><small>从立项到预览发布的步骤和评价表</small></span><a class="download-link" href="resources/files/第15次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜活动种子数据 events.csv</strong><small>3条虚构活动，含开放/关闭及容量</small></span><a class="download-link" href="resources/files/第15次课/events.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜L15-acceptance.csv</strong><small>访客、A/B账号、关闭活动和名额测试</small></span><a class="download-link" href="resources/files/第15次课/L15-acceptance.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜需求卡.txt</strong><small>最小范围、成功判据和不做清单</small></span><a class="download-link" href="resources/files/第15次课/需求卡.txt" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜data-model.csv</strong><small>events与registrations字段模板</small></span><a class="download-link" href="resources/files/第15次课/data-model.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜schema-reference.sql</strong><small>仅供课堂参考，需按实际云服务能力调整</small></span><a class="download-link" href="resources/files/第15次课/schema-reference.sql" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第15次课｜release-checklist.csv</strong><small>发布前八项顺序验收：配置、权限、身份隔离和窄屏</small></span><a class="download-link" href="resources/files/第15次课/release-checklist.csv" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>你本人操作WorkBuddy、处理虚构admin-demo/student-a/student-b演示身份，并逐项签核；无需真实账号或另一名操作者。无授权服务/发布时，按说明做本地模拟并标明状态。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>需求 → 数据/权限 → 实现 → 上线验收</span></div><ol class="steps"><li><span class="step-time">10分钟</span><div class="step-copy"><strong>写一页立项书。</strong>写用户、痛点、最小范围、可测成功判据和不做清单。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>定数据模型与权限。</strong>独立设计events和registrations两表，填写访客/学生/管理员的读写矩阵；WorkBuddy新会话按最小权限原则审查。数据权限不能只靠隐藏按钮。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>搭本地骨架。</strong>先生成目录和空白页面，运行后再逐项做活动列表、报名操作。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>接入云数据库和认证。</strong>只在获准课堂环境中建表；跑通登录流程、身份关联、写入后刷新仍存在。</div></li><li><span class="step-time">15分钟</span><div class="step-copy"><strong>验证权限和名额。</strong>由你本人依次切换虚构student-a、student-b和未登录状态，验证数据隔离、关闭活动不可报名、容量为2时第三次被拒；每步留存预期与实际证据。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>评估Creator插件。</strong>独立实现“报名是否超额”小模块/接口卡并运行三次容量测试；没有Creator入口时用WorkBuddy写纯函数测试，标注“Creator未启用/接口模拟”。</div></li><li><span class="step-time">16分钟</span><div class="step-copy"><strong>发布/预览并验收。</strong>密钥外置后用WorkBuddy Sites或获准预览生成链接；检查未登录、A/B身份和窄屏。无发布权限时明确标“未上线”。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>第一步只让WorkBuddy整理用户故事、最小范围、不做清单、数据表、权限策略和验收用例；确认后再逐步搭骨架、接服务、测试与发布。正式密钥不得粘贴到聊天；外部发布前先确认授权和分享范围。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>立项书与不做清单</li><li>数据模型图、字段与读写权限表</li><li>最小应用与持久化/认证/隔离/名额记录</li><li>Creator模块或标明模拟的接口方案</li><li>预览链接/截图和上线检查单</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>需求和模型</span><strong>15</strong></div><div class="rubric-row"><span>持久化、认证、隔离</span><strong>25</strong></div><div class="rubric-row"><span>状态与名额测试</span><strong>15</strong></div><div class="rubric-row"><span>插件接口可验证</span><strong>10</strong></div><div class="rubric-row"><span>发布/预览证据</span><strong>15</strong></div><div class="rubric-row"><span>隐私与授权</span><strong>20</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="lesson-16" data-search="16 综合项目 答辩 AI Index 前沿 数据证据 复现 五项评分 质询 三个月行动计划">
+    <header class="lesson-head"><div class="lesson-kicker"><span class="dot"></span>第16次课 · 模块五</div><h2>综合项目答辩与技术前沿展望</h2><p>用真实项目证据完成答辩，用来源、年份、对象/分母和限定语审查AI前沿数字；现场质询后修正项目表达并制定三个月行动计划。</p><div class="lesson-meta"><span class="chip">⏱ 90分钟</span><span class="chip green">目标：5分钟答辩 + 证据包</span></div></header>
+    <div class="lesson-body"><div class="task-callout"><b>本课大题</b><p>完成一场5分钟项目答辩，用证据包回应两轮质询，最后形成个人三个月能力行动计划。</p></div>
+      <div class="two-col"><section class="info-box"><h3><span class="icon">▤</span>背景与数据准备</h3><p>使用第15次应用或教师指定项目，收集真实运行路径和至少一个测试用例。至少填3条AI Index证据卡：来源、年份、对象/分母、限定语、不可据此推出的结论；可从课件中的采用率88%、事件数233→362、透明度58→40、MIT约95%、McKinsey约6%、METR特定任务约慢19%等例子中选取，并逐项复核统计口径。缺少口径的数字不得作确定结论。</p></section><section class="info-box"><h3><span class="icon">↓</span>本课配套资源</h3><div class="resource-list"><div class="resource-row"><span class="res-name"><strong>第16次课｜综合答辩与AI前沿资源包（ZIP）</strong><small>任务单、证据卡模板、评分表与复现清单</small></span><a class="download-link" href="resources/资源包_第16次课_综合答辩与AI前沿.zip" download aria-label="下载第16次课综合答辩与AI前沿资源包">下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第16次课｜课堂任务单.md</strong><small>答辩流程、数据核验步骤、成果物与评分表</small></span><a class="download-link" href="resources/files/第16次课/任务单.md" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第16次课｜L16-evidence-cards.csv</strong><small>来源、年份、对象/分母、限定语核验栏</small></span><a class="download-link" href="resources/files/第16次课/L16-evidence-cards.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第16次课｜L16-scoring-rubric.csv</strong><small>五项答辩维度、自评分与WorkBuddy盲审分值记录</small></span><a class="download-link" href="resources/files/第16次课/L16-scoring-rubric.csv" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第16次课｜5min-outline.txt</strong><small>演讲计时结构与固定质询</small></span><a class="download-link" href="resources/files/第16次课/5min-outline.txt" download>下载 ↓</a></div><div class="resource-row"><span class="res-name"><strong>第16次课｜repro-checklist.txt</strong><small>版本、依赖、运行和测试证据核查</small></span><a class="download-link" href="resources/files/第16次课/repro-checklist.txt" download>下载 ↓</a></div></div></section></div>
+      <div class="notice"><strong>单人完成方式</strong><br>答辩稿、演示、证据卡和三个月计划均由你个人完成。WorkBuddy新会话充当AI模拟评委；你本人现场回答或录音留证，不需要真人评委、同伴答问或多人协作。</div><div class="steps-title"><h3>课堂学习步骤</h3><span>证据核验 → 个人答辩 → AI模拟质询 → 行动</span></div><ol class="steps"><li><span class="step-time">10分钟</span><div class="step-copy"><strong>整理项目证据。</strong>用WorkBuddy列出已验证事实、尚未验证内容和当前限制；你逐项打开源文件/运行结果确认，每个AI生成说法均须有证据。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>生成5页答辩稿。</strong>固定页序：用户价值、最小方案和技术结构、现场演示、项目与AI前沿证据、限制风险和下一步。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>核验数据与论证。</strong>检查来源、年份、对象、分母和限定语；比较“约95%试点”与“约6%高绩效者”的口径；不把METR局部结果推广到所有开发者。</div></li><li><span class="step-time">20分钟</span><div class="step-copy"><strong>排练真实演示。</strong>按5分钟计时：30秒介绍、150秒运行、60秒展示证据、60秒说明限制和下一步。不得用预录视频代替现场运行。</div></li><li><span class="step-time">12分钟</span><div class="step-copy"><strong>WorkBuddy模拟两轮固定质询。</strong>新开“独立评委”会话，让它问“数字来源、分母、适用范围是什么？”和“换一台干净设备如何复现？”你本人计时作答并指向证据；答不上即记录缺口，不临时编造。</div></li><li><span class="step-time">10分钟</span><div class="step-copy"><strong>独立评分并修订。</strong>你先按五项量表自评，再让WorkBuddy盲审会话独立评分；比较差异，修订最低两项并记录前后证据。</div></li><li><span class="step-time">6分钟</span><div class="step-copy"><strong>写三个月行动计划。</strong>至少3个按月目标、每个可观察成果、一项复盘日期和一个AI使用边界。</div></li></ol>
+      <div class="tool-prompt"><h3>WorkBuddy操作重点</h3><p>让WorkBuddy只根据项目说明、测试记录和证据卡生成大纲。每个数字附来源、年份、对象/分母与限定语；缺项标“需核验”，不补造。再按五项评审标准列证据、缺口和具体修订动作。</p></div>
+      <div class="outcomes"><section><h3>成果物验收</h3><ul class="check-list"><li>5页答辩PPT或逐页讲稿</li><li>5分钟计时稿与现场演示清单</li><li>3条以上AI Index证据卡</li><li>五项评分表、两轮质询和修订前后对比</li><li>个人三个月行动计划</li></ul></section><section><h3>评价要点 · 100分</h3><div class="rubric"><div class="rubric-row"><span>用户问题和价值</span><strong>20</strong></div><div class="rubric-row"><span>真实技术演示</span><strong>20</strong></div><div class="rubric-row"><span>数据口径与来源</span><strong>25</strong></div><div class="rubric-row"><span>表达与答问</span><strong>15</strong></div><div class="rubric-row"><span>复现性</span><strong>10</strong></div><div class="rubric-row"><span>行动计划</span><strong>10</strong></div></div></section></div>
+    </div>
+  </article>
+
+  <section class="info-box" id="resources" style="margin-top:28px;padding:22px">
+    <div class="section-heading" style="margin:0 0 14px"><div><h2 style="font-size:22px">配套资源总表 · 全 16 次课</h2><p>每个入口都标明资源名称与对应课次；单课 ZIP 内含任务单、背景资料、全部素材、模板、个人验收表和教师核验卡。下方「16 次课资料逐份下载」还可单独取用任意一份文件。</p></div></div>
+    <div class="resource-list">
+      <div class="resource-row"><span class="res-name"><strong>全16次课练习资源总包（ZIP）</strong><small>总手册 + 清单 + 16 份按课次打包的全部任务资料</small></span><a class="download-link" href="resources/全16次课练习资源总包.zip" download>下载全包 ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>16次课练习总手册.md</strong><small>课程主线、通用执行规程与第 1—10 课完整任务单</small></span><a class="download-link" href="resources/16次课练习总手册.md" download>下载MD ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>16次课练习资源清单.md</strong><small>16 个 ZIP 命名对照与逐课文件列表</small></span><a class="download-link" href="resources/16次课练习资源清单.md" download>下载MD ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第11—16次课课堂AI综合练习手册（单人独立完成版 DOCX）</strong><small>后六次课完整任务的 Word 版，便于打印发放</small></span><a class="download-link" href="resources/第11-16次课课堂AI综合练习设计_单人独立完成版.docx" download>下载DOCX ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第1次课｜工具全景与个人红线资源包</strong><small>模块一 · 认知与原理 · 70分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第1次课_工具全景与个人红线.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第2次课｜Token 与上下文成本实测资源包</strong><small>模块一 · 认知与原理 · 70分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第2次课_Token与上下文成本实测.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第3次课｜多模态读图与素材生成资源包</strong><small>模块一 · 认知与原理 · 75分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第3次课_多模态读图与素材生成.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第4次课｜文档演示与知识归档资源包</strong><small>模块二 · 办公与数据 · 80分钟 · 10 份文件</small></span><a class="download-link" href="resources/资源包_第4次课_文档演示与知识归档.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第5次课｜表格清洗与公式复核资源包</strong><small>模块二 · 办公与数据 · 80分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第5次课_表格清洗与公式复核.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第6次课｜自然语言数据分析资源包</strong><small>模块二 · 办公与数据 · 80分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第6次课_自然语言数据分析.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第7次课｜BI 口径卡与经营报告资源包</strong><small>模块二 · 办公与数据 · 85分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第7次课_BI口径卡与经营报告.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第8次课｜智能体端到端与权限资源包</strong><small>模块三 · 智能体与编排 · 80分钟 · 12 份文件</small></span><a class="download-link" href="resources/资源包_第8次课_智能体端到端与权限.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第9次课｜知识库 RAG 与工作流资源包</strong><small>模块三 · 智能体与编排 · 85分钟 · 12 份文件</small></span><a class="download-link" href="resources/资源包_第9次课_知识库RAG与工作流.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第10次课｜低代码问答智能体实战资源包</strong><small>模块三 · 智能体与编排 · 90分钟 · 13 份文件</small></span><a class="download-link" href="resources/资源包_第10次课_低代码问答智能体实战.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第11次课｜多智能体与AgentOps资源包</strong><small>模块三 · 智能体与编排 · 85分钟 · 13 份文件</small></span><a class="download-link" href="resources/资源包_第11次课_多智能体与AgentOps.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第12次课｜Harness结构与成本资源包</strong><small>模块四 · Harness 工程 · 80分钟 · 12 份文件</small></span><a class="download-link" href="resources/资源包_第12次课_Harness结构与成本.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第13次课｜AI IDE CSV检查器资源包</strong><small>模块四 · Harness 工程 · 90分钟 · 13 份文件</small></span><a class="download-link" href="resources/资源包_第13次课_AI IDE CSV检查器.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第14次课｜工程护栏与Hook资源包</strong><small>模块四 · Harness 工程 · 85分钟 · 16 份文件</small></span><a class="download-link" href="resources/资源包_第14次课_工程护栏与Hook.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第15次课｜校园活动报名应用资源包</strong><small>模块四 · Harness 工程 · 100分钟 · 11 份文件</small></span><a class="download-link" href="resources/资源包_第15次课_校园活动报名应用.zip" download>下载ZIP ↓</a></div>
+      <div class="resource-row"><span class="res-name"><strong>第16次课｜综合答辩与AI前沿资源包</strong><small>模块五 · 综合实践与前沿 · 90分钟 · 10 份文件</small></span><a class="download-link" href="resources/资源包_第16次课_综合答辩与AI前沿.zip" download>下载ZIP ↓</a></div>
+    </div>
+    <div class="notice"><strong>课堂安全与验收提醒</strong><br>练习包使用虚构数据。不要上传真实学号、手机号、账号密码或正式密钥。云服务、Hook、子代理和发布入口以课堂实际授权为准；不支持时应完成标注明确的模拟，不得把模拟写成真实运行。教师核验卡仅供教师评阅，学生练习时不应先查看答案。</div>
+  </section>
+<section class="info-box" id="all-downloads" style="margin-top:22px;padding:22px">
+  <div id="resource-catalog" aria-live="polite"><p>正在整理单人独立完成版资源目录…</p></div>
+</section>
+</main>
+<footer class="footer"><div class="shell footer-inner"><span>人工智能与创新设计应用课程 · 全 16 次课练习资源</span><a href="#top">回到页面顶部 ↑</a></div></footer>
+<script src="resources/downloads.js"></script>
+<script>
+(function(){
+ const input=document.getElementById('course-search');
+ const cards=[...document.querySelectorAll('.lesson-card')];
+ const nav=[...document.querySelectorAll('.lesson-strip a')];
+ const empty=document.getElementById('no-results');
+ input.addEventListener('input',function(){
+   const q=this.value.trim().toLowerCase();let shown=0;
+   cards.forEach(card=>{const hit=!q||(card.dataset.search+' '+card.innerText).toLowerCase().includes(q);card.classList.toggle('hidden',!hit);if(hit)shown++;});
+   document.querySelector('.lesson-nav').classList.toggle('hidden',Boolean(q));
+   empty.style.display=shown?'none':'block';
+ });
+ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){nav.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-25% 0px -65% 0px'});
+ cards.forEach(c=>observer.observe(c));
+})();
+</script>
+</body>
+</html>
