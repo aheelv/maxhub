@@ -74,3 +74,77 @@ details summary{cursor:pointer;font-weight:700;color:var(--primary);font-size:14
 details pre{max-height:420px;overflow:auto;margin:10px 0 0}
 @media(max-width:640px){.hero h1{font-size:25px}section{padding:16px}.kv th{width:110px}}
 @media print{.site-head,.hero,footer,.btn{display:none}section{break-inside:avoid;box-shadow:none}}
+
+
+/* =====================================================================
+   wb-hot-responsive-patch-v1
+   《最热AI应用实践课》分站多端适配：表格可横向滑动、导航可滑动、长文本断行。
+   ===================================================================== */
+@media screen {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  img, video, canvas, svg, iframe { max-width: 100%; }
+  video, canvas, svg { height: auto; }
+  a, code, pre, td, th, .note, .warn, .ok, .step, .card p {
+    overflow-wrap: anywhere; word-break: break-word;
+  }
+  .grid { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+  .sample-grid { grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr)); }
+  /* 表格滚动容器：内容完整保留，窄屏/桌面都通过局部横向滚动查看 */
+  .tbl-scroll {
+    display: block; width: 100%; max-width: 100%;
+    overflow-x: auto; overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    margin: 12px 0; border-radius: 8px;
+  }
+  .tbl-scroll > table { margin: 0; width: 100%; }
+  .tbl-scroll::-webkit-scrollbar { height: 8px; }
+  .tbl-scroll::-webkit-scrollbar-track { background: #eef2fa; border-radius: 8px; }
+  .tbl-scroll::-webkit-scrollbar-thumb { background: #c3d0ea; border-radius: 8px; }
+}
+@media screen and (max-width: 760px) {
+  .tbl-scroll { box-shadow: inset -14px 0 12px -14px rgba(31, 54, 90, .5); }
+}
+@media screen and (max-width: 760px) {
+  .wrap { padding-left: 14px; padding-right: 14px; }
+  .site-head .wrap { padding: 10px 14px; gap: 8px; }
+  .brand { font-size: 14px; flex-wrap: wrap; }
+  .brand i { width: 30px; height: 30px; flex: none; }
+  .nav {
+    width: 100%; flex-wrap: nowrap; overflow-x: auto;
+    -webkit-overflow-scrolling: touch; gap: 4px; padding-bottom: 2px;
+  }
+  .nav a {
+    flex: none; white-space: nowrap; padding: 9px 11px;
+    min-height: 42px; display: inline-flex; align-items: center;
+  }
+  .hero { padding: 32px 0 28px; }
+  .hero h1 { font-size: clamp(23px, 6.2vw, 30px); }
+  .hero p { font-size: 14.5px; }
+  .pills span { font-size: 12px; }
+  main { padding: 22px 0 44px; }
+  section { padding: 16px 14px; margin-bottom: 14px; border-radius: 12px; }
+  section > h2 { font-size: 18px; }
+  table { font-size: 12.5px; }
+  th, td { padding: 6px 8px; }
+  th { white-space: normal; }
+  code { font-size: 12px; }
+  pre { padding: 10px 12px; font-size: 12px; }
+  .btn {
+    min-height: 44px; display: inline-flex; align-items: center;
+    justify-content: center; padding: 10px 14px; font-size: 13px;
+  }
+  .kv th { width: 96px; }
+  .step { padding: 13px 14px; }
+  .note, .warn, .ok { font-size: 13px; }
+  footer { padding: 16px 0; font-size: 12px; }
+  .sample-video { max-width: 100%; }
+}
+@media screen and (max-width: 420px) {
+  .brand { font-size: 13px; }
+  section > h2 { font-size: 17px; }
+  .kv th { width: 84px; }
+  .toc a { font-size: 12px; padding: 5px 8px; }
+  th, td { padding: 5px 6px; }
+}
+/* wb-hot-responsive-patch-v1 END */
