@@ -148,3 +148,65 @@ details pre{max-height:420px;overflow:auto;margin:10px 0 0}
   th, td { padding: 5px 6px; }
 }
 /* wb-hot-responsive-patch-v1 END */
+
+
+/* =====================================================================
+   wb-agent-topic-patch-v1
+   拓展专题区 / 企业级智能体开发专题：沿用分站设计系统，补充专题卡片、
+   单元卡片、时间轴、面包屑与代码区样式。全部规则窄屏自适应。
+   ===================================================================== */
+@media screen {
+  .topic-grid, .unit-grid {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+  .topic-card, .unit-card, .slot-card {
+    border: 1px solid var(--line); border-radius: 12px; padding: 16px;
+    background: var(--surface2); min-width: 0;
+  }
+  .topic-card { border-left: 4px solid var(--primary); }
+  .topic-card h3, .unit-card h3, .slot-card h3 { margin: 0 0 8px; font-size: 16px; }
+  .topic-card p, .unit-card p, .slot-card p { margin: 6px 0; font-size: 13.5px; }
+  .slot-card {
+    border: 1px dashed #c7d2ea; background: #fbfcff; color: var(--muted);
+  }
+  .slot-card h3 { color: var(--muted); }
+  .topic-meta, .unit-meta {
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px;
+  }
+  .topic-meta span, .unit-meta span, .tag {
+    background: var(--primary-soft); color: var(--primary); border-radius: 6px;
+    padding: 2px 8px; font-size: 12px; font-weight: 700;
+  }
+  .tag.gray { background: #eef2f8; color: var(--ink2); }
+  .tag.green { background: #e7f7ee; color: #14764a; }
+  .tag.amber { background: #fff3dc; color: #946100; }
+  .crumb { padding-top: 18px; }
+  .pager { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; }
+  .pager a, .toc a { border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    padding: 6px 10px; font-size: 13px; min-height: 40px;
+    display: inline-flex; align-items: center; }
+  .pager a { background: var(--surface2); }
+  .unit-nav { margin: 14px 0 2px; }
+  .arch { font-size: 12px; line-height: 1.55; }
+  .code-label { font: 12px/1.6 var(--mono); color: var(--muted); margin: 14px 0 2px; }
+  .kbd { background: #eef2fb; border: 1px solid #d9e2f3; border-radius: 4px;
+    padding: 0 4px; font: 12px var(--mono); }
+  details > ul, details > ol, details > p { font-size: 13.5px; }
+}
+@media screen and (max-width: 640px) {
+  .topic-card, .unit-card, .slot-card { padding: 13px; }
+  .pager a, .toc a { min-height: 42px; font-size: 12.5px; }
+  .crumb { padding-top: 14px; }
+}
+/* wb-agent-topic-patch-v1 END */
+
+/* wb-agent-overflow-patch-v1 BEGIN */
+/* 窄屏下允许长串字段、路径与 URL 在任意位置断行，避免正文撑破容器造成横向溢出；
+   不作用于 pre/code（代码块仍由自身 overflow-x 滚动承载）。 */
+main p, main li, main td, main th,
+.step p, .step li, .card p, .note, .warn, .ok,
+.tbl-scroll td, .tbl-scroll th {
+  overflow-wrap: anywhere;
+}
+/* wb-agent-overflow-patch-v1 END */

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>单元三 · 编排与开发范式 · 企业级智能体开发专题</title><link rel="stylesheet" href="../../assets/hot.css"></head><body><div class="site-head"><div class="wrap"><a class="brand" href="../../../index.html"><i>AI</i>人工智能工具应用实践 · 拓展课程</a><nav class="nav"><a href="../../../index.html">课程门户首页</a><a href="../../../exercises.html">16 课练习下载</a><a href="../../index.html">热度排序 · 课程主页</a><a href="../../topics/index.html" class="on">拓展专题区</a><a href="../../verify.html">验证清单</a><a href="../../access.html">登录与下载</a></nav></div></div><div class="hero"><div class="wrap"><span class="eyebrow">专题 01 · 单元 3 / 4 · 90 分钟</span><h1>单元三 · 编排与开发范式</h1><p>同一批工单，三种控制流：固定 Workflow、ReAct 单智能体、Supervisor 多智能体；用定量对照学会按场景选型，并实现人工确认与断点续跑。</p><div class="pills"><span>状态图五要素</span><span>三种范式对照</span><span>HITL 与 checkpoint</span><span>12 条定量评测</span><span>零依赖可运行</span></div></div></div><main class="wrap"><div class="wrap crumb"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="../../index.html">↑ 拓展课程主页</a><a href="unit2.html">← 单元 2</a><a href="unit4.html">单元 4 →</a></div></div><section id="overview"><h2>一、本单元一览</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>单元序号</td><td>单元三 / 共四单元</td></tr><tr><td>主题</td><td>编排与开发范式：Workflow、ReAct、多智能体</td></tr><tr><td>时长</td><td>90 分钟（讲授 40 分钟 + 实践 50 分钟）</td></tr><tr><td>前置</td><td>单元二的知识助手与工具集；按第六节重跑三条准备命令即可</td></tr><tr><td>当堂成果</td><td>同一批 12 条工单的三种实现 + 定量对照报告 + HITL 断点续跑</td></tr><tr><td>新增依赖</td><td>无。状态机、检查点、对照评测全部标准库</td></tr></tbody></table></div><div class="toc"><a href="#s1">学习目标</a><a href="#s2">90 分钟时间轴</a><a href="#s3">核心知识</a><a href="#s4">企业场景实例</a><a href="#s5">环境搭建</a><a href="#s6">开发模式</a><a href="#s7">逐步开发过程</a><a href="#s8">验收标准</a><a href="#s9">自测与排错</a><a href="#s10">产物与衔接</a></div></section><section id="s1"><h2>二、学习目标（可测量）</h2><ol><li>能说清状态图的五个要素（State、Node、Edge、条件边、Checkpoint）分别解决什么问题。</li><li>能解释 Workflow、ReAct、Plan-and-Execute、Reflection、Supervisor 多智能体在控制流归属上的差别，并画出各自适用的业务形状。</li><li>能用同一批工单、同一组工具实现三种范式，说明「控制变量」为什么是公平对比的前提。</li><li>能独立实现一次中断—人工确认—从 checkpoint 恢复，且不会重复执行已完成的写操作。</li><li>能根据步数、人工确认次数、自动通过率与可回归性，为一个真实场景写出范式选型结论。</li></ol></section><section id="s2"><h2>三、90 分钟时间轴</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>时段</th><th>环节</th><th>做什么</th><th>产出</th></tr></thead><tbody><tr><td>00–12 分</td><td>状态机基础</td><td>State / Node / Edge / 条件边 / Checkpoint</td><td>五要素表</td></tr><tr><td>12–26 分</td><td>范式原理</td><td>Workflow、ReAct、Plan-and-Execute、Reflection、多智能体拓扑</td><td>范式对照表</td></tr><tr><td>26–40 分</td><td>工程约束</td><td>HITL、幂等、重试、步数上限、成本与延迟模型</td><td>约束清单</td></tr><tr><td>40–47 分</td><td>环境准备</td><td>生成 12 条工单，确认单元二工具可复用</td><td>data/tickets.json</td></tr><tr><td>47–68 分</td><td>逐步实践</td><td>三种实现逐一跑通，观察同一工单的不同路径</td><td>3 个可运行脚本</td></tr><tr><td>68–80 分</td><td>对照实验</td><td>跑 12 条工单，统计节点数/人工确认/自动通过</td><td>compare_report.json</td></tr><tr><td>80–90 分</td><td>验收与衔接</td><td>写选型结论，说明单元四要加哪些治理能力</td><td>单元三报告</td></tr></tbody></table></div></section><section id="s3"><h2>四、核心知识：控制流到底归谁</h2><h3>4.1 状态图五要素</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>要素</th><th>含义</th><th>企业场景里的作用</th></tr></thead><tbody><tr><td>State（共享状态）</td><td>一次任务全程可见的结构化数据</td><td>工单号、金额、风险等级、已调用工具、审批结论</td></tr><tr><td>Node（节点）</td><td>一个可独立测试的处理单元</td><td>分类、取数、风控、财务、答复</td></tr><tr><td>Edge（边）</td><td>节点之间的固定流转</td><td>取数完成后必走风控</td></tr><tr><td>条件边</td><td>按状态动态选择下一个节点</td><td>金额 &gt; 500 或存在争议则转人工</td></tr><tr><td>Checkpoint</td><td>在关键节点持久化状态</td><td>系统重启/人工确认后从断点继续，不重复执行</td></tr></tbody></table></div><div class="note">LangGraph、Dify 等框架的核心抽象就是这五件事。本单元先用纯 Python 实现，你会看到框架并没有魔法：它只是把这些要素标准化、加上持久化、可视化与中断恢复。</div><h3>4.2 五种范式的控制流对照</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>范式</th><th>谁决定下一步</th><th>典型结构</th><th>优势</th><th>代价 / 风险</th></tr></thead><tbody><tr><td>Workflow（DAG）</td><td>开发者</td><td>固定节点 + 条件分支</td><td>可预测、可审计、易回归</td><td>路径变化要改代码</td></tr><tr><td>ReAct 单智能体</td><td>模型根据观察</td><td>Thought → Action → Observation 循环</td><td>适应信息不全、路径不定</td><td>可能绕路、死循环、成本波动</td></tr><tr><td>Plan-and-Execute</td><td>先规划再执行</td><td>计划器拆解 + 执行器逐步完成</td><td>长任务结构清晰</td><td>计划过期需重规划</td></tr><tr><td>Reflection / 自评</td><td>模型自我检查</td><td>生成 → 评审 → 修订</td><td>提高文案与代码质量</td><td>评审也会出错，需外部判据</td></tr><tr><td>Multi-Agent</td><td>主管分派 + 角色决策</td><td>Supervisor / Pipeline / Handoff / Debate</td><td>多视角交叉校验</td><td>消息膨胀、责任不清、成本最高</td></tr></tbody></table></div><h3>4.3 多智能体四种拓扑</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>拓扑</th><th>结构</th><th>适用</th><th>主要风险</th></tr></thead><tbody><tr><td>Supervisor（主管）</td><td>一个主管分派给多个专业角色并汇总</td><td>退款审批、跨部门核查</td><td>主管成为单点瓶颈</td></tr><tr><td>Pipeline（流水线）</td><td>角色按固定顺序交接</td><td>文档生成、数据加工</td><td>上游错误被下游放大</td></tr><tr><td>Swarm / Handoff</td><td>角色之间按规则互相转交</td><td>客服分流、多语言支持</td><td>转交循环、责任归属不清</td></tr><tr><td>Debate（评审）</td><td>多个角色独立产出后交叉评审</td><td>高风险决策、合同审阅</td><td>耗时与成本显著上升</td></tr></tbody></table></div><h3>4.4 贯穿案例：为什么退款审批需要多角色</h3><pre><code>工单 WD-004（退款 899 元 / 有争议）
+  triage  → 判定为退款类
+  risk    → 金额 &gt; 500 或争议 = high
+  finance → 生成退款方案（暂不执行）
+  supervisor → interrupt：等待人工确认
+  human   → approve / reject
+  resume  → 从 checkpoint 继续，写最终结论</code></pre><p>注意 <code>finance</code> 只生成<b>方案</b>，不执行退款：写操作被推迟到人工确认之后，这是企业级智能体与演示玩具最关键的分界线。</p><h3>4.5 工程约束清单</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>约束</th><th>不做会怎样</th><th>本单元实现</th></tr></thead><tbody><tr><td>步数上限</td><td>模型反复调用同一工具直至超时</td><td><code>MAX_STEPS=5</code>，超出转人工</td></tr><tr><td>幂等</td><td>重试造成重复退款/重复建单</td><td>工单 <code>idem_key</code>、状态机只执行一次写节点</td></tr><tr><td>人工确认 HITL</td><td>自动对外承诺赔付</td><td><code>interrupt</code> 写 checkpoint 并暂停</td></tr><tr><td>断点续跑</td><td>重启后从头再跑，写操作重复</td><td><code>resume()</code> 读取 checkpoint 继续</td></tr><tr><td>共享状态边界</td><td>角色互相覆盖字段、消息无限膨胀</td><td>固定 state 字段 + 只追加 log</td></tr><tr><td>成本与延迟</td><td>多角色把一次请求放大成十次模型调用</td><td>对照报告统计节点数与人工确认数</td></tr></tbody></table></div><h3>4.6 范式选型决策树（复用了单元一的结论，此处落到代码）</h3><ol><li>规则可枚举且路径固定？→ Workflow；本单元用 <code>03_workflow.py</code>。</li><li>路径不定但一个角色能完成、风险低？→ ReAct；用 <code>03_react.py</code>。</li><li>需要多个专业判断互相制约，且金额/权限敏感？→ Supervisor + HITL；用 <code>03_multiagent.py</code>。</li><li>不确定时先用 Workflow 打基线：它的输出是后续两种实现的对照标准。</li></ol><h3>4.7 生产替换点</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>教学实现</th><th>生产框架</th><th>要保持不变的东西</th></tr></thead><tbody><tr><td>纯 Python 节点函数</td><td>LangGraph 的 Node / Edge / conditional_edge</td><td>State 字段与节点输入输出契约</td></tr><tr><td>checkpoint.json</td><td>框架 Checkpointer（SQLite / Postgres）</td><td>中断点、恢复语义、幂等键</td></tr><tr><td>Supervisor 规则分派</td><td>CrewAI / AutoGen / Agent 编排服务</td><td>角色权限边界与消息格式</td></tr><tr><td>本地对照脚本</td><td>CI 里的回归评测流水线</td><td>同一批样本、同一组指标</td></tr></tbody></table></div></section><section id="s4"><h2>五、企业场景实例</h2><div class="step"><div class="t">场景 1 · 售后退款审批（金额阈值）</div><h3>WD-004：退款 899 元且客户提出争议</h3><p><b>Workflow</b>：条件边直接判定 <code>human_review</code>，路径固定、最快。</p><p><b>ReAct</b>：先查订单、再查风险，高风险时升级人工，多两步但能解释原因。</p><p><b>Multi-Agent</b>：客服分流 → 风控定级 → 财务出方案 → 主管中断 → 人工确认，最慢但职责清晰、审计完整。</p><p><b>选型结论</b>：金额敏感且需跨部门背书，选 Supervisor + HITL。</p></div><div class="step"><div class="t">场景 2 · 采购异常核查（跨系统）</div><h3>到货数量与采购单不一致，需查 ERP、仓储与发票</h3><p><b>输入</b>：一条异常告警；<b>可用资源</b>：ERP 查询、仓储快照、发票 OCR 结果。</p><p><b>做法</b>：Plan-and-Execute 先列核查计划，再逐项取数；任一系统超时则保留已完成结果并转人工，不重新开始。</p><p><b>失败示例</b>：单智能体在三个系统间反复跳转，触发步数上限却没有结论 → 改为先规划 + checkpoint 可避免。</p></div><div class="step"><div class="t">场景 3 · 月结关账协作（顺序 + 复核）</div><h3>关账需要数据、财务、审计三方依次确认</h3><p><b>做法</b>：Pipeline 顺序交接，每个角色把结论写入共享 state；Reflection 角色对照口径表复核一次，发现差异就打回上一节点。</p><p><b>为什么不用 ReAct</b>：顺序是制度规定的，自主跳转反而增加合规风险。</p></div><div class="step"><div class="t">场景 4 · 故障处置（失败与回滚）</div><h3>客服系统故障时智能体要判断是否切降级方案</h3><p><b>约束</b>：只读诊断可自动执行；重启服务、清缓存等写操作必须人工确认。</p><p><b>关键设计</b>：中断时把「已执行的只读检查」写进 checkpoint，人工确认后只执行剩余动作，避免重复调用造成告警风暴。</p></div></section><section id="s5"><h2>六、环境搭建（承接单元二）</h2><h3>6.1 前置检查</h3><pre><code>cd agent-course/unit3
+python ../unit1/01_selfcheck.py   # 环境仍可用
+python ../unit2/02_data.py        # 业务库存在
+python 03_data.py                 # 生成 12 条虚构工单</code></pre><h3>6.2 数据说明</h3><p><code>data/tickets.json</code> 共 12 条，字段：<code>ticket_id / order_id / type / amount / days / text / dispute / missing_info</code>。金额覆盖 45–1580 元，含 2 条争议、1 条信息缺失，正好用于观察「自动通过 / 人工复核 / 补充信息」三条分支。</p><h3>6.3 常见报错</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody><tr><td><code>tickets.json</code> 不存在</td><td>未运行 03_data.py</td><td>先执行 6.1 第三条</td></tr><tr><td>三种实现结果完全一样</td><td>工单数据被改成同一金额</td><td>重新运行 03_data.py 恢复 12 条样本</td></tr><tr><td>checkpoint 一直存在</td><td>上一次运行中断后未 resume</td><td>运行 03_multiagent.py 的 resume 演示或删除该文件</td></tr><tr><td>对照报告步数为 0</td><td>调用了错误的模块路径</td><td>确认三个脚本与 03_compare.py 在同一目录</td></tr></tbody></table></div></section><section id="s6"><h2>七、开发模式：控制变量的三实现对照</h2><pre><code>同一批 12 条工单 + 同一组业务规则 + 同一套输出字段
+   ├─ A Workflow     固定 5 节点，规则判定
+   ├─ B ReAct        模型式循环，最多 5 步
+   └─ C MultiAgent  4 个角色 + 主管 + HITL + checkpoint
+   ↓
+对照指标：节点/步数 · 人工确认数 · 自动通过数 · 可回归性</code></pre><p>本单元刻意让三种实现<b>共用输入与判定口径</b>，只改变「谁决定下一步」。这样才能把差异归因到范式本身，而不是数据或工具不同。这也是单元四离线评测能直接复用的原因。</p><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>维度</th><th>Workflow</th><th>ReAct</th><th>Multi-Agent</th></tr></thead><tbody><tr><td>控制流</td><td>开发者</td><td>模型</td><td>主管 + 各角色</td></tr><tr><td>可预测性</td><td>最高</td><td>中</td><td>中低</td></tr><tr><td>解释性</td><td>规则即解释</td><td>有 thought 轨迹</td><td>有角色日志与审批记录</td></tr><tr><td>回归测试</td><td>易</td><td>需固定模型输出</td><td>需固定分派规则</td></tr><tr><td>适用金额/权限敏感场景</td><td>可</td><td>需加 HITL</td><td>最合适</td></tr></tbody></table></div><div class="ok">不要因为「多智能体更先进」就默认选它。本单元的结论要由对照数据得出：能用 Workflow 说清的业务，就别用循环。</div></section><section id="s7"><h2>八、逐步开发过程</h2><div class="step"><div class="t">第 1 步 · 5 分钟</div><h3>生成 12 条工单</h3><p>运行 <code>python 03_data.py</code>，打开 <code>data/tickets.json</code> 确认金额与争议字段分布。</p><details><summary>完整文件 · <code>unit3/03_data.py</code>（点击展开）</summary><pre><code># -*- coding: utf-8 -*-
+# 单元三：12 条虚构售后工单（覆盖正常 / 高金额 / 信息缺失 / 争议）
+import json, os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(BASE, "data")
+os.makedirs(DATA, exist_ok=True)
+TYPES = ["退货", "退款", "换货", "投诉", "发票", "价保"]
+rows = []
+amounts = [59, 268, 499, 899, 1280, 88, 320, 760, 45, 1580, 210, 680]
+for i, a in enumerate(amounts, 1):
+    rows.append({
+        "ticket_id": "WD-%03d" % i,
+        "order_id": "SO-2026-%03d" % ((i - 1) % 3 + 1),
+        "type": TYPES[(i - 1) % len(TYPES)],
+        "amount": a,
+        "days": (i * 3) % 20,
+        "text": "%s申请，金额 %d 元" % (TYPES[(i - 1) % len(TYPES)], a),
+        "dispute": i in (4, 10),
+        "missing_info": i == 7,
+    })
+with open(os.path.join(DATA, "tickets.json"), "w", encoding="utf-8") as f:
+    json.dump(rows, f, ensure_ascii=False, indent=2)
+print("已生成 12 条工单 -&gt; data/tickets.json")</code></pre></details></div><div class="step"><div class="t">第 2 步 · 10 分钟</div><h3>实现 Workflow 固定 DAG</h3><p>五个节点顺序固定，<code>decide</code> 是纯规则：缺信息 → 补材料；金额 &gt; 500 或争议 → 人工复核；7 日内退款 → 自动通过。</p><div class="code-label">完整文件 · <code>unit3/03_workflow.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元三范式 A：固定 Workflow（DAG），步骤确定、可审计、不能自主换路
+# 节点：classify -&gt; enrich -&gt; decide -&gt; execute -&gt; reply
+import json, os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def run(ticket, tools=None):
+    tools = tools or {"steps": 0}
+    state = {"ticket": ticket, "steps": []}
+    # 1 classify
+    t = ticket["type"]
+    state["route"] = "refund" if t in ("退货", "退款", "价保") else "service"
+    state["steps"].append("classify")
+    # 2 enrich
+    state["amount"] = ticket["amount"]
+    state["days"] = ticket["days"]
+    state["steps"].append("enrich")
+    # 3 decide（纯规则，无模型）
+    if ticket["missing_info"]:
+        state["decision"] = "ask_info"
+    elif state["amount"] &gt; 500 or ticket["dispute"]:
+        state["decision"] = "human_review"
+    elif state["route"] == "refund" and state["days"] &lt;= 7:
+        state["decision"] = "auto_approve"
+    else:
+        state["decision"] = "standard_process"
+    state["steps"].append("decide")
+    # 4 execute
+    state["executed"] = {"decision": state["decision"], "auto": state["decision"] == "auto_approve"}
+    state["steps"].append("execute")
+    # 5 reply
+    state["reply"] = "按固定流程处理：" + state["decision"]
+    state["steps"].append("reply")
+    tools["steps"] += len(state["steps"])
+    return state
+
+
+if __name__ == "__main__":
+    tickets = json.load(open(os.path.join(BASE, "data", "tickets.json"), encoding="utf-8"))
+    print(run(tickets[0])["reply"], "| 节点：", run(tickets[0])["steps"])</code></pre></details><pre><code>python 03_workflow.py
+# 期望：按固定流程处理：auto_approve，并打印 5 个节点</code></pre></div><div class="step"><div class="t">第 3 步 · 12 分钟</div><h3>实现 ReAct 单智能体</h3><p>观察 <code>decide()</code> 如何根据上一轮的 observation 选择下一步；<code>run()</code> 里同样有步数上限与「高风险升级人工」。</p><div class="code-label">完整文件 · <code>unit3/03_react.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元三范式 B：ReAct 单智能体（Thought -&gt; Action -&gt; Observation 循环）
+import json, os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+MAX_STEPS = 5
+
+
+try:
+    _TICKETS = {t["ticket_id"]: t for t in json.load(
+        open(os.path.join(BASE, "data", "tickets.json"), encoding="utf-8"))}
+except FileNotFoundError:
+    _TICKETS = {}
+
+
+def lookup(tid):
+    t = _TICKETS.get(tid, {"amount": 499, "days": 5})
+    return {"amount": t["amount"], "days": t["days"], "status": "已签收"}
+
+
+def risk_check(amount):
+    return {"level": "high" if amount &gt; 500 else "low"}
+
+
+def refund(tid, amount):
+    return {"refund_id": "RF-" + tid[-3:], "amount": amount}
+
+
+TOOLS = {"lookup": lookup, "risk_check": risk_check, "refund": refund}
+
+
+def decide(ticket, history):
+    # 教学 MockLLM：按观察结果决定下一步；PROD 换成 Function Calling
+    if not history:
+        return ("需要订单事实", "lookup", {"tid": ticket["ticket_id"]})
+    last = history[-1]
+    if last["action"] == "lookup":
+        return ("拿到金额，评估风险", "risk_check", {"amount": last["obs"]["amount"]})
+    if last["action"] == "risk_check":
+        if last["obs"]["level"] == "high":
+            return ("高风险转人工", "escalate", {})
+        amount = next((h["obs"]["amount"] for h in history if h["action"] == "lookup"), 499)
+        return ("风险低，执行退款", "refund",
+                {"tid": ticket["ticket_id"], "amount": amount})
+    return ("信息充足，结束", "finish", {})
+
+
+def run(ticket):
+    history, steps = [], 0
+    for _ in range(MAX_STEPS):
+        thought, action, args = decide(ticket, history)
+        steps += 1
+        if action == "escalate":
+            return {"decision": "human_review", "steps": steps, "trace": history, "loop": True}
+        if action == "finish":
+            return {"decision": "auto_approve", "steps": steps, "trace": history, "loop": True}
+        obs = TOOLS[action](**args)
+        history.append({"thought": thought, "action": action, "args": args, "obs": obs})
+    return {"decision": "max_steps", "steps": steps, "trace": history, "loop": True}
+
+
+if __name__ == "__main__":
+    tickets = json.load(open(os.path.join(BASE, "data", "tickets.json"), encoding="utf-8"))
+    r = run(tickets[0])
+    print("决策：", r["decision"], "| 步数：", r["steps"], "| 轨迹：", len(r["trace"]))</code></pre></details><pre><code>python 03_react.py
+# 期望：低风险工单 4 步结束，auto_approve；轨迹 3 条</code></pre></div><div class="step"><div class="t">第 4 步 · 15 分钟</div><h3>实现 Supervisor 多智能体 + HITL + 断点续跑</h3><p>四个角色依次写共享 state；风险为 high 时 <code>run()</code> 返回 <code>interrupted</code> 并落盘 checkpoint；<code>resume(approve=True)</code> 从断点给出最终结论。</p><div class="code-label">完整文件 · <code>unit3/03_multiagent.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元三范式 C：Supervisor 多智能体 + 共享状态 + HITL + checkpoint 断点续跑
+import json, os
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+CKPT = os.path.join(BASE, "checkpoint.json")
+HIGH = 500
+
+
+def triage(state):
+    state["route"] = "refund" if "退款" in state["ticket"]["text"] or "退货" in state["ticket"]["text"] else "service"
+    state["log"].append("triage -&gt; " + state["route"])
+    return state
+
+
+def risk(state):
+    state["risk"] = "high" if state["ticket"]["amount"] &gt; HIGH or state["ticket"]["dispute"] else "low"
+    state["log"].append("risk -&gt; " + state["risk"])
+    return state
+
+
+def finance(state):
+    state["proposal"] = {"amount": state["ticket"]["amount"], "action": "退款待审批"}
+    state["log"].append("finance -&gt; proposal")
+    return state
+
+
+def supervisor(state):
+    if state.get("risk") == "high":
+        state["need_human"] = True
+        state["log"].append("supervisor -&gt; interrupt(human)")
+    else:
+        state["need_human"] = False
+        state["decision"] = "auto_approve"
+        state["log"].append("supervisor -&gt; approve")
+    return state
+
+
+ROLES = [triage, risk, finance, supervisor]
+
+
+def run(ticket, auto_confirm=False):
+    state = {"ticket": ticket, "log": [], "stage": 0}
+    for i, role in enumerate(ROLES):
+        state = role(state)
+        state["stage"] = i + 1
+        if role is supervisor and state["need_human"] and not auto_confirm:
+            with open(CKPT, "w", encoding="utf-8") as f:
+                json.dump(state, f, ensure_ascii=False)
+            return {"status": "interrupted", "checkpoint": CKPT, "state": state}
+    state["decision"] = state.get("decision", "approved_after_human")
+    return {"status": "done", "state": state}
+
+
+def resume(approve=True):
+    if not os.path.exists(CKPT):
+        return {"error": "没有待恢复的 checkpoint"}
+    state = json.load(open(CKPT, encoding="utf-8"))
+    state["log"].append("human -&gt; " + ("approve" if approve else "reject"))
+    state["decision"] = "approved_after_human" if approve else "rejected_by_human"
+    state["need_human"] = False
+    os.remove(CKPT)
+    return {"status": "done", "state": state}
+
+
+if __name__ == "__main__":
+    tickets = json.load(open(os.path.join(BASE, "data", "tickets.json"), encoding="utf-8"))
+    hi = next(t for t in tickets if t["amount"] &gt; HIGH)
+    lo = next(t for t in tickets if t["amount"] &lt;= HIGH and not t["dispute"])
+    print("低风险：", run(lo)["state"]["decision"])
+    r = run(hi)
+    print("高风险：", r["status"], "| 日志：", r["state"]["log"])
+    print("人工确认后：", resume(True)["state"]["decision"])</code></pre></details><pre><code>python 03_multiagent.py
+# 期望：低风险 auto_approve；高风险 interrupted；
+#       人工确认后 approved_after_human，checkpoint 被清理</code></pre></div><div class="step"><div class="t">第 5 步 · 8 分钟</div><h3>跑 12 条工单的对照评测</h3><p>脚本会依次调用三种实现，统计节点/步数、人工确认数与自动通过数，并自动清理残留 checkpoint，保证可重复运行。</p><div class="code-label">完整文件 · <code>unit3/03_compare.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元三：同一批 12 条工单，三种范式定量对照
+import json, os
+from importlib.util import spec_from_file_location, module_from_spec
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def _load(f, n):
+    s = spec_from_file_location(n, os.path.join(BASE, f))
+    m = module_from_spec(s)
+    s.loader.exec_module(m)
+    return m
+
+
+WF, RE, MA = (_load("03_workflow.py", "wf"), _load("03_react.py", "re"),
+              _load("03_multiagent.py", "ma"))
+
+
+def main():
+    tickets = json.load(open(os.path.join(BASE, "data", "tickets.json"), encoding="utf-8"))
+    report = {"workflow": {"steps": 0, "human": 0, "auto": 0},
+              "react": {"steps": 0, "human": 0, "auto": 0},
+              "multiagent": {"steps": 0, "human": 0, "auto": 0}}
+    for t in tickets:
+        w = WF.run(t)
+        report["workflow"]["steps"] += len(w["steps"])
+        report["workflow"]["human"] += w["decision"] == "human_review"
+        report["workflow"]["auto"] += w["decision"] == "auto_approve"
+        r = RE.run(t)
+        report["react"]["steps"] += r["steps"]
+        report["react"]["human"] += r["decision"] == "human_review"
+        report["react"]["auto"] += r["decision"] == "auto_approve"
+        m = MA.run(t, auto_confirm=False)
+        st = m["state"]
+        report["multiagent"]["steps"] += len(st["log"])
+        report["multiagent"]["human"] += m["status"] == "interrupted"
+        report["multiagent"]["auto"] += m["status"] == "done" and st.get("decision") == "auto_approve"
+    # 恢复残留 checkpoint，保证脚本可重复运行
+    if os.path.exists(MA.CKPT):
+        MA.resume(True)
+    with open(os.path.join(BASE, "compare_report.json"), "w", encoding="utf-8") as f:
+        json.dump({"tickets": len(tickets), "result": report}, f, ensure_ascii=False, indent=2)
+    print("工单数：", len(tickets))
+    for k, v in report.items():
+        print("%-10s 节点/步数=%3d 人工确认=%2d 自动通过=%2d" %
+              (k, v["steps"], v["human"], v["auto"]))
+    print("-&gt; compare_report.json")
+    return report
+
+
+if __name__ == "__main__":
+    main()</code></pre></details><pre><code>python 03_compare.py
+# 期望：打印三行统计与「-&gt; compare_report.json」</code></pre></div><div class="step"><div class="t">第 6 步 · 5 分钟</div><h3>写出选型结论</h3><p>用一页笔记回答：① 哪种范式节点数最少；② 高风险工单在三种实现里分别被怎么处理；③ 如果业务规则明天改了，哪种实现最容易回归验证；④ 本企业售后场景你会选哪一种，为什么。</p><div class="note">结论不要写「多智能体最好」。企业级选型的判据是「在满足风控要求的前提下，最可控、最便宜、最容易回归的那一个」。</div></div></section><section id="s8"><h2>九、验收标准（100 分）</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>评价项目</th><th>分值</th><th>通过标准</th></tr></thead><tbody><tr><td>状态图理解</td><td>15</td><td>能说清五要素，并指出 checkpoint 与幂等的关系</td></tr><tr><td>三实现可运行</td><td>25</td><td>Workflow / ReAct / MultiAgent 三个脚本全部 rc=0 且输出符合预期</td></tr><tr><td>HITL 与断点续跑</td><td>20</td><td>高风险工单中断写 checkpoint，resume 后不重复执行已完成动作</td></tr><tr><td>对照实验</td><td>20</td><td><code>compare_report.json</code> 覆盖 12 条工单且三类统计非零</td></tr><tr><td>选型结论</td><td>15</td><td>结论引用了对照数据，且说明可回归性与成本</td></tr><tr><td>工程约束</td><td>5</td><td>能指出步数上限、共享状态边界在生产中的对应实现</td></tr></tbody></table></div></section><section id="s9"><h2>十、自测、排错与作业</h2><ol><li>Workflow 与 ReAct 的根本差别是「有没有模型」吗？为什么？</li><li>为什么高风险工单要先生成「方案」而不是直接执行写操作？</li><li>checkpoint 里最少要存哪些字段，才能保证恢复时不重复执行？</li><li>Supervisor 成为单点瓶颈时，可以怎么改拓扑？代价是什么？</li><li>对照实验为什么要共用同一批工单和同一套判定口径？</li><li>LangGraph 替换纯 Python 状态机时，哪些东西必须保持不变？</li></ol><h3>排错表</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody><tr><td>ReAct 所有工单结果相同</td><td>工单数据未生成，lookup 走了默认值</td><td>先运行 <code>03_data.py</code></td></tr><tr><td>resume 报「没有待恢复」</td><td>上次运行没有触发中断</td><td>换用金额 &gt; 500 的工单再跑</td></tr><tr><td>对照报告 human 全为 0</td><td>传给 MA.run 的 auto_confirm 被设成 True</td><td>改回 False</td></tr><tr><td>多智能体日志无限增长</td><td>角色之间互相转交</td><td>固定角色顺序，只允许追加 log</td></tr><tr><td>重复运行对照结果变化</td><td>checkpoint 残留</td><td>脚本末尾已自动 resume 清理；必要时手动删除</td></tr></tbody></table></div><h3>作业</h3><ol><li>把 <code>HIGH</code> 阈值从 500 改成 300，重新跑对照并解释指标变化。</li><li>给 ReAct 增加一个 Reflection 节点，用于检查结论与金额是否一致。</li><li>写出把三实现迁移到 LangGraph 时的 State 字段表与节点清单。</li></ol></section><section id="s10"><h2>十一、本单元产物与下一单元衔接</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>产物</th><th>文件</th><th>单元四如何使用</th></tr></thead><tbody><tr><td>三种编排实现</td><td><code>unit3/03_*.py</code></td><td>选择其一作为被评测、被上线的服务内核</td></tr><tr><td>12 条工单</td><td><code>unit3/data/tickets.json</code></td><td>扩充为 12 条线上回归样本的一部分</td></tr><tr><td>对照报告</td><td><code>unit3/compare_report.json</code></td><td>作为性能与成本基线的参考</td></tr><tr><td>HITL 机制</td><td><code>unit3/03_multiagent.py</code></td><td>并入上线服务的写操作确认流程</td></tr></tbody></table></div><div class="ok">下一单元：给这套系统补上「上线前怎么证明它靠谱」——离线评测、五处护栏、结构化 trace、服务化部署、灰度与回滚，形成 AgentOps 闭环。</div></section><div class="unit-nav"><div class="pager"><a href="unit2.html">← 上一单元</a><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="materials/企业级智能体开发专题_全套资料.zip">⬇ 下载全套资料</a><a href="unit4.html">下一单元 →</a></div></div></main><footer><div class="wrap">大连财经学院管理学院 · 《人工智能工具应用实践》课程拓展内容 · 《最热AI应用实践课》 · 企业级智能体开发专题 · 素材均为课堂虚构数据 · 2026-11-10</div></footer></body></html>

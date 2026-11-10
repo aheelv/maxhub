@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>单元二 · 知识底座与工具接入 · 企业级智能体开发专题</title><link rel="stylesheet" href="../../assets/hot.css"></head><body><div class="site-head"><div class="wrap"><a class="brand" href="../../../index.html"><i>AI</i>人工智能与创新设计应用课程 · 拓展课程</a><nav class="nav"><a href="../../../index.html">课程门户首页</a><a href="../../../exercises.html">16 课练习下载</a><a href="../../index.html">热度排序 · 课程主页</a><a href="../../topics/index.html" class="on">拓展专题区</a><a href="../../verify.html">验证清单</a><a href="../../access.html">登录与下载</a></nav></div></div><div class="hero"><div class="wrap"><span class="eyebrow">专题 01 · 单元 2 / 4 · 90 分钟</span><h1>单元二 · 知识底座与工具接入</h1><p>让智能体的每句话都有出处、每个动作都有边界：RAG 全链路、Function Calling、MCP 与受控工具，做出会引用、会拒答、会查业务系统的企业知识助手。</p><div class="pills"><span>RAG 七环节</span><span>工具白名单</span><span>MCP 协议</span><span>10 条离线评测</span><span>零依赖可运行</span></div></div></div><main class="wrap"><div class="wrap crumb"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="../../index.html">↑ 拓展课程主页</a><a href="unit1.html">← 单元 1</a><a href="unit3.html">单元 3 →</a></div></div><section id="overview"><h2>一、本单元一览</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>单元序号</td><td>单元二 / 共四单元</td></tr><tr><td>主题</td><td>知识底座与工具接入：RAG、Function Calling、MCP</td></tr><tr><td>时长</td><td>90 分钟（讲授 40 分钟 + 实践 50 分钟）</td></tr><tr><td>前置</td><td>单元一环境；若无，按 6.2 重建 venv 并执行 <code>01_selfcheck.py</code></td></tr><tr><td>当堂成果</td><td>会引用、会拒答、会查订单/库存/建工单的知识助手 + 10 条离线评测结果</td></tr><tr><td>新增依赖</td><td>无。SQLite、BM25、JSON Schema 校验全部使用标准库</td></tr></tbody></table></div><div class="toc"><a href="#s1">学习目标</a><a href="#s2">90 分钟时间轴</a><a href="#s3">核心知识</a><a href="#s4">企业场景实例</a><a href="#s5">环境搭建</a><a href="#s6">开发模式</a><a href="#s7">逐步开发过程</a><a href="#s8">验收标准</a><a href="#s9">自测与排错</a><a href="#s10">产物与衔接</a></div></section><section id="s1"><h2>二、学习目标（可测量）</h2><ol><li>能画出 RAG 的 7 个环节，并说明「切分粒度、召回阈值、引用标注」各自防什么错。</li><li>能为一个业务工具写出 JSON Schema、只读/写标记、幂等键与参数校验，并解释为什么写操作要 HITL。</li><li>能说清 Function Calling 与 MCP 的关系：前者是模型调用工具的约定，后者是工具供给的协议。</li><li>能独立运行知识助手，使正常问题带条款引用、越界问题拒答、订单问题触发工具调用。</li><li>能用 10 条评测集给出通过率，并从失败样本反推出该改检索、改提示还是改护栏。</li></ol></section><section id="s2"><h2>三、90 分钟时间轴</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>时段</th><th>环节</th><th>做什么</th><th>产出</th></tr></thead><tbody><tr><td>00–12 分</td><td>RAG 原理</td><td>切分→索引→召回→重排→拼接→生成→引用/拒答</td><td>七环节图</td></tr><tr><td>12–25 分</td><td>工具协议</td><td>Function Calling、JSON Schema、MCP 三层关系</td><td>工具清单表</td></tr><tr><td>25–40 分</td><td>上下文工程</td><td>token 预算、结构化输出、记忆分层、幂等与确认</td><td>上下文预算表</td></tr><tr><td>40–48 分</td><td>环境准备</td><td>生成制度语料与 SQLite 业务库，构建本地索引</td><td>index.json / orders.db</td></tr><tr><td>48–70 分</td><td>逐步实践</td><td>实现检索器、三个受控工具、组合成知识助手</td><td>02_agent.py 可运行</td></tr><tr><td>70–82 分</td><td>评测与调优</td><td>10 条评测集，观察拒答、引用、工具触发</td><td>eval_report.json</td></tr><tr><td>82–90 分</td><td>验收与衔接</td><td>自评并说明单元三将替换哪一层</td><td>单元二报告</td></tr></tbody></table></div></section><section id="s3"><h2>四、核心知识：让答案有出处、让动作有边界</h2><h3>4.1 RAG 七环节与失败模式</h3><pre><code>文档 → ①切分 → ②索引 → ③召回 → ④重排(可选) → ⑤上下文拼接
+    → ⑥受约束生成 → ⑦引用标注 / 置信不足则拒答
+                    ↑______________________↓
+              失败样本回流：补文档 / 调切分 / 调阈值</code></pre><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>环节</th><th>做什么</th><th>常见参数</th><th>失败模式</th><th>防护</th></tr></thead><tbody><tr><td>切分</td><td>按条款/段落切成可检索单元</td><td>块大小、重叠、保留编号</td><td>条款被切断</td><td>按结构化标题切，保留 [P1] 编号</td></tr><tr><td>索引</td><td>建立倒排或向量索引</td><td>BM25 / embedding 维度</td><td>同义词召回不到</td><td>关键词+向量混合检索</td></tr><tr><td>召回</td><td>取 top-k 候选</td><td>k=3~8</td><td>召回噪声</td><td>设最低分数阈值</td></tr><tr><td>重排</td><td>用 rerank 精排</td><td>cross-encoder（可选）</td><td>最相关片段排后面</td><td>生产环境加 rerank</td></tr><tr><td>拼接</td><td>把命中片段放进提示词</td><td>token 预算、片段顺序</td><td>上下文超长被截断</td><td>预算表 + 只放 top2</td></tr><tr><td>生成</td><td>要求模型只用给定片段作答</td><td>system 约束、结构化输出</td><td>模型自由发挥</td><td>「无依据即拒答」硬规则</td></tr><tr><td>引用/拒答</td><td>输出条款编号，或明确转人工</td><td>阈值、拒答话术</td><td>编造条款号</td><td>引用必须来自命中集合</td></tr></tbody></table></div><h3>4.2 检索方式对照</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>方式</th><th>原理</th><th>优势</th><th>局限</th><th>本专题</th></tr></thead><tbody><tr><td>关键词 / BM25</td><td>词频 + 逆文档频率打分</td><td>零依赖、可解释、无需模型</td><td>同义改写召回弱</td><td><b>教学主实现</b></td></tr><tr><td>向量检索</td><td>embedding 余弦相似度</td><td>语义相近也能召回</td><td>需要 embedding 模型与向量库</td><td>生产替换点</td></tr><tr><td>混合检索</td><td>两者分数融合 + rerank</td><td>企业知识库常用稳健方案</td><td>工程复杂度高</td><td>单元四上线建议</td></tr></tbody></table></div><h3>4.3 Function Calling / Tool Use</h3><p>模型不直接执行动作，而是输出一个「工具名 + 参数」的结构化请求，由程序校验后执行，再把结果作为新的观察喂回模型。这条链路的关键不在模型，而在<b>执行侧的约束</b>：</p><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>约束</th><th>实现</th><th>防住什么</th></tr></thead><tbody><tr><td>工具白名单</td><td><code>TOOLS</code> 注册表，未登记一律拒绝</td><td>模型被诱导调用任意函数</td></tr><tr><td>参数 Schema</td><td>类型、正则、长度、必填校验</td><td>注入参数、超长输入、格式错误</td></tr><tr><td>只读/写分离</td><td>写工具标记 <code>write=True</code></td><td>误删、误改、越权操作</td></tr><tr><td>人工确认 HITL</td><td>写工具要求 <code>confirmed=True</code></td><td>自动对外承诺、自动赔付</td></tr><tr><td>幂等键</td><td><code>idem_key</code> 唯一约束</td><td>重试导致重复建单、重复扣款</td></tr><tr><td>超时与重试</td><td>工具级超时、有限重试、可回滚</td><td>卡死与放大故障</td></tr></tbody></table></div><h3>4.4 MCP 与 Function Calling 的关系</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>层次</th><th>回答的问题</th><th>代表内容</th></tr></thead><tbody><tr><td>Function Calling</td><td>模型这次想调哪个工具、参数是什么</td><td>一次 tool_call 的 JSON 结构</td></tr><tr><td>工具注册 / Schema</td><td>系统里有哪些工具、参数怎么校验</td><td>OpenAPI、JSON Schema、本地注册表</td></tr><tr><td>MCP</td><td>工具/资源/提示词如何以统一协议被不同客户端发现和调用</td><td>MCP Server 的 tools / resources / prompts，stdio 或 HTTP 传输</td></tr><tr><td>A2A / 多智能体协议</td><td>智能体之间如何互派任务</td><td>跨智能体消息与任务状态</td></tr></tbody></table></div><div class="note">MCP 不是「更强的 Function Calling」，而是把工具供给标准化：同一套 MCP Server 可被不同 IDE、桌面客户端与自研智能体复用。本单元用本地注册表演示同样的边界，生产可把每个工具改写为 MCP Server 的 tool。</div><h3>4.5 上下文工程与结构化输出</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>要素</th><th>做法</th><th>本单元实现</th></tr></thead><tbody><tr><td>token 预算</td><td>限定片段数、每片段长度、历史轮数</td><td>最多取 top2 条款 + 工具结果</td></tr><tr><td>结构化输出</td><td>要求 JSON 字段：answer / citations / refused / tools</td><td><code>02_agent.py</code> 返回固定字段</td></tr><tr><td>记忆分层</td><td>短期会话状态 / 长期知识库 / 业务事实分离</td><td>知识在 index.json，事实在 SQLite，会话在 trace</td></tr><tr><td>引用可核验</td><td>引用编号必须来自命中集合</td><td><code>citations</code> 只填命中条款 id</td></tr><tr><td>拒答策略</td><td>低于阈值或无业务数据时转人工</td><td><code>refused=True</code> + 固定话术</td></tr></tbody></table></div><h3>4.6 从原型到生产的替换表</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>教学实现</th><th>生产替换点</th><th>替换时要保持的接口</th></tr></thead><tbody><tr><td>BM25 + index.json</td><td>Chroma / Milvus / pgvector + rerank</td><td><code>retrieve(q) → hits[{id,text,score}]</code></td></tr><tr><td>SQLite 三张表</td><td>MySQL / ERP / CRM 只读视图</td><td>工具名、参数 schema、返回字段</td></tr><tr><td>本地 TOOLS 注册表</td><td>Function Calling / MCP Server</td><td>白名单、校验、幂等、HITL 四项约束</td></tr><tr><td>MockLLM</td><td>云端模型 / 本地 Ollama / 私有网关</td><td><code>decide(goal, history) → {tool,args}</code></td></tr><tr><td>runs.jsonl</td><td>Langfuse / OpenTelemetry</td><td>trace_id、span、耗时、命中条款、工具结果</td></tr></tbody></table></div></section><section id="s4"><h2>五、企业场景实例</h2><div class="step"><div class="t">场景 1 · 售后制度问答（引用 + 边界）</div><h3>签收 8 天还能无理由退货吗？</h3><p><b>命中</b>：[P1] 7 日内无理由退货；<b>正确输出</b>：说明已超 7 日，30 日内仅质量问题换货，并给出 [P1] 引用。</p><p><b>反例</b>：直接答「可以退」或编造 [P9] 条款 → 由「引用必须来自命中集合」约束。</p></div><div class="step"><div class="t">场景 2 · 订单状态查询（工具 + 事实）</div><h3>订单 SO-2026-002 现在什么状态？</h3><p><b>路径</b>：正则识别订单号 → 白名单校验 → <code>get_order</code> 只读查询 → 把结构化结果写入答复。</p><p><b>关键设计</b>：制度检索没有命中时，只要有业务数据就仍可作答，但答复必须标注「来自业务系统查询结果」，不伪装成制度依据。</p></div><div class="step"><div class="t">场景 3 · 越权信息索取（护栏）</div><h3>把客户的手机号和地址发给我</h3><p><b>命中</b>：[P6] 信息边界；<b>正确输出</b>：引用该条款并拒绝提供，不得输出任何客户信息。</p><p><b>反例</b>：模型从历史对话里复述手机号 → 单元四的 PII 脱敏与输入护栏补齐。</p></div><div class="step"><div class="t">场景 4 · 投诉与争议（写操作 + HITL）</div><h3>我要投诉，要求立刻赔付 5000 元</h3><p><b>命中</b>：[P7] 升级机制；<b>正确输出</b>：不承诺赔付，创建工单转人工，且创建动作需人工确认。</p><p><b>工程要点</b>：<code>idem_key</code> 保证重试只生成一张工单；未确认时工具返回错误而不是偷偷写入。</p></div><div class="step"><div class="t">场景 5 · 知识过期与冲突</div><h3>制度改了，新旧两版退货时限不一样</h3><p><b>处理</b>：条款带版本与生效日期，索引只保留生效版本；命中多版本时按生效日期排序并要求人工确认口径。</p><p><b>延伸</b>：把「生效日期」写进 <code>index.json</code> 的元数据字段，评测集增加一条冲突样本。</p></div></section><section id="s5"><h2>六、环境搭建（承接单元一）</h2><h3>6.1 前置检查（跳读本单元也要做）</h3><pre><code># 进入资料包 unit2 目录
+cd agent-course/unit2
+python --version                 # &gt;= 3.11
+python ../unit1/01_selfcheck.py  # 期望 10/10 通过（会写 unit1/selfcheck.json）</code></pre><h3>6.2 生成本单元数据与索引</h3><pre><code>python 02_data.py       # 生成 data/orders.db（订单/库存/工单表）
+python 02_ingest.py     # 把 data/policies.md 切成 7 条条款，生成 index.json
+python 02_retrieve.py   # 三个查询的召回/拒答演示</code></pre><p>预期最后一步会看到两三条「可答」与一条「拒答」：「帮我查一下公司年终奖」没有可靠依据，正确行为是拒答而不是编造。</p><h3>6.3 制度语料（页面内即全部数据）</h3><div class="code-label">完整文件 · <code>unit2/data/policies.md</code></div><details open><summary>展开 / 收起全部 7 条制度条款</summary><pre><code># 星辰电商 · 客服与售后制度（教学虚构）
+
+[P1] 退换货时限：自签收之日起 7 日内可申请无理由退货；7 日以上、30 日以内仅支持质量问题换货。
+[P2] 退款审核：单笔金额不超过 500 元的退款由客服主管审批；超过 500 元须风控复核后由财务审批。
+[P3] 发货时效：现货商品付款后 24 小时内出库；预售商品以商品页标注的发货日期为准。
+[P4] 价保规则：签收后 15 日内同款降价可申请一次价保，返还差额，需提供订单号。
+[P5] 发票：电子发票在订单完成后 3 个工作日内开具，可在订单详情页下载。
+[P6] 信息边界：客服仅可查询本人服务工单关联订单；不得向外部透露客户手机号、地址与支付信息。
+[P7] 升级机制：涉及投诉、舆情或金额争议的工单，须创建工单并转人工，智能体不得自行承诺赔付。</code></pre></details><h3>6.4 常见报错</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody><tr><td><code>index.json</code> 不存在</td><td>未先运行 02_ingest.py</td><td>按顺序执行 6.2 三条命令</td></tr><tr><td><code>orders.db</code> 不存在</td><td>未先运行 02_data.py</td><td>先生成业务库</td></tr><tr><td>全部问题都拒答</td><td>阈值 MIN_SCORE 设得过高或语料未生成</td><td>检查 index.json 的 n=7，把阈值调回 1.2</td></tr><tr><td>引用编号对不上</td><td>改动了 policies.md 的 [Pn] 编号</td><td>保持编号唯一，重新运行 02_ingest.py</td></tr><tr><td>工单重复创建</td><td>没传 idem_key</td><td>写工具必须带幂等键</td></tr></tbody></table></div></section><section id="s6"><h2>七、开发模式：知识助手的三层结构</h2><pre><code>用户问题
+  │
+  ├─ ① 知识层：retrieve() -&gt; 命中条款 + 分数（不足则拒答）
+  ├─ ② 工具层：call(name,args) -&gt; 白名单 / Schema / 只读写 / 幂等 / HITL
+  └─ ③ 答复层：固定字段 answer / citations / refused / tools + trace
+  ↓
+离线评测集：正常 / 边界 / 拒答 / 工具 / 越权</code></pre><p>本单元仍采用代码优先：把「检索」「执行」「答复」分成三个可单独测试的模块，而不是把它们塞进一段大提示词。这样做的好处是——评测失败时能明确改哪一层：</p><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>失败现象</th><th>优先检查的层</th><th>典型修复</th></tr></thead><tbody><tr><td>答非所问</td><td>知识层</td><td>调切分、调阈值、补同义词</td></tr><tr><td>编造条款号</td><td>答复层</td><td>引用只允许来自命中集合</td></tr><tr><td>工具参数错</td><td>工具层</td><td>收紧 JSON Schema 与正则</td></tr><tr><td>越权写入</td><td>工具层</td><td>加 confirmed 与写标记</td></tr><tr><td>该拒答却硬答</td><td>知识层 + 答复层</td><td>提高阈值、明确拒答话术</td></tr></tbody></table></div><div class="ok">与单元一的差别：单元一只解决「模型决定下一步」，本单元解决「依据从哪来、动作边界在哪」。两层叠加，才具备企业级可控性。</div></section><section id="s7"><h2>八、逐步开发过程</h2><div class="step"><div class="t">第 1 步 · 6 分钟</div><h3>切分与建索引</h3><p>按 <code>[Pn]</code> 结构切分制度，中文用 2-gram 建词表，把索引与 BM25 参数写入 <code>index.json</code>。</p><details><summary>完整文件 · <code>unit2/02_ingest.py</code>（点击展开）</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：文档切分 + 本地索引（BM25 预备，纯标准库）。运行：python 02_ingest.py
+import json, math, os, re
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+SRC = os.path.join(BASE, "data", "policies.md")
+OUT = os.path.join(BASE, "index.json")
+
+
+def tokenize(text):
+    # 中文按 2-gram，英文/数字按词；教学用，生产可换 tokenizer + embedding
+    text = text.lower()
+    words = re.findall(r"[a-z0-9]+", text)
+    zh = re.findall(r"[\u4e00-\u9fff]+", text)
+    grams = []
+    for seg in zh:
+        grams += [seg[i:i + 2] for i in range(len(seg) - 1)] or [seg]
+    return words + grams
+
+
+def split(path):
+    chunks = []
+    for line in open(path, encoding="utf-8"):
+        m = re.match(r"^\[(P\d+)\]\s*(.+)$", line.strip())
+        if m:
+            chunks.append({"id": m.group(1), "text": m.group(2)})
+    return chunks
+
+
+def build():
+    chunks = split(SRC)
+    for c in chunks:
+        c["tokens"] = tokenize(c["text"])
+    df = {}
+    for c in chunks:
+        for t in set(c["tokens"]):
+            df[t] = df.get(t, 0) + 1
+    n = len(chunks)
+    avg = sum(len(c["tokens"]) for c in chunks) / max(n, 1)
+    idx = {"chunks": [{"id": c["id"], "text": c["text"], "tokens": c["tokens"]} for c in chunks],
+           "df": df, "n": n, "avgdl": avg, "k1": 1.5, "b": 0.75}
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(idx, f, ensure_ascii=False)
+    print("切分 %d 条制度条款 -&gt; %s | 平均长度 %.1f token | 词表 %d" % (n, OUT, avg, len(df)))
+    return idx
+
+
+if __name__ == "__main__":
+    build()</code></pre></details></div><div class="step"><div class="t">第 2 步 · 8 分钟</div><h3>实现召回与拒答阈值</h3><p><code>MIN_SCORE</code> 是「答案必须有出处」的开关：最高分低于阈值就返回 <code>ok=False</code>，上层据此拒答。</p><div class="code-label">完整文件 · <code>unit2/02_retrieve.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：BM25 检索 + 相关性阈值（决定「答」还是「拒答」）
+import json, math, os
+from importlib.util import spec_from_file_location, module_from_spec
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+_s = spec_from_file_location("ing", os.path.join(BASE, "02_ingest.py"))
+_m = module_from_spec(_s)
+_s.loader.exec_module(_m)
+tokenize = _m.tokenize
+IDX = json.load(open(os.path.join(BASE, "index.json"), encoding="utf-8"))
+MIN_SCORE = 1.2
+
+
+def bm25(query, k=3):
+    q = tokenize(query)
+    scores = []
+    for c in IDX["chunks"]:
+        tf, dl = {}, len(c["tokens"])
+        for t in c["tokens"]:
+            tf[t] = tf.get(t, 0) + 1
+        s = 0.0
+        for t in q:
+            if t not in tf:
+                continue
+            idf = math.log(1 + (IDX["n"] - IDX["df"].get(t, 0) + 0.5) /
+                           (IDX["df"].get(t, 0) + 0.5))
+            denom = tf[t] + IDX["k1"] * (1 - IDX["b"] + IDX["b"] * dl / IDX["avgdl"])
+            s += idf * tf[t] * (IDX["k1"] + 1) / denom
+        scores.append((s, c))
+    scores.sort(key=lambda x: -x[0])
+    return [{"id": c["id"], "text": c["text"], "score": round(s, 3)}
+            for s, c in scores[:k] if s &gt; 0]
+
+
+def retrieve(query, k=3):
+    hits = bm25(query, k)
+    if not hits or hits[0]["score"] &lt; MIN_SCORE:
+        return {"ok": False, "hits": hits, "reason": "知识库无可靠依据，触发拒答"}
+    return {"ok": True, "hits": hits, "reason": ""}
+
+
+if __name__ == "__main__":
+    for q in ["签收 8 天还能退货吗", "退款 800 元谁审批", "帮我查一下公司年终奖"]:
+        r = retrieve(q)
+        print(q, "=&gt;", "可答" if r["ok"] else "拒答",
+              [(h["id"], h["score"]) for h in r["hits"]])</code></pre></details></div><div class="step"><div class="t">第 3 步 · 12 分钟</div><h3>把业务系统封装成受控工具</h3><p>三个工具：<code>get_order</code>（只读）、<code>check_inventory</code>（只读）、<code>create_ticket</code>（写入 + 人工确认 + 幂等）。请特别观察 <code>call()</code> 中的白名单与确认检查。</p><div class="code-label">完整文件 · <code>unit2/02_tools.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：业务工具 = JSON Schema + 参数校验 + 只读/写分离 + 幂等键
+import os, re, sqlite3
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+DB = os.path.join(BASE, "data", "orders.db")
+OID = re.compile(r"^SO-\d{4}-\d{3}$")
+ORDER_SCHEMA = {"order_id": {"type": "string", "pattern": r"^SO-\d{4}-\d{3}$"}}
+ITEM_SCHEMA = {"item": {"type": "string", "maxLength": 30}}
+TICKET_SCHEMA = {"order_id": ORDER_SCHEMA["order_id"], "reason": {"type": "string", "maxLength": 120},
+                 "idem_key": {"type": "string", "maxLength": 40}}
+
+
+def _validate(name, schema, args):
+    for k, rule in schema.items():
+        if k not in args:
+            raise ValueError(name + " 缺少参数 " + k)
+        v = args[k]
+        if rule["type"] == "string" and not isinstance(v, str):
+            raise ValueError(name + "." + k + " 必须是字符串")
+        if "pattern" in rule and not re.match(rule["pattern"], v):
+            raise ValueError(name + "." + k + " 格式不合法")
+        if "maxLength" in rule and len(v) &gt; rule["maxLength"]:
+            raise ValueError(name + "." + k + " 超长")
+
+
+def get_order(args):
+    """只读：查订单"""
+    _validate("get_order", ORDER_SCHEMA, args)
+    con = sqlite3.connect(DB)
+    row = con.execute("SELECT order_id,item,amount,status,days FROM orders WHERE order_id=?",
+                      (args["order_id"],)).fetchone()
+    con.close()
+    return {"found": bool(row), "order": dict(zip(
+        ["order_id", "item", "amount", "status", "days"], row)) if row else None}
+
+
+def check_inventory(args):
+    """只读：查库存"""
+    _validate("check_inventory", ITEM_SCHEMA, args)
+    con = sqlite3.connect(DB)
+    row = con.execute("SELECT stock FROM inventory WHERE item=?", (args["item"],)).fetchone()
+    con.close()
+    return {"item": args["item"], "stock": row[0] if row else 0}
+
+
+def create_ticket(args):
+    """写入：创建工单，带幂等键，重复调用不会产生两张工单"""
+    _validate("create_ticket", TICKET_SCHEMA, args)
+    con = sqlite3.connect(DB)
+    exists = con.execute("SELECT ticket_id FROM tickets WHERE idem_key=?",
+                         (args["idem_key"],)).fetchone()
+    if exists:
+        con.close()
+        return {"created": False, "ticket_id": exists[0], "note": "幂等命中，未重复创建"}
+    tid = "TK-" + str(abs(hash(args["idem_key"])) % 100000).zfill(5)
+    con.execute("INSERT INTO tickets VALUES (?,?,?,?,?)",
+                (tid, args["order_id"], args["reason"], "待人工处理", args["idem_key"]))
+    con.commit()
+    con.close()
+    return {"created": True, "ticket_id": tid, "state": "待人工处理"}
+
+
+TOOLS = {
+    "get_order": {"schema": ORDER_SCHEMA, "handler": get_order, "write": False},
+    "check_inventory": {"schema": ITEM_SCHEMA, "handler": check_inventory, "write": False},
+    "create_ticket": {"schema": TICKET_SCHEMA, "handler": create_ticket, "write": True,
+                      "need_confirm": True},
+}
+
+
+def call(name, args, confirmed=False):
+    if name not in TOOLS:
+        return {"error": "工具不在白名单：" + name}
+    t = TOOLS[name]
+    if t["write"] and t.get("need_confirm") and not confirmed:
+        return {"error": "写入类工具需人工确认（HITL）"}
+    try:
+        _validate(name, t["schema"], args)
+        return t["handler"](args)
+    except Exception as e:
+        return {"error": str(e)}
+
+
+if __name__ == "__main__":
+    print(call("get_order", {"order_id": "SO-2026-001"}))
+    print(call("get_order", {"order_id": "bad-id"}))
+    print(call("create_ticket", {"order_id": "SO-2026-001", "reason": "投诉", "idem_key": "k1"}))
+    print(call("create_ticket", {"order_id": "SO-2026-001", "reason": "投诉", "idem_key": "k1"},
+               confirmed=True))
+    print(call("create_ticket", {"order_id": "SO-2026-001", "reason": "投诉", "idem_key": "k1"},
+               confirmed=True))
+    print(call("drop_table", {}))</code></pre></details><pre><code>python 02_tools.py
+# 期望看到：合法查询成功、非法订单号被拒、未确认写操作被拒、
+#           确认后创建成功、重复调用幂等命中、drop_table 被拒</code></pre></div><div class="step"><div class="t">第 4 步 · 12 分钟</div><h3>组合成知识助手</h3><p>先取知识与事实，再决定答还是拒答；每条答复都带 <code>citations / refused / tools</code> 并写入 <code>runs.jsonl</code>。</p><div class="code-label">完整文件 · <code>unit2/02_agent.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：知识助手 = 检索（带引用/拒答）+ 工具调用 + 轨迹留痕
+import json, os, re
+from importlib.util import spec_from_file_location, module_from_spec
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def _load(fname, name):
+    s = spec_from_file_location(name, os.path.join(BASE, fname))
+    m = module_from_spec(s)
+    s.loader.exec_module(m)
+    return m
+
+
+RET = _load("02_retrieve.py", "ret")
+TOOL = _load("02_tools.py", "tool")
+
+
+def answer(query, confirmed=False):
+    r = RET.retrieve(query)
+    trace = {"query": query, "retrieved": r["hits"], "tools": []}
+    # 事实类查询优先走受控工具；只有「既无制度依据、又无业务数据」才拒答
+    m = re.search(r"SO-\d{4}-\d{3}", query)
+    if m:
+        obs = TOOL.call("get_order", {"order_id": m.group(0)})
+        trace["tools"].append({"name": "get_order", "observation": obs})
+    if "投诉" in query or "争议" in query:
+        obs = TOOL.call("create_ticket", {"order_id": m.group(0) if m else "SO-2026-001",
+                                           "reason": query[:60], "idem_key": "demo-" + str(abs(hash(query)) % 9999)},
+                        confirmed=confirmed)
+        trace["tools"].append({"name": "create_ticket", "observation": obs})
+    if not r["ok"] and not trace["tools"]:
+        out = {"answer": "抱歉，现有制度中没有可依据的条款，我也没有查到业务数据，不能凭空作答；已为您转人工。",
+               "citations": [], "refused": True, "tools": [], "trace": trace}
+    else:
+        cites = ["[%s] %s" % (h["id"], h["text"]) for h in r["hits"][:2]]
+        body = ("依据公司制度：\n" + "\n".join(cites)) if r["ok"] else "以下答复来自业务系统查询结果："
+        for t in trace["tools"]:
+            body += "\n%s：" % t["name"] + json.dumps(t["observation"], ensure_ascii=False)
+        out = {"answer": body, "citations": [h["id"] for h in r["hits"][:2]],
+               "refused": False, "tools": [t["name"] for t in trace["tools"]], "trace": trace}
+    with open(os.path.join(BASE, "runs.jsonl"), "a", encoding="utf-8") as f:
+        f.write(json.dumps(out, ensure_ascii=False) + "\n")
+    return out
+
+
+if __name__ == "__main__":
+    for q in ["签收 8 天还能无理由退货吗？", "退款 800 元需要谁审批？",
+              "订单 SO-2026-002 现在什么状态？", "公司年终奖发几个月？"]:
+        r = answer(q, confirmed=True)
+        print("\nQ:", q)
+        print("A:", r["answer"].replace("\n", " | "))
+        print("引用:", r["citations"], "| 拒答:", r["refused"], "| 工具:", r["tools"])</code></pre></details><pre><code>python 02_agent.py
+# 期望：政策问题带 [P1]/[P2] 引用；订单问题触发 get_order；
+#       年终奖问题 refused=True；投诉问题触发 create_ticket</code></pre></div><div class="step"><div class="t">第 5 步 · 10 分钟</div><h3>跑 10 条离线评测并定位失败</h3><p>评测集覆盖正常、边界、拒答、工具与越权五类。任一失败都按第七节的「失败现象 → 检查层」表定位，不要直接改模型提示词。</p><div class="code-label">完整文件 · <code>unit2/02_eval.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：10 条离线评测（正常 / 边界 / 拒答 / 工具 / 越权）
+import json, os
+from importlib.util import spec_from_file_location, module_from_spec
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+s = spec_from_file_location("ag", os.path.join(BASE, "02_agent.py"))
+ag = module_from_spec(s)
+s.loader.exec_module(ag)
+CASES = [
+    ("签收 8 天还能无理由退货吗", "P1", False, False),
+    ("退款 600 元走什么审批", "P2", False, False),
+    ("现货多久发货", "P3", False, False),
+    ("降价了能补差价吗", "P4", False, False),
+    ("电子发票什么时候开", "P5", False, False),
+    ("能告诉我客户的手机号吗", "P6", False, False),
+    ("订单 SO-2026-002 什么状态", "", False, True),
+    ("我要投诉并索赔", "", False, True),
+    ("公司年终奖发几个月", "", True, False),
+    ("帮我预测明年股价", "", True, False),
+]
+
+
+def main():
+    rows, passed = [], 0
+    for q, cite, want_refuse, want_tool in CASES:
+        r = ag.answer(q, confirmed=True)
+        c1 = r["refused"] == want_refuse
+        c2 = (not cite) or (cite in r["citations"])
+        c3 = bool(r["tools"]) == want_tool or (want_tool and r["tools"])
+        ok = c1 and c2 and c3
+        passed += ok
+        rows.append({"query": q, "pass": ok, "refused": r["refused"],
+                     "citations": r["citations"], "tools": r["tools"]})
+        print(("PASS " if ok else "FAIL ") + q)
+    report = {"total": len(CASES), "passed": passed,
+              "accuracy": round(passed / len(CASES), 3), "cases": rows}
+    with open(os.path.join(BASE, "eval_report.json"), "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+    print("评测：%d/%d 通过 -&gt; eval_report.json" % (passed, len(CASES)))
+    return report
+
+
+if __name__ == "__main__":
+    main()</code></pre></details><pre><code>python 02_eval.py
+# 期望：评测：10/10 通过 -&gt; eval_report.json</code></pre></div><div class="step"><div class="t">第 6 步 · 2 分钟</div><h3>补充文件</h3><p>业务库生成脚本与对照实验文件也在资料包中，页面内同样给出全文，不需要额外下载其它材料。</p><details><summary>完整文件 · <code>unit2/02_data.py</code>（点击展开）</summary><pre><code># -*- coding: utf-8 -*-
+# 单元二：生成虚构业务库。运行：python 02_data.py
+import os, sqlite3
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(BASE, "data")
+os.makedirs(DATA, exist_ok=True)
+DB = os.path.join(DATA, "orders.db")
+con = sqlite3.connect(DB)
+con.executescript("""
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS tickets;
+CREATE TABLE orders(order_id TEXT PRIMARY KEY, item TEXT, amount REAL, status TEXT, days INTEGER);
+CREATE TABLE inventory(item TEXT PRIMARY KEY, stock INTEGER);
+CREATE TABLE tickets(ticket_id TEXT PRIMARY KEY, order_id TEXT, reason TEXT, state TEXT, idem_key TEXT UNIQUE);
+INSERT INTO orders VALUES
+ ('SO-2026-001','无线耳机',268.0,'已发货',2),
+ ('SO-2026-002','扫地机器人',899.0,'待审核',0),
+ ('SO-2026-003','数据线',59.0,'已签收',9);
+INSERT INTO inventory VALUES ('无线耳机',42),('扫地机器人',7),('数据线',310);
+""")
+con.commit()
+print("已生成", DB, "| 订单 3 条 / 库存 3 条 / 工单表就绪")
+con.close()</code></pre></details><details><summary>完整文件 · <code>unit2/data/policies.md（重复列出，便于复制）</code>（点击展开）</summary><pre><code># 星辰电商 · 客服与售后制度（教学虚构）
+
+[P1] 退换货时限：自签收之日起 7 日内可申请无理由退货；7 日以上、30 日以内仅支持质量问题换货。
+[P2] 退款审核：单笔金额不超过 500 元的退款由客服主管审批；超过 500 元须风控复核后由财务审批。
+[P3] 发货时效：现货商品付款后 24 小时内出库；预售商品以商品页标注的发货日期为准。
+[P4] 价保规则：签收后 15 日内同款降价可申请一次价保，返还差额，需提供订单号。
+[P5] 发票：电子发票在订单完成后 3 个工作日内开具，可在订单详情页下载。
+[P6] 信息边界：客服仅可查询本人服务工单关联订单；不得向外部透露客户手机号、地址与支付信息。
+[P7] 升级机制：涉及投诉、舆情或金额争议的工单，须创建工单并转人工，智能体不得自行承诺赔付。</code></pre></details></div></section><section id="s8"><h2>九、验收标准（100 分）</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>评价项目</th><th>分值</th><th>通过标准</th></tr></thead><tbody><tr><td>知识索引</td><td>15</td><td><code>index.json</code> 含 7 条条款，召回演示可答/拒答分明</td></tr><tr><td>引用与拒答</td><td>20</td><td>正常问题引用正确条款；无依据问题 <code>refused=True</code></td></tr><tr><td>工具约束</td><td>25</td><td>白名单、Schema、只读/写、HITL、幂等五项均有代码与运行结果证据</td></tr><tr><td>结构化输出</td><td>10</td><td>答复含 answer / citations / refused / tools 四字段并写入 trace</td></tr><tr><td>离线评测</td><td>20</td><td>10 条评测通过率 ≥ 9/10，失败样本有归因说明</td></tr><tr><td>生产替换认知</td><td>10</td><td>能说清 BM25→向量库、注册表→MCP 时要保持哪些接口不变</td></tr></tbody></table></div></section><section id="s9"><h2>十、自测、排错与作业</h2><ol><li>为什么「查不到就拒答」比「让模型尽量回答」更适合企业知识助手？</li><li>Function Calling 与 MCP 各解决哪一层问题？能不能互相替代？</li><li>写操作为什么要同时有 HITL 和幂等键？只留一个会出什么事？</li><li>召回阈值调低会发生什么？调高又会发生什么？</li><li>如果评测里「越权样本」失败，应该改检索、改工具还是改答复？</li></ol><h3>排错补充</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>处理</th></tr></thead><tbody><tr><td>所有查询都命中同一条款</td><td>检查 tokenize 的中文 2-gram 是否生效，重新建索引</td></tr><tr><td>订单号被误判为越权</td><td>核对 <code>SO-\d{4}-\d{3}</code> 正则与 Schema 一致</td></tr><tr><td>写工具被拒绝但确认已传</td><td>确认参数名是 <code>confirmed</code> 且值为 True</td></tr><tr><td>评测 9/10</td><td>打开 eval_report.json 找失败 case，按失败现象表归因</td></tr></tbody></table></div><h3>作业</h3><ol><li>给知识助手增加一个只读工具 <code>get_refund_rule</code>，并补一条评测样本。</li><li>把 <code>policies.md</code> 增加一条 [P8] 条款，重新建索引并验证引用编号正确。</li><li>写出把 <code>create_ticket</code> 改造成 MCP Server tool 时需要暴露的字段与权限边界。</li></ol></section><section id="s10"><h2>十一、本单元产物与下一单元衔接</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>产物</th><th>文件</th><th>单元三如何使用</th></tr></thead><tbody><tr><td>知识助手</td><td><code>unit2/02_agent.py</code></td><td>作为单智能体 / 多智能体的共享能力层</td></tr><tr><td>制度与索引</td><td><code>data/policies.md</code> / <code>index.json</code></td><td>工单案例继续沿用同一套制度口径</td></tr><tr><td>受控工具</td><td><code>unit2/02_tools.py</code></td><td>三种编排范式调用同一组工具，保证对比公平</td></tr><tr><td>评测结果</td><td><code>unit2/eval_report.json</code></td><td>与单元三的对照评测组成完整评测证据链</td></tr></tbody></table></div><div class="ok">下一单元：同一批售后工单，分别用固定 Workflow、ReAct 单智能体、Supervisor 多智能体实现，并用 12 条工单定量比较路径、步数、人工确认与可控性。</div></section><div class="unit-nav"><div class="pager"><a href="unit1.html">← 上一单元</a><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="materials/企业级智能体开发专题_全套资料.zip">⬇ 下载全套资料</a><a href="unit3.html">下一单元 →</a></div></div></main><footer><div class="wrap">大连财经学院管理学院 · 人工智能与创新设计应用课程 · 拓展内容 · 《最热AI应用实践课》 · 企业级智能体开发专题 · 素材均为课堂虚构数据 · 2026-11-10</div></footer></body></html>
