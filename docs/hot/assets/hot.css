@@ -210,3 +210,35 @@ main p, main li, main td, main th,
   overflow-wrap: anywhere;
 }
 /* wb-agent-overflow-patch-v1 END */
+
+
+/* =====================================================================
+   wb-agent-code-patch-v2
+   统一代码块可读性：pre 深色底浅色字；pre code 继承、取消浅色块；
+   行内 code 浅蓝底深色字；禁止任何高亮/选中态造成白底白字。
+   ===================================================================== */
+pre {
+  background: #101c33 !important; color: #eef3ff !important;
+  border: 1px solid #2a3b60 !important; border-radius: 10px !important;
+  padding: 14px 16px !important; overflow-x: auto !important;
+  white-space: pre-wrap !important; word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+}
+pre code {
+  background: transparent !important; color: inherit !important;
+  padding: 0 !important; margin: 0 !important; border: 0 !important;
+  border-radius: 0 !important; font: inherit !important;
+  display: inline !important; box-shadow: none !important;
+  white-space: inherit !important; word-break: inherit !important;
+}
+:not(pre) > code {
+  background: #e9effb !important; color: #173563 !important;
+  padding: 1px 5px !important; border-radius: 4px !important;
+  overflow-wrap: anywhere !important;
+}
+pre mark, pre code mark, .deck mark {
+  background: #38548c !important; color: #fff8d8 !important;
+}
+pre::selection, pre code::selection { background: #35528c; color: #fff; }
+.code-label { color: #4b5b78 !important; }
+/* wb-agent-code-patch-v2 END */

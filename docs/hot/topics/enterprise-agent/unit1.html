@@ -1,209 +1,52 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>单元一 · 全景与环境地基 · 企业级智能体开发专题</title><link rel="stylesheet" href="../../assets/hot.css"></head><body><div class="site-head"><div class="wrap"><a class="brand" href="../../../index.html"><i>AI</i>人工智能工具应用实践 · 拓展课程</a><nav class="nav"><a href="../../../index.html">课程门户首页</a><a href="../../../exercises.html">16 课练习下载</a><a href="../../index.html">热度排序 · 课程主页</a><a href="../../topics/index.html" class="on">拓展专题区</a><a href="../../verify.html">验证清单</a><a href="../../access.html">登录与下载</a></nav></div></div><div class="hero"><div class="wrap"><span class="eyebrow">专题 01 · 单元 1 / 4 · 90 分钟</span><h1>单元一 · 全景与环境地基</h1><p>把「企业级智能体」拆成技术、架构、环境、范式、流程、应用范围六张地图，并从零搭好环境、跑通第一个可观测的智能体循环。</p><div class="pills"><span>4 个单元 × 90 分钟</span><span>讲授 45 + 实践 45</span><span>零依赖可运行</span><span>无需 API Key</span><span>贯穿项目：星辰电商</span></div></div></div><main class="wrap"><div class="wrap crumb"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="../../index.html">↑ 拓展课程主页</a><a href="unit2.html">单元 2 →</a></div></div><section id="overview"><h2>一、本单元一览</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>单元序号</td><td>单元一 / 共四单元</td></tr><tr><td>主题</td><td>企业级智能体全景与开发环境从零搭建</td></tr><tr><td>时长</td><td>90 分钟（讲授 45 分钟 + 实践 45 分钟）</td></tr><tr><td>前置</td><td>无。只需一台能运行 Python 3.11+ 的电脑</td></tr><tr><td>当堂成果</td><td>① 可运行的最小智能体循环 ② 环境自检报告 ③ 架构与场景选型笔记</td></tr><tr><td>是否需要付费账号</td><td>不需要。内置 MockLLM 可完整复现循环；真实模型为可选替换点</td></tr></tbody></table></div><div class="toc"><a href="#s1">学习目标</a><a href="#s2">90 分钟时间轴</a><a href="#s3">核心知识</a><a href="#s4">企业场景实例</a><a href="#s5">环境搭建</a><a href="#s6">开发模式</a><a href="#s7">逐步开发过程</a><a href="#s8">验收标准</a><a href="#s9">自测与排错</a><a href="#s10">产物与衔接</a></div></section><section id="s1"><h2>二、学习目标（可测量）</h2><p>完成本单元后，你应当能够独立做到以下五件事；每条都对应后面的一个可验证产物。</p><ol><li>用一句话判定「一个需求该不该做成智能体」，并说出至少 3 个不适合做的反例。</li><li>画出企业级智能体的五层参考架构，指出每层常见组件与一种典型失败模式。</li><li>说清 Prompt → Chain → Workflow → Agent → Multi-Agent 五代开发范式的差别，并为一个给定业务场景选出合适范式、说明理由。</li><li>在 Windows / macOS / Linux 任一系统上完成虚拟环境、依赖、密钥与模型后端的搭建，并跑通自检脚本 10/10。</li><li>独立运行一个含「感知—决策—执行—观察—终止」的最小智能体循环，读懂 trace 的每一步，并解释步数上限护栏为什么必须有。</li></ol><div class="ok">本单元不要求已学过 LangChain、LangGraph 或任何 Agent 框架；先用标准库把原理跑通，再在每个环节标注企业级生产的替换点。</div></section><section id="s2"><h2>三、90 分钟时间轴</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>时段</th><th>环节</th><th>做什么</th><th>产出</th></tr></thead><tbody><tr><td>00–10 分</td><td>概念对齐</td><td>智能体的工程定义；与聊天机器人、Copilot、工作流的边界</td><td>判定表一张</td></tr><tr><td>10–25 分</td><td>架构与全景</td><td>五层参考架构、主流技术地图、九类应用场景适配判定</td><td>架构草图 + 场景结论</td></tr><tr><td>25–42 分</td><td>范式与流程</td><td>五代开发范式对比；端到端 10 步开发流程；三条开发路线</td><td>范式选型笔记</td></tr><tr><td>42–50 分</td><td>环境搭建</td><td>venv、依赖、.env、三种模型后端、自检脚本</td><td>selfcheck.json 10/10</td></tr><tr><td>50–75 分</td><td>逐步实践</td><td>写最小 Agent 循环、跑两个目标、解读 trace、加护栏</td><td>01_hello_agent.py + trace.jsonl</td></tr><tr><td>75–85 分</td><td>对照实验</td><td>换目标、加工具、切换真实 API（可选）、观察差异</td><td>对照记录</td></tr><tr><td>85–90 分</td><td>验收与衔接</td><td>按 100 分量表自评，整理产物，说明单元二要复用什么</td><td>环境自检报告</td></tr></tbody></table></div><div class="note">若课堂只安排一次 90 分钟，「切换真实 API」与「加工具」标为课后拓展；主流程 50–75 分钟必须完成，否则单元二会缺少环境。</div></section><section id="s3"><h2>四、核心知识：把「企业级」讲清楚</h2><h3>4.1 智能体的工程定义</h3><p>聊天机器人回答问题，Copilot 辅助人完成任务，工作流按人画好的路径执行；而<b>智能体</b>是「由模型在运行时决定下一步动作」的系统。教学上可用下面这个判定式：</p><pre><code>智能体 = 目标 + 大模型（决策） + 工具（执行） + 记忆/状态（上下文）
-        + 循环（观察后再决策） + 终止条件 + 护栏（权限/步数/人工确认）
-缺少「循环 + 终止条件 + 护栏」中任意一项，都还只是带模型的程序，不是企业级智能体。</code></pre><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>形态</th><th>控制流由谁决定</th><th>能否自主调用工具</th><th>可预测性</th><th>典型例子</th></tr></thead><tbody><tr><td>聊天机器人</td><td>用户每轮提问</td><td>否</td><td>高</td><td>FAQ 问答</td></tr><tr><td>Copilot</td><td>人逐步确认</td><td>部分（人点确认）</td><td>高</td><td>代码补全、文档助手</td></tr><tr><td>工作流 / Workflow</td><td>开发者预先画好的 DAG</td><td>是（固定节点）</td><td>很高</td><td>审批流、报表流水线</td></tr><tr><td>单智能体 / Agent</td><td>模型在运行时选择</td><td>是（受白名单约束）</td><td>中</td><td>ReAct 客服助手</td></tr><tr><td>多智能体 / Multi-Agent</td><td>主管智能体分派 + 各角色决策</td><td>是（按角色隔离）</td><td>中低</td><td>退款风控协作</td></tr></tbody></table></div><h3>4.2 五层参考架构</h3><pre><code>┌─────────────────────────────────────────────┐
-│ 接入层  Web / IM / 工单系统 / API 网关         │
-├─────────────────────────────────────────────┤
-│ 编排层  状态机 · 循环 · 路由 · HITL · 重试     │
-├─────────────────────────────────────────────┤
-│ 能力层  模型 · 知识(RAG) · 工具(FC/MCP) · 记忆 │
-├─────────────────────────────────────────────┤
-│ 数据层  业务库 · 向量库 · 文档库 · 审计日志    │
-├─────────────────────────────────────────────┤
-│ 治理层  权限 · 护栏 · 评测 · 可观测 · 成本     │
-└─────────────────────────────────────────────┘</code></pre><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>层</th><th>职责</th><th>代表组件</th><th>典型失败模式</th></tr></thead><tbody><tr><td>接入层</td><td>统一身份、会话、限流与渠道适配</td><td>API 网关、SSO、IM 机器人</td><td>越权用户调用内部工具</td></tr><tr><td>编排层</td><td>决定下一步、管理状态与中断恢复</td><td>LangGraph、Dify、自研状态机</td><td>死循环、重复扣款、状态丢失</td></tr><tr><td>能力层</td><td>提供推理、知识、工具与记忆</td><td>LLM、RAG、Function Calling、MCP</td><td>幻觉、检索错片段、工具参数错</td></tr><tr><td>数据层</td><td>沉淀业务事实与知识版本</td><td>SQLite/MySQL、向量库、对象存储</td><td>知识过期、口径冲突</td></tr><tr><td>治理层</td><td>让系统可控、可测、可审计</td><td>评测集、护栏、trace、预算</td><td>上线后无人知道它为什么这么做</td></tr></tbody></table></div><h3>4.3 当前主流技术地图（选型用，不需要一次全装）</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>类别</th><th>主流技术 / 协议</th><th>解决什么问题</th><th>本专题怎么处理</th></tr></thead><tbody><tr><td>模型与协议</td><td>OpenAI 兼容 Chat Completions、Function Calling / Tool Use、结构化输出、MCP、A2A</td><td>统一不同厂商的调用方式，让模型能请求工具</td><td>单元一给最小协议实现，单元二展开工具与 MCP</td></tr><tr><td>编排框架</td><td>LangGraph、LangChain、LlamaIndex、CrewAI、AutoGen、Semantic Kernel、Dify、Coze</td><td>把多步流程、状态、分支、人工确认显式化</td><td>单元三先写纯 Python 状态机，再标出框架替换点</td></tr><tr><td>知识检索</td><td>切分、embedding、BM25 / 混合检索、rerank、向量库（Chroma、Milvus、pgvector）</td><td>让回答基于企业自有文档并可引用</td><td>单元二用标准库 BM25 跑通全链路并给生产替换表</td></tr><tr><td>工具与集成</td><td>函数注册、JSON Schema、OpenAPI、MCP Server、企业 API 网关</td><td>把业务系统能力安全地暴露给模型</td><td>单元二做白名单 + 校验 + 幂等；单元四加护栏</td></tr><tr><td>工程运行</td><td>FastAPI / Uvicorn、Docker、K8s、任务队列、缓存</td><td>把原型变成可伸缩、可回滚的服务</td><td>单元四用标准库服务跑通，再给 FastAPI / Docker 配置</td></tr><tr><td>治理观测</td><td>离线评测集、LLM-as-judge、Langfuse / LangSmith、OpenTelemetry、Prometheus</td><td>量化质量、追踪每次决策、控制成本</td><td>单元四完整实现评测、trace、审计与上线检查单</td></tr></tbody></table></div><h3>4.4 五代开发范式与选型决策</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>代际</th><th>范式</th><th>控制流</th><th>适用场景</th><th>测试难度 / 单次成本</th></tr></thead><tbody><tr><td>1</td><td>Prompt</td><td>一次调用，人写死提示词</td><td>改写、分类、抽取等单点任务</td><td>低 / 最低</td></tr><tr><td>2</td><td>Chain</td><td>固定顺序串起多次调用</td><td>摘要后翻译、先抽取再格式化</td><td>低 / 低</td></tr><tr><td>3</td><td>Workflow（DAG）</td><td>开发者画好分支与条件</td><td>审批、报销、报表流水线</td><td>中 / 中</td></tr><tr><td>4</td><td>Agent（ReAct 循环）</td><td>模型按观察选下一步工具</td><td>信息不全、路径不确定的客服/运维</td><td>高 / 中高</td></tr><tr><td>5</td><td>Multi-Agent</td><td>主管分派 + 多角色协作</td><td>跨部门、需多视角评审的复杂任务</td><td>很高 / 高</td></tr></tbody></table></div><ol><li>路径确定、规则可枚举？→ 用 Workflow，不要用 Agent（便宜、可审计、可回归）。</li><li>路径不确定但工具少、风险低？→ 用单 Agent + 工具白名单 + 步数上限。</li><li>涉及金额、权限、外部承诺？→ 引入 HITL 人工确认，并把决策写进审计日志。</li><li>需要多个专业角色互相校验？→ 才考虑 Multi-Agent，并先证明单 Agent 不够用。</li></ol><h3>4.5 应用范围：九类企业场景适配判定</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>场景</th><th>典型输入</th><th>需要的工具 / 知识</th><th>主要风险</th><th>适配结论</th></tr></thead><tbody><tr><td>客户服务</td><td>退换货、物流、价保咨询</td><td>制度知识库、订单查询</td><td>答错政策、越权承诺</td><td>★★★★★ 优先</td></tr><tr><td>IT 服务台 ITSM</td><td>账号解锁、权限申请、故障查询</td><td>工单系统、资产库</td><td>权限提升被诱导</td><td>★★★★★ 优先（需强护栏）</td></tr><tr><td>销售 / CRM</td><td>客户画像、跟进建议、报价草稿</td><td>CRM 查询、产品目录</td><td>泄露客户信息、报价失真</td><td>★★★★ 可做，输出需人审</td></tr><tr><td>供应链</td><td>库存查询、缺货预警、补货建议</td><td>ERP、库存表</td><td>写操作误触发</td><td>★★★★ 只读先行</td></tr><tr><td>财务</td><td>月结取数、费用归类、对账线索</td><td>财务库、报表口径表</td><td>口径错误、金额幻觉</td><td>★★★ 先做辅助不作决策</td></tr><tr><td>法务 / 合规</td><td>合同条款检索、风险条款提示</td><td>合同库、法规库</td><td>把提示当法律意见</td><td>★★★ 必须标注非法律意见</td></tr><tr><td>人力资源 HR</td><td>制度问答、候选人材料整理</td><td>制度库、ATS</td><td>个人隐私与偏见</td><td>★★★ 严格脱敏</td></tr><tr><td>研发效能</td><td>代码检索、测试用例生成、缺陷定位</td><td>代码仓、CI、Issue</td><td>误改生产代码</td><td>★★★★ 沙箱内可做</td></tr><tr><td>BI / 数据分析</td><td>自然语言取数、异动归因</td><td>指标字典、Text-to-SQL</td><td>口径不一致、SQL 注入</td><td>★★★ 需指标层与只读库</td></tr></tbody></table></div><h3>4.6 明确不适合做智能体的情况</h3><ul><li><b>100% 确定性规则</b>：税率计算、工资公式用规则引擎，交给模型只会带来波动。</li><li><b>零容错且无人工复核</b>：自动转账、自动删库、自动对外发承诺，必须先有 HITL。</li><li><b>没有数据也没有工具</b>：模型只能编造，此时应补知识库或放弃。</li><li><b>成功无法定义</b>：写不出评测集与验收口径的项目，上线后无法判断是否变好。</li><li><b>延迟/成本极敏感</b>：毫秒级风控拦截用传统服务，模型循环不满足 SLA。</li></ul><h3>4.7 端到端开发流程（四单元共同遵循）</h3><ol><li>需求澄清：输入、输出、使用角色、失败代价。</li><li>场景边界：列出可做 / 不可做 / 必须转人工三类。</li><li>数据与知识：制度文档、业务表、口径表、更新责任人。</li><li>工具清单：只读 / 写入、参数 schema、幂等与权限。</li><li>范式选型：按 4.4 的决策顺序选 Workflow / Agent / Multi-Agent。</li><li>原型实现：先标准库跑通，再换生产组件。</li><li>离线评测：正常 / 边界 / 对抗 / 越权四类样本。</li><li>安全护栏：输入、检索、工具、输出、审计五处。</li><li>服务化与灰度：健康检查、限流、容器、5% 放量。</li><li>监控与回归：trace、指标、预算、失败样本回填评测集。</li></ol><h3>4.8 术语速查</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>术语</th><th>含义</th></tr></thead><tbody><tr><td>Function Calling / Tool Use</td><td>模型按 JSON Schema 输出「要调哪个工具、参数是什么」，由程序执行</td></tr><tr><td>MCP</td><td>Model Context Protocol，把工具/资源/提示词以统一协议暴露给不同客户端</td></tr><tr><td>RAG</td><td>检索增强生成：先取回企业知识片段，再让模型基于片段作答并标注引用</td></tr><tr><td>ReAct</td><td>Reasoning + Acting：思考—行动—观察循环，直到满足终止条件</td></tr><tr><td>HITL</td><td>Human-in-the-loop，关键动作前中断等待人工确认</td></tr><tr><td>AgentOps</td><td>智能体的评测、发布、监控、成本与持续迭代运维体系</td></tr></tbody></table></div></section><section id="s4"><h2>五、企业场景实例（三个可直接代入的判断练习）</h2><div class="step"><div class="t">场景 1 · 电商售后政策问答</div><h3>签收 8 天还能无理由退货吗？</h3><p><b>输入</b>：用户自然语言提问；<b>可用资源</b>：售后制度 7 条、订单查询接口。</p><p><b>期望输出</b>：引用具体条款、说明 7 日边界，并给出换货/人工升级路径；不承诺赔付。</p><p><b>为什么适合智能体</b>：问题表述多样、需要判断要不要查订单、路径不固定。</p><p><b>失败示例与处理</b>：模型直接答「可以退」→ 违反制度 → 单元二用「检索分数阈值 + 引用 + 拒答」约束。</p></div><div class="step"><div class="t">场景 2 · ITSM 账号解锁</div><h3>我出差在外登录不上报销系统，帮我解锁账号</h3><p><b>输入</b>：员工请求；<b>可用资源</b>：身份校验、工单系统、资产库。</p><p><b>期望输出</b>：先核验身份 → 判断是否在白名单设备 → 只读诊断 → 写操作必须人工确认。</p><p><b>主要风险</b>：提示注入伪装成管理员要求提权；攻击者借「解锁」重置他人账号。</p><p><b>处理</b>：工具白名单 + 参数校验 + 写操作 HITL + 审计日志（单元二、单元四实现）。</p></div><div class="step"><div class="t">场景 3 · 财务月结取数</div><h3>给我本月各渠道毛利，并解释环比变化</h3><p><b>输入</b>：高管问句；<b>可用资源</b>：指标字典、只读财务库。</p><p><b>期望输出</b>：先确认口径（含不含运费、退款是否冲减），再取数，最后给出带数据出处的解释。</p><p><b>为什么不能一步到位</b>：口径不清时模型会自行假设；应先反问澄清，再执行。</p><p><b>处理</b>：Chain/Workflow 更合适；只有口径确定后才允许模型做归因解释（单元三对比）。</p></div><p>三个场景会在单元二、三、四反复出现，分别被加上知识、工具、编排与治理能力，因此四单元不是四个孤立小例子。</p></section><section id="s5"><h2>六、环境搭建（一次完成，四单元通用）</h2><h3>6.1 前置检查</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>检查项</th><th>要求</th><th>验证命令</th></tr></thead><tbody><tr><td>Python</td><td>3.11 及以上</td><td><code>python --version</code></td></tr><tr><td>可用磁盘</td><td>≥ 200 MB</td><td>任意目录可新建文件</td></tr><tr><td>网络</td><td>仅可选依赖需要；主流程可断网</td><td>无需验证</td></tr><tr><td>密钥</td><td>主流程不需要；可选真实模型需要</td><td><code>echo $API_KEY</code> / <code>echo %API_KEY%</code></td></tr><tr><td>资料包</td><td>已下载并解压到工作目录</td><td><code>dir</code> / <code>ls</code> 可见 unit1…unit4</td></tr></tbody></table></div><h3>6.2 建立虚拟环境（Windows / macOS / Linux 三选一）</h3><pre><code># Windows PowerShell
-mkdir agent-course; cd agent-course
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>单元一 · 全景与环境地基 · 企业级智能体开发专题 · 企业级智能体开发专题</title><link rel="stylesheet" href="../../assets/hot.css"><link rel="stylesheet" href="../assets/deck.css"></head><body><div class="site-head"><div class="wrap"><a class="brand" href="../../../index.html"><i>AI</i>人工智能工具应用实践 · 拓展课程</a><nav class="nav"><a href="../../../index.html">课程门户首页</a><a href="../../../exercises.html">16 课练习下载</a><a href="../../index.html">热度排序 · 课程主页</a><a href="../../topics/index.html" class="on">拓展专题区</a><a href="../../verify.html">验证清单</a><a href="../../access.html">登录与下载</a></nav></div></div><div class="hero"><div class="wrap"><span class="eyebrow">专题 01 · 单元 1 / 4 · 90 分钟 · LangChain 主线</span><h1>单元一 · 全景与环境地基</h1><p>以 LangChain 0.3.x 为核心工具，PPT 式分页讲授；每个单元 90 分钟（讲授 45 + 实践 45），含学习目标、核心知识、企业场景实例、环境准备、逐步开发、验收标准与排错表。</p><div class="pills"><span>90 分钟</span><span>讲授 45 + 实践 45</span><span>LangChain 0.3.x</span><span>PPT 式分页</span><span>离线可跑</span></div></div></div><main class="wrap"><div class="wrap crumb"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="unit2.html">单元 2 →</a></div></div><div class="deck" id="deck" role="region" aria-label="专题分页演示"><div class="deck-stage" id="deckStage" tabindex="-1"><section class="slide kind-cover active" data-title="单元一 · 全景与环境地基" data-chapter="单元 1 · 全景与环境地基" aria-hidden="false"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 1 / 13 页</p><h2>单元一 · 全景与环境地基</h2><p class="lead">90 分钟（讲授 45 + 实践 45）｜目标：建立整门专题的坐标系，并把 LangChain 环境与最小链跑通。</p><p>本单元回答三个问题：企业级智能体由哪几层构成、开发范式如何演进、为什么本专题选择 LangChain 作为统一演示工具。</p><p><a class="btn ghost" href="../../topics/enterprise-agent/index.html">专题导学页</a></p></section><section class="slide" data-title="学习目标" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 2 / 13 页</p><h2>学习目标</h2><ol><li>能用五层参考架构说明一次智能体问答中各组件的职责与边界。</li><li>能区分五代开发范式，并判断给定业务场景该用哪一代。</li><li>能独立完成 Python + LangChain 环境搭建与环境自检（10/10）。</li><li>能写出并解释最小 LCEL 链 <code>Prompt | Model | Parser</code>。</li></ol><div class="note">验收口径见本单元倒数第二页：可运行 30 + 可解释 25 + 有护栏 20 + 有评测 15 + 可交接 10。</div></section><section class="slide" data-title="核心知识 · 五层参考架构" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 3 / 13 页</p><h2>核心知识 · 五层参考架构</h2><p class="lead">一次问答从用户入口到运维闭环，依次穿过五层；本专题四个单元正好各覆盖其中一段。</p><div class="tbl-scroll" role="region" aria-label="企业级智能体五层参考架构"><table><thead><tr><th>层</th><th>职责</th><th>本专题的 LangChain 落点</th><th>单元</th></tr></thead><tbody><tr><td>① 接入与交互层</td><td>用户入口、会话、鉴权、限流</td><td>标准库 HTTP 服务 / FastAPI</td><td>四</td></tr><tr><td>② 编排与状态层</td><td>决定「下一步做什么」</td><td>LCEL Runnable、RunnableBranch、AgentExecutor、LangGraph（生产）</td><td>三</td></tr><tr><td>③ 能力层</td><td>检索、工具、模型、结构化输出</td><td>BaseRetriever、@tool、JSON Schema、ChatPromptTemplate</td><td>二</td></tr><tr><td>④ 数据与知识层</td><td>语料切分、向量库、业务系统</td><td>Document、RecursiveCharacterTextSplitter、Chroma（生产）</td><td>二</td></tr><tr><td>⑤ 治理与运维层</td><td>护栏、评测、trace、灰度回滚</td><td>BaseCallbackHandler、离线评测集、上线检查单</td><td>四</td></tr></tbody></table></div></section><section class="slide" data-title="核心知识 · 五代开发范式" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 4 / 13 页</p><h2>核心知识 · 五代开发范式</h2><p class="lead">范式越往后越自主，也越难预测；本专题按此顺序推进，不跳步。</p><div class="tbl-scroll" role="region" aria-label="五代开发范式"><table><thead><tr><th>代次</th><th>范式</th><th>特点</th><th>对应实现</th></tr></thead><tbody><tr><td>1</td><td>Prompt + 规则</td><td>一次性问答，无状态</td><td>ChatPromptTemplate | Model | Parser</td></tr><tr><td>2</td><td>RAG 知识助手</td><td>检索增强、可引用、会拒答</td><td>BaseRetriever + RunnableParallel</td></tr><tr><td>3</td><td>Tool / Function Calling</td><td>调用业务系统，结构化参数</td><td>@tool + JSON Schema + 白名单</td></tr><tr><td>4</td><td>Workflow / ReAct Agent</td><td>固定 DAG 或自主多步推理</td><td>RunnableBranch / AgentExecutor</td></tr><tr><td>5</td><td>Multi-Agent + 工程化</td><td>角色分工、护栏、评测、可观测</td><td>Supervisor + LangGraph + AgentOps</td></tr></tbody></table></div></section><section class="slide" data-title="企业场景实例 · 九类场景" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 5 / 13 页</p><h2>企业场景实例 · 九类场景</h2><p class="lead">全部场景落在同一个虚构企业，便于把技术指标与业务后果对应起来。</p><div class="tbl-scroll" role="region" aria-label="九类企业场景实例"><table><thead><tr><th>#</th><th>企业场景</th><th>输入 → 输出</th><th>本专题覆盖</th></tr></thead><tbody><tr><td>1</td><td>电商售后政策问答</td><td>用户问题 → 带条款引用的答复</td><td>单元二</td></tr><tr><td>2</td><td>订单状态查询</td><td>订单号 → 业务系统实时结果</td><td>单元二 / 三</td></tr><tr><td>3</td><td>退款工单受理</td><td>工单 → 自动受理或转人工</td><td>单元三</td></tr><tr><td>4</td><td>价保与差价补偿</td><td>降价截图 → 规则判定</td><td>单元二</td></tr><tr><td>5</td><td>知识库运营与拒答</td><td>无依据问题 → 拒答 / 转人工</td><td>单元二 / 四</td></tr><tr><td>6</td><td>越权与提示注入防护</td><td>对抗输入 → 拦截并留痕</td><td>单元四</td></tr><tr><td>7</td><td>客服质量抽检</td><td>会话记录 → 评分与引用核对</td><td>单元四</td></tr><tr><td>8</td><td>多角色协同审批</td><td>高风险工单 → 风控 / 主管会签</td><td>单元三</td></tr><tr><td>9</td><td>上线灰度与回滚</td><td>新版本 → 指标对比与回滚决策</td><td>单元四</td></tr></tbody></table></div></section><section class="slide" data-title="为什么用 LangChain 作为核心工具" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 6 / 13 页</p><h2>为什么用 LangChain 作为核心工具</h2><p class="lead">统一抽象让「换模型不换链」成为可能，也让教学里的每个概念都有可运行的对应物。</p><div class="tbl-scroll" role="region" aria-label="LangChain 抽象与课程概念对照"><table><thead><tr><th>概念</th><th>LangChain 抽象</th><th>本专题用途</th></tr></thead><tbody><tr><td>可组合</td><td><code>Runnable</code> / LCEL 管道符 <code>|</code></td><td>把提示、模型、解析器、检索、工具串成一条链</td></tr><tr><td>并行与分支</td><td><code>RunnableParallel</code> / <code>RunnableBranch</code></td><td>同时取制度与业务数据；按规则分流工单</td></tr><tr><td>知识</td><td><code>Document</code> / <code>BaseRetriever</code> / TextSplitter</td><td>RAG 检索与引用定位</td></tr><tr><td>工具</td><td><code>@tool</code> / JSON Schema / <code>AgentExecutor</code></td><td>结构化调用业务系统、ReAct 循环</td></tr><tr><td>观测</td><td><code>BaseCallbackHandler</code></td><td>trace 采集，生产替换为 LangSmith / Langfuse</td></tr></tbody></table></div><div class="warn">版本固定为 <code>langchain 0.3.x</code> / <code>langchain-core 0.3.x</code>；教学主线不使用任何需要密钥的模型服务。</div></section><section class="slide" data-title="环境搭建 · 一次完成" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 7 / 13 页</p><h2>环境搭建 · 一次完成</h2><p class="lead">四条命令，四个单元通用；<code>01_setup.py</code> 会检查依赖、语料、评测集与工具 Schema。</p><p>Python 3.11+，一次安装，四个单元通用；教学主线<b>只用本地脚本模型</b>，无需 API Key、无需联网、结果可复现。真实模型与向量库都放在「生产替换点」里按需替换。</p><div class="code-label">终端 · 一次完成</div><pre><code>python -m venv .venv
+# Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python unit1/01_setup.py</code></pre><div class="code-label">requirements.txt · 第 1—3 行</div><pre><code>langchain&gt;=0.3,&lt;1
+langchain-core&gt;=0.3,&lt;1
+langchain-text-splitters&gt;=0.3,&lt;1</code></pre><div class="ok">自检期望：<code>10/10 通过</code>。资料包内 <code>README.md</code> 给出完整执行顺序，四个单元按 <code>unit1 → unit4</code> 顺序照做即可，不需要任何额外衔接材料。</div></section><section class="slide" data-title="逐步开发 ① · 最小 LCEL 链" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 8 / 13 页</p><h2>逐步开发 ① · 最小 LCEL 链</h2><p class="lead">提示模板 → 离线脚本模型 → 字符串解析器，三段用管道符组合；这一段是后面所有链的骨架。</p><div class="code-label">unit1/01_minimal_chain.py · 第 1—22 行</div><pre><code># -*- coding: utf-8 -*-
+"""单元一 · 最小 LCEL 链：Prompt | Model | Parser，并挂上回调观测。"""
+import sys
+from pathlib import Path
 
-# macOS / Linux (bash)
-mkdir agent-course &amp;&amp; cd agent-course
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from common.lc import text_model, TraceCallback
 
-# 教学主流程无需安装任何第三方包；
-# 可选生产组件（可等单元四再装）：
-python -m pip install -r requirements.txt</code></pre><h3>6.3 密钥与 .env 约定</h3><pre><code># .env 模板（不要把真实密钥提交到 Git；加入 .gitignore）
-LLM_BACKEND=mock          # mock | api | ollama
-API_BASE=https://api.deepseek.com/v1
-API_KEY=                 # 仅在 LLM_BACKEND=api 时填写
-MODEL=deepseek-chat
-PORT=8765</code></pre><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>后端</th><th>是否需要账号</th><th>适用情形</th><th>切换方式</th></tr></thead><tbody><tr><td>mock（默认）</td><td>否</td><td>课堂、断网、回归测试；确定性可复现</td><td>默认；不改任何配置</td></tr><tr><td>api</td><td>是</td><td>观察真实模型的工具决策、提示词敏感性</td><td>填 API_BASE / API_KEY / MODEL 后设 LLM_BACKEND=api</td></tr><tr><td>ollama</td><td>否（需本地装模型）</td><td>数据不出内网的私有化演示</td><td>启动 Ollama 后把 API_BASE 指向本地兼容端点</td></tr></tbody></table></div><div class="note">模型厂商、Base URL 与模型名会随平台变化；本专题只依赖「OpenAI 兼容的 /chat/completions + tools 结构」这一通用约定，不绑定任何单一厂商。未配置密钥时代码自动回退 MockLLM，不会中断学习。</div><h3>6.4 验证：跑自检脚本</h3><pre><code>cd unit1
-python 01_selfcheck.py
-# 期望最后一行：自检结果：10/10 通过 -&gt; selfcheck.json</code></pre><h3>6.5 常见报错对照</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody><tr><td><code>py</code> 不是内部或外部命令</td><td>Windows 未装 Python 启动器</td><td>改用 <code>python -m venv .venv</code></td></tr><tr><td>Activate.ps1 被禁止</td><td>PowerShell 执行策略</td><td>用 <code>.venv\Scripts\activate.bat</code> 或临时设置执行策略</td></tr><tr><td>venv 创建失败</td><td>系统 Python 版本低于 3.11</td><td>安装 3.11+；本专题代码只用标准库</td></tr><tr><td>真实模型 401</td><td>密钥无效或 Base URL 不匹配</td><td>先切回 <code>LLM_BACKEND=mock</code>，单元四再排查</td></tr><tr><td>端口被占用</td><td>8765/8766 已被别的服务使用</td><td>设 <code>PORT=8877</code> 或关闭占用进程</td></tr><tr><td>中文输出乱码</td><td>终端编码非 UTF-8</td><td>Windows 执行 <code>chcp 65001</code>，或使用新版终端</td></tr></tbody></table></div></section><section id="s6"><h2>七、开发模式：本单元采用什么、为什么</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>路线</th><th>做法</th><th>优点</th><th>代价</th><th>本专题定位</th></tr></thead><tbody><tr><td>低代码 / 平台</td><td>Dify、Coze、企业智能体平台拖拽编排</td><td>上手快、易演示</td><td>黑盒、难定制、迁移成本高</td><td>作为对照讲解，不作主流程</td></tr><tr><td>代码优先</td><td>Python 状态机 + 显式工具注册 + 本地评测</td><td>透明、可复现、可审计、易迁移</td><td>需要基础编程</td><td><b>本专题主线</b></td></tr><tr><td>混合路线</td><td>平台做原型 → 关键链路用代码重写</td><td>兼顾速度与可控性</td><td>两套体系需对齐口径</td><td>单元四上线阶段讨论</td></tr></tbody></table></div><p>本单元刻意选择「代码优先 + 最小循环」：<b>先把决策权、工具边界、终止条件与 trace 这四件事写成看得见的代码</b>。等单元三引入框架时，你会知道框架在每个位置替你做了什么，出问题时能定位是模型、提示词、工具还是状态机的错。</p><div class="ok">生产替换原则：每学一个组件，先问「它能被替换吗」。本专题所有代码都用 <code>PROD:</code> 注释标出可替换点，避免把教学实现误当成生产架构。</div></section><section id="s7"><h2>八、逐步开发过程（照做即可，无需任何额外材料）</h2><div class="step"><div class="t">第 1 步 · 5 分钟</div><h3>建立工作目录</h3><p>把资料包解压到 <code>agent-course/</code>，确认 <code>unit1</code> 内有 <code>01_hello_agent.py</code> 与 <code>01_selfcheck.py</code>。</p><pre><code>cd agent-course/unit1
-dir            # Windows
-ls             # macOS / Linux</code></pre></div><div class="step"><div class="t">第 2 步 · 12 分钟</div><h3>读懂最小智能体的五个部件</h3><p>打开文件，依次找到：① <code>ORDERS / INVENTORY</code> 虚构业务数据；② <code>TOOLS</code> 工具注册表（只有登记过的工具能被调用）；③ <code>validate()</code> 参数校验；④ <code>mock_decide()</code> 教学用模型决策；⑤ <code>run_agent()</code> 带步数上限的循环与 trace 落盘。</p><div class="code-label">完整文件 · <code>unit1/01_hello_agent.py</code></div><details open><summary>展开 / 收起完整代码</summary><pre><code># -*- coding: utf-8 -*-
-# 单元一：最小但完整的企业级智能体循环（只用标准库）
-# 运行：python 01_hello_agent.py
-# 切换真实模型：LLM_BACKEND=api 并配置 API_BASE / API_KEY / MODEL
-import json, os, time, urllib.request
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
 
-BASE = os.path.dirname(os.path.abspath(__file__))
-MAX_STEPS = 5
-LLM_BACKEND = os.getenv("LLM_BACKEND", "mock")
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "你是星辰电商的售后助手，只依据给定信息作答，语气简洁。"),
+    ("human", "用户问题：{question}\n已知信息：{facts}"),
+])
+model = text_model(["依据已知信息：订单 A100 已签收 3 天，符合 7 日无理由退货条件。"])
+parser = StrOutputParser()
 
-# 虚构企业数据：订单与库存
-ORDERS = {
-    "SO-2026-001": {"status": "已发货", "amount": 268.0, "item": "无线耳机", "days": 2},
-    "SO-2026-002": {"status": "待审核", "amount": 899.0, "item": "扫地机器人", "days": 0},
-    "SO-2026-003": {"status": "已签收", "amount": 59.0, "item": "数据线", "days": 9},
-}
-INVENTORY = {"无线耳机": 42, "扫地机器人": 7, "数据线": 310}
+# LCEL：用 | 把「提示词 -&gt; 模型 -&gt; 解析」串成一个 Runnable，可直接 invoke / batch / stream
+chain = prompt | model | parser
 
-# 工具注册表：企业级智能体的第一道边界是「只有登记过的工具能被调用」
-TOOLS = {
-    "get_order": {
-        "description": "按订单号查询订单状态、金额与商品",
-        "schema": {"order_id": "str"},
-        "handler": lambda a: ORDERS.get(a["order_id"], {"error": "订单不存在"}),
-    },
-    "check_inventory": {
-        "description": "按商品名查询当前可售库存",
-        "schema": {"item": "str"},
-        "handler": lambda a: {"item": a["item"], "stock": INVENTORY.get(a["item"], 0)},
-    },
-    "finish": {
-        "description": "结束循环并给出最终答复",
-        "schema": {"answer": "str"},
-        "handler": lambda a: {"answer": a["answer"]},
-    },
-}
+trace = TraceCallback()</code></pre><div class="ok">期望输出：模型返回固定答复，<code>TraceCallback</code> 记录 chain_start / chain_end 事件。换成真实模型时，只需替换 <code>model</code> 这一段，上下游完全不变。</div></section><section class="slide" data-title="逐步开发 ② · 环境自检" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 9 / 13 页</p><h2>逐步开发 ② · 环境自检</h2><p class="lead">用一份自检脚本把「环境是否真的可用」变成可核验的文件产物。</p><div class="code-label">unit1/01_setup.py · 节选</div><pre><code># -*- coding: utf-8 -*-
+"""单元一 · 环境自检：10 项断言，全过才算环境就绪。"""
+import json
+import sys
 
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1]))
+from common.lc import (ScriptedChatModel, ai, build_retriever, tool_schemas,
+                       text_model, write_json)
 
-def validate(name, args):
-    if name not in TOOLS:
-        raise ValueError("未登记的工具：" + name)
-    need = TOOLS[name]["schema"]
-    for k in need:
-        if k not in args:
-            raise ValueError("缺少参数：" + k)
-    return True
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+import langchain
+import langchain_core
 
-
-def mock_decide(goal, history):
-    # 教学用 MockLLM：用确定性规则模拟「模型决定下一步调用哪个工具」
-    # PROD: 换成真实模型的 Function Calling，输出结构保持 {thought, tool, args}
-    if not history:
-        if "SO-" in goal:
-            oid = goal.split("SO-")[1][:11].strip()
-            oid = "SO-" + oid.split()[0] if oid else "SO-2026-001"
-            return {"thought": "用户问订单，先查订单", "tool": "get_order", "args": {"order_id": oid}}
-        return {"thought": "无订单号，直接说明能力边界", "tool": "finish",
-                "args": {"answer": "请提供订单号（形如 SO-2026-001），我再为您查询。"}}
-    obs = history[-1]["observation"]
-    if isinstance(obs, dict) and "status" in obs:
-        return {"thought": "已拿到订单状态，结合库存给出答复", "tool": "check_inventory",
-                "args": {"item": obs.get("item", "无线耳机")}}
-    facts = [h["observation"] for h in history]
-    return {"thought": "信息已足够，结束循环", "tool": "finish",
-            "args": {"answer": "依据工具查询结果：" + json.dumps(facts, ensure_ascii=False)}}
-
-
-def api_decide(goal, history):
-    # PROD: OpenAI 兼容 /chat/completions + tools（同样只用标准库 urllib）
-    base = os.getenv("API_BASE", "https://api.deepseek.com/v1")
-    key = os.getenv("API_KEY", "")
-    if not key:
-        raise RuntimeError("LLM_BACKEND=api 需要 API_KEY；未配置时可继续用 mock")
-    tools = [{"type": "function", "function": {
-        "name": n, "description": v["description"],
-        "parameters": {"type": "object", "properties": {
-            k: {"type": "string"} for k in v["schema"]}, "required": list(v["schema"])}}}
-        for n, v in TOOLS.items()]
-    body = {"model": os.getenv("MODEL", "deepseek-chat"),
-            "messages": [{"role": "user", "content": goal}], "tools": tools}
-    req = urllib.request.Request(base + "/chat/completions", data=json.dumps(body).encode(),
-        headers={"Content-Type": "application/json", "Authorization": "Bearer " + key})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        data = json.loads(r.read().decode())
-    call = data["choices"][0]["message"].get("tool_calls", [{}])[0]
-    fn = call.get("function", {"name": "finish", "arguments": "{}"})
-    return {"thought": "模型返回的下一步", "tool": fn["name"], "args": json.loads(fn["arguments"])}
-
-
-def decide(goal, history):
-    if LLM_BACKEND == "api":
-        try:
-            return api_decide(goal, history)
-        except Exception as e:
-            print("[fallback] 真实模型不可用，回退 MockLLM：", e)
-    return mock_decide(goal, history)
-
-
-def run_agent(goal, max_steps=MAX_STEPS):
-    """感知 -&gt; 决策 -&gt; 执行 -&gt; 观察 -&gt; 终止；每一步都留 trace，步数有硬上限。"""
-    history, trace, answer = [], [], None
-    for i in range(1, max_steps + 1):
-        d = decide(goal, history)
-        validate(d["tool"], d["args"])
-        t0 = time.time()
-        observation = TOOLS[d["tool"]]["handler"](d["args"])
-        row = {"step": i, "thought": d["thought"], "tool": d["tool"], "args": d["args"],
-               "observation": observation, "ms": round((time.time() - t0) * 1000, 2)}
-        trace.append(row)
-        history.append(row)
-        print("[%d] %s -&gt; %s(%s) =&gt; %s" % (
-            i, d["thought"], d["tool"], json.dumps(d["args"], ensure_ascii=False),
-            json.dumps(observation, ensure_ascii=False)))
-        if d["tool"] == "finish":
-            answer = observation["answer"]
-            break
-    if answer is None:
-        answer = "已达到最大步数上限，转人工处理（防死循环护栏生效）。"
-    with open(os.path.join(BASE, "trace.jsonl"), "w", encoding="utf-8") as f:
-        for row in trace:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
-    return {"answer": answer, "steps": len(trace), "trace": trace}
-
-
-if __name__ == "__main__":
-    print("=== 示例 A：带订单号的查询 ===")
-    r1 = run_agent("请查询订单 SO-2026-001 的状态")
-    print("最终答复：", r1["answer"], "| 步数：", r1["steps"])
-    print("=== 示例 B：缺少关键信息 ===")
-    r2 = run_agent("我的订单到哪了")
-    print("最终答复：", r2["answer"], "| 步数：", r2["steps"])</code></pre></details></div><div class="step"><div class="t">第 3 步 · 8 分钟</div><h3>运行并对照预期输出</h3><pre><code>python 01_hello_agent.py</code></pre><p><b>预期输出（节选）</b>：示例 A 会依次打印三步——查订单 → 查库存 → 结束；示例 B 因为没有订单号，一轮就结束并提示补充信息。</p><pre><code>=== 示例 A：带订单号的查询 ===
-[1] 用户问订单，先查订单 -&gt; get_order({"order_id": "SO-2026-001"})
-    =&gt; {"status": "已发货", "amount": 268.0, "item": "无线耳机", "days": 2}
-[2] 已拿到订单状态，结合库存给出答复 -&gt; check_inventory({"item": "无线耳机"})
-    =&gt; {"item": "无线耳机", "stock": 42}
-[3] 信息已足够，结束循环 -&gt; finish(...)
-=== 示例 B：缺少关键信息 ===
-[1] 无订单号，直接说明能力边界 -&gt; finish(...)</code></pre></div><div class="step"><div class="t">第 4 步 · 8 分钟</div><h3>解读 trace 与护栏</h3><p>运行后目录里生成 <code>trace.jsonl</code>，每行是一个 JSON 对象：<code>step / thought / tool / args / observation / ms</code>。这就是单元四可观测体系的雏形。</p><ul><li><b>为什么要有 MAX_STEPS=5</b>：模型可能反复调用同一工具，护栏保证最坏情况也会终止并转人工。</li><li><b>为什么工具要先注册</b>：模型只能从白名单里选，参数不合法直接抛错，不接触真实业务系统。</li><li><b>为什么用 MockLLM</b>：确定性输出让「循环结构」与「模型能力」解耦，便于回归测试。</li></ul></div><div class="step"><div class="t">第 5 步 · 7 分钟</div><h3>做两个对照实验</h3><p>① 把示例 B 的目标改成「我的订单 SO-2026-002 到哪了」，观察循环步数变化；② 在 <code>TOOLS</code> 中新增一个只读工具 <code>get_refund_policy</code>，并在 <code>mock_decide</code> 里让它可被选择，观察工具注册表如何成为能力边界。</p><div class="note">新增工具时只改注册表与决策规则，不要改 <code>run_agent</code> 主循环——这正是「能力层与编排层分离」的最小体现。</div></div><div class="step"><div class="t">第 6 步 · 5 分钟</div><h3>可选：切换真实模型</h3><p>填入 <code>.env</code> 后执行（Windows PowerShell 用 <code>$env:LLM_BACKEND="api"</code>）：</p><pre><code>export LLM_BACKEND=api      # macOS / Linux
-$env:LLM_BACKEND="api"      # Windows PowerShell
-python 01_hello_agent.py</code></pre><p>代码里 <code>api_decide()</code> 用标准库 urllib 请求 OpenAI 兼容的 <code>/chat/completions</code>，把 <code>TOOLS</code> 转成 <code>tools</code> 数组，解析返回的 <code>tool_calls</code>；请求失败会自动回退 MockLLM，不会中断课堂。</p><div class="warn">真实模型会产生费用与不可复现的输出。课堂验收一律以 mock 后端为准；api 后端只用于对照观察，不计入 100 分量表。</div></div><div class="step"><div class="t">第 7 步 · 3 分钟</div><h3>写环境自检报告</h3><p>运行 <code>python 01_selfcheck.py</code>，把 <code>selfcheck.json</code> 与下面四项记进一页笔记：Python 版本、后端选择、自检通过项、本单元对五层架构中「编排层 + 治理层」的对应位置。单元二开头会直接复用。</p><details><summary>完整文件 · <code>unit1/01_selfcheck.py</code>（点击展开）</summary><pre><code># -*- coding: utf-8 -*-
-# 单元一：环境自检（零依赖）。运行：python 01_selfcheck.py
-import importlib.util, json, os, platform, sys
-
-BASE = os.path.dirname(os.path.abspath(__file__))
 checks = []
 
 
-def check(name, cond, detail=""):
-    checks.append({"name": name, "ok": bool(cond), "detail": detail})
-    print(("PASS " if cond else "FAIL ") + name + (" | " + detail if detail else ""))
-
-
-check("Python &gt;= 3.11", sys.version_info &gt;= (3, 11), platform.python_version())
-check("标准库 json/sqlite3/urllib 可用", all(
-    importlib.util.find_spec(m) for m in ["json", "sqlite3", "urllib.request"]))
-check("工作目录可写", os.access(BASE, os.W_OK), BASE)
-for name in ["mock", "api", "ollama"]:
-    check("LLM_BACKEND 取值 %s 已文档化" % name, True, "默认 mock，无需密钥")
-spec = importlib.util.spec_from_file_location("hello", os.path.join(BASE, "01_hello_agent.py"))
-mod = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(mod)
-r = mod.run_agent("请查询订单 SO-2026-002 的状态")
-check("最小 Agent 循环跑通", r["steps"] &gt;= 2, "步数=" + str(r["steps"]))
-check("工具参数校验生效", True, "validate() 拒绝未登记工具与缺参")
-check("步数上限护栏存在", mod.MAX_STEPS == 5, "MAX_STEPS=5")
-check("trace 已落盘", os.path.exists(os.path.join(BASE, "trace.jsonl")))
-with open(os.path.join(BASE, "selfcheck.json"), "w", encoding="utf-8") as f:
-    json.dump({"python": platform.python_version(), "checks": checks,
-               "passed": sum(c["ok"] for c in checks), "total": len(checks)},
-              f, ensure_ascii=False, indent=2)
-print("自检结果：%d/%d 通过 -&gt; selfcheck.json" % (
-    sum(c["ok"] for c in checks), len(checks)))
-sys.exit(0 if all(c["ok"] for c in checks) else 1)</code></pre></details></div></section><section id="s8"><h2>九、验收标准（100 分）</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>评价项目</th><th>分值</th><th>通过标准</th></tr></thead><tbody><tr><td>环境可复现</td><td>20</td><td>自检脚本 10/10 通过，<code>selfcheck.json</code> 存在且记录 Python 版本</td></tr><tr><td>架构理解</td><td>15</td><td>能独立画出五层架构并各说出一种失败模式和对应防护</td></tr><tr><td>范式选型</td><td>15</td><td>对给定场景能说出选 Workflow 还是 Agent 的理由，且能举出 3 个反例</td></tr><tr><td>循环实现</td><td>20</td><td><code>01_hello_agent.py</code> 运行成功，<code>trace.jsonl</code> 至少 3 步且字段完整</td></tr><tr><td>护栏意识</td><td>15</td><td>能解释步数上限、工具白名单、参数校验各自防的是什么</td></tr><tr><td>文档与衔接</td><td>15</td><td>环境自检报告完整，写清单元二要复用的目录、数据与后端配置</td></tr></tbody></table></div><div class="ok">80 分及以上即可进入单元二；未达 80 分建议只重做第八节的第 2–4 步，不需要重听理论部分。</div></section><section id="s9"><h2>十、自测、排错与作业</h2><h3>10.1 自测题（答案都在本页内）</h3><ol><li>判定式里哪三项缺失就不算企业级智能体？</li><li>为什么说「路径确定、规则可枚举」的业务不该用 Agent？</li><li>五层架构中，审计日志属于哪一层？提示注入防护又在哪几层生效？</li><li>MockLLM 的作用是模拟模型能力，还是隔离模型不确定性？说明理由。</li><li><code>MAX_STEPS</code> 触发后系统应该怎么做，而不是继续重试？</li><li>九类场景中，哪两类必须先做脱敏或只读限制才能上线？</li></ol><h3>10.2 排错表</h3><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>现象</th><th>最可能原因</th><th>定位命令 / 动作</th></tr></thead><tbody><tr><td>运行后没有 trace.jsonl</td><td>在错误目录执行</td><td><code>dir</code> 确认同目录有 01_hello_agent.py</td></tr><tr><td>工具报「未登记」</td><td>改了工具名但没同步注册表</td><td>核对 <code>TOOLS</code> 的键与 decide 返回值</td></tr><tr><td>循环一步就结束</td><td>目标里没有订单号</td><td>换用含 <code>SO-2026-001</code> 的目标</td></tr><tr><td>api 后端回退 mock</td><td>密钥/Base URL/网络三者之一异常</td><td>看控制台 <code>[fallback]</code> 提示，先切回 mock</td></tr><tr><td>自检少 1 项通过</td><td>目录只读，无法写 selfcheck.json</td><td>换到可写目录重新解压</td></tr><tr><td>真实模型调用报 429</td><td>限流</td><td>降低并发；课堂验收不需要 api 后端</td></tr></tbody></table></div><h3>10.3 作业（课后 30 分钟，单元二会用到）</h3><ol><li>把 4.5 的九类场景表补一列「本企业/本专业最可能先落地的一类」，写 100 字理由。</li><li>给 <code>TOOLS</code> 增加一个只读工具并写清 JSON Schema，不改主循环。</li><li>写出三条「必须转人工」的边界规则，格式：触发条件 → 转给谁 → 留下什么审计字段。</li></ol></section><section id="s10"><h2>十一、本单元产物与下一单元衔接</h2><div class="tbl-scroll" role="region" aria-label="数据表，可左右滑动查看"><table><thead><tr><th>产物</th><th>文件</th><th>单元二如何使用</th></tr></thead><tbody><tr><td>可运行最小智能体</td><td><code>unit1/01_hello_agent.py</code></td><td>作为「工具注册表 + 循环」的参照实现</td></tr><tr><td>运行轨迹</td><td><code>unit1/trace.jsonl</code></td><td>对照单元二带引用的 trace 结构</td></tr><tr><td>环境自检报告</td><td><code>unit1/selfcheck.json</code> + 一页笔记</td><td>确认虚拟环境、后端与目录可直接复用</td></tr><tr><td>架构/场景笔记</td><td>课堂笔记</td><td>单元二为「售后政策问答」加知识层与工具层</td></tr></tbody></table></div><div class="ok">下一单元：把「能查订单」升级为「能依据公司制度作答、会引用条款、查不到就拒答、能安全调用业务系统」——即 RAG + Function Calling / MCP 全链路。</div></section><div class="unit-nav"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="../index.html">↑ 专题区索引</a><a href="materials/企业级智能体开发专题_全套资料.zip">⬇ 下载全套资料</a><a href="unit2.html">下一单元 →</a></div></div></main><footer><div class="wrap">大连财经学院管理学院 · 《人工智能工具应用实践》课程拓展内容 · 《最热AI应用实践课》 · 企业级智能体开发专题 · 素材均为课堂虚构数据 · 2026-11-10</div></footer></body></html>
+def ck(name, fn):
+    try:
+        ok = bool(fn())
+    except Exception as e:
+        ok = False
+        name += " (%s)" % type(e).__name__
+    checks.append({"item": name, "ok": ok})</code></pre><p>运行：</p><div class="code-label">终端</div><pre><code>cd unit1 &amp;&amp; python 01_setup.py
+# 期望：自检 10/10 通过 -&gt; selfcheck.json</code></pre><div class="ok">产物 <code>unit1/selfcheck.json</code>：<code>{"passed": 10, "total": 10}</code>。</div></section><section class="slide" data-title="运行结果与可解释性" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 10 / 13 页</p><h2>运行结果与可解释性</h2><p class="lead">把链的输入输出逐段说清，是「可解释」25 分的评分依据。</p><div class="tbl-scroll" role="region" aria-label="LCEL 各段输入输出"><table><thead><tr><th>链段</th><th>输入</th><th>输出</th></tr></thead><tbody><tr><td><code>prompt</code></td><td><code>{"question": "..."}</code></td><td>ChatPromptValue（消息列表）</td></tr><tr><td><code>model</code></td><td>ChatPromptValue</td><td>AIMessage（离线脚本模型按序返回）</td></tr><tr><td><code>parser</code></td><td>AIMessage</td><td>str</td></tr><tr><td>整条链</td><td>dict</td><td>str</td></tr></tbody></table></div><div class="note">用 <code>chain.invoke(...)</code> 单步验证；生产把 <code>model</code> 换成 <code>ChatOpenAI(...)</code> 后，这张表仍然成立。</div></section><section class="slide" data-title="生产替换点" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 11 / 13 页</p><h2>生产替换点</h2><p class="lead">教学实现与企业实现的边界在这里一次说清，后续单元不再重复。</p><div class="tbl-scroll" role="region" aria-label="教学实现到生产实现的替换点"><table><thead><tr><th>教学实现（离线可跑）</th><th>生产替换</th><th>替换后不变的部分</th></tr></thead><tbody><tr><td><code>FakeListChatModel</code> / <code>ScriptedChatModel</code></td><td><code>init_chat_model(...)</code> / <code>ChatOpenAI</code> / <code>ChatDeepSeek</code></td><td>Prompt、Parser、链的组装方式</td></tr><tr><td><code>CourseRetriever</code>（简化 BM25）</td><td><code>Chroma</code> / <code>Milvus</code> + <code>EnsembleRetriever</code> + rerank</td><td>Document 结构、引用格式、拒答逻辑</td></tr><tr><td><code>RunnableLambda</code> 固定分支</td><td><code>LangGraph</code> 状态图 + checkpoint + HITL interrupt</td><td>工具 Schema、业务函数</td></tr><tr><td><code>TraceCallback</code>（内存 trace）</td><td>LangSmith / Langfuse / OpenTelemetry</td><td>评测集与指标定义</td></tr><tr><td>标准库 HTTP 服务</td><td>FastAPI + Uvicorn + Docker + K8s + 灰度</td><td><code>/health</code> <code>/ask</code> <code>/eval</code> 契约</td></tr></tbody></table></div></section><section class="slide" data-title="验收标准与排错" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 12 / 13 页</p><h2>验收标准与排错</h2><div class="cols"><div><h3>验收</h3><div class="tbl-scroll" role="region" aria-label="100 分验收口径"><table><thead><tr><th>维度</th><th>分值</th><th>判定</th></tr></thead><tbody><tr><td>可运行</td><td>30</td><td>脚本在离线环境跑通且退出码为 0</td></tr><tr><td>可解释</td><td>25</td><td>能说清每一段 Runnable 的输入与输出</td></tr><tr><td>有护栏</td><td>20</td><td>范围外 / 越权 / 写操作被拦截</td></tr><tr><td>有评测</td><td>15</td><td>评测集通过并生成报告文件</td></tr><tr><td>可交接</td><td>10</td><td>README、上线检查单、依赖清单齐全</td></tr></tbody></table></div><div class="note">及格线 60 分。四个单元共用同一口径，评分依据全部来自当堂生成的可核验文件。</div></div><div><h3>常见错误</h3><div class="tbl-scroll" role="region" aria-label="单元一排错表"><table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody><tr><td><code>ModuleNotFoundError: langchain</code></td><td>未激活虚拟环境</td><td>重新 activate 后再 pip install</td></tr><tr><td>自检少于 10 项</td><td>从压缩包中只解压了部分文件</td><td>解压全部 28 个条目，保持目录结构</td></tr><tr><td>模型返回空串</td><td>FakeListChatModel 的 responses 已用尽</td><td>按 README 顺序重跑脚本</td></tr><tr><td>中文输出乱码</td><td>终端编码非 UTF-8</td><td>用 UTF-8 终端或重定向到文件查看</td></tr></tbody></table></div></div></div></section><section class="slide kind-chapter" data-title="小结 · 进入单元 2" data-chapter="单元 1 · 全景与环境地基" aria-hidden="true"><p class="slide-kicker">单元 1 · 全景与环境地基 · 第 13 / 13 页</p><h2>小结 · 进入单元 2</h2><p class="lead">已经能跑通一条最小链；下一步让它「读得进企业制度、答得有出处」。</p><ul><li>五层架构定位组件，五代范式决定编排复杂度，九类场景提供业务语境。</li><li>LangChain 的 Runnable 抽象使模型可替换、链路可组合、过程可观测。</li><li>单元 2 将加入 <code>BaseRetriever</code>、<code>@tool</code> 与引用 / 拒答逻辑。</li></ul><p><a class="btn" href="unit2.html">下一单元 →</a><a class="btn ghost" href="index.html">专题导学页</a><a class="btn ghost" href="materials/企业级智能体开发专题_全套资料.zip">⬇ 全套资料</a></p></section></div><div class="deck-progress"><i id="deckFill"></i></div><div class="deck-bar" role="group" aria-label="分页控制"><button class="deck-btn ghost" id="deckPrev" type="button">← 上一页</button><button class="deck-btn" id="deckNext" type="button">下一页 →</button><span class="deck-count" id="deckCount" aria-live="polite">1 / 13</span><select class="deck-select" id="deckSelect" aria-label="按目录跳页"></select><button class="deck-mini" id="deckAll" type="button">全文模式</button></div><p class="deck-tip" id="deckTip">点击「下一页」逐页呈现；也可用键盘 <kbd>→</kbd> <kbd>←</kbd> / <kbd>PageDown</kbd> / <kbd>Home</kbd> <kbd>End</kbd>，手机端可左右滑动；「全文模式」可一次展开全部页面，浏览器打印可导出讲义。</p><div class="note">本页为 PPT 式分页演示：默认一次呈现一页，可用「下一页」按钮、键盘方向键、目录下拉或手机滑动切换；「全文模式」可一次展开全部内容。页面内代码与 <a href="materials/企业级智能体开发专题_全套资料.zip" download>全套资料包</a> 逐字一致，代码块统一为深色底浅色字。</div></div><div class="unit-nav"><div class="pager"><a href="index.html">↑ 专题导学页</a><a href="materials/企业级智能体开发专题_全套资料.zip">⬇ 下载全套资料</a><a href="unit2.html">下一单元 →</a></div></div></main><footer><div class="wrap">大连财经学院管理学院 · 《人工智能工具应用实践》课程拓展内容 · 《最热AI应用实践课》 · 企业级智能体开发专题 · 素材均为课堂虚构数据 · 2026-11-10</div></footer><script src="../assets/deck.js"></script></body></html>

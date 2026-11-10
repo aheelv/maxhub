@@ -1,0 +1,103 @@
+/* =====================================================================
+   wb-agent-deck-v2 · PPT 式分页演示（专题区共享样式）
+   默认一次只呈现一页；.deck-all 切换为全文阅读；@media print 可导出讲义。
+   ===================================================================== */
+.deck { margin: 0 auto 22px; max-width: 1080px; }
+.deck-stage {
+  border: 1px solid var(--line, #dfe6f2); border-radius: 14px;
+  background: #fff; box-shadow: 0 6px 20px rgba(18, 38, 78, .06);
+  padding: 26px 30px 30px; min-height: 430px;
+}
+.deck .slide { display: none; }
+body:not(.deck-ready) .slide { display: block; border-bottom: 1px dashed var(--line, #dfe6f2); padding-bottom: 22px; margin-bottom: 22px; }
+body.deck-all .slide { display: block !important; border-bottom: 1px dashed var(--line, #dfe6f2); padding-bottom: 24px; margin-bottom: 24px; }
+.deck .slide.active { display: block; animation: deckIn .18s ease-out; }
+@keyframes deckIn { from { opacity: .35; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.deck .slide .slide-kicker { font-size: 12px; letter-spacing: .08em; color: #4b6cb7; font-weight: 700; margin: 0 0 6px; }
+.deck .slide h2 { font-size: clamp(20px, 3.2vw, 29px); line-height: 1.35; margin: 0 0 10px; color: #101d36; }
+.deck .slide .lead { color: #47567a; font-size: 15px; line-height: 1.75; margin: 0 0 16px; }
+.deck .slide p, .deck .slide li { line-height: 1.8; font-size: 14.5px; }
+.deck .slide ul, .deck .slide ol { padding-left: 22px; margin: 8px 0 14px; }
+.deck .slide li { margin: 3px 0; }
+.deck .slide h3 { font-size: 16px; margin: 16px 0 8px; color: #1b2c4d; }
+.deck .slide b, .deck .slide strong { color: #16305e; }
+.deck .slide .cols { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
+.deck .slide .note, .deck .slide .warn, .deck .slide .ok { font-size: 13.5px; line-height: 1.7; }
+.deck .slide .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.deck .slide table { font-size: 13px; }
+.deck .slide .btn { display: inline-block; margin: 6px 8px 2px 0; }
+.deck .slide.kind-cover { text-align: center; padding: 34px 0 18px; }
+.deck .slide.kind-cover h2 { font-size: clamp(24px, 4.4vw, 38px); }
+.deck .slide.kind-cover .lead { font-size: 16px; max-width: 720px; margin: 0 auto 18px; }
+.deck .slide.kind-chapter { text-align: center; padding: 30px 0 12px; }
+.deck .slide.kind-chapter h2 { font-size: clamp(22px, 4vw, 34px); }
+
+/* 代码块：统一清晰可读，彻底消除「浅底白字 / 条纹反白」 */
+.deck .code-label { font: 12px/1.6 var(--mono, ui-monospace, Consolas, monospace); color: #4b5b78; margin: 14px 0 4px; }
+.deck pre, .deck .slide pre {
+  background: #101c33 !important; color: #eef3ff !important;
+  border: 1px solid #2a3b60 !important; border-radius: 10px !important;
+  padding: 14px 16px !important; margin: 8px 0 14px !important;
+  font: 12.5px/1.72 var(--mono, ui-monospace, Consolas, monospace) !important;
+  white-space: pre-wrap !important; word-break: break-word !important;
+  overflow-wrap: anywhere !important; overflow-x: auto !important;
+  text-align: left !important;
+}
+.deck pre code, .deck .slide pre code {
+  background: transparent !important; color: inherit !important;
+  padding: 0 !important; margin: 0 !important; border: 0 !important;
+  border-radius: 0 !important; font: inherit !important;
+  display: inline !important; box-shadow: none !important;
+  white-space: inherit !important; word-break: inherit !important;
+}
+.deck .slide :not(pre) > code {
+  background: #e9effb !important; color: #173563 !important;
+  padding: 1px 5px !important; border-radius: 4px !important;
+  font: 13px var(--mono, ui-monospace, Consolas, monospace) !important;
+  overflow-wrap: anywhere;
+}
+.deck pre mark, .deck pre code mark, .deck .slide mark {
+  background: #38548c !important; color: #fff8d8 !important;
+}
+.deck pre::selection, .deck pre code::selection { background: #35528c; color: #fff; }
+
+/* 控制条 */
+.deck-bar {
+  position: sticky; bottom: 10px; z-index: 20;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid var(--line, #dfe6f2); border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(18, 38, 78, .12);
+  padding: 10px 12px; margin-top: 12px;
+}
+.deck-bar .deck-btn {
+  min-width: 92px; min-height: 44px; padding: 0 16px;
+  border: 1px solid #2c54a8; border-radius: 9px; background: #2c54a8; color: #fff;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.deck-bar .deck-btn.ghost { background: #fff; color: #2c54a8; }
+.deck-bar .deck-btn:disabled { opacity: .42; cursor: not-allowed; }
+.deck-bar .deck-count { font: 14px var(--mono, ui-monospace, Consolas, monospace); color: #25375c; min-width: 74px; text-align: center; }
+.deck-bar .deck-select { flex: 1 1 220px; min-width: 160px; min-height: 44px; padding: 0 8px; border: 1px solid #cbd6e8; border-radius: 9px; background: #fff; color: #1b2c4d; font-size: 14px; }
+.deck-bar .deck-mini { min-height: 44px; padding: 0 12px; border: 1px solid #cbd6e8; border-radius: 9px; background: #f6f8fd; color: #27406e; font-size: 13px; cursor: pointer; }
+.deck-progress { height: 5px; border-radius: 5px; background: #e6ecf8; overflow: hidden; margin: 0 2px 2px; }
+.deck-progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #2c54a8, #52a0e8); transition: width .18s ease; }
+.deck-tip { font-size: 12px; color: #62739a; margin: 8px 2px 0; line-height: 1.6; }
+.deck-tip kbd { background: #eef2fa; border: 1px solid #d6deed; border-radius: 4px; padding: 0 5px; font: 12px var(--mono, ui-monospace, Consolas, monospace); }
+
+@media screen and (max-width: 700px) {
+  .deck-stage { padding: 18px 16px 22px; min-height: 0; }
+  .deck .slide.active { max-height: calc(100vh - 205px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+  .deck .slide p, .deck .slide li { font-size: 14px; }
+  .deck-bar { gap: 8px; padding: 8px; }
+  .deck-bar .deck-btn { flex: 1 1 96px; min-width: 0; }
+  .deck-bar .deck-select { flex: 1 1 100%; order: 3; }
+  .deck-bar .deck-mini { flex: 0 0 auto; }
+}
+@media print {
+  .deck-bar, .deck-progress, .deck-tip { display: none !important; }
+  .deck-stage { border: 0; box-shadow: none; padding: 0; min-height: 0; }
+  .deck .slide, body.deck-ready .deck .slide { display: block !important; max-height: none !important; overflow: visible !important; page-break-after: always; border: 0; }
+  .deck .slide:last-child { page-break-after: auto; }
+}
+/* wb-agent-deck-v2 END */
