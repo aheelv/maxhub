@@ -101,3 +101,73 @@ body.deck-all .slide { display: block !important; border-bottom: 1px dashed var(
   .deck .slide:last-child { page-break-after: auto; }
 }
 /* wb-agent-deck-v2 END */
+
+
+/* =====================================================================
+   wb-agent-deck-v3 · 认知口径版组件（概念卡、流程链、面试问答、认知地图）
+   全部使用 flex/grid 自适应，窄屏不断行溢出。
+   ===================================================================== */
+.deck .slide .ccards {
+  display: grid; gap: 12px; margin: 12px 0 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(228px, 100%), 1fr));
+}
+.deck .slide .ccard {
+  border: 1px solid #dfe6f2; border-left: 4px solid #2c54a8; border-radius: 10px;
+  background: #f8faff; padding: 12px 14px; min-width: 0;
+}
+.deck .slide .ccard.alt { border-left-color: #4b8f8a; background: #f6fbfb; }
+.deck .slide .ccard.warnc { border-left-color: #b87a24; background: #fffaf2; }
+.deck .slide .ccard-tag {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .02em;
+  color: #2c54a8; background: #e9effb; border-radius: 5px; padding: 1px 7px; margin-bottom: 6px;
+}
+.deck .slide .ccard.alt .ccard-tag { color: #2c6d68; background: #e3f2f1; }
+.deck .slide .ccard.warnc .ccard-tag { color: #8a5a13; background: #fbeed7; }
+.deck .slide .ccard h4 { margin: 0 0 6px; font-size: 15px; color: #16305e; }
+.deck .slide .ccard p { margin: 0; font-size: 13.5px; line-height: 1.72; color: #33456a; }
+.deck .slide .flow { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.deck .slide .fstep {
+  flex: 1 1 148px; min-width: 0; border: 1px solid #dfe6f2; border-radius: 10px;
+  background: #fff; padding: 10px 12px;
+}
+.deck .slide .fstep > span {
+  display: inline-block; min-width: 22px; height: 22px; line-height: 22px; text-align: center;
+  border-radius: 6px; background: #2c54a8; color: #fff; font-size: 12px; font-weight: 700;
+  margin-bottom: 6px;
+}
+.deck .slide .fstep p { margin: 0; font-size: 13px; line-height: 1.65; color: #33456a; }
+.deck .slide .qa {
+  border: 1px solid #dfe6f2; border-radius: 10px; background: #fbfcff;
+  padding: 10px 14px; margin: 8px 0;
+}
+.deck .slide .qa .qq { margin: 0 0 5px; font-size: 14px; color: #16305e; font-weight: 700; }
+.deck .slide .qa .aa { margin: 0; font-size: 13.5px; line-height: 1.75; color: #33456a; }
+.deck .slide .bigq {
+  border-left: 4px solid #4b6cb7; background: #f5f8ff; border-radius: 0 10px 10px 0;
+  padding: 12px 16px; margin: 12px 0 16px; font-size: 15px; line-height: 1.8; color: #22406f;
+}
+.deck .slide .mapline {
+  display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 12px 0 16px;
+}
+.deck .slide .mapline .mnode {
+  flex: 1 1 160px; min-width: 0; border: 1px solid #cfdbee; border-radius: 10px;
+  background: #f7faff; padding: 10px 12px; font-size: 13px; line-height: 1.65; color: #2b3f66;
+}
+.deck .slide .mapline .mnode b { display: block; color: #16305e; font-size: 14px; margin-bottom: 4px; }
+.deck .slide .tagrow { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 16px; }
+.deck .slide .tagrow span {
+  border: 1px solid #cfdbee; background: #f2f6fd; color: #24447c;
+  border-radius: 999px; padding: 3px 11px; font-size: 12.5px;
+}
+.deck .slide .ccard p, .deck .slide .fstep p, .deck .slide .qa .aa,
+.deck .slide .mnode, .deck .slide .tagrow span, .deck .slide .bigq,
+.deck .slide td, .deck .slide th { overflow-wrap: anywhere; }
+@media screen and (max-width: 700px) {
+  .deck .slide .ccards { grid-template-columns: 1fr; }
+  .deck .slide .fstep { flex: 1 1 100%; }
+  .deck .slide .mnode { flex: 1 1 100%; }
+}
+@media print {
+  .deck .slide .ccards { grid-template-columns: repeat(2, 1fr); }
+}
+/* wb-agent-deck-v3 END */
